@@ -1,0 +1,3650 @@
+*** SPICE deck for cell Sim_Matrix_4096{lay} from library pixel
+*** Created on lun ene 20, 2020 12:32:13
+*** Last revised on lun mar 02, 2020 17:02:57
+*** Written on lun mar 02, 2020 17:03:06 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** SUBCIRCUIT pixel__pixelv3 FROM CELL pixelv3{lay}
+.SUBCKT pixel__pixelv3 FD gnd_pix out reset select vdd_f vdd_reset
+Mnmos@1 net@90 FD#1nmos@1_poly-right vdd_f gnd_pix NMOS L=0.6U W=3U AS=4.95P AD=1.688P PS=9.3U PD=4.65U
+Mnmos@2 out select#2nmos@2_poly-left net@90 gnd_pix NMOS L=0.6U W=3U AS=1.688P AD=4.95P PS=4.65U PD=9.3U
+Mnmos@3 vdd_reset reset#0nmos@3_poly-left FD gnd_pix NMOS L=0.6U W=3U AS=9.45P AD=4.95P PS=18.3U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 out 0 1.427fF
+C1 FD 0 3.614fF
+C2 reset 0 0.973fF
+C3 select 0 3.169fF
+C4 select#2nmos@2_poly-left 0 0.134fF
+C5 FD#2pin@50_polysilicon-1 0 0.141fF
+C6 reset#1pin@103_polysilicon-1 0 0.284fF
+C7 select#1pin@124_polysilicon-1 0 0.339fF
+** Extracted Parasitic Resistors ***
+R0 FD#1nmos@1_poly-right FD#1nmos@1_poly-right##0 6.975
+R1 FD#1nmos@1_poly-right##0 FD#2pin@50_polysilicon-1 6.975
+R2 FD FD#2pin@50_polysilicon-1 4.65
+R3 reset#0nmos@3_poly-left reset#1pin@103_polysilicon-1 7.75
+R4 select select#1pin@124_polysilicon-1 4.96
+R5 select#2nmos@2_poly-left select#2nmos@2_poly-left##0 8.783
+C8 select#2nmos@2_poly-left##0 0 0.134fF
+R6 select#2nmos@2_poly-left##0 select#2nmos@2_poly-left##1 8.783
+C9 select#2nmos@2_poly-left##1 0 0.134fF
+R7 select#2nmos@2_poly-left##1 select#1pin@124_polysilicon-1 8.783
+R8 reset reset#1pin@103_polysilicon-1 4.96
+.ENDS pixel__pixelv3
+
+*** SUBCIRCUIT pixel__Matrix_4 FROM CELL Matrix_4{lay}
+.SUBCKT pixel__Matrix_4 FD gnd_0 gnd_1 out out_1 reset reset_1 select select_1 vdd_0 vdd_1 vdd_reset vdd_reset_1
+Xpixelv3@11 pixelv3@11_FD gnd_0 out reset_1 select_1 vdd_1 vdd_reset_1 pixel__pixelv3
+Xpixelv3@15 FD gnd_1 out_1 reset_1 select_1 vdd_1 vdd_reset_1 pixel__pixelv3
+Xpixelv3@16 pixelv3@16_FD gnd_0 out reset select vdd_0 vdd_reset pixel__pixelv3
+Xpixelv3@17 pixelv3@17_FD gnd_1 out_1 reset select vdd_0 vdd_reset pixel__pixelv3
+** Extracted Parasitic Capacitors ***
+C0 out 0 5.598fF
+C1 reset_1 0 4.439fF
+C2 select_1 0 4.439fF
+C3 out_1 0 5.598fF
+C4 reset 0 4.439fF
+C5 select 0 4.439fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__Matrix_4
+
+*** SUBCIRCUIT pixel__Matrix_16 FROM CELL Matrix_16{lay}
+.SUBCKT pixel__Matrix_16 FD gnd out_0 out_1 out_2 out_3 reset_0 reset_1 reset_2 reset_3 select_0 select_1 select_2 select_3 vdd vdd_reset
+XMatrix_4@4 Matrix_4@4_FD gnd gnd out_0 out_1 reset_2 reset_3 select_2 select_3 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+XMatrix_4@5 FD gnd gnd out_2 out_3 reset_2 reset_3 select_2 select_3 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+XMatrix_4@6 Matrix_4@6_FD gnd gnd out_0 out_1 reset_0 reset_1 select_0 select_1 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+XMatrix_4@7 Matrix_4@7_FD gnd gnd out_2 out_3 reset_0 reset_1 select_0 select_1 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+** Extracted Parasitic Capacitors ***
+C0 out_0 0 11.196fF
+C1 out_1 0 11.196fF
+C2 reset_2 0 8.923fF
+C3 reset_3 0 8.923fF
+C4 select_2 0 8.923fF
+C5 select_3 0 8.923fF
+C6 out_2 0 11.196fF
+C7 out_3 0 11.196fF
+C8 reset_0 0 8.879fF
+C9 reset_1 0 8.879fF
+C10 select_0 0 8.879fF
+C11 select_1 0 8.879fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__Matrix_16
+
+*** SUBCIRCUIT pixel__Matrix_64 FROM CELL Matrix_64{lay}
+.SUBCKT pixel__Matrix_64 FD gnd out_0 out_1 out_2 out_3 out_4 out_5 out_6 out_7 reset_0 reset_1 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 select_0 select_1 select_2 select_3 select_4 select_5 select_6 select_7 vdd vdd_reset
+XMatrix_1@0 Matrix_1@0_FD gnd out_0 out_1 out_2 out_3 reset_4 reset_5 reset_6 reset_7 select_4 select_5 select_6 select_7 vdd vdd_reset pixel__Matrix_16
+XMatrix_1@1 FD gnd out_4 out_5 out_6 out_7 reset_4#0Matrix_1@1_reset_0 reset_5#0Matrix_1@1_reset_1 reset_6#0Matrix_1@1_reset_2 reset_7#0Matrix_1@1_reset_3 select_4#0Matrix_1@1_select_0 select_5#0Matrix_1@1_select_1 select_6#0Matrix_1@1_select_2 select_7#0Matrix_1@1_select_3 vdd vdd_reset pixel__Matrix_16
+XMatrix_1@2 Matrix_1@2_FD gnd out_0 out_1 out_2 out_3 reset_0 reset_1 reset_2 reset_3 select_0 select_1 select_2 select_3 vdd vdd_reset pixel__Matrix_16
+XMatrix_1@3 Matrix_1@3_FD gnd out_4 out_5 out_6 out_7 reset_0#0Matrix_1@3_reset_0 reset_1#0Matrix_1@3_reset_1 reset_2#0Matrix_1@3_reset_2 reset_3#0Matrix_1@3_reset_3 select_0#0Matrix_1@3_select_0 select_1#0Matrix_1@3_select_1 select_2#0Matrix_1@3_select_2 select_3#0Matrix_1@3_select_3 vdd vdd_reset pixel__Matrix_16
+** Extracted Parasitic Capacitors ***
+C0 out_0 0 22.392fF
+C1 out_1 0 22.392fF
+C2 out_2 0 22.392fF
+C3 out_3 0 22.392fF
+C4 reset_4 0 9.212fF
+C5 reset_5 0 9.212fF
+C6 reset_6 0 9.212fF
+C7 reset_7 0 9.212fF
+C8 select_4 0 9.212fF
+C9 select_5 0 9.212fF
+C10 select_6 0 9.212fF
+C11 select_7 0 9.212fF
+C12 out_4 0 22.392fF
+C13 out_5 0 22.392fF
+C14 out_6 0 22.392fF
+C15 out_7 0 22.392fF
+C16 reset_4#0Matrix_1@1_reset_0 0 9.212fF
+C17 reset_5#0Matrix_1@1_reset_1 0 9.212fF
+C18 reset_6#0Matrix_1@1_reset_2 0 9.212fF
+C19 reset_7#0Matrix_1@1_reset_3 0 9.212fF
+C20 select_4#0Matrix_1@1_select_0 0 9.212fF
+C21 select_5#0Matrix_1@1_select_1 0 9.212fF
+C22 select_6#0Matrix_1@1_select_2 0 9.212fF
+C23 select_7#0Matrix_1@1_select_3 0 9.212fF
+C24 reset_0 0 9.212fF
+C25 reset_1 0 9.212fF
+C26 reset_2 0 9.212fF
+C27 reset_3 0 9.212fF
+C28 select_0 0 9.212fF
+C29 select_1 0 9.212fF
+C30 select_2 0 9.212fF
+C31 select_3 0 9.212fF
+C32 reset_0#0Matrix_1@3_reset_0 0 9.212fF
+C33 reset_1#0Matrix_1@3_reset_1 0 9.212fF
+C34 reset_2#0Matrix_1@3_reset_2 0 9.212fF
+C35 reset_3#0Matrix_1@3_reset_3 0 9.212fF
+C36 select_0#0Matrix_1@3_select_0 0 9.212fF
+C37 select_1#0Matrix_1@3_select_1 0 9.212fF
+C38 select_2#0Matrix_1@3_select_2 0 9.212fF
+C39 select_3#0Matrix_1@3_select_3 0 9.212fF
+** Extracted Parasitic Resistors ***
+R0 select_0 select_0#0Matrix_1@3_select_0 4.046
+R1 reset_1 reset_1#0Matrix_1@3_reset_1 4.046
+R2 select_1 select_1#0Matrix_1@3_select_1 4.046
+R3 reset_2 reset_2#0Matrix_1@3_reset_2 4.046
+R4 select_2 select_2#0Matrix_1@3_select_2 4.046
+R5 reset_3 reset_3#0Matrix_1@3_reset_3 4.046
+R6 select_3 select_3#0Matrix_1@3_select_3 4.046
+R7 reset_0 reset_0#0Matrix_1@3_reset_0 4.046
+R8 reset_4 reset_4#0Matrix_1@1_reset_0 4.046
+R9 select_4 select_4#0Matrix_1@1_select_0 4.046
+R10 reset_5 reset_5#0Matrix_1@1_reset_1 4.046
+R11 select_5 select_5#0Matrix_1@1_select_1 4.046
+R12 reset_6 reset_6#0Matrix_1@1_reset_2 4.046
+R13 select_6 select_6#0Matrix_1@1_select_2 4.046
+R14 reset_7 reset_7#0Matrix_1@1_reset_3 4.046
+R15 select_7 select_7#0Matrix_1@1_select_3 4.046
+.ENDS pixel__Matrix_64
+
+*** SUBCIRCUIT pixel__Matrix_256 FROM CELL Matrix_256{lay}
+.SUBCKT pixel__Matrix_256 FD FD_1 gnd out_0 out_1 out_10 out_11 out_12 out_13 out_14 out_15 out_2 out_3 out_4 out_5 out_6 out_7 out_8 out_9 reset_0 reset_1 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 reset_8 reset_9 select_0 select_1 select_10 select_11 select_12 select_13 select_14 select_15 select_2 select_3 select_4 select_5 select_6 select_7 select_8 select_9 vdd vdd_reset
+XMatrix_6@0 Matrix_6@0_FD gnd out_0 out_1 out_2 out_3 out_4 out_5 out_6 out_7 reset_8 reset_9 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 select_8 select_9 select_10 select_11 select_12 select_13 select_14 select_15 vdd vdd_reset pixel__Matrix_64
+XMatrix_6@1 FD gnd out_8 out_9 out_10 out_11 out_12 out_13 out_14 out_15 reset_8#0Matrix_6@1_reset_0 reset_9#0Matrix_6@1_reset_1 reset_10#0Matrix_6@1_reset_2 reset_11#0Matrix_6@1_reset_3 reset_12#0Matrix_6@1_reset_4 reset_13#0Matrix_6@1_reset_5 reset_14#0Matrix_6@1_reset_6 reset_15#0Matrix_6@1_reset_7 select_8#0Matrix_6@1_select_0 select_9#0Matrix_6@1_select_1 select_10#0Matrix_6@1_select_2 select_11#0Matrix_6@1_select_3 select_12#0Matrix_6@1_select_4 select_13#0Matrix_6@1_select_5
++select_14#0Matrix_6@1_select_6 select_15#0Matrix_6@1_select_7 vdd vdd_reset pixel__Matrix_64
+XMatrix_6@2 FD_1 gnd out_0#0Matrix_6@2_out_0 out_1#0Matrix_6@2_out_1 out_2#0Matrix_6@2_out_2 out_3#0Matrix_6@2_out_3 out_4#0Matrix_6@2_out_4 out_5#0Matrix_6@2_out_5 out_6#0Matrix_6@2_out_6 out_7#0Matrix_6@2_out_7 reset_0 reset_1 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 select_0 select_1 select_2 select_3 select_4 select_5 select_6 select_7 vdd vdd_reset pixel__Matrix_64
+XMatrix_6@3 Matrix_6@3_FD gnd out_8#0Matrix_6@3_out_0 out_9#0Matrix_6@3_out_1 out_10#0Matrix_6@3_out_2 out_11#0Matrix_6@3_out_3 out_12#0Matrix_6@3_out_4 out_13#0Matrix_6@3_out_5 out_14#0Matrix_6@3_out_6 out_15#0Matrix_6@3_out_7 reset_0#0Matrix_6@3_reset_0 reset_1#0Matrix_6@3_reset_1 reset_2#0Matrix_6@3_reset_2 reset_3#0Matrix_6@3_reset_3 reset_4#0Matrix_6@3_reset_4 reset_5#0Matrix_6@3_reset_5 reset_6#0Matrix_6@3_reset_6 reset_7#0Matrix_6@3_reset_7 select_0#0Matrix_6@3_select_0 select_1#0Matrix_6@3_select_1
++select_2#0Matrix_6@3_select_2 select_3#0Matrix_6@3_select_3 select_4#0Matrix_6@3_select_4 select_5#0Matrix_6@3_select_5 select_6#0Matrix_6@3_select_6 select_7#0Matrix_6@3_select_7 vdd vdd_reset pixel__Matrix_64
+** Extracted Parasitic Capacitors ***
+C0 out_0 0 22.749fF
+C1 out_1 0 22.749fF
+C2 out_2 0 22.749fF
+C3 out_3 0 22.749fF
+C4 out_4 0 22.749fF
+C5 out_5 0 22.749fF
+C6 out_6 0 22.749fF
+C7 out_7 0 22.749fF
+C8 reset_8 0 18.446fF
+C9 reset_9 0 18.446fF
+C10 reset_10 0 18.446fF
+C11 reset_11 0 18.446fF
+C12 reset_12 0 18.446fF
+C13 reset_13 0 18.446fF
+C14 reset_14 0 18.446fF
+C15 reset_15 0 18.446fF
+C16 select_8 0 18.446fF
+C17 select_9 0 18.446fF
+C18 select_10 0 18.446fF
+C19 select_11 0 18.446fF
+C20 select_12 0 18.446fF
+C21 select_13 0 18.446fF
+C22 select_14 0 18.446fF
+C23 select_15 0 18.446fF
+C24 out_8 0 22.749fF
+C25 out_9 0 22.749fF
+C26 out_10 0 22.749fF
+C27 out_11 0 22.749fF
+C28 out_12 0 22.749fF
+C29 out_13 0 22.749fF
+C30 out_14 0 22.749fF
+C31 out_15 0 22.749fF
+C32 reset_8#0Matrix_6@1_reset_0 0 18.446fF
+C33 reset_9#0Matrix_6@1_reset_1 0 18.446fF
+C34 reset_10#0Matrix_6@1_reset_2 0 18.446fF
+C35 reset_11#0Matrix_6@1_reset_3 0 18.446fF
+C36 reset_12#0Matrix_6@1_reset_4 0 18.446fF
+C37 reset_13#0Matrix_6@1_reset_5 0 18.446fF
+C38 reset_14#0Matrix_6@1_reset_6 0 18.446fF
+C39 reset_15#0Matrix_6@1_reset_7 0 18.446fF
+C40 select_8#0Matrix_6@1_select_0 0 18.446fF
+C41 select_9#0Matrix_6@1_select_1 0 18.446fF
+C42 select_10#0Matrix_6@1_select_2 0 18.446fF
+C43 select_11#0Matrix_6@1_select_3 0 18.446fF
+C44 select_12#0Matrix_6@1_select_4 0 18.446fF
+C45 select_13#0Matrix_6@1_select_5 0 18.446fF
+C46 select_14#0Matrix_6@1_select_6 0 18.446fF
+C47 select_15#0Matrix_6@1_select_7 0 18.446fF
+C48 out_0#0Matrix_6@2_out_0 0 22.749fF
+C49 out_1#0Matrix_6@2_out_1 0 22.749fF
+C50 out_2#0Matrix_6@2_out_2 0 22.749fF
+C51 out_3#0Matrix_6@2_out_3 0 22.749fF
+C52 out_4#0Matrix_6@2_out_4 0 22.749fF
+C53 out_5#0Matrix_6@2_out_5 0 22.749fF
+C54 out_6#0Matrix_6@2_out_6 0 22.749fF
+C55 out_7#0Matrix_6@2_out_7 0 22.749fF
+C56 reset_0 0 18.446fF
+C57 reset_1 0 18.446fF
+C58 reset_2 0 18.446fF
+C59 reset_3 0 18.446fF
+C60 reset_4 0 18.446fF
+C61 reset_5 0 18.446fF
+C62 reset_6 0 18.446fF
+C63 reset_7 0 18.446fF
+C64 select_0 0 18.446fF
+C65 select_1 0 18.446fF
+C66 select_2 0 18.446fF
+C67 select_3 0 18.446fF
+C68 select_4 0 18.446fF
+C69 select_5 0 18.446fF
+C70 select_6 0 18.446fF
+C71 select_7 0 18.446fF
+C72 out_8#0Matrix_6@3_out_0 0 22.749fF
+C73 out_9#0Matrix_6@3_out_1 0 22.749fF
+C74 out_10#0Matrix_6@3_out_2 0 22.749fF
+C75 out_11#0Matrix_6@3_out_3 0 22.749fF
+C76 out_12#0Matrix_6@3_out_4 0 22.749fF
+C77 out_13#0Matrix_6@3_out_5 0 22.749fF
+C78 out_14#0Matrix_6@3_out_6 0 22.749fF
+C79 out_15#0Matrix_6@3_out_7 0 22.749fF
+C80 reset_0#0Matrix_6@3_reset_0 0 18.446fF
+C81 reset_1#0Matrix_6@3_reset_1 0 18.446fF
+C82 reset_2#0Matrix_6@3_reset_2 0 18.446fF
+C83 reset_3#0Matrix_6@3_reset_3 0 18.446fF
+C84 reset_4#0Matrix_6@3_reset_4 0 18.446fF
+C85 reset_5#0Matrix_6@3_reset_5 0 18.446fF
+C86 reset_6#0Matrix_6@3_reset_6 0 18.446fF
+C87 reset_7#0Matrix_6@3_reset_7 0 18.446fF
+C88 select_0#0Matrix_6@3_select_0 0 18.446fF
+C89 select_1#0Matrix_6@3_select_1 0 18.446fF
+C90 select_2#0Matrix_6@3_select_2 0 18.446fF
+C91 select_3#0Matrix_6@3_select_3 0 18.446fF
+C92 select_4#0Matrix_6@3_select_4 0 18.446fF
+C93 select_5#0Matrix_6@3_select_5 0 18.446fF
+C94 select_6#0Matrix_6@3_select_6 0 18.446fF
+C95 select_7#0Matrix_6@3_select_7 0 18.446fF
+** Extracted Parasitic Resistors ***
+R0 select_0 select_0#0Matrix_6@3_select_0 8.102
+R1 reset_1 reset_1#0Matrix_6@3_reset_1 8.102
+R2 select_1 select_1#0Matrix_6@3_select_1 8.102
+R3 reset_2 reset_2#0Matrix_6@3_reset_2 8.102
+R4 select_2 select_2#0Matrix_6@3_select_2 8.102
+R5 reset_3 reset_3#0Matrix_6@3_reset_3 8.102
+R6 select_3 select_3#0Matrix_6@3_select_3 8.102
+R7 reset_4 reset_4#0Matrix_6@3_reset_4 8.102
+R8 select_4 select_4#0Matrix_6@3_select_4 8.102
+R9 reset_5 reset_5#0Matrix_6@3_reset_5 8.102
+R10 select_5 select_5#0Matrix_6@3_select_5 8.102
+R11 reset_6 reset_6#0Matrix_6@3_reset_6 8.102
+R12 select_6 select_6#0Matrix_6@3_select_6 8.102
+R13 reset_7 reset_7#0Matrix_6@3_reset_7 8.102
+R14 out_0#0Matrix_6@2_out_0 out_0 8.083
+R15 out_1#0Matrix_6@2_out_1 out_1 8.083
+R16 out_2#0Matrix_6@2_out_2 out_2 8.083
+R17 out_3#0Matrix_6@2_out_3 out_3 8.083
+R18 out_4#0Matrix_6@2_out_4 out_4 8.083
+R19 out_5#0Matrix_6@2_out_5 out_5 8.083
+R20 out_6#0Matrix_6@2_out_6 out_6 8.083
+R21 out_9#0Matrix_6@3_out_1 out_9 8.083
+R22 out_10#0Matrix_6@3_out_2 out_10 8.083
+R23 out_11#0Matrix_6@3_out_3 out_11 8.083
+R24 out_12#0Matrix_6@3_out_4 out_12 8.083
+R25 out_13#0Matrix_6@3_out_5 out_13 8.083
+R26 out_14#0Matrix_6@3_out_6 out_14 8.083
+R27 out_15#0Matrix_6@3_out_7 out_15 8.083
+R28 select_7 select_7#0Matrix_6@3_select_7 8.102
+R29 reset_8 reset_8#0Matrix_6@1_reset_0 8.102
+R30 out_8#0Matrix_6@3_out_0 out_8 8.083
+R31 select_8 select_8#0Matrix_6@1_select_0 8.102
+R32 reset_9 reset_9#0Matrix_6@1_reset_1 8.102
+R33 select_9 select_9#0Matrix_6@1_select_1 8.102
+R34 reset_10 reset_10#0Matrix_6@1_reset_2 8.102
+R35 select_10 select_10#0Matrix_6@1_select_2 8.102
+R36 reset_11 reset_11#0Matrix_6@1_reset_3 8.102
+R37 select_11 select_11#0Matrix_6@1_select_3 8.102
+R38 reset_12 reset_12#0Matrix_6@1_reset_4 8.102
+R39 select_12 select_12#0Matrix_6@1_select_4 8.102
+R40 reset_13 reset_13#0Matrix_6@1_reset_5 8.102
+R41 select_13 select_13#0Matrix_6@1_select_5 8.102
+R42 reset_14 reset_14#0Matrix_6@1_reset_6 8.102
+R43 select_14 select_14#0Matrix_6@1_select_6 8.102
+R44 reset_15 reset_15#0Matrix_6@1_reset_7 8.102
+R45 select_15 select_15#0Matrix_6@1_select_7 8.102
+R46 out_7#0Matrix_6@2_out_7 out_7 8.083
+R47 reset_0 reset_0#0Matrix_6@3_reset_0 8.102
+.ENDS pixel__Matrix_256
+
+*** SUBCIRCUIT pixel__Matrix_1024 FROM CELL Matrix_1024{lay}
+.SUBCKT pixel__Matrix_1024 FD FD_1 gnd out_0 out_1 out_10 out_11 out_12 out_13 out_14 out_15 out_16 out_17 out_18 out_19 out_2 out_20 out_21 out_22 out_23 out_24 out_25 out_26 out_27 out_28 out_29 out_3 out_30 out_31 out_4 out_5 out_6 out_7 out_8 out_9 reset_0 reset_1 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 reset_16 reset_17 reset_18 reset_19 reset_2 reset_20 reset_21 reset_22 reset_23 reset_24 reset_25 reset_26 reset_27 reset_28 reset_29 reset_3 reset_30 reset_31 reset_4 reset_5 reset_6
++reset_7 reset_8 reset_9 select_0 select_1 select_10 select_11 select_12 select_13 select_14 select_15 select_16 select_17 select_18 select_19 select_2 select_20 select_21 select_22 select_23 select_24 select_25 select_26 select_27 select_28 select_29 select_3 select_30 select_31 select_4 select_5 select_6 select_7 select_8 select_9 vdd vdd_reset
+XMatrix_2@0 Matrix_2@0_FD Matrix_2@0_FD_1 gnd out_0 out_1 out_10 out_11 out_12 out_13 out_14 out_15 out_2 out_3 out_4 out_5 out_6 out_7 out_8 out_9 reset_16 reset_17 reset_26 reset_27 reset_28 reset_29 reset_30 reset_31 reset_18 reset_19 reset_20 reset_21 reset_22 reset_23 reset_24 reset_25 select_16 select_17 select_26 select_27 select_28 select_29 select_30 select_31 select_18 select_19 select_20 select_21 select_22 select_23 select_24 select_25 vdd vdd_reset pixel__Matrix_256
+XMatrix_2@1 FD Matrix_2@1_FD_1 gnd out_16 out_17 out_26 out_27 out_28 out_29 out_30 out_31 out_18 out_19 out_20 out_21 out_22 out_23 out_24 out_25 reset_16#0Matrix_2@1_reset_0 reset_17#0Matrix_2@1_reset_1 reset_26#0Matrix_2@1_reset_10 reset_27#0Matrix_2@1_reset_11 reset_28#0Matrix_2@1_reset_12 reset_29#0Matrix_2@1_reset_13 reset_30#0Matrix_2@1_reset_14 reset_31#0Matrix_2@1_reset_15 reset_18#0Matrix_2@1_reset_2 reset_19#0Matrix_2@1_reset_3 reset_20#0Matrix_2@1_reset_4 reset_21#0Matrix_2@1_reset_5
++reset_22#0Matrix_2@1_reset_6 reset_23#0Matrix_2@1_reset_7 reset_24#0Matrix_2@1_reset_8 reset_25#0Matrix_2@1_reset_9 select_16#0Matrix_2@1_select_0 select_17#0Matrix_2@1_select_1 select_26#0Matrix_2@1_select_10 select_27#0Matrix_2@1_select_11 select_28#0Matrix_2@1_select_12 select_29#0Matrix_2@1_select_13 select_30#0Matrix_2@1_select_14 select_31#0Matrix_2@1_select_15 select_18#0Matrix_2@1_select_2 select_19#0Matrix_2@1_select_3 select_20#0Matrix_2@1_select_4 select_21#0Matrix_2@1_select_5
++select_22#0Matrix_2@1_select_6 select_23#0Matrix_2@1_select_7 select_24#0Matrix_2@1_select_8 select_25#0Matrix_2@1_select_9 vdd vdd_reset pixel__Matrix_256
+XMatrix_2@2 Matrix_2@2_FD FD_1 gnd out_0#0Matrix_2@2_out_0 out_1#0Matrix_2@2_out_1 out_10#0Matrix_2@2_out_10 out_11#0Matrix_2@2_out_11 out_12#0Matrix_2@2_out_12 out_13#0Matrix_2@2_out_13 out_14#0Matrix_2@2_out_14 out_15#0Matrix_2@2_out_15 out_2#0Matrix_2@2_out_2 out_3#0Matrix_2@2_out_3 out_4#0Matrix_2@2_out_4 out_5#0Matrix_2@2_out_5 out_6#0Matrix_2@2_out_6 out_7#0Matrix_2@2_out_7 out_8#0Matrix_2@2_out_8 out_9#0Matrix_2@2_out_9 reset_0 reset_1 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 reset_2
++reset_3 reset_4 reset_5 reset_6 reset_7 reset_8 reset_9 select_0 select_1 select_10 select_11 select_12 select_13 select_14 select_15 select_2 select_3 select_4 select_5 select_6 select_7 select_8 select_9 vdd vdd_reset pixel__Matrix_256
+XMatrix_2@3 Matrix_2@3_FD Matrix_2@3_FD_1 gnd out_16#0Matrix_2@3_out_0 out_17#0Matrix_2@3_out_1 out_26#0Matrix_2@3_out_10 out_27#0Matrix_2@3_out_11 out_28#0Matrix_2@3_out_12 out_29#0Matrix_2@3_out_13 out_30#0Matrix_2@3_out_14 out_31#0Matrix_2@3_out_15 out_18#0Matrix_2@3_out_2 out_19#0Matrix_2@3_out_3 out_20#0Matrix_2@3_out_4 out_21#0Matrix_2@3_out_5 out_22#0Matrix_2@3_out_6 out_23#0Matrix_2@3_out_7 out_24#0Matrix_2@3_out_8 out_25#0Matrix_2@3_out_9 reset_0#0Matrix_2@3_reset_0 reset_1#0Matrix_2@3_reset_1
++reset_10#0Matrix_2@3_reset_10 reset_11#0Matrix_2@3_reset_11 reset_12#0Matrix_2@3_reset_12 reset_13#0Matrix_2@3_reset_13 reset_14#0Matrix_2@3_reset_14 reset_15#0Matrix_2@3_reset_15 reset_2#0Matrix_2@3_reset_2 reset_3#0Matrix_2@3_reset_3 reset_4#0Matrix_2@3_reset_4 reset_5#0Matrix_2@3_reset_5 reset_6#0Matrix_2@3_reset_6 reset_7#0Matrix_2@3_reset_7 reset_8#0Matrix_2@3_reset_8 reset_9#0Matrix_2@3_reset_9 select_0#0Matrix_2@3_select_0 select_1#0Matrix_2@3_select_1 select_10#0Matrix_2@3_select_10
++select_11#0Matrix_2@3_select_11 select_12#0Matrix_2@3_select_12 select_13#0Matrix_2@3_select_13 select_14#0Matrix_2@3_select_14 select_15#0Matrix_2@3_select_15 select_2#0Matrix_2@3_select_2 select_3#0Matrix_2@3_select_3 select_4#0Matrix_2@3_select_4 select_5#0Matrix_2@3_select_5 select_6#0Matrix_2@3_select_6 select_7#0Matrix_2@3_select_7 select_8#0Matrix_2@3_select_8 select_9#0Matrix_2@3_select_9 vdd vdd_reset pixel__Matrix_256
+** Extracted Parasitic Capacitors ***
+C0 out_0 0 30.331fF
+C1 out_1 0 30.331fF
+C2 out_2 0 30.331fF
+C3 out_3 0 30.331fF
+C4 out_4 0 30.331fF
+C5 out_5 0 30.331fF
+C6 out_6 0 30.331fF
+C7 out_7 0 30.331fF
+C8 out_8 0 30.331fF
+C9 out_9 0 30.331fF
+C10 out_10 0 30.331fF
+C11 out_11 0 30.331fF
+C12 out_12 0 30.331fF
+C13 out_13 0 30.331fF
+C14 out_14 0 30.331fF
+C15 out_15 0 30.331fF
+C16 reset_16 0 24.579fF
+C17 reset_17 0 24.579fF
+C18 reset_18 0 24.579fF
+C19 reset_19 0 24.579fF
+C20 reset_20 0 24.579fF
+C21 reset_21 0 24.579fF
+C22 reset_22 0 24.579fF
+C23 reset_23 0 24.579fF
+C24 reset_24 0 24.579fF
+C25 reset_25 0 24.579fF
+C26 reset_26 0 24.579fF
+C27 reset_27 0 24.579fF
+C28 reset_28 0 24.579fF
+C29 reset_29 0 24.579fF
+C30 reset_30 0 24.579fF
+C31 reset_31 0 24.579fF
+C32 select_16 0 24.579fF
+C33 select_17 0 24.579fF
+C34 select_18 0 24.579fF
+C35 select_19 0 24.579fF
+C36 select_20 0 24.579fF
+C37 select_21 0 24.579fF
+C38 select_22 0 24.579fF
+C39 select_23 0 24.579fF
+C40 select_24 0 24.579fF
+C41 select_25 0 24.579fF
+C42 select_26 0 24.579fF
+C43 select_27 0 24.579fF
+C44 select_28 0 24.579fF
+C45 select_29 0 24.579fF
+C46 select_30 0 24.579fF
+C47 select_31 0 24.579fF
+C48 out_16 0 30.331fF
+C49 out_17 0 30.331fF
+C50 out_18 0 30.331fF
+C51 out_19 0 30.331fF
+C52 out_20 0 30.331fF
+C53 out_21 0 30.331fF
+C54 out_22 0 30.331fF
+C55 out_23 0 30.331fF
+C56 out_24 0 30.331fF
+C57 out_25 0 30.331fF
+C58 out_26 0 30.331fF
+C59 out_27 0 30.331fF
+C60 out_28 0 30.331fF
+C61 out_29 0 30.331fF
+C62 out_30 0 30.331fF
+C63 out_31 0 30.331fF
+C64 reset_16#0Matrix_2@1_reset_0 0 24.579fF
+C65 reset_17#0Matrix_2@1_reset_1 0 24.579fF
+C66 reset_18#0Matrix_2@1_reset_2 0 24.579fF
+C67 reset_19#0Matrix_2@1_reset_3 0 24.579fF
+C68 reset_20#0Matrix_2@1_reset_4 0 24.579fF
+C69 reset_21#0Matrix_2@1_reset_5 0 24.579fF
+C70 reset_22#0Matrix_2@1_reset_6 0 24.579fF
+C71 reset_23#0Matrix_2@1_reset_7 0 24.579fF
+C72 reset_24#0Matrix_2@1_reset_8 0 24.579fF
+C73 reset_25#0Matrix_2@1_reset_9 0 24.579fF
+C74 reset_26#0Matrix_2@1_reset_10 0 24.579fF
+C75 reset_27#0Matrix_2@1_reset_11 0 24.579fF
+C76 reset_28#0Matrix_2@1_reset_12 0 24.579fF
+C77 reset_29#0Matrix_2@1_reset_13 0 24.579fF
+C78 reset_30#0Matrix_2@1_reset_14 0 24.579fF
+C79 reset_31#0Matrix_2@1_reset_15 0 24.579fF
+C80 select_16#0Matrix_2@1_select_0 0 24.579fF
+C81 select_17#0Matrix_2@1_select_1 0 24.579fF
+C82 select_18#0Matrix_2@1_select_2 0 24.579fF
+C83 select_19#0Matrix_2@1_select_3 0 24.579fF
+C84 select_20#0Matrix_2@1_select_4 0 24.579fF
+C85 select_21#0Matrix_2@1_select_5 0 24.579fF
+C86 select_22#0Matrix_2@1_select_6 0 24.579fF
+C87 select_23#0Matrix_2@1_select_7 0 24.579fF
+C88 select_24#0Matrix_2@1_select_8 0 24.579fF
+C89 select_25#0Matrix_2@1_select_9 0 24.579fF
+C90 select_26#0Matrix_2@1_select_10 0 24.579fF
+C91 select_27#0Matrix_2@1_select_11 0 24.579fF
+C92 select_28#0Matrix_2@1_select_12 0 24.579fF
+C93 select_29#0Matrix_2@1_select_13 0 24.579fF
+C94 select_30#0Matrix_2@1_select_14 0 24.579fF
+C95 select_31#0Matrix_2@1_select_15 0 24.579fF
+C96 out_0#0Matrix_2@2_out_0 0 30.331fF
+C97 out_1#0Matrix_2@2_out_1 0 30.331fF
+C98 out_2#0Matrix_2@2_out_2 0 30.331fF
+C99 out_3#0Matrix_2@2_out_3 0 30.331fF
+C100 out_4#0Matrix_2@2_out_4 0 30.331fF
+C101 out_5#0Matrix_2@2_out_5 0 30.331fF
+C102 out_6#0Matrix_2@2_out_6 0 30.331fF
+C103 out_7#0Matrix_2@2_out_7 0 30.331fF
+C104 out_8#0Matrix_2@2_out_8 0 30.331fF
+C105 out_9#0Matrix_2@2_out_9 0 30.331fF
+C106 out_10#0Matrix_2@2_out_10 0 30.331fF
+C107 out_11#0Matrix_2@2_out_11 0 30.331fF
+C108 out_12#0Matrix_2@2_out_12 0 30.331fF
+C109 out_13#0Matrix_2@2_out_13 0 30.331fF
+C110 out_14#0Matrix_2@2_out_14 0 30.331fF
+C111 out_15#0Matrix_2@2_out_15 0 30.331fF
+C112 reset_0 0 24.579fF
+C113 reset_1 0 24.579fF
+C114 reset_2 0 24.579fF
+C115 reset_3 0 24.579fF
+C116 reset_4 0 24.579fF
+C117 reset_5 0 24.579fF
+C118 reset_6 0 24.579fF
+C119 reset_7 0 24.579fF
+C120 reset_8 0 24.579fF
+C121 reset_9 0 24.579fF
+C122 reset_10 0 24.579fF
+C123 reset_11 0 24.579fF
+C124 reset_12 0 24.579fF
+C125 reset_13 0 24.579fF
+C126 reset_14 0 24.579fF
+C127 reset_15 0 24.579fF
+C128 select_0 0 24.579fF
+C129 select_1 0 24.579fF
+C130 select_2 0 24.579fF
+C131 select_3 0 24.579fF
+C132 select_4 0 24.579fF
+C133 select_5 0 24.579fF
+C134 select_6 0 24.579fF
+C135 select_7 0 24.579fF
+C136 select_8 0 24.579fF
+C137 select_9 0 24.579fF
+C138 select_10 0 24.579fF
+C139 select_11 0 24.579fF
+C140 select_12 0 24.579fF
+C141 select_13 0 24.579fF
+C142 select_14 0 24.579fF
+C143 select_15 0 24.579fF
+C144 out_16#0Matrix_2@3_out_0 0 30.331fF
+C145 out_17#0Matrix_2@3_out_1 0 30.331fF
+C146 out_18#0Matrix_2@3_out_2 0 30.331fF
+C147 out_19#0Matrix_2@3_out_3 0 30.331fF
+C148 out_20#0Matrix_2@3_out_4 0 30.331fF
+C149 out_21#0Matrix_2@3_out_5 0 30.331fF
+C150 out_22#0Matrix_2@3_out_6 0 30.331fF
+C151 out_23#0Matrix_2@3_out_7 0 30.331fF
+C152 out_24#0Matrix_2@3_out_8 0 30.331fF
+C153 out_25#0Matrix_2@3_out_9 0 30.331fF
+C154 out_26#0Matrix_2@3_out_10 0 30.331fF
+C155 out_27#0Matrix_2@3_out_11 0 30.331fF
+C156 out_28#0Matrix_2@3_out_12 0 30.331fF
+C157 out_29#0Matrix_2@3_out_13 0 30.331fF
+C158 out_30#0Matrix_2@3_out_14 0 30.331fF
+C159 out_31#0Matrix_2@3_out_15 0 30.331fF
+C160 reset_0#0Matrix_2@3_reset_0 0 24.579fF
+C161 reset_1#0Matrix_2@3_reset_1 0 24.579fF
+C162 reset_2#0Matrix_2@3_reset_2 0 24.579fF
+C163 reset_3#0Matrix_2@3_reset_3 0 24.579fF
+C164 reset_4#0Matrix_2@3_reset_4 0 24.579fF
+C165 reset_5#0Matrix_2@3_reset_5 0 24.579fF
+C166 reset_6#0Matrix_2@3_reset_6 0 24.579fF
+C167 reset_7#0Matrix_2@3_reset_7 0 24.579fF
+C168 reset_8#0Matrix_2@3_reset_8 0 24.579fF
+C169 reset_9#0Matrix_2@3_reset_9 0 24.579fF
+C170 reset_10#0Matrix_2@3_reset_10 0 24.579fF
+C171 reset_11#0Matrix_2@3_reset_11 0 24.579fF
+C172 reset_12#0Matrix_2@3_reset_12 0 24.579fF
+C173 reset_13#0Matrix_2@3_reset_13 0 24.579fF
+C174 reset_14#0Matrix_2@3_reset_14 0 24.579fF
+C175 reset_15#0Matrix_2@3_reset_15 0 24.579fF
+C176 select_0#0Matrix_2@3_select_0 0 24.579fF
+C177 select_1#0Matrix_2@3_select_1 0 24.579fF
+C178 select_2#0Matrix_2@3_select_2 0 24.579fF
+C179 select_3#0Matrix_2@3_select_3 0 24.579fF
+C180 select_4#0Matrix_2@3_select_4 0 24.579fF
+C181 select_5#0Matrix_2@3_select_5 0 24.579fF
+C182 select_6#0Matrix_2@3_select_6 0 24.579fF
+C183 select_7#0Matrix_2@3_select_7 0 24.579fF
+C184 select_8#0Matrix_2@3_select_8 0 24.579fF
+C185 select_9#0Matrix_2@3_select_9 0 24.579fF
+C186 select_10#0Matrix_2@3_select_10 0 24.579fF
+C187 select_11#0Matrix_2@3_select_11 0 24.579fF
+C188 select_12#0Matrix_2@3_select_12 0 24.579fF
+C189 select_13#0Matrix_2@3_select_13 0 24.579fF
+C190 select_14#0Matrix_2@3_select_14 0 24.579fF
+C191 select_15#0Matrix_2@3_select_15 0 24.579fF
+** Extracted Parasitic Resistors ***
+R0 reset_0 reset_0##0 8.097
+C192 reset_0##0 0 24.579fF
+R1 reset_0##0 reset_0#0Matrix_2@3_reset_0 8.097
+R2 select_0 select_0##0 8.097
+C193 select_0##0 0 24.579fF
+R3 select_0##0 select_0#0Matrix_2@3_select_0 8.097
+R4 reset_1 reset_1##0 8.097
+C194 reset_1##0 0 24.579fF
+R5 reset_1##0 reset_1#0Matrix_2@3_reset_1 8.097
+R6 select_1 select_1##0 8.097
+C195 select_1##0 0 24.579fF
+R7 select_1##0 select_1#0Matrix_2@3_select_1 8.097
+R8 reset_2 reset_2##0 8.097
+C196 reset_2##0 0 24.579fF
+R9 reset_2##0 reset_2#0Matrix_2@3_reset_2 8.097
+R10 select_2 select_2##0 8.097
+C197 select_2##0 0 24.579fF
+R11 select_2##0 select_2#0Matrix_2@3_select_2 8.097
+R12 reset_3 reset_3##0 8.097
+C198 reset_3##0 0 24.579fF
+R13 reset_3##0 reset_3#0Matrix_2@3_reset_3 8.097
+R14 select_3 select_3##0 8.097
+C199 select_3##0 0 24.579fF
+R15 select_3##0 select_3#0Matrix_2@3_select_3 8.097
+R16 reset_4 reset_4##0 8.097
+C200 reset_4##0 0 24.579fF
+R17 reset_4##0 reset_4#0Matrix_2@3_reset_4 8.097
+R18 select_4 select_4##0 8.097
+C201 select_4##0 0 24.579fF
+R19 select_4##0 select_4#0Matrix_2@3_select_4 8.097
+R20 reset_5 reset_5##0 8.097
+C202 reset_5##0 0 24.579fF
+R21 reset_5##0 reset_5#0Matrix_2@3_reset_5 8.097
+R22 select_5 select_5##0 8.097
+C203 select_5##0 0 24.579fF
+R23 select_5##0 select_5#0Matrix_2@3_select_5 8.097
+R24 reset_6 reset_6##0 8.097
+C204 reset_6##0 0 24.579fF
+R25 reset_6##0 reset_6#0Matrix_2@3_reset_6 8.097
+R26 select_6 select_6##0 8.097
+C205 select_6##0 0 24.579fF
+R27 select_6##0 select_6#0Matrix_2@3_select_6 8.097
+R28 reset_7 reset_7##0 8.097
+C206 reset_7##0 0 24.579fF
+R29 reset_7##0 reset_7#0Matrix_2@3_reset_7 8.097
+R30 select_7 select_7##0 8.097
+C207 select_7##0 0 24.579fF
+R31 select_7##0 select_7#0Matrix_2@3_select_7 8.097
+R32 reset_8 reset_8##0 8.097
+C208 reset_8##0 0 24.579fF
+R33 reset_8##0 reset_8#0Matrix_2@3_reset_8 8.097
+R34 select_8 select_8##0 8.097
+C209 select_8##0 0 24.579fF
+R35 select_8##0 select_8#0Matrix_2@3_select_8 8.097
+R36 reset_9 reset_9##0 8.097
+C210 reset_9##0 0 24.579fF
+R37 reset_9##0 reset_9#0Matrix_2@3_reset_9 8.097
+R38 select_9 select_9##0 8.097
+C211 select_9##0 0 24.579fF
+R39 select_9##0 select_9#0Matrix_2@3_select_9 8.097
+R40 reset_10 reset_10##0 8.097
+C212 reset_10##0 0 24.579fF
+R41 reset_10##0 reset_10#0Matrix_2@3_reset_10 8.097
+R42 select_10 select_10##0 8.097
+C213 select_10##0 0 24.579fF
+R43 select_10##0 select_10#0Matrix_2@3_select_10 8.097
+R44 reset_11 reset_11##0 8.097
+C214 reset_11##0 0 24.579fF
+R45 reset_11##0 reset_11#0Matrix_2@3_reset_11 8.097
+R46 select_11 select_11##0 8.097
+C215 select_11##0 0 24.579fF
+R47 select_11##0 select_11#0Matrix_2@3_select_11 8.097
+R48 reset_12 reset_12##0 8.097
+C216 reset_12##0 0 24.579fF
+R49 reset_12##0 reset_12#0Matrix_2@3_reset_12 8.097
+R50 select_12 select_12##0 8.097
+C217 select_12##0 0 24.579fF
+R51 select_12##0 select_12#0Matrix_2@3_select_12 8.097
+R52 reset_13 reset_13##0 8.097
+C218 reset_13##0 0 24.579fF
+R53 reset_13##0 reset_13#0Matrix_2@3_reset_13 8.097
+R54 select_13 select_13##0 8.097
+C219 select_13##0 0 24.579fF
+R55 select_13##0 select_13#0Matrix_2@3_select_13 8.097
+R56 reset_14 reset_14##0 8.097
+C220 reset_14##0 0 24.579fF
+R57 reset_14##0 reset_14#0Matrix_2@3_reset_14 8.097
+R58 select_14 select_14##0 8.097
+C221 select_14##0 0 24.579fF
+R59 select_14##0 select_14#0Matrix_2@3_select_14 8.097
+R60 reset_15 reset_15##0 8.097
+C222 reset_15##0 0 24.579fF
+R61 reset_15##0 reset_15#0Matrix_2@3_reset_15 8.097
+R62 select_15 select_15##0 8.097
+C223 select_15##0 0 24.579fF
+R63 select_15##0 select_15#0Matrix_2@3_select_15 8.097
+R64 reset_16 reset_16##0 8.097
+C224 reset_16##0 0 24.579fF
+R65 reset_16##0 reset_16#0Matrix_2@1_reset_0 8.097
+R66 select_16 select_16##0 8.097
+C225 select_16##0 0 24.579fF
+R67 select_16##0 select_16#0Matrix_2@1_select_0 8.097
+R68 reset_17 reset_17##0 8.097
+C226 reset_17##0 0 24.579fF
+R69 reset_17##0 reset_17#0Matrix_2@1_reset_1 8.097
+R70 select_17 select_17##0 8.097
+C227 select_17##0 0 24.579fF
+R71 select_17##0 select_17#0Matrix_2@1_select_1 8.097
+R72 reset_18 reset_18##0 8.097
+C228 reset_18##0 0 24.579fF
+R73 reset_18##0 reset_18#0Matrix_2@1_reset_2 8.097
+R74 select_18 select_18##0 8.097
+C229 select_18##0 0 24.579fF
+R75 select_18##0 select_18#0Matrix_2@1_select_2 8.097
+R76 reset_19 reset_19##0 8.097
+C230 reset_19##0 0 24.579fF
+R77 reset_19##0 reset_19#0Matrix_2@1_reset_3 8.097
+R78 select_19 select_19##0 8.097
+C231 select_19##0 0 24.579fF
+R79 select_19##0 select_19#0Matrix_2@1_select_3 8.097
+R80 reset_20 reset_20##0 8.097
+C232 reset_20##0 0 24.579fF
+R81 reset_20##0 reset_20#0Matrix_2@1_reset_4 8.097
+R82 select_20 select_20##0 8.097
+C233 select_20##0 0 24.579fF
+R83 select_20##0 select_20#0Matrix_2@1_select_4 8.097
+R84 reset_21 reset_21##0 8.097
+C234 reset_21##0 0 24.579fF
+R85 reset_21##0 reset_21#0Matrix_2@1_reset_5 8.097
+R86 select_21 select_21##0 8.097
+C235 select_21##0 0 24.579fF
+R87 select_21##0 select_21#0Matrix_2@1_select_5 8.097
+R88 reset_22 reset_22##0 8.097
+C236 reset_22##0 0 24.579fF
+R89 reset_22##0 reset_22#0Matrix_2@1_reset_6 8.097
+R90 select_22 select_22##0 8.097
+C237 select_22##0 0 24.579fF
+R91 select_22##0 select_22#0Matrix_2@1_select_6 8.097
+R92 reset_23 reset_23##0 8.097
+C238 reset_23##0 0 24.579fF
+R93 reset_23##0 reset_23#0Matrix_2@1_reset_7 8.097
+R94 select_23 select_23##0 8.097
+C239 select_23##0 0 24.579fF
+R95 select_23##0 select_23#0Matrix_2@1_select_7 8.097
+R96 reset_24 reset_24##0 8.097
+C240 reset_24##0 0 24.579fF
+R97 reset_24##0 reset_24#0Matrix_2@1_reset_8 8.097
+R98 select_24 select_24##0 8.097
+C241 select_24##0 0 24.579fF
+R99 select_24##0 select_24#0Matrix_2@1_select_8 8.097
+R100 reset_25 reset_25##0 8.097
+C242 reset_25##0 0 24.579fF
+R101 reset_25##0 reset_25#0Matrix_2@1_reset_9 8.097
+R102 select_25 select_25##0 8.097
+C243 select_25##0 0 24.579fF
+R103 select_25##0 select_25#0Matrix_2@1_select_9 8.097
+R104 reset_26 reset_26##0 8.097
+C244 reset_26##0 0 24.579fF
+R105 reset_26##0 reset_26#0Matrix_2@1_reset_10 8.097
+R106 select_26 select_26##0 8.097
+C245 select_26##0 0 24.579fF
+R107 select_26##0 select_26#0Matrix_2@1_select_10 8.097
+R108 reset_27 reset_27##0 8.097
+C246 reset_27##0 0 24.579fF
+R109 reset_27##0 reset_27#0Matrix_2@1_reset_11 8.097
+R110 select_27 select_27##0 8.097
+C247 select_27##0 0 24.579fF
+R111 select_27##0 select_27#0Matrix_2@1_select_11 8.097
+R112 reset_28 reset_28##0 8.097
+C248 reset_28##0 0 24.579fF
+R113 reset_28##0 reset_28#0Matrix_2@1_reset_12 8.097
+R114 select_28 select_28##0 8.097
+C249 select_28##0 0 24.579fF
+R115 select_28##0 select_28#0Matrix_2@1_select_12 8.097
+R116 reset_29 reset_29##0 8.097
+C250 reset_29##0 0 24.579fF
+R117 reset_29##0 reset_29#0Matrix_2@1_reset_13 8.097
+R118 select_29 select_29##0 8.097
+C251 select_29##0 0 24.579fF
+R119 select_29##0 select_29#0Matrix_2@1_select_13 8.097
+R120 reset_30 reset_30##0 8.097
+C252 reset_30##0 0 24.579fF
+R121 reset_30##0 reset_30#0Matrix_2@1_reset_14 8.097
+R122 select_30 select_30##0 8.097
+C253 select_30##0 0 24.579fF
+R123 select_30##0 select_30#0Matrix_2@1_select_14 8.097
+R124 select_31 select_31##0 8.097
+C254 select_31##0 0 24.579fF
+R125 select_31##0 select_31#0Matrix_2@1_select_15 8.097
+R126 reset_31 reset_31##0 8.097
+C255 reset_31##0 0 24.579fF
+R127 reset_31##0 reset_31#0Matrix_2@1_reset_15 8.097
+R128 out_0#0Matrix_2@2_out_0 out_0#0Matrix_2@2_out_0##0 8.083
+C256 out_0#0Matrix_2@2_out_0##0 0 30.331fF
+R129 out_0#0Matrix_2@2_out_0##0 out_0 8.083
+R130 out_1#0Matrix_2@2_out_1 out_1#0Matrix_2@2_out_1##0 8.083
+C257 out_1#0Matrix_2@2_out_1##0 0 30.331fF
+R131 out_1#0Matrix_2@2_out_1##0 out_1 8.083
+R132 out_2#0Matrix_2@2_out_2 out_2#0Matrix_2@2_out_2##0 8.083
+C258 out_2#0Matrix_2@2_out_2##0 0 30.331fF
+R133 out_2#0Matrix_2@2_out_2##0 out_2 8.083
+R134 out_3 out_3##0 8.083
+C259 out_3##0 0 30.331fF
+R135 out_3##0 out_3#0Matrix_2@2_out_3 8.083
+R136 out_4#0Matrix_2@2_out_4 out_4#0Matrix_2@2_out_4##0 8.083
+C260 out_4#0Matrix_2@2_out_4##0 0 30.331fF
+R137 out_4#0Matrix_2@2_out_4##0 out_4 8.083
+R138 out_5 out_5##0 8.083
+C261 out_5##0 0 30.331fF
+R139 out_5##0 out_5#0Matrix_2@2_out_5 8.083
+R140 out_6 out_6##0 8.083
+C262 out_6##0 0 30.331fF
+R141 out_6##0 out_6#0Matrix_2@2_out_6 8.083
+R142 out_7 out_7##0 8.083
+C263 out_7##0 0 30.331fF
+R143 out_7##0 out_7#0Matrix_2@2_out_7 8.083
+R144 out_8 out_8##0 8.083
+C264 out_8##0 0 30.331fF
+R145 out_8##0 out_8#0Matrix_2@2_out_8 8.083
+R146 out_9 out_9##0 8.083
+C265 out_9##0 0 30.331fF
+R147 out_9##0 out_9#0Matrix_2@2_out_9 8.083
+R148 out_10#0Matrix_2@2_out_10 out_10#0Matrix_2@2_out_10##0 8.083
+C266 out_10#0Matrix_2@2_out_10##0 0 30.331fF
+R149 out_10#0Matrix_2@2_out_10##0 out_10 8.083
+R150 out_11 out_11##0 8.083
+C267 out_11##0 0 30.331fF
+R151 out_11##0 out_11#0Matrix_2@2_out_11 8.083
+R152 out_12#0Matrix_2@2_out_12 out_12#0Matrix_2@2_out_12##0 8.083
+C268 out_12#0Matrix_2@2_out_12##0 0 30.331fF
+R153 out_12#0Matrix_2@2_out_12##0 out_12 8.083
+R154 out_13#0Matrix_2@2_out_13 out_13#0Matrix_2@2_out_13##0 8.083
+C269 out_13#0Matrix_2@2_out_13##0 0 30.331fF
+R155 out_13#0Matrix_2@2_out_13##0 out_13 8.083
+R156 out_14 out_14##0 8.083
+C270 out_14##0 0 30.331fF
+R157 out_14##0 out_14#0Matrix_2@2_out_14 8.083
+R158 out_15#0Matrix_2@2_out_15 out_15#0Matrix_2@2_out_15##0 8.083
+C271 out_15#0Matrix_2@2_out_15##0 0 30.331fF
+R159 out_15#0Matrix_2@2_out_15##0 out_15 8.083
+R160 out_16#0Matrix_2@3_out_0 out_16#0Matrix_2@3_out_0##0 8.083
+C272 out_16#0Matrix_2@3_out_0##0 0 30.331fF
+R161 out_16#0Matrix_2@3_out_0##0 out_16 8.083
+R162 out_17#0Matrix_2@3_out_1 out_17#0Matrix_2@3_out_1##0 8.083
+C273 out_17#0Matrix_2@3_out_1##0 0 30.331fF
+R163 out_17#0Matrix_2@3_out_1##0 out_17 8.083
+R164 out_18 out_18##0 8.083
+C274 out_18##0 0 30.331fF
+R165 out_18##0 out_18#0Matrix_2@3_out_2 8.083
+R166 out_19#0Matrix_2@3_out_3 out_19#0Matrix_2@3_out_3##0 8.083
+C275 out_19#0Matrix_2@3_out_3##0 0 30.331fF
+R167 out_19#0Matrix_2@3_out_3##0 out_19 8.083
+R168 out_20 out_20##0 8.083
+C276 out_20##0 0 30.331fF
+R169 out_20##0 out_20#0Matrix_2@3_out_4 8.083
+R170 out_21#0Matrix_2@3_out_5 out_21#0Matrix_2@3_out_5##0 8.083
+C277 out_21#0Matrix_2@3_out_5##0 0 30.331fF
+R171 out_21#0Matrix_2@3_out_5##0 out_21 8.083
+R172 out_22 out_22##0 8.083
+C278 out_22##0 0 30.331fF
+R173 out_22##0 out_22#0Matrix_2@3_out_6 8.083
+R174 out_23#0Matrix_2@3_out_7 out_23#0Matrix_2@3_out_7##0 8.083
+C279 out_23#0Matrix_2@3_out_7##0 0 30.331fF
+R175 out_23#0Matrix_2@3_out_7##0 out_23 8.083
+R176 out_24 out_24##0 8.083
+C280 out_24##0 0 30.331fF
+R177 out_24##0 out_24#0Matrix_2@3_out_8 8.083
+R178 out_25#0Matrix_2@3_out_9 out_25#0Matrix_2@3_out_9##0 8.083
+C281 out_25#0Matrix_2@3_out_9##0 0 30.331fF
+R179 out_25#0Matrix_2@3_out_9##0 out_25 8.083
+R180 out_26#0Matrix_2@3_out_10 out_26#0Matrix_2@3_out_10##0 8.083
+C282 out_26#0Matrix_2@3_out_10##0 0 30.331fF
+R181 out_26#0Matrix_2@3_out_10##0 out_26 8.083
+R182 out_27 out_27##0 8.083
+C283 out_27##0 0 30.331fF
+R183 out_27##0 out_27#0Matrix_2@3_out_11 8.083
+R184 out_28#0Matrix_2@3_out_12 out_28#0Matrix_2@3_out_12##0 8.083
+C284 out_28#0Matrix_2@3_out_12##0 0 30.331fF
+R185 out_28#0Matrix_2@3_out_12##0 out_28 8.083
+R186 out_29 out_29##0 8.083
+C285 out_29##0 0 30.331fF
+R187 out_29##0 out_29#0Matrix_2@3_out_13 8.083
+R188 out_30#0Matrix_2@3_out_14 out_30#0Matrix_2@3_out_14##0 8.083
+C286 out_30#0Matrix_2@3_out_14##0 0 30.331fF
+R189 out_30#0Matrix_2@3_out_14##0 out_30 8.083
+R190 out_31 out_31##0 8.083
+C287 out_31##0 0 30.331fF
+R191 out_31##0 out_31#0Matrix_2@3_out_15 8.083
+.ENDS pixel__Matrix_1024
+
+*** SUBCIRCUIT pixel__buffer FROM CELL buffer{lay}
+.SUBCKT pixel__buffer d g gnd vdd
+Mpmos@1 gnd g#13pmos@1_poly-left d vdd PMOS L=0.6U W=5.7U AS=6.199P AD=5.13P PS=9.3U PD=7.5U
+Mpmos@2 d g#11pmos@2_poly-left gnd vdd PMOS L=0.6U W=5.7U AS=5.13P AD=6.199P PS=7.5U PD=9.3U
+Mpmos@3 gnd g#9pmos@3_poly-left d vdd PMOS L=0.6U W=5.7U AS=6.199P AD=5.13P PS=9.3U PD=7.5U
+Mpmos@4 d g#7pmos@4_poly-left gnd vdd PMOS L=0.6U W=5.7U AS=5.13P AD=6.199P PS=7.5U PD=9.3U
+Mpmos@5 gnd g#4pmos@5_poly-left d vdd PMOS L=0.6U W=5.7U AS=6.199P AD=5.13P PS=9.3U PD=7.5U
+Mpmos@6 d g#3pmos@6_poly-left gnd vdd PMOS L=0.6U W=5.7U AS=5.13P AD=6.199P PS=7.5U PD=9.3U
+Mpmos@7 gnd g#0pmos@7_poly-left d vdd PMOS L=0.6U W=5.7U AS=6.199P AD=5.13P PS=9.3U PD=7.5U
+Mpmos@8 d g#16pmos@8_poly-left gnd vdd PMOS L=0.6U W=5.7U AS=5.13P AD=6.199P PS=7.5U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 d 0 18.166fF
+C1 g 0 0.126fF
+C2 g#1pin@14_polysilicon-1 0 0.267fF
+C3 g#2pin@17_polysilicon-1 0 0.314fF
+C4 g#5pin@18_polysilicon-1 0 0.369fF
+C5 g#6pin@19_polysilicon-1 0 0.393fF
+C6 g#8pin@20_polysilicon-1 0 0.393fF
+C7 g#10pin@21_polysilicon-1 0 0.393fF
+C8 g#12pin@22_polysilicon-1 0 0.393fF
+C9 g#14pin@23_polysilicon-1 0 0.275fF
+C10 g#17pin@29_polysilicon-1 0 0.267fF
+C11 g#13pmos@1_poly-left 0 0.141fF
+C12 g#11pmos@2_poly-left 0 0.141fF
+C13 g#9pmos@3_poly-left 0 0.141fF
+C14 g#7pmos@4_poly-left 0 0.141fF
+C15 g#4pmos@5_poly-left 0 0.141fF
+C16 g#3pmos@6_poly-left 0 0.141fF
+C17 g#0pmos@7_poly-left 0 0.141fF
+C18 g#16pmos@8_poly-left 0 0.141fF
+** Extracted Parasitic Resistors ***
+R0 g#0pmos@7_poly-left g#0pmos@7_poly-left##0 9.3
+C19 g#0pmos@7_poly-left##0 0 0.141fF
+R1 g#0pmos@7_poly-left##0 g#0pmos@7_poly-left##1 9.3
+C20 g#0pmos@7_poly-left##1 0 0.141fF
+R2 g#0pmos@7_poly-left##1 g#1pin@14_polysilicon-1 9.3
+R3 g#1pin@14_polysilicon-1 g#1pin@14_polysilicon-1##0 8.267
+C21 g#1pin@14_polysilicon-1##0 0 0.126fF
+R4 g#1pin@14_polysilicon-1##0 g#1pin@14_polysilicon-1##1 8.267
+C22 g#1pin@14_polysilicon-1##1 0 0.126fF
+R5 g#1pin@14_polysilicon-1##1 g#2pin@17_polysilicon-1 8.267
+R6 g#3pmos@6_poly-left g#3pmos@6_poly-left##0 9.3
+C23 g#3pmos@6_poly-left##0 0 0.141fF
+R7 g#3pmos@6_poly-left##0 g#3pmos@6_poly-left##1 9.3
+C24 g#3pmos@6_poly-left##1 0 0.141fF
+R8 g#3pmos@6_poly-left##1 g#2pin@17_polysilicon-1 9.3
+R9 g#4pmos@5_poly-left g#4pmos@5_poly-left##0 9.3
+C25 g#4pmos@5_poly-left##0 0 0.141fF
+R10 g#4pmos@5_poly-left##0 g#4pmos@5_poly-left##1 9.3
+C26 g#4pmos@5_poly-left##1 0 0.141fF
+R11 g#4pmos@5_poly-left##1 g#5pin@18_polysilicon-1 9.3
+R12 g#5pin@18_polysilicon-1 g#5pin@18_polysilicon-1##0 8.267
+C27 g#5pin@18_polysilicon-1##0 0 0.126fF
+R13 g#5pin@18_polysilicon-1##0 g#5pin@18_polysilicon-1##1 8.267
+C28 g#5pin@18_polysilicon-1##1 0 0.126fF
+R14 g#5pin@18_polysilicon-1##1 g#6pin@19_polysilicon-1 8.267
+R15 g#7pmos@4_poly-left g#7pmos@4_poly-left##0 9.3
+C29 g#7pmos@4_poly-left##0 0 0.141fF
+R16 g#7pmos@4_poly-left##0 g#7pmos@4_poly-left##1 9.3
+C30 g#7pmos@4_poly-left##1 0 0.141fF
+R17 g#7pmos@4_poly-left##1 g#6pin@19_polysilicon-1 9.3
+R18 g#6pin@19_polysilicon-1 g#6pin@19_polysilicon-1##0 8.267
+C31 g#6pin@19_polysilicon-1##0 0 0.126fF
+R19 g#6pin@19_polysilicon-1##0 g#6pin@19_polysilicon-1##1 8.267
+C32 g#6pin@19_polysilicon-1##1 0 0.126fF
+R20 g#6pin@19_polysilicon-1##1 g#8pin@20_polysilicon-1 8.267
+R21 g#9pmos@3_poly-left g#9pmos@3_poly-left##0 9.3
+C33 g#9pmos@3_poly-left##0 0 0.141fF
+R22 g#9pmos@3_poly-left##0 g#9pmos@3_poly-left##1 9.3
+C34 g#9pmos@3_poly-left##1 0 0.141fF
+R23 g#9pmos@3_poly-left##1 g#8pin@20_polysilicon-1 9.3
+R24 g#8pin@20_polysilicon-1 g#8pin@20_polysilicon-1##0 8.267
+C35 g#8pin@20_polysilicon-1##0 0 0.126fF
+R25 g#8pin@20_polysilicon-1##0 g#8pin@20_polysilicon-1##1 8.267
+C36 g#8pin@20_polysilicon-1##1 0 0.126fF
+R26 g#8pin@20_polysilicon-1##1 g#10pin@21_polysilicon-1 8.267
+R27 g#11pmos@2_poly-left g#11pmos@2_poly-left##0 9.3
+C37 g#11pmos@2_poly-left##0 0 0.141fF
+R28 g#11pmos@2_poly-left##0 g#11pmos@2_poly-left##1 9.3
+C38 g#11pmos@2_poly-left##1 0 0.141fF
+R29 g#11pmos@2_poly-left##1 g#10pin@21_polysilicon-1 9.3
+R30 g#10pin@21_polysilicon-1 g#10pin@21_polysilicon-1##0 8.267
+C39 g#10pin@21_polysilicon-1##0 0 0.126fF
+R31 g#10pin@21_polysilicon-1##0 g#10pin@21_polysilicon-1##1 8.267
+C40 g#10pin@21_polysilicon-1##1 0 0.126fF
+R32 g#10pin@21_polysilicon-1##1 g#12pin@22_polysilicon-1 8.267
+R33 g#13pmos@1_poly-left g#13pmos@1_poly-left##0 9.3
+C41 g#13pmos@1_poly-left##0 0 0.141fF
+R34 g#13pmos@1_poly-left##0 g#13pmos@1_poly-left##1 9.3
+C42 g#13pmos@1_poly-left##1 0 0.141fF
+R35 g#13pmos@1_poly-left##1 g#12pin@22_polysilicon-1 9.3
+R36 g#2pin@17_polysilicon-1 g#14pin@23_polysilicon-1 4.65
+R37 g#14pin@23_polysilicon-1 g#14pin@23_polysilicon-1##0 6.717
+C43 g#14pin@23_polysilicon-1##0 0 0.102fF
+R38 g#14pin@23_polysilicon-1##0 g#14pin@23_polysilicon-1##1 6.717
+C44 g#14pin@23_polysilicon-1##1 0 0.102fF
+R39 g#14pin@23_polysilicon-1##1 g#5pin@18_polysilicon-1 6.717
+R40 g#14pin@23_polysilicon-1 g#14pin@23_polysilicon-1##0 8.267
+C45 g#14pin@23_polysilicon-1##0 0 0.126fF
+R41 g#14pin@23_polysilicon-1##0 g#14pin@23_polysilicon-1##1 8.267
+C46 g#14pin@23_polysilicon-1##1 0 0.126fF
+R42 g#14pin@23_polysilicon-1##1 g 8.267
+R43 g#16pmos@8_poly-left g#16pmos@8_poly-left##0 9.3
+C47 g#16pmos@8_poly-left##0 0 0.141fF
+R44 g#16pmos@8_poly-left##0 g#16pmos@8_poly-left##1 9.3
+C48 g#16pmos@8_poly-left##1 0 0.141fF
+R45 g#16pmos@8_poly-left##1 g#17pin@29_polysilicon-1 9.3
+R46 g#17pin@29_polysilicon-1 g#17pin@29_polysilicon-1##0 8.267
+C49 g#17pin@29_polysilicon-1##0 0 0.126fF
+R47 g#17pin@29_polysilicon-1##0 g#17pin@29_polysilicon-1##1 8.267
+C50 g#17pin@29_polysilicon-1##1 0 0.126fF
+R48 g#17pin@29_polysilicon-1##1 g#12pin@22_polysilicon-1 8.267
+.ENDS pixel__buffer
+
+*** SUBCIRCUIT pixel__column_bias FROM CELL column_bias{lay}
+.SUBCKT pixel__column_bias g gnd out_1
+Mnmos@20 gnd g#0nmos@23_poly-left net@59 gnd NMOS L=3.3U W=5.1U AS=2.7P AD=21.915P PS=6.9U PD=37.5U
+Mnmos@21 net@59 g#2nmos@25_poly-left net@58 gnd NMOS L=3.3U W=5.1U AS=2.565P AD=2.7P PS=6.6U PD=6.9U
+Mnmos@22 net@58 g#4nmos@26_poly-left net@61 gnd NMOS L=3.3U W=5.1U AS=8.415P AD=2.565P PS=13.5U PD=6.6U
+Mnmos@23 out_1 g#0nmos@23_poly-left net@53 gnd NMOS L=3.3U W=5.1U AS=2.633P AD=8.415P PS=6.75U PD=13.5U
+Mnmos@25 net@53 g#2nmos@25_poly-left net@55 gnd NMOS L=3.3U W=5.1U AS=2.565P AD=2.633P PS=6.6U PD=6.75U
+Mnmos@26 net@55 g#4nmos@26_poly-left net@61 gnd NMOS L=3.3U W=5.1U AS=8.415P AD=2.565P PS=13.5U PD=6.6U
+** Extracted Parasitic Capacitors ***
+C0 net@61 0 2.634fF
+C1 out_1 0 7.19fF
+C2 g 0 3.646fF
+C3 g#0nmos@23_poly-left 0 0.268fF
+C4 g#2nmos@25_poly-left 0 0.268fF
+C5 g#4nmos@26_poly-left 0 0.268fF
+C6 g#7pin@23_polysilicon-1 0 0.493fF
+C7 g#8pin@24_polysilicon-1 0 0.331fF
+C8 g#10pin@25_polysilicon-1 0 0.477fF
+C9 g#12pin@38_polysilicon-1 0 0.301fF
+** Extracted Parasitic Resistors ***
+R0 g#4nmos@26_poly-left g#7pin@23_polysilicon-1 6.2
+R1 g#8pin@24_polysilicon-1 g#0nmos@23_poly-left 6.2
+R2 g#7pin@23_polysilicon-1 g#7pin@23_polysilicon-1##0 8.68
+C10 g#7pin@23_polysilicon-1##0 0 0.147fF
+R3 g#7pin@23_polysilicon-1##0 g#7pin@23_polysilicon-1##1 8.68
+C11 g#7pin@23_polysilicon-1##1 0 0.147fF
+R4 g#7pin@23_polysilicon-1##1 g#7pin@23_polysilicon-1##2 8.68
+C12 g#7pin@23_polysilicon-1##2 0 0.147fF
+R5 g#7pin@23_polysilicon-1##2 g#7pin@23_polysilicon-1##3 8.68
+C13 g#7pin@23_polysilicon-1##3 0 0.147fF
+R6 g#7pin@23_polysilicon-1##3 g#10pin@25_polysilicon-1 8.68
+R7 g#10pin@25_polysilicon-1 g#10pin@25_polysilicon-1##0 8.99
+C14 g#10pin@25_polysilicon-1##0 0 0.152fF
+R8 g#10pin@25_polysilicon-1##0 g#10pin@25_polysilicon-1##1 8.99
+C15 g#10pin@25_polysilicon-1##1 0 0.152fF
+R9 g#10pin@25_polysilicon-1##1 g#10pin@25_polysilicon-1##2 8.99
+C16 g#10pin@25_polysilicon-1##2 0 0.152fF
+R10 g#10pin@25_polysilicon-1##2 g#10pin@25_polysilicon-1##3 8.99
+C17 g#10pin@25_polysilicon-1##3 0 0.152fF
+R11 g#10pin@25_polysilicon-1##3 g#8pin@24_polysilicon-1 8.99
+R12 g#10pin@25_polysilicon-1 g#2nmos@25_poly-left 6.2
+R13 g#7pin@23_polysilicon-1 g#7pin@23_polysilicon-1##0 9.92
+C18 g#7pin@23_polysilicon-1##0 0 0.168fF
+R14 g#7pin@23_polysilicon-1##0 g#7pin@23_polysilicon-1##1 9.92
+C19 g#7pin@23_polysilicon-1##1 0 0.168fF
+R15 g#7pin@23_polysilicon-1##1 g#7pin@23_polysilicon-1##2 9.92
+C20 g#7pin@23_polysilicon-1##2 0 0.168fF
+R16 g#7pin@23_polysilicon-1##2 g#7pin@23_polysilicon-1##3 9.92
+C21 g#7pin@23_polysilicon-1##3 0 0.168fF
+R17 g#7pin@23_polysilicon-1##3 g#12pin@38_polysilicon-1 9.92
+R18 g#12pin@38_polysilicon-1 g#12pin@38_polysilicon-1##0 8.783
+C22 g#12pin@38_polysilicon-1##0 0 0.134fF
+R19 g#12pin@38_polysilicon-1##0 g#12pin@38_polysilicon-1##1 8.783
+C23 g#12pin@38_polysilicon-1##1 0 0.134fF
+R20 g#12pin@38_polysilicon-1##1 g 8.783
+.ENDS pixel__column_bias
+
+*** SUBCIRCUIT pixel__dff2_column FROM CELL dff2_column{lay}
+.SUBCKT pixel__dff2_column clk clkb D gnd_digital Q Q_neg rst vdd_digital
+Mnmos@14 net@130 clk#0nmos@14_poly-right D gnd_digital NMOS L=0.6U W=1.8U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mnmos@16 gnd_digital net@130#7nmos@16_poly-right net@284 gnd_digital NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mnmos@19 net@284 clkb#3nmos@19_poly-right Q_neg gnd_digital NMOS L=0.6U W=1.8U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mnmos@20 Q Q_neg#8nmos@20_poly-right gnd_digital gnd_digital NMOS L=0.6U W=1.8U AS=8.07P AD=2.43P PS=14.7U PD=4.5U
+Mnmos@21 gnd_digital Q_neg#10pin@233_polysilicon-1 Q gnd_digital NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mpmos@14 net@130 clkb#0pmos@14_poly-left D vdd_digital PMOS L=0.6U W=3.6U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mpmos@16 vdd_digital net@130#4pmos@16_poly-left net@284 vdd_digital PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@18 net@284 clk#2pin@128_polysilicon-1 Q_neg vdd_digital PMOS L=0.6U W=3.6U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mpmos@31 Q Q_neg#6pin@229_polysilicon-1 vdd_digital vdd_digital PMOS L=0.6U W=3.6U AS=7.74P AD=2.43P PS=12.9U PD=4.5U
+Mpmos@32 vdd_digital Q_neg#4pin@230_polysilicon-1 Q vdd_digital PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@33 Q_neg rst#2pmos@33_poly-left vdd_digital vdd_digital PMOS L=0.6U W=3.6U AS=7.74P AD=4.95P PS=12.9U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 net@130 0 7.474fF
+C1 D 0 6.257fF
+C2 net@284 0 4.061fF
+C3 Q_neg 0 10.421fF
+C4 Q 0 6.147fF
+C5 rst 0 0.454fF
+C6 clkb 0 0.151fF
+C7 clk 0 0.268fF
+C8 clk#0nmos@14_poly-right 0 0.134fF
+C9 net@130#7nmos@16_poly-right 0 0.166fF
+C10 clkb#3nmos@19_poly-right 0 0.165fF
+C11 Q_neg#10pin@233_polysilicon-1 0 0.102fF
+C12 clkb#0pmos@14_poly-left 0 0.178fF
+C13 clkb#2pin@124_polysilicon-1 0 0.31fF
+C14 clk#2pin@128_polysilicon-1 0 0.24fF
+C15 net@130#5pin@145_polysilicon-1 0 0.168fF
+C16 Q_neg#4pin@230_polysilicon-1 0 0.102fF
+C17 Q_neg#12pin@234_polysilicon-1 0 0.301fF
+C18 Q_neg#13pin@235_polysilicon-1 0 0.281fF
+C19 clk#4pin@249_polysilicon-1 0 0.308fF
+C20 clk#5pin@250_polysilicon-1 0 0.322fF
+C21 clkb#4pin@252_polysilicon-1 0 0.411fF
+C22 clk#6pin@266_polysilicon-1 0 0.498fF
+C23 rst#2pmos@33_poly-left 0 0.102fF
+** Extracted Parasitic Resistors ***
+R0 net@130#4pmos@16_poly-left net@130#4pmos@16_poly-left##0 5.425
+R1 net@130#4pmos@16_poly-left##0 net@130#5pin@145_polysilicon-1 5.425
+R2 net@130#5pin@145_polysilicon-1 net@130 9.3
+R3 Q_neg#6pin@229_polysilicon-1 Q_neg#12pin@234_polysilicon-1 4.65
+R4 Q_neg#12pin@234_polysilicon-1 Q_neg#12pin@234_polysilicon-1##0 6.717
+C24 Q_neg#12pin@234_polysilicon-1##0 0 0.102fF
+R5 Q_neg#12pin@234_polysilicon-1##0 Q_neg#12pin@234_polysilicon-1##1 6.717
+C25 Q_neg#12pin@234_polysilicon-1##1 0 0.102fF
+R6 Q_neg#12pin@234_polysilicon-1##1 Q_neg#4pin@230_polysilicon-1 6.717
+R7 Q_neg#8nmos@20_poly-right Q_neg#13pin@235_polysilicon-1 4.65
+R8 Q_neg#13pin@235_polysilicon-1 Q_neg#13pin@235_polysilicon-1##0 6.717
+C26 Q_neg#13pin@235_polysilicon-1##0 0 0.102fF
+R9 Q_neg#13pin@235_polysilicon-1##0 Q_neg#13pin@235_polysilicon-1##1 6.717
+C27 Q_neg#13pin@235_polysilicon-1##1 0 0.102fF
+R10 Q_neg#13pin@235_polysilicon-1##1 Q_neg#10pin@233_polysilicon-1 6.717
+R11 Q_neg#12pin@234_polysilicon-1 Q_neg#12pin@234_polysilicon-1##0 8.99
+C28 Q_neg#12pin@234_polysilicon-1##0 0 0.152fF
+R12 Q_neg#12pin@234_polysilicon-1##0 Q_neg#12pin@234_polysilicon-1##1 8.99
+C29 Q_neg#12pin@234_polysilicon-1##1 0 0.152fF
+R13 Q_neg#12pin@234_polysilicon-1##1 Q_neg#12pin@234_polysilicon-1##2 8.99
+C30 Q_neg#12pin@234_polysilicon-1##2 0 0.152fF
+R14 Q_neg#12pin@234_polysilicon-1##2 Q_neg#12pin@234_polysilicon-1##3 8.99
+C31 Q_neg#12pin@234_polysilicon-1##3 0 0.152fF
+R15 Q_neg#12pin@234_polysilicon-1##3 Q_neg 8.99
+R16 Q_neg Q_neg##0 8.138
+C32 Q_neg##0 0 0.132fF
+R17 Q_neg##0 Q_neg##1 8.138
+C33 Q_neg##1 0 0.132fF
+R18 Q_neg##1 Q_neg##2 8.138
+C34 Q_neg##2 0 0.132fF
+R19 Q_neg##2 Q_neg#13pin@235_polysilicon-1 8.138
+R20 rst rst##0 6.717
+C35 rst##0 0 0.102fF
+R21 rst##0 rst##1 6.717
+C36 rst##1 0 0.102fF
+R22 rst##1 rst#2pmos@33_poly-left 6.717
+R23 clkb#2pin@124_polysilicon-1 clkb#2pin@124_polysilicon-1##0 9.3
+C37 clkb#2pin@124_polysilicon-1##0 0 0.165fF
+R24 clkb#2pin@124_polysilicon-1##0 clkb#2pin@124_polysilicon-1##1 9.3
+C38 clkb#2pin@124_polysilicon-1##1 0 0.165fF
+R25 clkb#2pin@124_polysilicon-1##1 clkb#2pin@124_polysilicon-1##2 9.3
+C39 clkb#2pin@124_polysilicon-1##2 0 0.165fF
+R26 clkb#2pin@124_polysilicon-1##2 clkb#2pin@124_polysilicon-1##3 9.3
+C40 clkb#2pin@124_polysilicon-1##3 0 0.165fF
+R27 clkb#2pin@124_polysilicon-1##3 clkb#2pin@124_polysilicon-1##4 9.3
+C41 clkb#2pin@124_polysilicon-1##4 0 0.165fF
+R28 clkb#2pin@124_polysilicon-1##4 clkb#2pin@124_polysilicon-1##5 9.3
+C42 clkb#2pin@124_polysilicon-1##5 0 0.165fF
+R29 clkb#2pin@124_polysilicon-1##5 clkb#3nmos@19_poly-right 9.3
+R30 net@130 net@130##0 9.558
+C43 net@130##0 0 0.166fF
+R31 net@130##0 net@130##1 9.558
+C44 net@130##1 0 0.166fF
+R32 net@130##1 net@130##2 9.558
+C45 net@130##2 0 0.166fF
+R33 net@130##2 net@130##3 9.558
+C46 net@130##3 0 0.166fF
+R34 net@130##3 net@130##4 9.558
+C47 net@130##4 0 0.166fF
+R35 net@130##4 net@130#7nmos@16_poly-right 9.558
+R36 clk#0nmos@14_poly-right clk#0nmos@14_poly-right##0 8.783
+C48 clk#0nmos@14_poly-right##0 0 0.134fF
+R37 clk#0nmos@14_poly-right##0 clk#0nmos@14_poly-right##1 8.783
+C49 clk#0nmos@14_poly-right##1 0 0.134fF
+R38 clk#0nmos@14_poly-right##1 clk#4pin@249_polysilicon-1 8.783
+R39 clk#5pin@250_polysilicon-1 clk#5pin@250_polysilicon-1##0 9.61
+C50 clk#5pin@250_polysilicon-1##0 0 0.177fF
+R40 clk#5pin@250_polysilicon-1##0 clk#5pin@250_polysilicon-1##1 9.61
+C51 clk#5pin@250_polysilicon-1##1 0 0.177fF
+R41 clk#5pin@250_polysilicon-1##1 clk#5pin@250_polysilicon-1##2 9.61
+C52 clk#5pin@250_polysilicon-1##2 0 0.177fF
+R42 clk#5pin@250_polysilicon-1##2 clk#5pin@250_polysilicon-1##3 9.61
+C53 clk#5pin@250_polysilicon-1##3 0 0.177fF
+R43 clk#5pin@250_polysilicon-1##3 clk#5pin@250_polysilicon-1##4 9.61
+C54 clk#5pin@250_polysilicon-1##4 0 0.177fF
+R44 clk#5pin@250_polysilicon-1##4 clk#5pin@250_polysilicon-1##5 9.61
+C55 clk#5pin@250_polysilicon-1##5 0 0.177fF
+R45 clk#5pin@250_polysilicon-1##5 clk#5pin@250_polysilicon-1##6 9.61
+C56 clk#5pin@250_polysilicon-1##6 0 0.177fF
+R46 clk#5pin@250_polysilicon-1##6 clk#5pin@250_polysilicon-1##7 9.61
+C57 clk#5pin@250_polysilicon-1##7 0 0.177fF
+R47 clk#5pin@250_polysilicon-1##7 clk#5pin@250_polysilicon-1##8 9.61
+C58 clk#5pin@250_polysilicon-1##8 0 0.177fF
+R48 clk#5pin@250_polysilicon-1##8 clk#2pin@128_polysilicon-1 9.61
+R49 clkb#0pmos@14_poly-left clkb#0pmos@14_poly-left##0 8.525
+C59 clkb#0pmos@14_poly-left##0 0 0.115fF
+R50 clkb#0pmos@14_poly-left##0 clkb#4pin@252_polysilicon-1 8.525
+R51 clkb#4pin@252_polysilicon-1 clkb#4pin@252_polysilicon-1##0 8.913
+C60 clkb#4pin@252_polysilicon-1##0 0 0.145fF
+R52 clkb#4pin@252_polysilicon-1##0 clkb#4pin@252_polysilicon-1##1 8.913
+C61 clkb#4pin@252_polysilicon-1##1 0 0.145fF
+R53 clkb#4pin@252_polysilicon-1##1 clkb#4pin@252_polysilicon-1##2 8.913
+C62 clkb#4pin@252_polysilicon-1##2 0 0.145fF
+R54 clkb#4pin@252_polysilicon-1##2 clkb#2pin@124_polysilicon-1 8.913
+R55 clkb#4pin@252_polysilicon-1 clkb#4pin@252_polysilicon-1##0 9.3
+C63 clkb#4pin@252_polysilicon-1##0 0 0.151fF
+R56 clkb#4pin@252_polysilicon-1##0 clkb#4pin@252_polysilicon-1##1 9.3
+C64 clkb#4pin@252_polysilicon-1##1 0 0.151fF
+R57 clkb#4pin@252_polysilicon-1##1 clkb#4pin@252_polysilicon-1##2 9.3
+C65 clkb#4pin@252_polysilicon-1##2 0 0.151fF
+R58 clkb#4pin@252_polysilicon-1##2 clkb 9.3
+R59 clk#5pin@250_polysilicon-1 clk#5pin@250_polysilicon-1##0 8.913
+C66 clk#5pin@250_polysilicon-1##0 0 0.145fF
+R60 clk#5pin@250_polysilicon-1##0 clk#5pin@250_polysilicon-1##1 8.913
+C67 clk#5pin@250_polysilicon-1##1 0 0.145fF
+R61 clk#5pin@250_polysilicon-1##1 clk#5pin@250_polysilicon-1##2 8.913
+C68 clk#5pin@250_polysilicon-1##2 0 0.145fF
+R62 clk#5pin@250_polysilicon-1##2 clk#6pin@266_polysilicon-1 8.913
+R63 clk#6pin@266_polysilicon-1 clk#6pin@266_polysilicon-1##0 9.455
+C69 clk#6pin@266_polysilicon-1##0 0 0.174fF
+R64 clk#6pin@266_polysilicon-1##0 clk#6pin@266_polysilicon-1##1 9.455
+C70 clk#6pin@266_polysilicon-1##1 0 0.174fF
+R65 clk#6pin@266_polysilicon-1##1 clk#6pin@266_polysilicon-1##2 9.455
+C71 clk#6pin@266_polysilicon-1##2 0 0.174fF
+R66 clk#6pin@266_polysilicon-1##2 clk#6pin@266_polysilicon-1##3 9.455
+C72 clk#6pin@266_polysilicon-1##3 0 0.174fF
+R67 clk#6pin@266_polysilicon-1##3 clk#6pin@266_polysilicon-1##4 9.455
+C73 clk#6pin@266_polysilicon-1##4 0 0.174fF
+R68 clk#6pin@266_polysilicon-1##4 clk#6pin@266_polysilicon-1##5 9.455
+C74 clk#6pin@266_polysilicon-1##5 0 0.174fF
+R69 clk#6pin@266_polysilicon-1##5 clk#6pin@266_polysilicon-1##6 9.455
+C75 clk#6pin@266_polysilicon-1##6 0 0.174fF
+R70 clk#6pin@266_polysilicon-1##6 clk#6pin@266_polysilicon-1##7 9.455
+C76 clk#6pin@266_polysilicon-1##7 0 0.174fF
+R71 clk#6pin@266_polysilicon-1##7 clk#6pin@266_polysilicon-1##8 9.455
+C77 clk#6pin@266_polysilicon-1##8 0 0.174fF
+R72 clk#6pin@266_polysilicon-1##8 clk#4pin@249_polysilicon-1 9.455
+R73 clk clk#6pin@266_polysilicon-1 4.34
+.ENDS pixel__dff2_column
+
+*** SUBCIRCUIT pixel__dff_2_column FROM CELL dff_2_column{lay}
+.SUBCKT pixel__dff_2_column clk_column clkb_column D_column gnd_digital I_column I_column_neg Q_column Q_column_neg rst_column vdd_digital
+Xdff2_col@0 clk_column clkb_column D_column gnd_digital I_column I_column_neg rst_column vdd_digital pixel__dff2_column
+Xdff2_col@1 clk_column clkb_column I_column gnd_digital Q_column Q_column_neg rst_column vdd_digital pixel__dff2_column
+** Extracted Parasitic Capacitors ***
+C0 I_column 0 12.361fF
+C1 D_column 0 5.872fF
+C2 I_column_neg 0 13.94fF
+C3 clk_column 0 7.103fF
+C4 clkb_column 0 8.317fF
+C5 rst_column 0 8.317fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__dff_2_column
+
+*** SUBCIRCUIT pixel__dff_4_column FROM CELL dff_4_column{lay}
+.SUBCKT pixel__dff_4_column a0 a0_neg a1 a1_neg a2 a2_neg a3 a3_neg clk_column clkb_column D_column gnd_digital rst_column vdd_digital
+Xdff_2_co@0 clk_column clkb_column a1 gnd_digital a2 a2_neg a3 a3_neg rst_column vdd_digital pixel__dff_2_column
+Xdff_2_co@1 clk_column clkb_column D_column gnd_digital a0 a0_neg a1 a1_neg rst_column vdd_digital pixel__dff_2_column
+** Extracted Parasitic Capacitors ***
+C0 a1 0 27.825fF
+C1 clk_column 0 9.565fF
+C2 clkb_column 0 9.565fF
+C3 rst_column 0 9.565fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__dff_4_column
+
+*** SUBCIRCUIT pixel__dff_16_column FROM CELL dff_16_column{lay}
+.SUBCKT pixel__dff_16_column a0 a1 a10 a11 a12 a13 a14 a15 a2 a3 a4 a5 a6 a7 a8 a9 clk_column clkb_column D_column gnd_digital na0 na1 na10 na11 na12 na13 na14 na15 na2 na3 na4 na5 na6 na7 na8 na9 rst_column vdd_digital
+Xdff_4_co@0 a12 na12 a13 na13 a14 na14 a15 na15 clk_column clkb_column a11 gnd_digital rst_column vdd_digital pixel__dff_4_column
+Xdff_4_co@2 a4 na4 a5 na5 a6 na6 a7 na7 clk_column clkb_column a3 gnd_digital rst_column vdd_digital pixel__dff_4_column
+Xdff_4_co@3 a0 na0 a1 na1 a2 na2 a3 na3 clk_column clkb_column D_column gnd_digital rst_column vdd_digital pixel__dff_4_column
+Xna10 a8 na8 a9 na9 a10 na10 a11 na11 clk_column clkb_column a7 gnd_digital rst_column vdd_digital pixel__dff_4_column
+** Extracted Parasitic Capacitors ***
+C0 a11 0 29.581fF
+C1 clk_column 0 62.273fF
+C2 clkb_column 0 62.273fF
+C3 rst_column 0 62.273fF
+C4 a3 0 29.581fF
+C5 a7 0 29.581fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__dff_16_column
+
+*** SUBCIRCUIT pixel__dff_64_column FROM CELL dff_64_column{lay}
+.SUBCKT pixel__dff_64_column a0 a1 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a2 a20 a21 a22 a23 a24 a25 a26 a27 a28 a29 a3 a30 a31 a32 a33 a34 a35 a36 a37 a38 a39 a4 a40 a41 a42 a43 a44 a45 a46 a47 a48 a49 a5 a50 a51 a52 a53 a54 a55 a56 a57 a58 a59 a6 a60 a61 a62 a63 a7 a8 a9 clk_column clkb_column D_column gnd_digital na0 na1 na10 na11 na12 na13 na14 na15 na16 na17 na18 na19 na2 na20 na21 na22 na23 na24 na25 na26 na27 na28 na29 na3 na30 na31 na32 na33 na34 na35 na36 na37 na38 na39 na4 na40 na41 na42 na43
++na44 na45 na46 na47 na48 na49 na5 na50 na51 na52 na53 na54 na55 na56 na57 na58 na59 na6 na60 na61 na62 na63 na7 na8 na9 rst_column vdd_digital
+Xdff_16_c@0 a0 a1 a10 a11 a12 a13 a14 a15 a2 a3 a4 a5 a6 a7 a8 a9 clk_column#0dff_16_c@0_clk_column clkb_column#0dff_16_c@0_clkb_column D_column gnd_digital na0 na1 na10 na11 na12 na13 na14 na15 na2 na3 na4 na5 na6 na7 na8 na9 rst_column#0dff_16_c@0_rst_column vdd_digital pixel__dff_16_column
+Xdff_16_c@1 a16 a17 a26 a27 a28 a29 a30 a31 a18 a19 a20 a21 a22 a23 a24 a25 clk_column#1dff_16_c@1_clk_column clkb_column#1dff_16_c@1_clkb_column a15 gnd_digital na16 na17 na26 na27 na28 na29 na30 na31 na18 na19 na20 na21 na22 na23 na24 na25 rst_column#1dff_16_c@1_rst_column vdd_digital pixel__dff_16_column
+Xdff_16_c@2 a32 a33 a42 a43 a44 a45 a46 a47 a34 a35 a36 a37 a38 a39 a40 a41 clk_column#2dff_16_c@2_clk_column clkb_column#2dff_16_c@2_clkb_column a31 gnd_digital na32 na33 na42 na43 na44 na45 na46 na47 na34 na35 na36 na37 na38 na39 na40 na41 rst_column#2dff_16_c@2_rst_column vdd_digital pixel__dff_16_column
+Xdff_16_c@3 a48 a49 a58 a59 a60 a61 a62 a63 a50 a51 a52 a53 a54 a55 a56 a57 clk_column clkb_column a47 gnd_digital na48 na49 na58 na59 na60 na61 na62 na63 na50 na51 na52 na53 na54 na55 na56 na57 rst_column vdd_digital pixel__dff_16_column
+** Extracted Parasitic Capacitors ***
+C0 a15 0 29.581fF
+C1 clk_column#0dff_16_c@0_clk_column 0 27.689fF
+C2 clkb_column#0dff_16_c@0_clkb_column 0 27.689fF
+C3 rst_column#0dff_16_c@0_rst_column 0 27.689fF
+C4 a31 0 29.581fF
+C5 clk_column#1dff_16_c@1_clk_column 0 55.412fF
+C6 clkb_column#1dff_16_c@1_clkb_column 0 55.412fF
+C7 rst_column#1dff_16_c@1_rst_column 0 55.412fF
+C8 a47 0 29.581fF
+C9 clk_column#2dff_16_c@2_clk_column 0 55.446fF
+C10 clkb_column#2dff_16_c@2_clkb_column 0 55.446fF
+C11 rst_column#2dff_16_c@2_rst_column 0 55.446fF
+C12 clk_column 0 27.723fF
+C13 clkb_column 0 27.723fF
+C14 rst_column 0 27.723fF
+** Extracted Parasitic Resistors ***
+R0 clk_column#0dff_16_c@0_clk_column clk_column#0dff_16_c@0_clk_column##0 5.193
+C15 clk_column#0dff_16_c@0_clk_column##0 0 27.689fF
+R1 clk_column#0dff_16_c@0_clk_column##0 clk_column#1dff_16_c@1_clk_column 5.193
+R2 clk_column#1dff_16_c@1_clk_column clk_column#1dff_16_c@1_clk_column##0 5.2
+C16 clk_column#1dff_16_c@1_clk_column##0 0 27.723fF
+R3 clk_column#1dff_16_c@1_clk_column##0 clk_column#2dff_16_c@2_clk_column 5.2
+R4 clk_column#2dff_16_c@2_clk_column clk_column#2dff_16_c@2_clk_column##0 5.2
+C17 clk_column#2dff_16_c@2_clk_column##0 0 27.723fF
+R5 clk_column#2dff_16_c@2_clk_column##0 clk_column 5.2
+R6 clkb_column#0dff_16_c@0_clkb_column clkb_column#0dff_16_c@0_clkb_column##0 5.193
+C18 clkb_column#0dff_16_c@0_clkb_column##0 0 27.689fF
+R7 clkb_column#0dff_16_c@0_clkb_column##0 clkb_column#1dff_16_c@1_clkb_column 5.193
+R8 clkb_column#1dff_16_c@1_clkb_column clkb_column#1dff_16_c@1_clkb_column##0 5.2
+C19 clkb_column#1dff_16_c@1_clkb_column##0 0 27.723fF
+R9 clkb_column#1dff_16_c@1_clkb_column##0 clkb_column#2dff_16_c@2_clkb_column 5.2
+R10 clkb_column#2dff_16_c@2_clkb_column clkb_column#2dff_16_c@2_clkb_column##0 5.2
+C20 clkb_column#2dff_16_c@2_clkb_column##0 0 27.723fF
+R11 clkb_column#2dff_16_c@2_clkb_column##0 clkb_column 5.2
+R12 rst_column#0dff_16_c@0_rst_column rst_column#0dff_16_c@0_rst_column##0 5.193
+C21 rst_column#0dff_16_c@0_rst_column##0 0 27.689fF
+R13 rst_column#0dff_16_c@0_rst_column##0 rst_column#1dff_16_c@1_rst_column 5.193
+R14 rst_column#1dff_16_c@1_rst_column rst_column#1dff_16_c@1_rst_column##0 5.2
+C22 rst_column#1dff_16_c@1_rst_column##0 0 27.723fF
+R15 rst_column#1dff_16_c@1_rst_column##0 rst_column#2dff_16_c@2_rst_column 5.2
+R16 rst_column#2dff_16_c@2_rst_column rst_column#2dff_16_c@2_rst_column##0 5.2
+C23 rst_column#2dff_16_c@2_rst_column##0 0 27.723fF
+R17 rst_column#2dff_16_c@2_rst_column##0 rst_column 5.2
+.ENDS pixel__dff_64_column
+
+*** SUBCIRCUIT pixel__dff2 FROM CELL dff2{lay}
+.SUBCKT pixel__dff2 clk clkb D gnd Q rst vdd
+Mnmos@14 net@130 clk#0nmos@14_poly-right D gnd NMOS L=0.6U W=1.8U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mnmos@16 gnd net@130#7nmos@16_poly-right net@284 gnd NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mnmos@19 net@284 clkb#3nmos@19_poly-right net@348 gnd NMOS L=0.6U W=1.8U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mnmos@20 Q net@348#8nmos@20_poly-right gnd gnd NMOS L=0.6U W=1.8U AS=8.07P AD=2.43P PS=14.7U PD=4.5U
+Mnmos@21 gnd net@348#10pin@233_polysilicon-1 Q gnd NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mpmos@14 net@130 clkb#0pmos@14_poly-left D vdd PMOS L=0.6U W=3.6U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mpmos@16 vdd net@130#4pmos@16_poly-left net@284 vdd PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@18 net@284 clk#2pin@128_polysilicon-1 net@348 vdd PMOS L=0.6U W=3.6U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mpmos@31 Q net@348#6pin@229_polysilicon-1 vdd vdd PMOS L=0.6U W=3.6U AS=7.74P AD=2.43P PS=12.9U PD=4.5U
+Mpmos@32 vdd net@348#4pin@230_polysilicon-1 Q vdd PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@33 net@348 rst#2pmos@33_poly-left vdd vdd PMOS L=0.6U W=3.6U AS=7.74P AD=4.95P PS=12.9U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 net@130 0 7.474fF
+C1 D 0 6.257fF
+C2 net@284 0 4.061fF
+C3 net@348 0 10.421fF
+C4 Q 0 6.147fF
+C5 rst 0 0.454fF
+C6 clkb 0 0.151fF
+C7 clk 0 0.268fF
+C8 clk#0nmos@14_poly-right 0 0.134fF
+C9 net@130#7nmos@16_poly-right 0 0.166fF
+C10 clkb#3nmos@19_poly-right 0 0.165fF
+C11 net@348#10pin@233_polysilicon-1 0 0.102fF
+C12 clkb#0pmos@14_poly-left 0 0.178fF
+C13 clkb#2pin@124_polysilicon-1 0 0.31fF
+C14 clk#2pin@128_polysilicon-1 0 0.24fF
+C15 net@130#5pin@145_polysilicon-1 0 0.168fF
+C16 net@348#4pin@230_polysilicon-1 0 0.102fF
+C17 net@348#12pin@234_polysilicon-1 0 0.301fF
+C18 net@348#13pin@235_polysilicon-1 0 0.281fF
+C19 clk#4pin@249_polysilicon-1 0 0.308fF
+C20 clk#5pin@250_polysilicon-1 0 0.322fF
+C21 clkb#4pin@252_polysilicon-1 0 0.411fF
+C22 clk#6pin@266_polysilicon-1 0 0.498fF
+C23 rst#2pmos@33_poly-left 0 0.102fF
+** Extracted Parasitic Resistors ***
+R0 net@130#4pmos@16_poly-left net@130#4pmos@16_poly-left##0 5.425
+R1 net@130#4pmos@16_poly-left##0 net@130#5pin@145_polysilicon-1 5.425
+R2 net@130#5pin@145_polysilicon-1 net@130 9.3
+R3 net@348#6pin@229_polysilicon-1 net@348#12pin@234_polysilicon-1 4.65
+R4 net@348#12pin@234_polysilicon-1 net@348#12pin@234_polysilicon-1##0 6.717
+C24 net@348#12pin@234_polysilicon-1##0 0 0.102fF
+R5 net@348#12pin@234_polysilicon-1##0 net@348#12pin@234_polysilicon-1##1 6.717
+C25 net@348#12pin@234_polysilicon-1##1 0 0.102fF
+R6 net@348#12pin@234_polysilicon-1##1 net@348#4pin@230_polysilicon-1 6.717
+R7 net@348#8nmos@20_poly-right net@348#13pin@235_polysilicon-1 4.65
+R8 net@348#13pin@235_polysilicon-1 net@348#13pin@235_polysilicon-1##0 6.717
+C26 net@348#13pin@235_polysilicon-1##0 0 0.102fF
+R9 net@348#13pin@235_polysilicon-1##0 net@348#13pin@235_polysilicon-1##1 6.717
+C27 net@348#13pin@235_polysilicon-1##1 0 0.102fF
+R10 net@348#13pin@235_polysilicon-1##1 net@348#10pin@233_polysilicon-1 6.717
+R11 net@348#12pin@234_polysilicon-1 net@348#12pin@234_polysilicon-1##0 8.99
+C28 net@348#12pin@234_polysilicon-1##0 0 0.152fF
+R12 net@348#12pin@234_polysilicon-1##0 net@348#12pin@234_polysilicon-1##1 8.99
+C29 net@348#12pin@234_polysilicon-1##1 0 0.152fF
+R13 net@348#12pin@234_polysilicon-1##1 net@348#12pin@234_polysilicon-1##2 8.99
+C30 net@348#12pin@234_polysilicon-1##2 0 0.152fF
+R14 net@348#12pin@234_polysilicon-1##2 net@348#12pin@234_polysilicon-1##3 8.99
+C31 net@348#12pin@234_polysilicon-1##3 0 0.152fF
+R15 net@348#12pin@234_polysilicon-1##3 net@348 8.99
+R16 net@348 net@348##0 8.138
+C32 net@348##0 0 0.132fF
+R17 net@348##0 net@348##1 8.138
+C33 net@348##1 0 0.132fF
+R18 net@348##1 net@348##2 8.138
+C34 net@348##2 0 0.132fF
+R19 net@348##2 net@348#13pin@235_polysilicon-1 8.138
+R20 rst rst##0 6.717
+C35 rst##0 0 0.102fF
+R21 rst##0 rst##1 6.717
+C36 rst##1 0 0.102fF
+R22 rst##1 rst#2pmos@33_poly-left 6.717
+R23 clkb#2pin@124_polysilicon-1 clkb#2pin@124_polysilicon-1##0 9.3
+C37 clkb#2pin@124_polysilicon-1##0 0 0.165fF
+R24 clkb#2pin@124_polysilicon-1##0 clkb#2pin@124_polysilicon-1##1 9.3
+C38 clkb#2pin@124_polysilicon-1##1 0 0.165fF
+R25 clkb#2pin@124_polysilicon-1##1 clkb#2pin@124_polysilicon-1##2 9.3
+C39 clkb#2pin@124_polysilicon-1##2 0 0.165fF
+R26 clkb#2pin@124_polysilicon-1##2 clkb#2pin@124_polysilicon-1##3 9.3
+C40 clkb#2pin@124_polysilicon-1##3 0 0.165fF
+R27 clkb#2pin@124_polysilicon-1##3 clkb#2pin@124_polysilicon-1##4 9.3
+C41 clkb#2pin@124_polysilicon-1##4 0 0.165fF
+R28 clkb#2pin@124_polysilicon-1##4 clkb#2pin@124_polysilicon-1##5 9.3
+C42 clkb#2pin@124_polysilicon-1##5 0 0.165fF
+R29 clkb#2pin@124_polysilicon-1##5 clkb#3nmos@19_poly-right 9.3
+R30 net@130 net@130##0 9.558
+C43 net@130##0 0 0.166fF
+R31 net@130##0 net@130##1 9.558
+C44 net@130##1 0 0.166fF
+R32 net@130##1 net@130##2 9.558
+C45 net@130##2 0 0.166fF
+R33 net@130##2 net@130##3 9.558
+C46 net@130##3 0 0.166fF
+R34 net@130##3 net@130##4 9.558
+C47 net@130##4 0 0.166fF
+R35 net@130##4 net@130#7nmos@16_poly-right 9.558
+R36 clk#0nmos@14_poly-right clk#0nmos@14_poly-right##0 8.783
+C48 clk#0nmos@14_poly-right##0 0 0.134fF
+R37 clk#0nmos@14_poly-right##0 clk#0nmos@14_poly-right##1 8.783
+C49 clk#0nmos@14_poly-right##1 0 0.134fF
+R38 clk#0nmos@14_poly-right##1 clk#4pin@249_polysilicon-1 8.783
+R39 clk#5pin@250_polysilicon-1 clk#5pin@250_polysilicon-1##0 9.61
+C50 clk#5pin@250_polysilicon-1##0 0 0.177fF
+R40 clk#5pin@250_polysilicon-1##0 clk#5pin@250_polysilicon-1##1 9.61
+C51 clk#5pin@250_polysilicon-1##1 0 0.177fF
+R41 clk#5pin@250_polysilicon-1##1 clk#5pin@250_polysilicon-1##2 9.61
+C52 clk#5pin@250_polysilicon-1##2 0 0.177fF
+R42 clk#5pin@250_polysilicon-1##2 clk#5pin@250_polysilicon-1##3 9.61
+C53 clk#5pin@250_polysilicon-1##3 0 0.177fF
+R43 clk#5pin@250_polysilicon-1##3 clk#5pin@250_polysilicon-1##4 9.61
+C54 clk#5pin@250_polysilicon-1##4 0 0.177fF
+R44 clk#5pin@250_polysilicon-1##4 clk#5pin@250_polysilicon-1##5 9.61
+C55 clk#5pin@250_polysilicon-1##5 0 0.177fF
+R45 clk#5pin@250_polysilicon-1##5 clk#5pin@250_polysilicon-1##6 9.61
+C56 clk#5pin@250_polysilicon-1##6 0 0.177fF
+R46 clk#5pin@250_polysilicon-1##6 clk#5pin@250_polysilicon-1##7 9.61
+C57 clk#5pin@250_polysilicon-1##7 0 0.177fF
+R47 clk#5pin@250_polysilicon-1##7 clk#5pin@250_polysilicon-1##8 9.61
+C58 clk#5pin@250_polysilicon-1##8 0 0.177fF
+R48 clk#5pin@250_polysilicon-1##8 clk#2pin@128_polysilicon-1 9.61
+R49 clkb#0pmos@14_poly-left clkb#0pmos@14_poly-left##0 8.525
+C59 clkb#0pmos@14_poly-left##0 0 0.115fF
+R50 clkb#0pmos@14_poly-left##0 clkb#4pin@252_polysilicon-1 8.525
+R51 clkb#4pin@252_polysilicon-1 clkb#4pin@252_polysilicon-1##0 8.913
+C60 clkb#4pin@252_polysilicon-1##0 0 0.145fF
+R52 clkb#4pin@252_polysilicon-1##0 clkb#4pin@252_polysilicon-1##1 8.913
+C61 clkb#4pin@252_polysilicon-1##1 0 0.145fF
+R53 clkb#4pin@252_polysilicon-1##1 clkb#4pin@252_polysilicon-1##2 8.913
+C62 clkb#4pin@252_polysilicon-1##2 0 0.145fF
+R54 clkb#4pin@252_polysilicon-1##2 clkb#2pin@124_polysilicon-1 8.913
+R55 clkb#4pin@252_polysilicon-1 clkb#4pin@252_polysilicon-1##0 9.3
+C63 clkb#4pin@252_polysilicon-1##0 0 0.151fF
+R56 clkb#4pin@252_polysilicon-1##0 clkb#4pin@252_polysilicon-1##1 9.3
+C64 clkb#4pin@252_polysilicon-1##1 0 0.151fF
+R57 clkb#4pin@252_polysilicon-1##1 clkb#4pin@252_polysilicon-1##2 9.3
+C65 clkb#4pin@252_polysilicon-1##2 0 0.151fF
+R58 clkb#4pin@252_polysilicon-1##2 clkb 9.3
+R59 clk#5pin@250_polysilicon-1 clk#5pin@250_polysilicon-1##0 8.913
+C66 clk#5pin@250_polysilicon-1##0 0 0.145fF
+R60 clk#5pin@250_polysilicon-1##0 clk#5pin@250_polysilicon-1##1 8.913
+C67 clk#5pin@250_polysilicon-1##1 0 0.145fF
+R61 clk#5pin@250_polysilicon-1##1 clk#5pin@250_polysilicon-1##2 8.913
+C68 clk#5pin@250_polysilicon-1##2 0 0.145fF
+R62 clk#5pin@250_polysilicon-1##2 clk#6pin@266_polysilicon-1 8.913
+R63 clk#6pin@266_polysilicon-1 clk#6pin@266_polysilicon-1##0 9.455
+C69 clk#6pin@266_polysilicon-1##0 0 0.174fF
+R64 clk#6pin@266_polysilicon-1##0 clk#6pin@266_polysilicon-1##1 9.455
+C70 clk#6pin@266_polysilicon-1##1 0 0.174fF
+R65 clk#6pin@266_polysilicon-1##1 clk#6pin@266_polysilicon-1##2 9.455
+C71 clk#6pin@266_polysilicon-1##2 0 0.174fF
+R66 clk#6pin@266_polysilicon-1##2 clk#6pin@266_polysilicon-1##3 9.455
+C72 clk#6pin@266_polysilicon-1##3 0 0.174fF
+R67 clk#6pin@266_polysilicon-1##3 clk#6pin@266_polysilicon-1##4 9.455
+C73 clk#6pin@266_polysilicon-1##4 0 0.174fF
+R68 clk#6pin@266_polysilicon-1##4 clk#6pin@266_polysilicon-1##5 9.455
+C74 clk#6pin@266_polysilicon-1##5 0 0.174fF
+R69 clk#6pin@266_polysilicon-1##5 clk#6pin@266_polysilicon-1##6 9.455
+C75 clk#6pin@266_polysilicon-1##6 0 0.174fF
+R70 clk#6pin@266_polysilicon-1##6 clk#6pin@266_polysilicon-1##7 9.455
+C76 clk#6pin@266_polysilicon-1##7 0 0.174fF
+R71 clk#6pin@266_polysilicon-1##7 clk#6pin@266_polysilicon-1##8 9.455
+C77 clk#6pin@266_polysilicon-1##8 0 0.174fF
+R72 clk#6pin@266_polysilicon-1##8 clk#4pin@249_polysilicon-1 9.455
+R73 clk clk#6pin@266_polysilicon-1 4.34
+.ENDS pixel__dff2
+
+*** SUBCIRCUIT pixel__dff_4 FROM CELL dff_4{lay}
+.SUBCKT pixel__dff_4 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 rst_reset rst_select select_0 select_1 vdd
+Xdff2@0 clk_select clkb_select D_select gnd select_0#0dff2@0_Q rst_select vdd pixel__dff2
+Xdff2@1 clk_select clkb_select select_0#0dff2@0_Q gnd select_1 rst_select vdd pixel__dff2
+Xdff2@2 clk_reset clkb_reset D_reset gnd reset_0 rst_reset vdd pixel__dff2
+Xdff2@3 clk_reset clkb_reset reset_0 gnd reset_1 rst_reset vdd pixel__dff2
+** Extracted Parasitic Capacitors ***
+C0 select_0#0dff2@0_Q 0 15.056fF
+C1 reset_1 0 0.622fF
+C2 D_select 0 5.872fF
+C3 clk_select 0 6.482fF
+C4 clkb_select 0 7.589fF
+C5 rst_select 0 7.589fF
+C6 select_1 0 21.788fF
+C7 D_reset 0 5.324fF
+C8 reset_0 0 11.415fF
+C9 clk_reset 0 6.393fF
+C10 clkb_reset 0 7.485fF
+C11 rst_reset 0 7.485fF
+C12 select_0 0 10.61fF
+** Extracted Parasitic Resistors ***
+R0 select_0#0dff2@0_Q select_0 4.661
+.ENDS pixel__dff_4
+
+*** SUBCIRCUIT pixel__dff_16 FROM CELL dff_16{lay}
+.SUBCKT pixel__dff_16 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 rst_reset rst_select select_0 select_1 select_2 select_3 select_4 select_5 select_6 select_7 vdd
+Xdff_4@0 clk_reset clk_select clkb_reset clkb_select reset_5 select_5 gnd reset_6 reset_7 rst_reset rst_select select_6 select_7 vdd pixel__dff_4
+Xdff_4@1 clk_reset clk_select clkb_reset clkb_select reset_3 select_3 gnd reset_4 reset_5 rst_reset rst_select select_4 select_5 vdd pixel__dff_4
+Xdff_4@2 clk_reset clk_select clkb_reset clkb_select reset_1 select_1 gnd reset_2 reset_3 rst_reset rst_select select_2 select_3 vdd pixel__dff_4
+Xdff_4@3 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 rst_reset rst_select select_0 select_1 vdd pixel__dff_4
+** Extracted Parasitic Capacitors ***
+C0 reset_1 0 28.732fF
+C1 reset_3 0 28.784fF
+C2 reset_5 0 28.784fF
+C3 select_5 0 24.368fF
+C4 clk_reset 0 31.5fF
+C5 clk_select 0 31.449fF
+C6 clkb_reset 0 31.5fF
+C7 clkb_select 0 31.449fF
+C8 rst_reset 0 31.5fF
+C9 rst_select 0 31.449fF
+C10 select_3 0 24.368fF
+C11 select_1 0 24.368fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__dff_16
+
+*** SUBCIRCUIT pixel__dff_124 FROM CELL dff_124{lay}
+.SUBCKT pixel__dff_124 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 reset_16 reset_17 reset_18 reset_19 reset_2 reset_20 reset_21 reset_22 reset_23 reset_24 reset_25 reset_26 reset_27 reset_28 reset_29 reset_3 reset_30 reset_31 reset_32 reset_33 reset_34 reset_35 reset_36 reset_37 reset_38 reset_39 reset_4 reset_40 reset_41 reset_42 reset_43 reset_44 reset_45 reset_46 reset_47 reset_48 reset_49 reset_5 reset_50
++reset_51 reset_52 reset_53 reset_54 reset_55 reset_56 reset_57 reset_58 reset_59 reset_6 reset_60 reset_61 reset_62 reset_63 reset_7 reset_8 reset_9 rst_reset rst_select select_0 select_1 select_10 select_11 select_12 select_13 select_14 select_15 select_16 select_17 select_18 select_19 select_2 select_20 select_21 select_22 select_23 select_24 select_25 select_26 select_27 select_28 select_29 select_3 select_30 select_31 select_32 select_33 select_34 select_35 select_36 select_37 select_38 select_39
++select_4 select_40 select_41 select_42 select_43 select_44 select_45 select_46 select_47 select_48 select_49 select_5 select_50 select_51 select_52 select_53 select_54 select_55 select_56 select_57 select_58 select_59 select_6 select_60 select_61 select_62 select_63 select_7 select_8 select_9 vdd
+Xdff_16@0 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 rst_reset rst_select select_0 select_1 select_2 select_3 select_4 select_5 select_6 select_7 vdd pixel__dff_16
+Xdff_16@1 clk_reset#0dff_16@1_clk_reset clk_select#0dff_16@1_clk_select clkb_reset#0dff_16@1_clkb_reset clkb_select#0dff_16@1_clkb_select reset_7 select_7 gnd reset_8 reset_9 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 rst_reset#0dff_16@1_rst_reset rst_select#0dff_16@1_rst_select select_8 select_9 select_10 select_11 select_12 select_13 select_14 select_15 vdd pixel__dff_16
+Xdff_16@6 clk_reset#5dff_16@6_clk_reset clk_select#5dff_16@6_clk_select clkb_reset#5dff_16@6_clkb_reset clkb_select#5dff_16@6_clkb_select reset_47 select_47 gnd reset_48 reset_49 reset_50 reset_51 reset_52 reset_53 reset_54 reset_55 rst_reset#5dff_16@6_rst_reset rst_select#5dff_16@6_rst_select select_48 select_49 select_50 select_51 select_52 select_53 select_54 select_55 vdd pixel__dff_16
+Xdff_16@7 clk_reset#6dff_16@7_clk_reset clk_select#6dff_16@7_clk_select clkb_reset#6dff_16@7_clkb_reset clkb_select#6dff_16@7_clkb_select reset_55 select_55 gnd reset_56 reset_57 reset_58 reset_59 reset_60 reset_61 reset_62 reset_63 rst_reset#6dff_16@7_rst_reset rst_select#6dff_16@7_rst_select select_56 select_57 select_58 select_59 select_60 select_61 select_62 select_63 vdd pixel__dff_16
+Xselect_23 clk_reset#1select_23_clk_reset clk_select#1select_23_clk_select clkb_reset#1select_23_clkb_reset clkb_select#1select_23_clkb_select reset_15 select_15 gnd reset_16 reset_17 reset_18 reset_19 reset_20 reset_21 reset_22 reset_23 rst_reset#1select_23_rst_reset rst_select#1select_23_rst_select select_16 select_17 select_18 select_19 select_20 select_21 select_22 select_23 vdd pixel__dff_16
+Xselect_31 clk_reset#2select_31_clk_reset clk_select#2select_31_clk_select clkb_reset#2select_31_clkb_reset clkb_select#2select_31_clkb_select reset_23 select_23 gnd reset_24 reset_25 reset_26 reset_27 reset_28 reset_29 reset_30 reset_31 rst_reset#2select_31_rst_reset rst_select#2select_31_rst_select select_24 select_25 select_26 select_27 select_28 select_29 select_30 select_31 vdd pixel__dff_16
+Xselect_39 clk_reset#3select_39_clk_reset clk_select#3select_39_clk_select clkb_reset#3select_39_clkb_reset clkb_select#3select_39_clkb_select reset_31 select_31 gnd reset_32 reset_33 reset_34 reset_35 reset_36 reset_37 reset_38 reset_39 rst_reset#3select_39_rst_reset rst_select#3select_39_rst_select select_32 select_33 select_34 select_35 select_36 select_37 select_38 select_39 vdd pixel__dff_16
+Xselect_47 clk_reset#4select_47_clk_reset clk_select#4select_47_clk_select clkb_reset#4select_47_clkb_reset clkb_select#4select_47_clkb_select reset_39 select_39 gnd reset_40 reset_41 reset_42 reset_43 reset_44 reset_45 reset_46 reset_47 rst_reset#4select_47_rst_reset rst_select#4select_47_rst_select select_40 select_41 select_42 select_43 select_44 select_45 select_46 select_47 vdd pixel__dff_16
+** Extracted Parasitic Capacitors ***
+C0 reset_7 0 30.725fF
+C1 reset_15 0 29.928fF
+C2 reset_23 0 29.928fF
+C3 reset_31 0 29.928fF
+C4 reset_39 0 29.884fF
+C5 reset_47 0 29.936fF
+C6 reset_55 0 29.753fF
+C7 clk_reset 0 21.988fF
+C8 clk_select 0 21.988fF
+C9 clkb_reset 0 21.988fF
+C10 clkb_select 0 21.988fF
+C11 rst_reset 0 21.988fF
+C12 rst_select 0 21.988fF
+C13 select_7 0 26.453fF
+C14 clk_reset#0dff_16@1_clk_reset 0 43.612fF
+C15 clk_select#0dff_16@1_clk_select 0 43.612fF
+C16 clkb_reset#0dff_16@1_clkb_reset 0 43.612fF
+C17 clkb_select#0dff_16@1_clkb_select 0 43.612fF
+C18 rst_reset#0dff_16@1_rst_reset 0 43.612fF
+C19 rst_select#0dff_16@1_rst_select 0 43.612fF
+C20 select_15 0 25.685fF
+C21 select_47 0 25.685fF
+C22 clk_reset#5dff_16@6_clk_reset 0 43.092fF
+C23 clk_select#5dff_16@6_clk_select 0 43.092fF
+C24 clkb_reset#5dff_16@6_clkb_reset 0 43.092fF
+C25 clkb_select#5dff_16@6_clkb_select 0 43.092fF
+C26 rst_reset#5dff_16@6_rst_reset 0 43.092fF
+C27 rst_select#5dff_16@6_rst_select 0 43.092fF
+C28 select_55 0 25.465fF
+C29 clk_reset#6dff_16@7_clk_reset 0 21.52fF
+C30 clk_select#6dff_16@7_clk_select 0 21.52fF
+C31 clkb_reset#6dff_16@7_clkb_reset 0 21.52fF
+C32 clkb_select#6dff_16@7_clkb_select 0 21.52fF
+C33 rst_reset#6dff_16@7_rst_reset 0 21.52fF
+C34 rst_select#6dff_16@7_rst_select 0 21.52fF
+C35 select_23 0 25.685fF
+C36 select_31 0 25.685fF
+C37 select_39 0 25.685fF
+C38 clk_reset#1select_23_clk_reset 0 43.196fF
+C39 clk_select#1select_23_clk_select 0 43.196fF
+C40 clkb_reset#1select_23_clkb_reset 0 43.196fF
+C41 clkb_select#1select_23_clkb_select 0 43.196fF
+C42 rst_reset#1select_23_rst_reset 0 43.196fF
+C43 rst_select#1select_23_rst_select 0 43.196fF
+C44 clk_reset#2select_31_clk_reset 0 43.196fF
+C45 clk_select#2select_31_clk_select 0 43.196fF
+C46 clkb_reset#2select_31_clkb_reset 0 43.196fF
+C47 clkb_select#2select_31_clkb_select 0 43.196fF
+C48 rst_reset#2select_31_rst_reset 0 43.196fF
+C49 rst_select#2select_31_rst_select 0 43.196fF
+C50 clk_reset#3select_39_clk_reset 0 43.248fF
+C51 clk_select#3select_39_clk_select 0 43.248fF
+C52 clkb_reset#3select_39_clkb_reset 0 43.248fF
+C53 clkb_select#3select_39_clkb_select 0 43.248fF
+C54 rst_reset#3select_39_rst_reset 0 43.248fF
+C55 rst_select#3select_39_rst_select 0 43.248fF
+C56 clk_reset#4select_47_clk_reset 0 43.196fF
+C57 clk_select#4select_47_clk_select 0 43.196fF
+C58 clkb_reset#4select_47_clkb_reset 0 43.196fF
+C59 clkb_select#4select_47_clkb_select 0 43.196fF
+C60 rst_reset#4select_47_rst_reset 0 43.196fF
+C61 rst_select#4select_47_rst_select 0 43.196fF
+** Extracted Parasitic Resistors ***
+R0 clk_select clk_select#0dff_16@1_clk_select 5.499
+R1 clk_select#0dff_16@1_clk_select clk_select#1select_23_clk_select 5.408
+R2 clk_select#1select_23_clk_select clk_select#2select_31_clk_select 5.395
+R3 clk_select#2select_31_clk_select clk_select#3select_39_clk_select 5.408
+R4 clk_select#3select_39_clk_select clk_select#4select_47_clk_select 5.408
+R5 clk_select#4select_47_clk_select clk_select#5dff_16@6_clk_select 5.395
+R6 clk_select#5dff_16@6_clk_select clk_select#6dff_16@7_clk_select 5.382
+R7 clk_reset clk_reset#0dff_16@1_clk_reset 5.499
+R8 clk_reset#0dff_16@1_clk_reset clk_reset#1select_23_clk_reset 5.408
+R9 clk_reset#1select_23_clk_reset clk_reset#2select_31_clk_reset 5.395
+R10 clk_reset#2select_31_clk_reset clk_reset#3select_39_clk_reset 5.408
+R11 clk_reset#3select_39_clk_reset clk_reset#4select_47_clk_reset 5.408
+R12 clk_reset#4select_47_clk_reset clk_reset#5dff_16@6_clk_reset 5.395
+R13 clk_reset#5dff_16@6_clk_reset clk_reset#6dff_16@7_clk_reset 5.382
+R14 clkb_select clkb_select#0dff_16@1_clkb_select 5.499
+R15 clkb_select#0dff_16@1_clkb_select clkb_select#1select_23_clkb_select 5.408
+R16 clkb_select#1select_23_clkb_select clkb_select#2select_31_clkb_select 5.395
+R17 clkb_select#2select_31_clkb_select clkb_select#3select_39_clkb_select 5.408
+R18 clkb_select#3select_39_clkb_select clkb_select#4select_47_clkb_select 5.408
+R19 clkb_select#4select_47_clkb_select clkb_select#5dff_16@6_clkb_select 5.395
+R20 clkb_select#5dff_16@6_clkb_select clkb_select#6dff_16@7_clkb_select 5.382
+R21 clkb_reset clkb_reset#0dff_16@1_clkb_reset 5.499
+R22 clkb_reset#0dff_16@1_clkb_reset clkb_reset#1select_23_clkb_reset 5.408
+R23 clkb_reset#1select_23_clkb_reset clkb_reset#2select_31_clkb_reset 5.395
+R24 clkb_reset#2select_31_clkb_reset clkb_reset#3select_39_clkb_reset 5.408
+R25 clkb_reset#3select_39_clkb_reset clkb_reset#4select_47_clkb_reset 5.408
+R26 clkb_reset#4select_47_clkb_reset clkb_reset#5dff_16@6_clkb_reset 5.395
+R27 clkb_reset#5dff_16@6_clkb_reset clkb_reset#6dff_16@7_clkb_reset 5.382
+R28 rst_select rst_select#0dff_16@1_rst_select 5.499
+R29 rst_select#0dff_16@1_rst_select rst_select#1select_23_rst_select 5.408
+R30 rst_select#1select_23_rst_select rst_select#2select_31_rst_select 5.395
+R31 rst_select#2select_31_rst_select rst_select#3select_39_rst_select 5.408
+R32 rst_select#3select_39_rst_select rst_select#4select_47_rst_select 5.408
+R33 rst_select#4select_47_rst_select rst_select#5dff_16@6_rst_select 5.395
+R34 rst_select#5dff_16@6_rst_select rst_select#6dff_16@7_rst_select 5.382
+R35 rst_reset rst_reset#0dff_16@1_rst_reset 5.499
+R36 rst_reset#0dff_16@1_rst_reset rst_reset#1select_23_rst_reset 5.408
+R37 rst_reset#1select_23_rst_reset rst_reset#2select_31_rst_reset 5.395
+R38 rst_reset#2select_31_rst_reset rst_reset#3select_39_rst_reset 5.408
+R39 rst_reset#3select_39_rst_reset rst_reset#4select_47_rst_reset 5.408
+R40 rst_reset#4select_47_rst_reset rst_reset#5dff_16@6_rst_reset 5.395
+R41 rst_reset#5dff_16@6_rst_reset rst_reset#6dff_16@7_rst_reset 5.382
+.ENDS pixel__dff_124
+*** WARNING: no ground connection for N-transistor wells in cell 'pass_gate{lay}'
+
+*** SUBCIRCUIT pixel__pass_gate FROM CELL pass_gate{lay}
+.SUBCKT pixel__pass_gate clk clkb in out vdd
+Mnmos@2 in clk#0nmos@2_poly-left out gnd NMOS L=0.6U W=1.8U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mpmos@2 in clkb#0pmos@2_poly-left out vdd PMOS L=0.6U W=3.6U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+** Extracted Parasitic Capacitors ***
+C0 in 0 2.964fF
+C1 out 0 3.795fF
+C2 clkb 0 0.145fF
+C3 clkb#0pmos@2_poly-left 0 0.176fF
+** Extracted Parasitic Resistors ***
+R0 clk#0nmos@2_poly-left clk#0nmos@2_poly-left##0 5.425
+R1 clk#0nmos@2_poly-left##0 clk 5.425
+R2 clkb#0pmos@2_poly-left clkb#0pmos@2_poly-left##0 8.913
+C4 clkb#0pmos@2_poly-left##0 0 0.145fF
+R3 clkb#0pmos@2_poly-left##0 clkb#0pmos@2_poly-left##1 8.913
+C5 clkb#0pmos@2_poly-left##1 0 0.145fF
+R4 clkb#0pmos@2_poly-left##1 clkb#0pmos@2_poly-left##2 8.913
+C6 clkb#0pmos@2_poly-left##2 0 0.145fF
+R5 clkb#0pmos@2_poly-left##2 clkb 8.913
+.ENDS pixel__pass_gate
+
+*** TOP LEVEL CELL: Sim_Matrix_4096{lay}
+XMatrix_1@0 Matrix_1@0_FD Matrix_1@0_FD_1 gnd net@191#1Matrix_1@0_out_0 net@192#1Matrix_1@0_out_1 net@201 net@202#1Matrix_1@0_out_11 net@203 net@204#1Matrix_1@0_out_13 net@205 net@206#1Matrix_1@0_out_15 net@207 net@208#1Matrix_1@0_out_17 net@209 net@210#1Matrix_1@0_out_19 net@193#1Matrix_1@0_out_2 net@211#1Matrix_1@0_out_20 net@212 net@213#1Matrix_1@0_out_22 net@214 net@215#1Matrix_1@0_out_24 net@216 net@217#1Matrix_1@0_out_26 net@218 net@219 net@220#1Matrix_1@0_out_29 net@194 net@221 o1
++net@195#1Matrix_1@0_out_4 net@196 net@197#1Matrix_1@0_out_6 out7 net@199 net@200#1Matrix_1@0_out_9 net@127 net@129 net@147 net@149 net@151 net@153 net@155 net@157 net@159 net@161 net@163 net@165 net@131 net@167 net@169 net@171 net@173 net@175 net@177 net@179 net@181 net@183 net@185 net@133 net@187 net@190 net@135 net@137 net@139 net@141 net@143 net@145 net@128 net@130 net@148 net@150 net@152 net@154 net@156 net@158 net@160 net@162 net@164 net@166 net@132 net@168 net@170 net@172 net@174 net@176 net@178
++net@180 net@182 net@184 net@186 net@134 net@188 net@189 net@136 net@138 net@140 net@142 net@144 net@146 vdd vdd_reset pixel__Matrix_1024
+XMatrix_1@1 Matrix_1@1_FD Matrix_1@1_FD_1 gnd net@223 net@224#1Matrix_1@1_out_1 net@233 net@234#1Matrix_1@1_out_11 net@235 net@236#1Matrix_1@1_out_13 net@237 net@238#1Matrix_1@1_out_15 net@239 net@240#1Matrix_1@1_out_17 net@241#1Matrix_1@1_out_18 net@242 net@225 net@243#1Matrix_1@1_out_20 net@244 net@245#1Matrix_1@1_out_22 net@246 net@247#1Matrix_1@1_out_24 net@248 net@249#1Matrix_1@1_out_26 net@250 net@251#1Matrix_1@1_out_28 net@252 net@226#1Matrix_1@1_out_3 net@253#1Matrix_1@1_out_30 net@254 net@227
++net@228#1Matrix_1@1_out_5 net@229 net@230#1Matrix_1@1_out_7 net@231 net@232#1Matrix_1@1_out_9 net@127#1Matrix_1@1_reset_0 net@129#1Matrix_1@1_reset_1 net@147#1Matrix_1@1_reset_10 net@149#1Matrix_1@1_reset_11 net@151#1Matrix_1@1_reset_12 net@153#1Matrix_1@1_reset_13 net@155#1Matrix_1@1_reset_14 net@157#1Matrix_1@1_reset_15 net@159#1Matrix_1@1_reset_16 net@161#1Matrix_1@1_reset_17 net@163#1Matrix_1@1_reset_18 net@165#1Matrix_1@1_reset_19 net@131#1Matrix_1@1_reset_2 net@167#1Matrix_1@1_reset_20
++net@169#1Matrix_1@1_reset_21 net@171#1Matrix_1@1_reset_22 net@173#1Matrix_1@1_reset_23 net@175#1Matrix_1@1_reset_24 net@177#1Matrix_1@1_reset_25 net@179#1Matrix_1@1_reset_26 net@181#1Matrix_1@1_reset_27 net@183#1Matrix_1@1_reset_28 net@185#1Matrix_1@1_reset_29 net@133#1Matrix_1@1_reset_3 net@187#1Matrix_1@1_reset_30 net@190#1Matrix_1@1_reset_31 net@135#1Matrix_1@1_reset_4 net@137#1Matrix_1@1_reset_5 net@139#1Matrix_1@1_reset_6 net@141#1Matrix_1@1_reset_7 net@143#1Matrix_1@1_reset_8
++net@145#1Matrix_1@1_reset_9 net@128#1Matrix_1@1_select_0 net@130#1Matrix_1@1_select_1 net@148#1Matrix_1@1_select_10 net@150#1Matrix_1@1_select_11 net@152#1Matrix_1@1_select_12 net@154#1Matrix_1@1_select_13 net@156#1Matrix_1@1_select_14 net@158#1Matrix_1@1_select_15 net@160#1Matrix_1@1_select_16 net@162#1Matrix_1@1_select_17 net@164#1Matrix_1@1_select_18 net@166#1Matrix_1@1_select_19 net@132#1Matrix_1@1_select_2 net@168#1Matrix_1@1_select_20 net@170#1Matrix_1@1_select_21 net@172#1Matrix_1@1_select_22
++net@174#1Matrix_1@1_select_23 net@176#1Matrix_1@1_select_24 net@178#1Matrix_1@1_select_25 net@180#1Matrix_1@1_select_26 net@182#1Matrix_1@1_select_27 net@184#1Matrix_1@1_select_28 net@186#1Matrix_1@1_select_29 net@134#1Matrix_1@1_select_3 net@188#1Matrix_1@1_select_30 net@189#1Matrix_1@1_select_31 net@136#1Matrix_1@1_select_4 net@138#1Matrix_1@1_select_5 net@140#1Matrix_1@1_select_6 net@142#1Matrix_1@1_select_7 net@144#1Matrix_1@1_select_8 net@146#1Matrix_1@1_select_9 vdd vdd_reset pixel__Matrix_1024
+XMatrix_1@2 FD_test FD_1 gnd net@191 net@192 net@201#1Matrix_1@2_out_10 net@202 net@203#1Matrix_1@2_out_12 net@204 net@205#1Matrix_1@2_out_14 net@206 net@207#1Matrix_1@2_out_16 net@208 net@209#1Matrix_1@2_out_18 net@210 net@193 net@211 net@212#1Matrix_1@2_out_21 net@213 net@214#1Matrix_1@2_out_23 net@215 net@216#1Matrix_1@2_out_25 net@217 net@218#1Matrix_1@2_out_27 net@219#1Matrix_1@2_out_28 net@220 net@194#1Matrix_1@2_out_3 net@221#1Matrix_1@2_out_30 o1#0Matrix_1@2_out_31 net@195 net@196#1Matrix_1@2_out_5
++net@197 out7#0Matrix_1@2_out_7 net@199#1Matrix_1@2_out_8 net@200 net@23 net@25 net@68 net@70 net@72 net@74 net@76 net@78 net@80 net@82 net@84 net@86 net@27 net@88 net@90 net@92 net@94 net@96 net@113 net@115 net@117 net@119 net@121 net@29 net@123 net@126 net@31 net@33 net@35 reset7 net@64 net@66 net@24 net@26 net@69 net@71 net@73 net@75 net@77 net@79 net@81 net@83 net@85 net@87 net@28 net@89 net@91 net@93 net@95 net@97 net@114 net@116 net@118 net@120 net@122 net@30 net@124 net@125 net@32 net@34 net@36
++select7 net@65 net@67 vdd vdd_reset pixel__Matrix_1024
+XMatrix_1@3 Matrix_1@3_FD Matrix_1@3_FD_1 gnd net@223#1Matrix_1@3_out_0 net@224 net@233#1Matrix_1@3_out_10 net@234 net@235#1Matrix_1@3_out_12 net@236 net@237#1Matrix_1@3_out_14 net@238 net@239#1Matrix_1@3_out_16 net@240 net@241 net@242#1Matrix_1@3_out_19 net@225#1Matrix_1@3_out_2 net@243 net@244#1Matrix_1@3_out_21 net@245 net@246#1Matrix_1@3_out_23 net@247 net@248#1Matrix_1@3_out_25 net@249 net@250#1Matrix_1@3_out_27 net@251 net@252#1Matrix_1@3_out_29 net@226 net@253 net@254#1Matrix_1@3_out_31
++net@227#1Matrix_1@3_out_4 net@228 net@229#1Matrix_1@3_out_6 net@230 net@231#1Matrix_1@3_out_8 net@232 net@23#1Matrix_1@3_reset_0 net@25#1Matrix_1@3_reset_1 net@68#1Matrix_1@3_reset_10 net@70#1Matrix_1@3_reset_11 net@72#1Matrix_1@3_reset_12 net@74#1Matrix_1@3_reset_13 net@76#1Matrix_1@3_reset_14 net@78#1Matrix_1@3_reset_15 net@80#1Matrix_1@3_reset_16 net@82#1Matrix_1@3_reset_17 net@84#1Matrix_1@3_reset_18 net@86#1Matrix_1@3_reset_19 net@27#1Matrix_1@3_reset_2 net@88#1Matrix_1@3_reset_20
++net@90#1Matrix_1@3_reset_21 net@92#1Matrix_1@3_reset_22 net@94#1Matrix_1@3_reset_23 net@96#1Matrix_1@3_reset_24 net@113#1Matrix_1@3_reset_25 net@115#1Matrix_1@3_reset_26 net@117#1Matrix_1@3_reset_27 net@119#1Matrix_1@3_reset_28 net@121#1Matrix_1@3_reset_29 net@29#1Matrix_1@3_reset_3 net@123#1Matrix_1@3_reset_30 net@126#1Matrix_1@3_reset_31 net@31#1Matrix_1@3_reset_4 net@33#1Matrix_1@3_reset_5 net@35#1Matrix_1@3_reset_6 reset7#1Matrix_1@3_reset_7 net@64#1Matrix_1@3_reset_8 net@66#1Matrix_1@3_reset_9
++net@24#1Matrix_1@3_select_0 net@26#1Matrix_1@3_select_1 net@69#1Matrix_1@3_select_10 net@71#1Matrix_1@3_select_11 net@73#1Matrix_1@3_select_12 net@75#1Matrix_1@3_select_13 net@77#1Matrix_1@3_select_14 net@79#1Matrix_1@3_select_15 net@81#1Matrix_1@3_select_16 net@83#1Matrix_1@3_select_17 net@85#1Matrix_1@3_select_18 net@87#1Matrix_1@3_select_19 net@28#1Matrix_1@3_select_2 net@89#1Matrix_1@3_select_20 net@91#1Matrix_1@3_select_21 net@93#1Matrix_1@3_select_22 net@95#1Matrix_1@3_select_23
++net@97#1Matrix_1@3_select_24 net@114#1Matrix_1@3_select_25 net@116#1Matrix_1@3_select_26 net@118#1Matrix_1@3_select_27 net@120#1Matrix_1@3_select_28 net@122#1Matrix_1@3_select_29 net@30#1Matrix_1@3_select_3 net@124#1Matrix_1@3_select_30 net@125#1Matrix_1@3_select_31 net@32#1Matrix_1@3_select_4 net@34#1Matrix_1@3_select_5 net@36#1Matrix_1@3_select_6 select7#1Matrix_1@3_select_7 net@65#1Matrix_1@3_select_8 net@67#1Matrix_1@3_select_9 vdd vdd_reset pixel__Matrix_1024
+Xbuffer@0 out_final g1 gnd vdd pixel__buffer
+Xcolumn_b@0 gate_column gnd net@191#1Matrix_1@0_out_0 pixel__column_bias
+Xcolumn_b@1 gate_column gnd net@192#1Matrix_1@0_out_1 pixel__column_bias
+Xcolumn_b@4 gate_column gnd net@193#1Matrix_1@0_out_2 pixel__column_bias
+Xcolumn_b@5 gate_column gnd net@194 pixel__column_bias
+Xcolumn_b@6 gate_column gnd net@195#1Matrix_1@0_out_4 pixel__column_bias
+Xcolumn_b@7 gate_column gnd net@196 pixel__column_bias
+Xcolumn_b@8 gate_column gnd net@197#1Matrix_1@0_out_6 pixel__column_bias
+Xcolumn_b@9 gate_column gnd out7 pixel__column_bias
+Xcolumn_b@10 gate_column gnd net@199 pixel__column_bias
+Xcolumn_b@11 gate_column gnd net@200#1Matrix_1@0_out_9 pixel__column_bias
+Xcolumn_b@12 gate_column gnd net@201 pixel__column_bias
+Xcolumn_b@13 gate_column gnd net@202#1Matrix_1@0_out_11 pixel__column_bias
+Xcolumn_b@14 gate_column gnd net@203 pixel__column_bias
+Xcolumn_b@15 gate_column gnd net@204#1Matrix_1@0_out_13 pixel__column_bias
+Xcolumn_b@16 gate_column gnd net@205 pixel__column_bias
+Xcolumn_b@17 gate_column gnd net@206#1Matrix_1@0_out_15 pixel__column_bias
+Xcolumn_b@18 gate_column gnd net@207 pixel__column_bias
+Xcolumn_b@19 gate_column gnd net@208#1Matrix_1@0_out_17 pixel__column_bias
+Xcolumn_b@20 gate_column gnd net@209 pixel__column_bias
+Xcolumn_b@21 gate_column gnd net@210#1Matrix_1@0_out_19 pixel__column_bias
+Xcolumn_b@22 gate_column gnd net@211#1Matrix_1@0_out_20 pixel__column_bias
+Xcolumn_b@23 gate_column gnd net@212 pixel__column_bias
+Xcolumn_b@24 gate_column gnd net@213#1Matrix_1@0_out_22 pixel__column_bias
+Xcolumn_b@25 gate_column gnd net@214 pixel__column_bias
+Xcolumn_b@26 gate_column gnd net@215#1Matrix_1@0_out_24 pixel__column_bias
+Xcolumn_b@27 gate_column gnd net@216 pixel__column_bias
+Xcolumn_b@28 gate_column gnd net@217#1Matrix_1@0_out_26 pixel__column_bias
+Xcolumn_b@29 gate_column gnd net@218 pixel__column_bias
+Xcolumn_b@30 gate_column gnd net@219 pixel__column_bias
+Xcolumn_b@31 gate_column gnd net@220#1Matrix_1@0_out_29 pixel__column_bias
+Xcolumn_b@32 gate_column gnd net@221 pixel__column_bias
+Xcolumn_b@33 gate_column gnd o1 pixel__column_bias
+Xcolumn_b@34 gate_column gnd net@223 pixel__column_bias
+Xcolumn_b@35 gate_column gnd net@224#1Matrix_1@1_out_1 pixel__column_bias
+Xcolumn_b@36 gate_column gnd net@225 pixel__column_bias
+Xcolumn_b@37 gate_column gnd net@226#1Matrix_1@1_out_3 pixel__column_bias
+Xcolumn_b@38 gate_column gnd net@227 pixel__column_bias
+Xcolumn_b@39 gate_column gnd net@228#1Matrix_1@1_out_5 pixel__column_bias
+Xcolumn_b@40 gate_column gnd net@229 pixel__column_bias
+Xcolumn_b@41 gate_column gnd net@230#1Matrix_1@1_out_7 pixel__column_bias
+Xcolumn_b@42 gate_column gnd net@231 pixel__column_bias
+Xcolumn_b@43 gate_column gnd net@232#1Matrix_1@1_out_9 pixel__column_bias
+Xcolumn_b@44 gate_column gnd net@233 pixel__column_bias
+Xcolumn_b@45 gate_column gnd net@234#1Matrix_1@1_out_11 pixel__column_bias
+Xcolumn_b@46 gate_column gnd net@235 pixel__column_bias
+Xcolumn_b@47 gate_column gnd net@236#1Matrix_1@1_out_13 pixel__column_bias
+Xcolumn_b@48 gate_column gnd net@237 pixel__column_bias
+Xcolumn_b@49 gate_column gnd net@238#1Matrix_1@1_out_15 pixel__column_bias
+Xcolumn_b@50 gate_column gnd net@239 pixel__column_bias
+Xcolumn_b@51 gate_column gnd net@240#1Matrix_1@1_out_17 pixel__column_bias
+Xcolumn_b@52 gate_column gnd net@241#1Matrix_1@1_out_18 pixel__column_bias
+Xcolumn_b@53 gate_column gnd net@242 pixel__column_bias
+Xcolumn_b@54 gate_column gnd net@243#1Matrix_1@1_out_20 pixel__column_bias
+Xcolumn_b@55 gate_column gnd net@244 pixel__column_bias
+Xcolumn_b@56 gate_column gnd net@245#1Matrix_1@1_out_22 pixel__column_bias
+Xcolumn_b@57 gate_column gnd net@246 pixel__column_bias
+Xcolumn_b@58 gate_column gnd net@247#1Matrix_1@1_out_24 pixel__column_bias
+Xcolumn_b@59 gate_column gnd net@248 pixel__column_bias
+Xcolumn_b@60 gate_column gnd net@249#1Matrix_1@1_out_26 pixel__column_bias
+Xcolumn_b@61 gate_column gnd net@250 pixel__column_bias
+Xcolumn_b@62 gate_column gnd net@251#1Matrix_1@1_out_28 pixel__column_bias
+Xcolumn_b@63 gate_column gnd net@252 pixel__column_bias
+Xcolumn_b@64 gate_column gnd net@253#1Matrix_1@1_out_30 pixel__column_bias
+Xcolumn_b@65 gate_column gnd net@254 pixel__column_bias
+Xdff_64_c@0 net@1317 net@1324 net@1416 net@1424 net@1435 net@1441 net@1447 net@1454 net@1468 net@1474 net@1480 net@1487 net@1331 net@1501 net@1508 net@1515 net@1523 net@1537 net@1545 net@1553 net@1559 net@1573 net@1580 net@1338 net@1588 net@1598 net@1658 net@1666 net@1677 net@1681 net@1691 net@1695 net@1705 net@1709 net@1354 net@1747 net@1750 net@1762 net@1774 net@1781 net@1793 net@1802 net@1814 net@1825 net@1835 net@1362 net@1842 net@1851 net@1988 net@1997 net@2004 net@2013 net@2025 net@2039 net@2068
++net@2080 net@1370 net@2087 net@2103 net@2114 net@2127 net@1377 net@1395 net@1405 clk_column clkb_column D_column gnd net@1323 net@1327 net@1421 net@1427 net@1438 net@1444 net@1451 net@1457 net@1471 net@1477 net@1483 net@1490 net@1335 net@1504 net@1512 net@1518 net@1526 net@1542 net@1548 net@1556 net@1564 net@1576 net@1585 net@1343 net@1595 net@1601 net@1655 net@1669 net@1674 net@1684 net@1688 net@1698 net@1702 net@1712 net@1357 net@1744 net@1753 net@1765 net@1777 net@1784 net@1796 net@1805 net@1817
++net@1822 net@1838 net@1365 net@1845 net@1854 net@1983 net@1987 net@2001 net@2018 net@2029 net@2042 net@2045 net@2074 net@1374 net@2091 net@2107 net@2118 net@2131 net@1380 net@1400 net@1408 rst_column vdd pixel__dff_64_column
+Xdff_124@0 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd net@23 net@25 net@68 net@70 net@72 net@74 net@76 net@78 net@80 net@82 net@84 net@86 net@27 net@88 net@90 net@92 net@94 net@96 net@113 net@115 net@117 net@119 net@121 net@29 net@123 net@126 net@127 net@129 net@131 net@133 net@135 net@137 net@139 net@141 net@31 net@143 net@145 net@147 net@149 net@151 net@153 net@155 net@157 net@159 net@161 net@33 net@163 net@165 net@167 net@169 net@171 net@173 net@175 net@177 net@179 net@181 net@35
++net@183 net@185 net@187 net@190 reset7 net@64 net@66 rst_reset rst_select net@24 net@26 net@69 net@71 net@73 net@75 net@77 net@79 net@81 net@83 net@85 net@87 net@28 net@89 net@91 net@93 net@95 net@97 net@114 net@116 net@118 net@120 net@122 net@30 net@124 net@125 net@128 net@130 net@132 net@134 net@136 net@138 net@140 net@142 net@32 net@144 net@146 net@148 net@150 net@152 net@154 net@156 net@158 net@160 net@162 net@34 net@164 net@166 net@168 net@170 net@172 net@174 net@176 net@178 net@180 net@182 net@36
++net@184 net@186 net@188 net@189 select7 net@65 net@67 vdd pixel__dff_124
+Xpass_gat@0 net@1317 net@1323 net@191#1Matrix_1@0_out_0 g1 vdd pixel__pass_gate
+Xpass_gat@1 net@1324 net@1327 net@192#1Matrix_1@0_out_1 g1 vdd pixel__pass_gate
+Xpass_gat@2 net@1331 net@1335 net@193#1Matrix_1@0_out_2 g1 vdd pixel__pass_gate
+Xpass_gat@3 net@1338 net@1343 net@194 g1 vdd pixel__pass_gate
+Xpass_gat@4 net@1354 net@1357 net@195#1Matrix_1@0_out_4 g1 vdd pixel__pass_gate
+Xpass_gat@5 net@1362 net@1365 net@196 g1 vdd pixel__pass_gate
+Xpass_gat@6 net@1370 net@1374 net@197#1Matrix_1@0_out_6 g1 vdd pixel__pass_gate
+Xpass_gat@7 net@1377 net@1380 out7 g1 vdd pixel__pass_gate
+Xpass_gat@8 net@1395 net@1400 net@199 g1 vdd pixel__pass_gate
+Xpass_gat@9 net@1405 net@1408 net@200#1Matrix_1@0_out_9 g1 vdd pixel__pass_gate
+Xpass_gat@10 net@1416 net@1421 net@201 g1 vdd pixel__pass_gate
+Xpass_gat@11 net@1424 net@1427 net@202#1Matrix_1@0_out_11 g1 vdd pixel__pass_gate
+Xpass_gat@12 net@1435 net@1438 net@203 g1 vdd pixel__pass_gate
+Xpass_gat@13 net@1441 net@1444 net@204#1Matrix_1@0_out_13 g1 vdd pixel__pass_gate
+Xpass_gat@14 net@1447 net@1451 net@205 g1 vdd pixel__pass_gate
+Xpass_gat@15 net@1454 net@1457 net@206#1Matrix_1@0_out_15 g1 vdd pixel__pass_gate
+Xpass_gat@16 net@1468 net@1471 net@207 g1 vdd pixel__pass_gate
+Xpass_gat@17 net@1474 net@1477 net@208#1Matrix_1@0_out_17 g1 vdd pixel__pass_gate
+Xpass_gat@18 net@1480 net@1483 net@209 g1 vdd pixel__pass_gate
+Xpass_gat@19 net@1487 net@1490 net@210#1Matrix_1@0_out_19 g1 vdd pixel__pass_gate
+Xpass_gat@20 net@1501 net@1504 net@211#1Matrix_1@0_out_20 g1 vdd pixel__pass_gate
+Xpass_gat@21 net@1508 net@1512 net@212 g1 vdd pixel__pass_gate
+Xpass_gat@22 net@1515 net@1518 net@213#1Matrix_1@0_out_22 g1 vdd pixel__pass_gate
+Xpass_gat@23 net@1523 net@1526 net@214 g1 vdd pixel__pass_gate
+Xpass_gat@24 net@1537 net@1542 net@215#1Matrix_1@0_out_24 g1 vdd pixel__pass_gate
+Xpass_gat@25 net@1545 net@1548 net@216 g1 vdd pixel__pass_gate
+Xpass_gat@26 net@1553 net@1556 net@217#1Matrix_1@0_out_26 g1 vdd pixel__pass_gate
+Xpass_gat@27 net@1559 net@1564 net@218 g1 vdd pixel__pass_gate
+Xpass_gat@28 net@1573 net@1576 net@219 g1 vdd pixel__pass_gate
+Xpass_gat@29 net@1580 net@1585 net@220#1Matrix_1@0_out_29 g1 vdd pixel__pass_gate
+Xpass_gat@30 net@1588 net@1595 net@221 g1 vdd pixel__pass_gate
+Xpass_gat@31 net@1598 net@1601 o1 g1 vdd pixel__pass_gate
+Xpass_gat@32 net@1658 net@1655 net@223 g1 vdd pixel__pass_gate
+Xpass_gat@33 net@1666 net@1669 net@224#1Matrix_1@1_out_1 g1 vdd pixel__pass_gate
+Xpass_gat@34 net@1677 net@1674 net@225 g1 vdd pixel__pass_gate
+Xpass_gat@35 net@1681 net@1684 net@226#1Matrix_1@1_out_3 g1 vdd pixel__pass_gate
+Xpass_gat@36 net@1691 net@1688 net@227 g1 vdd pixel__pass_gate
+Xpass_gat@39 net@1695 net@1698 net@228#1Matrix_1@1_out_5 g1 vdd pixel__pass_gate
+Xpass_gat@40 net@1705 net@1702 net@229 g1 vdd pixel__pass_gate
+Xpass_gat@41 net@1709 net@1712 net@230#1Matrix_1@1_out_7 g1 vdd pixel__pass_gate
+Xpass_gat@42 net@1747 net@1744 net@231 g1 vdd pixel__pass_gate
+Xpass_gat@43 net@1750 net@1753 net@232#1Matrix_1@1_out_9 g1 vdd pixel__pass_gate
+Xpass_gat@44 net@1762 net@1765 net@233 g1 vdd pixel__pass_gate
+Xpass_gat@45 net@1774 net@1777 net@234#1Matrix_1@1_out_11 g1 vdd pixel__pass_gate
+Xpass_gat@46 net@1781 net@1784 net@235 g1 vdd pixel__pass_gate
+Xpass_gat@47 net@1793 net@1796 net@236#1Matrix_1@1_out_13 g1 vdd pixel__pass_gate
+Xpass_gat@48 net@1802 net@1805 net@237 g1 vdd pixel__pass_gate
+Xpass_gat@49 net@1814 net@1817 net@238#1Matrix_1@1_out_15 g1 vdd pixel__pass_gate
+Xpass_gat@50 net@1825 net@1822 net@239 g1 vdd pixel__pass_gate
+Xpass_gat@51 net@1835 net@1838 net@240#1Matrix_1@1_out_17 g1 vdd pixel__pass_gate
+Xpass_gat@52 net@1842 net@1845 net@241#1Matrix_1@1_out_18 g1 vdd pixel__pass_gate
+Xpass_gat@53 net@1851 net@1854 net@242 g1 vdd pixel__pass_gate
+Xpass_gat@54 net@1988 net@1983 net@243#1Matrix_1@1_out_20 g1 vdd pixel__pass_gate
+Xpass_gat@55 net@1997 net@1987 net@244 g1 vdd pixel__pass_gate
+Xpass_gat@56 net@2004 net@2001 net@245#1Matrix_1@1_out_22 g1 vdd pixel__pass_gate
+Xpass_gat@57 net@2013 net@2018 net@246 g1 vdd pixel__pass_gate
+Xpass_gat@58 net@2025 net@2029 net@247#1Matrix_1@1_out_24 g1 vdd pixel__pass_gate
+Xpass_gat@59 net@2039 net@2042 net@248 g1 vdd pixel__pass_gate
+Xpass_gat@60 net@2068 net@2045 net@249#1Matrix_1@1_out_26 g1 vdd pixel__pass_gate
+Xpass_gat@61 net@2080 net@2074 net@250 g1 vdd pixel__pass_gate
+Xpass_gat@62 net@2087 net@2091 net@251#1Matrix_1@1_out_28 g1 vdd pixel__pass_gate
+Xpass_gat@63 net@2103 net@2107 net@252 g1 vdd pixel__pass_gate
+Xpass_gat@64 net@2114 net@2118 net@253#1Matrix_1@1_out_30 g1 vdd pixel__pass_gate
+Xpass_gat@65 net@2127 net@2131 net@254 g1 vdd pixel__pass_gate
+** Extracted Parasitic Capacitors ***
+C0 net@191#1Matrix_1@0_out_0 0 44.984fF
+C1 net@192#1Matrix_1@0_out_1 0 44.984fF
+C2 net@193#1Matrix_1@0_out_2 0 44.984fF
+C3 net@194 0 44.984fF
+C4 net@195#1Matrix_1@0_out_4 0 44.984fF
+C5 net@196 0 44.984fF
+C6 net@197#1Matrix_1@0_out_6 0 44.984fF
+C7 out7 0 44.984fF
+C8 net@199 0 44.984fF
+C9 net@200#1Matrix_1@0_out_9 0 44.984fF
+C10 net@201 0 44.984fF
+C11 net@202#1Matrix_1@0_out_11 0 44.984fF
+C12 net@203 0 44.984fF
+C13 net@204#1Matrix_1@0_out_13 0 44.984fF
+C14 net@205 0 44.984fF
+C15 net@206#1Matrix_1@0_out_15 0 44.984fF
+C16 net@207 0 44.984fF
+C17 net@208#1Matrix_1@0_out_17 0 44.984fF
+C18 net@209 0 44.984fF
+C19 net@210#1Matrix_1@0_out_19 0 44.984fF
+C20 net@211#1Matrix_1@0_out_20 0 44.984fF
+C21 net@212 0 44.984fF
+C22 net@213#1Matrix_1@0_out_22 0 44.984fF
+C23 net@214 0 44.984fF
+C24 net@215#1Matrix_1@0_out_24 0 44.984fF
+C25 net@216 0 44.984fF
+C26 net@217#1Matrix_1@0_out_26 0 44.984fF
+C27 net@218 0 44.984fF
+C28 net@219 0 44.984fF
+C29 net@220#1Matrix_1@0_out_29 0 44.984fF
+C30 net@221 0 44.984fF
+C31 o1 0 44.984fF
+C32 net@127 0 39.807fF
+C33 net@129 0 39.676fF
+C34 net@131 0 39.718fF
+C35 net@133 0 39.587fF
+C36 net@135 0 39.629fF
+C37 net@137 0 39.498fF
+C38 net@139 0 39.54fF
+C39 net@141 0 39.506fF
+C40 net@143 0 39.94fF
+C41 net@145 0 39.809fF
+C42 net@147 0 39.851fF
+C43 net@149 0 39.72fF
+C44 net@151 0 39.762fF
+C45 net@153 0 39.631fF
+C46 net@155 0 39.673fF
+C47 net@157 0 39.639fF
+C48 net@159 0 40.073fF
+C49 net@161 0 39.942fF
+C50 net@163 0 39.984fF
+C51 net@165 0 39.853fF
+C52 net@167 0 39.895fF
+C53 net@169 0 39.861fF
+C54 net@171 0 39.807fF
+C55 net@173 0 39.772fF
+C56 net@175 0 40.029fF
+C57 net@177 0 39.898fF
+C58 net@179 0 39.94fF
+C59 net@181 0 39.809fF
+C60 net@183 0 39.851fF
+C61 net@185 0 39.72fF
+C62 net@187 0 39.762fF
+C63 net@190 0 38.378fF
+C64 net@128 0 35.799fF
+C65 net@130 0 56.652fF
+C66 net@132 0 35.711fF
+C67 net@134 0 56.652fF
+C68 net@136 0 35.622fF
+C69 net@138 0 56.871fF
+C70 net@140 0 35.533fF
+C71 net@142 0 56.981fF
+C72 net@144 0 35.933fF
+C73 net@146 0 56.487fF
+C74 net@148 0 35.844fF
+C75 net@150 0 56.597fF
+C76 net@152 0 35.755fF
+C77 net@154 0 56.707fF
+C78 net@156 0 35.666fF
+C79 net@158 0 56.816fF
+C80 net@160 0 36.066fF
+C81 net@162 0 56.322fF
+C82 net@164 0 35.977fF
+C83 net@166 0 56.377fF
+C84 net@168 0 35.888fF
+C85 net@170 0 56.487fF
+C86 net@172 0 35.799fF
+C87 net@174 0 56.652fF
+C88 net@176 0 36.021fF
+C89 net@178 0 56.377fF
+C90 net@180 0 35.933fF
+C91 net@182 0 56.487fF
+C92 net@184 0 35.844fF
+C93 net@186 0 56.597fF
+C94 net@188 0 35.755fF
+C95 net@189 0 56.597fF
+C96 net@223 0 44.984fF
+C97 net@224#1Matrix_1@1_out_1 0 44.984fF
+C98 net@225 0 44.984fF
+C99 net@226#1Matrix_1@1_out_3 0 44.984fF
+C100 net@227 0 44.984fF
+C101 net@228#1Matrix_1@1_out_5 0 44.984fF
+C102 net@229 0 44.984fF
+C103 net@230#1Matrix_1@1_out_7 0 44.984fF
+C104 net@231 0 44.984fF
+C105 net@232#1Matrix_1@1_out_9 0 44.984fF
+C106 net@233 0 44.984fF
+C107 net@234#1Matrix_1@1_out_11 0 44.984fF
+C108 net@235 0 44.984fF
+C109 net@236#1Matrix_1@1_out_13 0 44.984fF
+C110 net@237 0 44.984fF
+C111 net@238#1Matrix_1@1_out_15 0 44.984fF
+C112 net@239 0 44.984fF
+C113 net@240#1Matrix_1@1_out_17 0 44.984fF
+C114 net@241#1Matrix_1@1_out_18 0 44.984fF
+C115 net@242 0 44.984fF
+C116 net@243#1Matrix_1@1_out_20 0 44.984fF
+C117 net@244 0 44.984fF
+C118 net@245#1Matrix_1@1_out_22 0 44.984fF
+C119 net@246 0 44.984fF
+C120 net@247#1Matrix_1@1_out_24 0 44.984fF
+C121 net@248 0 44.984fF
+C122 net@249#1Matrix_1@1_out_26 0 44.984fF
+C123 net@250 0 44.984fF
+C124 net@251#1Matrix_1@1_out_28 0 44.984fF
+C125 net@252 0 44.984fF
+C126 net@253#1Matrix_1@1_out_30 0 44.984fF
+C127 net@254 0 44.984fF
+C128 net@127#1Matrix_1@1_reset_0 0 29.504fF
+C129 net@129#1Matrix_1@1_reset_1 0 29.504fF
+C130 net@131#1Matrix_1@1_reset_2 0 29.504fF
+C131 net@133#1Matrix_1@1_reset_3 0 29.504fF
+C132 net@135#1Matrix_1@1_reset_4 0 29.504fF
+C133 net@137#1Matrix_1@1_reset_5 0 29.504fF
+C134 net@139#1Matrix_1@1_reset_6 0 29.504fF
+C135 net@141#1Matrix_1@1_reset_7 0 29.504fF
+C136 net@143#1Matrix_1@1_reset_8 0 29.504fF
+C137 net@145#1Matrix_1@1_reset_9 0 29.504fF
+C138 net@147#1Matrix_1@1_reset_10 0 29.504fF
+C139 net@149#1Matrix_1@1_reset_11 0 29.504fF
+C140 net@151#1Matrix_1@1_reset_12 0 29.504fF
+C141 net@153#1Matrix_1@1_reset_13 0 29.504fF
+C142 net@155#1Matrix_1@1_reset_14 0 29.504fF
+C143 net@157#1Matrix_1@1_reset_15 0 29.504fF
+C144 net@159#1Matrix_1@1_reset_16 0 29.504fF
+C145 net@161#1Matrix_1@1_reset_17 0 29.504fF
+C146 net@163#1Matrix_1@1_reset_18 0 29.504fF
+C147 net@165#1Matrix_1@1_reset_19 0 29.504fF
+C148 net@167#1Matrix_1@1_reset_20 0 29.504fF
+C149 net@169#1Matrix_1@1_reset_21 0 29.504fF
+C150 net@171#1Matrix_1@1_reset_22 0 29.504fF
+C151 net@173#1Matrix_1@1_reset_23 0 29.504fF
+C152 net@175#1Matrix_1@1_reset_24 0 29.504fF
+C153 net@177#1Matrix_1@1_reset_25 0 29.504fF
+C154 net@179#1Matrix_1@1_reset_26 0 29.504fF
+C155 net@181#1Matrix_1@1_reset_27 0 29.504fF
+C156 net@183#1Matrix_1@1_reset_28 0 29.504fF
+C157 net@185#1Matrix_1@1_reset_29 0 29.504fF
+C158 net@187#1Matrix_1@1_reset_30 0 29.504fF
+C159 net@190#1Matrix_1@1_reset_31 0 29.504fF
+C160 net@128#1Matrix_1@1_select_0 0 29.54fF
+C161 net@130#1Matrix_1@1_select_1 0 29.54fF
+C162 net@132#1Matrix_1@1_select_2 0 29.54fF
+C163 net@134#1Matrix_1@1_select_3 0 29.54fF
+C164 net@136#1Matrix_1@1_select_4 0 29.54fF
+C165 net@138#1Matrix_1@1_select_5 0 29.54fF
+C166 net@140#1Matrix_1@1_select_6 0 29.54fF
+C167 net@142#1Matrix_1@1_select_7 0 29.54fF
+C168 net@144#1Matrix_1@1_select_8 0 29.54fF
+C169 net@146#1Matrix_1@1_select_9 0 29.54fF
+C170 net@148#1Matrix_1@1_select_10 0 29.54fF
+C171 net@150#1Matrix_1@1_select_11 0 29.54fF
+C172 net@152#1Matrix_1@1_select_12 0 29.54fF
+C173 net@154#1Matrix_1@1_select_13 0 29.54fF
+C174 net@156#1Matrix_1@1_select_14 0 29.54fF
+C175 net@158#1Matrix_1@1_select_15 0 29.54fF
+C176 net@160#1Matrix_1@1_select_16 0 29.54fF
+C177 net@162#1Matrix_1@1_select_17 0 29.54fF
+C178 net@164#1Matrix_1@1_select_18 0 29.54fF
+C179 net@166#1Matrix_1@1_select_19 0 29.54fF
+C180 net@168#1Matrix_1@1_select_20 0 29.54fF
+C181 net@170#1Matrix_1@1_select_21 0 29.54fF
+C182 net@172#1Matrix_1@1_select_22 0 29.54fF
+C183 net@174#1Matrix_1@1_select_23 0 29.54fF
+C184 net@176#1Matrix_1@1_select_24 0 29.54fF
+C185 net@178#1Matrix_1@1_select_25 0 29.54fF
+C186 net@180#1Matrix_1@1_select_26 0 29.54fF
+C187 net@182#1Matrix_1@1_select_27 0 29.54fF
+C188 net@184#1Matrix_1@1_select_28 0 29.54fF
+C189 net@186#1Matrix_1@1_select_29 0 29.54fF
+C190 net@188#1Matrix_1@1_select_30 0 29.54fF
+C191 net@189#1Matrix_1@1_select_31 0 29.54fF
+C192 net@191 0 36.409fF
+C193 net@192 0 36.409fF
+C194 net@193 0 36.409fF
+C195 net@194#1Matrix_1@2_out_3 0 36.409fF
+C196 net@195 0 36.409fF
+C197 net@196#1Matrix_1@2_out_5 0 36.409fF
+C198 net@197 0 36.409fF
+C199 out7#0Matrix_1@2_out_7 0 36.409fF
+C200 net@199#1Matrix_1@2_out_8 0 36.409fF
+C201 net@200 0 36.409fF
+C202 net@201#1Matrix_1@2_out_10 0 36.409fF
+C203 net@202 0 36.409fF
+C204 net@203#1Matrix_1@2_out_12 0 36.409fF
+C205 net@204 0 36.409fF
+C206 net@205#1Matrix_1@2_out_14 0 36.409fF
+C207 net@206 0 36.409fF
+C208 net@207#1Matrix_1@2_out_16 0 36.409fF
+C209 net@208 0 36.409fF
+C210 net@209#1Matrix_1@2_out_18 0 36.409fF
+C211 net@210 0 36.409fF
+C212 net@211 0 36.409fF
+C213 net@212#1Matrix_1@2_out_21 0 36.409fF
+C214 net@213 0 36.409fF
+C215 net@214#1Matrix_1@2_out_23 0 36.409fF
+C216 net@215 0 36.409fF
+C217 net@216#1Matrix_1@2_out_25 0 36.409fF
+C218 net@217 0 36.409fF
+C219 net@218#1Matrix_1@2_out_27 0 36.409fF
+C220 net@219#1Matrix_1@2_out_28 0 36.409fF
+C221 net@220 0 36.409fF
+C222 net@221#1Matrix_1@2_out_30 0 36.409fF
+C223 o1#0Matrix_1@2_out_31 0 36.409fF
+C224 net@23 0 38.571fF
+C225 net@25 0 39.527fF
+C226 net@27 0 38.534fF
+C227 net@29 0 39.631fF
+C228 net@31 0 38.519fF
+C229 net@33 0 39.72fF
+C230 net@35 0 38.43fF
+C231 reset7 0 39.832fF
+C232 net@64 0 39.451fF
+C233 net@66 0 39.32fF
+C234 net@68 0 39.363fF
+C235 net@70 0 39.232fF
+C236 net@72 0 39.274fF
+C237 net@74 0 38.95fF
+C238 net@76 0 39.185fF
+C239 net@78 0 39.054fF
+C240 net@80 0 39.585fF
+C241 net@82 0 39.454fF
+C242 net@84 0 39.496fF
+C243 net@86 0 39.365fF
+C244 net@88 0 39.407fF
+C245 net@90 0 39.276fF
+C246 net@92 0 39.318fF
+C247 net@94 0 39.276fF
+C248 net@96 0 39.718fF
+C249 net@113 0 39.602fF
+C250 net@115 0 39.629fF
+C251 net@117 0 39.498fF
+C252 net@119 0 39.54fF
+C253 net@121 0 39.409fF
+C254 net@123 0 39.451fF
+C255 net@126 0 39.417fF
+C256 net@24 0 34.689fF
+C257 net@26 0 58.013fF
+C258 net@28 0 34.601fF
+C259 net@30 0 58.176fF
+C260 net@32 0 34.689fF
+C261 net@34 0 58.134fF
+C262 net@36 0 34.778fF
+C263 select7 0 58.243fF
+C264 net@65 0 35.444fF
+C265 net@67 0 57.091fF
+C266 net@69 0 35.355fF
+C267 net@71 0 57.201fF
+C268 net@73 0 35.267fF
+C269 net@75 0 57.31fF
+C270 net@77 0 35.178fF
+C271 net@79 0 57.42fF
+C272 net@81 0 35.577fF
+C273 net@83 0 56.871fF
+C274 net@85 0 35.489fF
+C275 net@87 0 57.036fF
+C276 net@89 0 35.4fF
+C277 net@91 0 57.146fF
+C278 net@93 0 35.311fF
+C279 net@95 0 57.245fF
+C280 net@97 0 35.711fF
+C281 net@114 0 56.762fF
+C282 net@116 0 35.622fF
+C283 net@118 0 56.871fF
+C284 net@120 0 35.533fF
+C285 net@122 0 56.981fF
+C286 net@124 0 35.444fF
+C287 net@125 0 57.091fF
+C288 net@223#1Matrix_1@3_out_0 0 36.409fF
+C289 net@224 0 36.409fF
+C290 net@225#1Matrix_1@3_out_2 0 36.409fF
+C291 net@226 0 36.409fF
+C292 net@227#1Matrix_1@3_out_4 0 36.409fF
+C293 net@228 0 36.409fF
+C294 net@229#1Matrix_1@3_out_6 0 36.409fF
+C295 net@230 0 36.409fF
+C296 net@231#1Matrix_1@3_out_8 0 36.409fF
+C297 net@232 0 36.409fF
+C298 net@233#1Matrix_1@3_out_10 0 36.409fF
+C299 net@234 0 36.409fF
+C300 net@235#1Matrix_1@3_out_12 0 36.409fF
+C301 net@236 0 36.409fF
+C302 net@237#1Matrix_1@3_out_14 0 36.409fF
+C303 net@238 0 36.409fF
+C304 net@239#1Matrix_1@3_out_16 0 36.409fF
+C305 net@240 0 36.409fF
+C306 net@241 0 36.409fF
+C307 net@242#1Matrix_1@3_out_19 0 36.409fF
+C308 net@243 0 36.409fF
+C309 net@244#1Matrix_1@3_out_21 0 36.409fF
+C310 net@245 0 36.409fF
+C311 net@246#1Matrix_1@3_out_23 0 36.409fF
+C312 net@247 0 36.409fF
+C313 net@248#1Matrix_1@3_out_25 0 36.409fF
+C314 net@249 0 36.409fF
+C315 net@250#1Matrix_1@3_out_27 0 36.409fF
+C316 net@251 0 36.409fF
+C317 net@252#1Matrix_1@3_out_29 0 36.409fF
+C318 net@253 0 36.409fF
+C319 net@254#1Matrix_1@3_out_31 0 36.409fF
+C320 net@23#1Matrix_1@3_reset_0 0 29.504fF
+C321 net@25#1Matrix_1@3_reset_1 0 29.504fF
+C322 net@27#1Matrix_1@3_reset_2 0 29.504fF
+C323 net@29#1Matrix_1@3_reset_3 0 29.504fF
+C324 net@31#1Matrix_1@3_reset_4 0 29.504fF
+C325 net@33#1Matrix_1@3_reset_5 0 29.504fF
+C326 net@35#1Matrix_1@3_reset_6 0 29.504fF
+C327 reset7#1Matrix_1@3_reset_7 0 29.504fF
+C328 net@64#1Matrix_1@3_reset_8 0 29.504fF
+C329 net@66#1Matrix_1@3_reset_9 0 29.504fF
+C330 net@68#1Matrix_1@3_reset_10 0 29.504fF
+C331 net@70#1Matrix_1@3_reset_11 0 29.504fF
+C332 net@72#1Matrix_1@3_reset_12 0 29.504fF
+C333 net@74#1Matrix_1@3_reset_13 0 29.504fF
+C334 net@76#1Matrix_1@3_reset_14 0 29.504fF
+C335 net@78#1Matrix_1@3_reset_15 0 29.504fF
+C336 net@80#1Matrix_1@3_reset_16 0 29.504fF
+C337 net@82#1Matrix_1@3_reset_17 0 29.504fF
+C338 net@84#1Matrix_1@3_reset_18 0 29.504fF
+C339 net@86#1Matrix_1@3_reset_19 0 29.504fF
+C340 net@88#1Matrix_1@3_reset_20 0 29.504fF
+C341 net@90#1Matrix_1@3_reset_21 0 29.504fF
+C342 net@92#1Matrix_1@3_reset_22 0 29.504fF
+C343 net@94#1Matrix_1@3_reset_23 0 29.504fF
+C344 net@96#1Matrix_1@3_reset_24 0 29.504fF
+C345 net@113#1Matrix_1@3_reset_25 0 29.504fF
+C346 net@115#1Matrix_1@3_reset_26 0 29.504fF
+C347 net@117#1Matrix_1@3_reset_27 0 29.504fF
+C348 net@119#1Matrix_1@3_reset_28 0 29.504fF
+C349 net@121#1Matrix_1@3_reset_29 0 29.504fF
+C350 net@123#1Matrix_1@3_reset_30 0 29.504fF
+C351 net@126#1Matrix_1@3_reset_31 0 29.504fF
+C352 net@24#1Matrix_1@3_select_0 0 29.54fF
+C353 net@26#1Matrix_1@3_select_1 0 29.54fF
+C354 net@28#1Matrix_1@3_select_2 0 29.54fF
+C355 net@30#1Matrix_1@3_select_3 0 29.54fF
+C356 net@32#1Matrix_1@3_select_4 0 29.54fF
+C357 net@34#1Matrix_1@3_select_5 0 29.54fF
+C358 net@36#1Matrix_1@3_select_6 0 29.54fF
+C359 select7#1Matrix_1@3_select_7 0 29.54fF
+C360 net@65#1Matrix_1@3_select_8 0 29.54fF
+C361 net@67#1Matrix_1@3_select_9 0 29.54fF
+C362 net@69#1Matrix_1@3_select_10 0 29.54fF
+C363 net@71#1Matrix_1@3_select_11 0 29.54fF
+C364 net@73#1Matrix_1@3_select_12 0 29.54fF
+C365 net@75#1Matrix_1@3_select_13 0 29.54fF
+C366 net@77#1Matrix_1@3_select_14 0 29.54fF
+C367 net@79#1Matrix_1@3_select_15 0 29.54fF
+C368 net@81#1Matrix_1@3_select_16 0 29.54fF
+C369 net@83#1Matrix_1@3_select_17 0 29.54fF
+C370 net@85#1Matrix_1@3_select_18 0 29.54fF
+C371 net@87#1Matrix_1@3_select_19 0 29.54fF
+C372 net@89#1Matrix_1@3_select_20 0 29.54fF
+C373 net@91#1Matrix_1@3_select_21 0 29.54fF
+C374 net@93#1Matrix_1@3_select_22 0 29.54fF
+C375 net@95#1Matrix_1@3_select_23 0 29.54fF
+C376 net@97#1Matrix_1@3_select_24 0 29.54fF
+C377 net@114#1Matrix_1@3_select_25 0 29.54fF
+C378 net@116#1Matrix_1@3_select_26 0 29.54fF
+C379 net@118#1Matrix_1@3_select_27 0 29.54fF
+C380 net@120#1Matrix_1@3_select_28 0 29.54fF
+C381 net@122#1Matrix_1@3_select_29 0 29.54fF
+C382 net@124#1Matrix_1@3_select_30 0 29.54fF
+C383 net@125#1Matrix_1@3_select_31 0 29.54fF
+C384 g1 0 346.817fF
+C385 gate_column 0 299.704fF
+C386 net@1845 0 9.188fF
+C387 net@1317 0 12.386fF
+C388 net@1331 0 11.676fF
+C389 net@1354 0 11.72fF
+C390 net@1395 0 11.01fF
+C391 net@1416 0 10.299fF
+C392 net@1435 0 10.344fF
+C393 net@1447 0 9.633fF
+C394 net@1468 0 9.678fF
+C395 net@1480 0 8.968fF
+C396 net@1501 0 9.012fF
+C397 net@1515 0 8.302fF
+C398 net@1537 0 8.302fF
+C399 net@1553 0 8.923fF
+C400 net@1573 0 8.612fF
+C401 net@1588 0 6.925fF
+C402 net@1658 0 8.435fF
+C403 net@1677 0 6.215fF
+C404 net@1691 0 6.26fF
+C405 net@1705 0 5.549fF
+C406 net@1747 0 5.549fF
+C407 net@1762 0 4.839fF
+C408 net@1781 0 4.883fF
+C409 net@1802 0 4.795fF
+C410 net@1825 0 4.75fF
+C411 net@1842 0 5.46fF
+C412 net@1988 0 5.416fF
+C413 net@2004 0 6.126fF
+C414 net@2001 0 10.347fF
+C415 net@2025 0 6.126fF
+C416 net@2029 0 10.452fF
+C417 net@2045 0 11.183fF
+C418 net@2068 0 6.837fF
+C419 net@2087 0 6.792fF
+C420 net@2091 0 11.044fF
+C421 net@2114 0 7.503fF
+C422 net@2118 0 11.859fF
+C423 net@1370 0 11.01fF
+C424 D_column 0 8.287fF
+C425 net@1324 0 7.025fF
+C426 net@1338 0 6.147fF
+C427 net@1362 0 6.202fF
+C428 net@1377 0 5.653fF
+C429 net@1405 0 5.653fF
+C430 net@1424 0 6.531fF
+C431 net@1441 0 6.476fF
+C432 net@1454 0 7.354fF
+C433 net@1474 0 7.299fF
+C434 net@1487 0 8.177fF
+C435 net@1508 0 8.123fF
+C436 net@1523 0 9.001fF
+C437 net@1545 0 9.001fF
+C438 net@1559 0 9.879fF
+C439 net@1580 0 9.824fF
+C440 net@1598 0 10.702fF
+C441 net@1666 0 10.702fF
+C442 net@1681 0 11.58fF
+C443 net@1695 0 11.525fF
+C444 net@1709 0 12.403fF
+C445 net@1750 0 12.403fF
+C446 net@1774 0 13.281fF
+C447 net@1793 0 13.227fF
+C448 net@1814 0 14.105fF
+C449 net@1835 0 14.05fF
+C450 net@1851 0 14.928fF
+C451 net@1997 0 14.873fF
+C452 net@2013 0 15.801fF
+C453 net@2039 0 15.751fF
+C454 net@2080 0 16.194fF
+C455 net@2103 0 16.226fF
+C456 net@2127 0 17.452fF
+C457 clk_column 0 3.327fF
+C458 clkb_column 0 4.886fF
+C459 net@1323 0 9.165fF
+C460 net@1327 0 7.958fF
+C461 net@1335 0 7.464fF
+C462 net@1343 0 7.08fF
+C463 net@1357 0 7.519fF
+C464 net@1365 0 7.135fF
+C465 net@1374 0 6.641fF
+C466 net@1380 0 6.257fF
+C467 net@1400 0 6.641fF
+C468 net@1408 0 6.257fF
+C469 net@1421 0 5.763fF
+C470 net@1427 0 5.378fF
+C471 net@1438 0 5.817fF
+C472 net@1444 0 5.433fF
+C473 net@1451 0 4.939fF
+C474 net@1457 0 4.555fF
+C475 net@1471 0 4.994fF
+C476 net@1477 0 4.61fF
+C477 net@1483 0 4.336fF
+C478 net@1490 0 4.83fF
+C479 net@1504 0 4.281fF
+C480 net@1512 0 4.775fF
+C481 net@1518 0 5.159fF
+C482 net@1526 0 5.653fF
+C483 net@1542 0 5.159fF
+C484 net@1548 0 5.653fF
+C485 net@1556 0 6.037fF
+C486 net@1564 0 6.531fF
+C487 net@1576 0 5.982fF
+C488 net@1585 0 6.476fF
+C489 net@1595 0 6.86fF
+C490 net@1601 0 7.354fF
+C491 net@1655 0 6.86fF
+C492 net@1669 0 7.354fF
+C493 net@1674 0 7.738fF
+C494 net@1684 0 8.232fF
+C495 net@1688 0 7.683fF
+C496 net@1698 0 8.177fF
+C497 net@1702 0 8.562fF
+C498 net@1712 0 9.056fF
+C499 net@1744 0 8.562fF
+C500 net@1753 0 9.056fF
+C501 net@1765 0 9.44fF
+C502 net@1777 0 9.934fF
+C503 net@1784 0 9.385fF
+C504 net@1796 0 9.879fF
+C505 net@1805 0 10.263fF
+C506 net@1817 0 10.757fF
+C507 net@1822 0 10.208fF
+C508 net@1838 0 10.702fF
+C509 net@1854 0 11.58fF
+C510 net@1983 0 11.031fF
+C511 net@1987 0 11.525fF
+C512 net@2018 0 12.403fF
+C513 net@2042 0 12.403fF
+C514 net@2074 0 13.281fF
+C515 net@2107 0 13.227fF
+C516 net@2131 0 14.105fF
+C517 D_reset 0 10.153fF
+C518 D_select 0 6.531fF
+C519 clk_reset 0 7.277fF
+C520 clk_select 0 4.75fF
+C521 clkb_reset 0 6.342fF
+C522 clkb_select 0 6.03fF
+C523 rst_reset 0 7.745fF
+C524 rst_select 0 5.25fF
+** Extracted Parasitic Resistors ***
+R0 net@23 net@23##0 8.1
+C525 net@23##0 0 29.504fF
+R1 net@23##0 net@23##1 8.1
+C526 net@23##1 0 29.504fF
+R2 net@23##1 net@23##2 8.1
+C527 net@23##2 0 29.504fF
+R3 net@23##2 net@23#1Matrix_1@3_reset_0 8.1
+R4 net@24 net@24##0 8.11
+C528 net@24##0 0 29.54fF
+R5 net@24##0 net@24##1 8.11
+C529 net@24##1 0 29.54fF
+R6 net@24##1 net@24##2 8.11
+C530 net@24##2 0 29.54fF
+R7 net@24##2 net@24#1Matrix_1@3_select_0 8.11
+R8 net@25 net@25##0 8.1
+C531 net@25##0 0 29.504fF
+R9 net@25##0 net@25##1 8.1
+C532 net@25##1 0 29.504fF
+R10 net@25##1 net@25##2 8.1
+C533 net@25##2 0 29.504fF
+R11 net@25##2 net@25#1Matrix_1@3_reset_1 8.1
+R12 net@26 net@26##0 8.11
+C534 net@26##0 0 29.54fF
+R13 net@26##0 net@26##1 8.11
+C535 net@26##1 0 29.54fF
+R14 net@26##1 net@26##2 8.11
+C536 net@26##2 0 29.54fF
+R15 net@26##2 net@26#1Matrix_1@3_select_1 8.11
+R16 net@27 net@27##0 8.1
+C537 net@27##0 0 29.504fF
+R17 net@27##0 net@27##1 8.1
+C538 net@27##1 0 29.504fF
+R18 net@27##1 net@27##2 8.1
+C539 net@27##2 0 29.504fF
+R19 net@27##2 net@27#1Matrix_1@3_reset_2 8.1
+R20 net@28 net@28##0 8.11
+C540 net@28##0 0 29.54fF
+R21 net@28##0 net@28##1 8.11
+C541 net@28##1 0 29.54fF
+R22 net@28##1 net@28##2 8.11
+C542 net@28##2 0 29.54fF
+R23 net@28##2 net@28#1Matrix_1@3_select_2 8.11
+R24 net@29 net@29##0 8.1
+C543 net@29##0 0 29.504fF
+R25 net@29##0 net@29##1 8.1
+C544 net@29##1 0 29.504fF
+R26 net@29##1 net@29##2 8.1
+C545 net@29##2 0 29.504fF
+R27 net@29##2 net@29#1Matrix_1@3_reset_3 8.1
+R28 net@30 net@30##0 8.11
+C546 net@30##0 0 29.54fF
+R29 net@30##0 net@30##1 8.11
+C547 net@30##1 0 29.54fF
+R30 net@30##1 net@30##2 8.11
+C548 net@30##2 0 29.54fF
+R31 net@30##2 net@30#1Matrix_1@3_select_3 8.11
+R32 net@31 net@31##0 8.1
+C549 net@31##0 0 29.504fF
+R33 net@31##0 net@31##1 8.1
+C550 net@31##1 0 29.504fF
+R34 net@31##1 net@31##2 8.1
+C551 net@31##2 0 29.504fF
+R35 net@31##2 net@31#1Matrix_1@3_reset_4 8.1
+R36 net@32 net@32##0 8.11
+C552 net@32##0 0 29.54fF
+R37 net@32##0 net@32##1 8.11
+C553 net@32##1 0 29.54fF
+R38 net@32##1 net@32##2 8.11
+C554 net@32##2 0 29.54fF
+R39 net@32##2 net@32#1Matrix_1@3_select_4 8.11
+R40 net@33 net@33##0 8.1
+C555 net@33##0 0 29.504fF
+R41 net@33##0 net@33##1 8.1
+C556 net@33##1 0 29.504fF
+R42 net@33##1 net@33##2 8.1
+C557 net@33##2 0 29.504fF
+R43 net@33##2 net@33#1Matrix_1@3_reset_5 8.1
+R44 net@34 net@34##0 8.11
+C558 net@34##0 0 29.54fF
+R45 net@34##0 net@34##1 8.11
+C559 net@34##1 0 29.54fF
+R46 net@34##1 net@34##2 8.11
+C560 net@34##2 0 29.54fF
+R47 net@34##2 net@34#1Matrix_1@3_select_5 8.11
+R48 net@35 net@35##0 8.1
+C561 net@35##0 0 29.504fF
+R49 net@35##0 net@35##1 8.1
+C562 net@35##1 0 29.504fF
+R50 net@35##1 net@35##2 8.1
+C563 net@35##2 0 29.504fF
+R51 net@35##2 net@35#1Matrix_1@3_reset_6 8.1
+R52 net@36 net@36##0 8.11
+C564 net@36##0 0 29.54fF
+R53 net@36##0 net@36##1 8.11
+C565 net@36##1 0 29.54fF
+R54 net@36##1 net@36##2 8.11
+C566 net@36##2 0 29.54fF
+R55 net@36##2 net@36#1Matrix_1@3_select_6 8.11
+R56 reset7 reset7##0 8.1
+C567 reset7##0 0 29.504fF
+R57 reset7##0 reset7##1 8.1
+C568 reset7##1 0 29.504fF
+R58 reset7##1 reset7##2 8.1
+C569 reset7##2 0 29.504fF
+R59 reset7##2 reset7#1Matrix_1@3_reset_7 8.1
+R60 select7 select7##0 8.11
+C570 select7##0 0 29.54fF
+R61 select7##0 select7##1 8.11
+C571 select7##1 0 29.54fF
+R62 select7##1 select7##2 8.11
+C572 select7##2 0 29.54fF
+R63 select7##2 select7#1Matrix_1@3_select_7 8.11
+R64 net@64 net@64##0 8.1
+C573 net@64##0 0 29.504fF
+R65 net@64##0 net@64##1 8.1
+C574 net@64##1 0 29.504fF
+R66 net@64##1 net@64##2 8.1
+C575 net@64##2 0 29.504fF
+R67 net@64##2 net@64#1Matrix_1@3_reset_8 8.1
+R68 net@65 net@65##0 8.11
+C576 net@65##0 0 29.54fF
+R69 net@65##0 net@65##1 8.11
+C577 net@65##1 0 29.54fF
+R70 net@65##1 net@65##2 8.11
+C578 net@65##2 0 29.54fF
+R71 net@65##2 net@65#1Matrix_1@3_select_8 8.11
+R72 net@66 net@66##0 8.1
+C579 net@66##0 0 29.504fF
+R73 net@66##0 net@66##1 8.1
+C580 net@66##1 0 29.504fF
+R74 net@66##1 net@66##2 8.1
+C581 net@66##2 0 29.504fF
+R75 net@66##2 net@66#1Matrix_1@3_reset_9 8.1
+R76 net@67 net@67##0 8.11
+C582 net@67##0 0 29.54fF
+R77 net@67##0 net@67##1 8.11
+C583 net@67##1 0 29.54fF
+R78 net@67##1 net@67##2 8.11
+C584 net@67##2 0 29.54fF
+R79 net@67##2 net@67#1Matrix_1@3_select_9 8.11
+R80 net@68 net@68##0 8.1
+C585 net@68##0 0 29.504fF
+R81 net@68##0 net@68##1 8.1
+C586 net@68##1 0 29.504fF
+R82 net@68##1 net@68##2 8.1
+C587 net@68##2 0 29.504fF
+R83 net@68##2 net@68#1Matrix_1@3_reset_10 8.1
+R84 net@69 net@69##0 8.11
+C588 net@69##0 0 29.54fF
+R85 net@69##0 net@69##1 8.11
+C589 net@69##1 0 29.54fF
+R86 net@69##1 net@69##2 8.11
+C590 net@69##2 0 29.54fF
+R87 net@69##2 net@69#1Matrix_1@3_select_10 8.11
+R88 net@70 net@70##0 8.1
+C591 net@70##0 0 29.504fF
+R89 net@70##0 net@70##1 8.1
+C592 net@70##1 0 29.504fF
+R90 net@70##1 net@70##2 8.1
+C593 net@70##2 0 29.504fF
+R91 net@70##2 net@70#1Matrix_1@3_reset_11 8.1
+R92 net@71 net@71##0 8.11
+C594 net@71##0 0 29.54fF
+R93 net@71##0 net@71##1 8.11
+C595 net@71##1 0 29.54fF
+R94 net@71##1 net@71##2 8.11
+C596 net@71##2 0 29.54fF
+R95 net@71##2 net@71#1Matrix_1@3_select_11 8.11
+R96 net@72 net@72##0 8.1
+C597 net@72##0 0 29.504fF
+R97 net@72##0 net@72##1 8.1
+C598 net@72##1 0 29.504fF
+R98 net@72##1 net@72##2 8.1
+C599 net@72##2 0 29.504fF
+R99 net@72##2 net@72#1Matrix_1@3_reset_12 8.1
+R100 net@73 net@73##0 8.11
+C600 net@73##0 0 29.54fF
+R101 net@73##0 net@73##1 8.11
+C601 net@73##1 0 29.54fF
+R102 net@73##1 net@73##2 8.11
+C602 net@73##2 0 29.54fF
+R103 net@73##2 net@73#1Matrix_1@3_select_12 8.11
+R104 net@74 net@74##0 8.1
+C603 net@74##0 0 29.504fF
+R105 net@74##0 net@74##1 8.1
+C604 net@74##1 0 29.504fF
+R106 net@74##1 net@74##2 8.1
+C605 net@74##2 0 29.504fF
+R107 net@74##2 net@74#1Matrix_1@3_reset_13 8.1
+R108 net@75 net@75##0 8.11
+C606 net@75##0 0 29.54fF
+R109 net@75##0 net@75##1 8.11
+C607 net@75##1 0 29.54fF
+R110 net@75##1 net@75##2 8.11
+C608 net@75##2 0 29.54fF
+R111 net@75##2 net@75#1Matrix_1@3_select_13 8.11
+R112 net@76 net@76##0 8.1
+C609 net@76##0 0 29.504fF
+R113 net@76##0 net@76##1 8.1
+C610 net@76##1 0 29.504fF
+R114 net@76##1 net@76##2 8.1
+C611 net@76##2 0 29.504fF
+R115 net@76##2 net@76#1Matrix_1@3_reset_14 8.1
+R116 net@77 net@77##0 8.11
+C612 net@77##0 0 29.54fF
+R117 net@77##0 net@77##1 8.11
+C613 net@77##1 0 29.54fF
+R118 net@77##1 net@77##2 8.11
+C614 net@77##2 0 29.54fF
+R119 net@77##2 net@77#1Matrix_1@3_select_14 8.11
+R120 net@78 net@78##0 8.1
+C615 net@78##0 0 29.504fF
+R121 net@78##0 net@78##1 8.1
+C616 net@78##1 0 29.504fF
+R122 net@78##1 net@78##2 8.1
+C617 net@78##2 0 29.504fF
+R123 net@78##2 net@78#1Matrix_1@3_reset_15 8.1
+R124 net@79 net@79##0 8.11
+C618 net@79##0 0 29.54fF
+R125 net@79##0 net@79##1 8.11
+C619 net@79##1 0 29.54fF
+R126 net@79##1 net@79##2 8.11
+C620 net@79##2 0 29.54fF
+R127 net@79##2 net@79#1Matrix_1@3_select_15 8.11
+R128 net@80 net@80##0 8.1
+C621 net@80##0 0 29.504fF
+R129 net@80##0 net@80##1 8.1
+C622 net@80##1 0 29.504fF
+R130 net@80##1 net@80##2 8.1
+C623 net@80##2 0 29.504fF
+R131 net@80##2 net@80#1Matrix_1@3_reset_16 8.1
+R132 net@81 net@81##0 8.11
+C624 net@81##0 0 29.54fF
+R133 net@81##0 net@81##1 8.11
+C625 net@81##1 0 29.54fF
+R134 net@81##1 net@81##2 8.11
+C626 net@81##2 0 29.54fF
+R135 net@81##2 net@81#1Matrix_1@3_select_16 8.11
+R136 net@82 net@82##0 8.1
+C627 net@82##0 0 29.504fF
+R137 net@82##0 net@82##1 8.1
+C628 net@82##1 0 29.504fF
+R138 net@82##1 net@82##2 8.1
+C629 net@82##2 0 29.504fF
+R139 net@82##2 net@82#1Matrix_1@3_reset_17 8.1
+R140 net@83 net@83##0 8.11
+C630 net@83##0 0 29.54fF
+R141 net@83##0 net@83##1 8.11
+C631 net@83##1 0 29.54fF
+R142 net@83##1 net@83##2 8.11
+C632 net@83##2 0 29.54fF
+R143 net@83##2 net@83#1Matrix_1@3_select_17 8.11
+R144 net@84 net@84##0 8.1
+C633 net@84##0 0 29.504fF
+R145 net@84##0 net@84##1 8.1
+C634 net@84##1 0 29.504fF
+R146 net@84##1 net@84##2 8.1
+C635 net@84##2 0 29.504fF
+R147 net@84##2 net@84#1Matrix_1@3_reset_18 8.1
+R148 net@85 net@85##0 8.11
+C636 net@85##0 0 29.54fF
+R149 net@85##0 net@85##1 8.11
+C637 net@85##1 0 29.54fF
+R150 net@85##1 net@85##2 8.11
+C638 net@85##2 0 29.54fF
+R151 net@85##2 net@85#1Matrix_1@3_select_18 8.11
+R152 net@86 net@86##0 8.1
+C639 net@86##0 0 29.504fF
+R153 net@86##0 net@86##1 8.1
+C640 net@86##1 0 29.504fF
+R154 net@86##1 net@86##2 8.1
+C641 net@86##2 0 29.504fF
+R155 net@86##2 net@86#1Matrix_1@3_reset_19 8.1
+R156 net@87 net@87##0 8.11
+C642 net@87##0 0 29.54fF
+R157 net@87##0 net@87##1 8.11
+C643 net@87##1 0 29.54fF
+R158 net@87##1 net@87##2 8.11
+C644 net@87##2 0 29.54fF
+R159 net@87##2 net@87#1Matrix_1@3_select_19 8.11
+R160 net@88 net@88##0 8.1
+C645 net@88##0 0 29.504fF
+R161 net@88##0 net@88##1 8.1
+C646 net@88##1 0 29.504fF
+R162 net@88##1 net@88##2 8.1
+C647 net@88##2 0 29.504fF
+R163 net@88##2 net@88#1Matrix_1@3_reset_20 8.1
+R164 net@89 net@89##0 8.11
+C648 net@89##0 0 29.54fF
+R165 net@89##0 net@89##1 8.11
+C649 net@89##1 0 29.54fF
+R166 net@89##1 net@89##2 8.11
+C650 net@89##2 0 29.54fF
+R167 net@89##2 net@89#1Matrix_1@3_select_20 8.11
+R168 net@90 net@90##0 8.1
+C651 net@90##0 0 29.504fF
+R169 net@90##0 net@90##1 8.1
+C652 net@90##1 0 29.504fF
+R170 net@90##1 net@90##2 8.1
+C653 net@90##2 0 29.504fF
+R171 net@90##2 net@90#1Matrix_1@3_reset_21 8.1
+R172 net@91 net@91##0 8.11
+C654 net@91##0 0 29.54fF
+R173 net@91##0 net@91##1 8.11
+C655 net@91##1 0 29.54fF
+R174 net@91##1 net@91##2 8.11
+C656 net@91##2 0 29.54fF
+R175 net@91##2 net@91#1Matrix_1@3_select_21 8.11
+R176 net@92 net@92##0 8.1
+C657 net@92##0 0 29.504fF
+R177 net@92##0 net@92##1 8.1
+C658 net@92##1 0 29.504fF
+R178 net@92##1 net@92##2 8.1
+C659 net@92##2 0 29.504fF
+R179 net@92##2 net@92#1Matrix_1@3_reset_22 8.1
+R180 net@93 net@93##0 8.11
+C660 net@93##0 0 29.54fF
+R181 net@93##0 net@93##1 8.11
+C661 net@93##1 0 29.54fF
+R182 net@93##1 net@93##2 8.11
+C662 net@93##2 0 29.54fF
+R183 net@93##2 net@93#1Matrix_1@3_select_22 8.11
+R184 net@94 net@94##0 8.1
+C663 net@94##0 0 29.504fF
+R185 net@94##0 net@94##1 8.1
+C664 net@94##1 0 29.504fF
+R186 net@94##1 net@94##2 8.1
+C665 net@94##2 0 29.504fF
+R187 net@94##2 net@94#1Matrix_1@3_reset_23 8.1
+R188 net@95 net@95##0 8.11
+C666 net@95##0 0 29.54fF
+R189 net@95##0 net@95##1 8.11
+C667 net@95##1 0 29.54fF
+R190 net@95##1 net@95##2 8.11
+C668 net@95##2 0 29.54fF
+R191 net@95##2 net@95#1Matrix_1@3_select_23 8.11
+R192 net@96 net@96##0 8.1
+C669 net@96##0 0 29.504fF
+R193 net@96##0 net@96##1 8.1
+C670 net@96##1 0 29.504fF
+R194 net@96##1 net@96##2 8.1
+C671 net@96##2 0 29.504fF
+R195 net@96##2 net@96#1Matrix_1@3_reset_24 8.1
+R196 net@97 net@97##0 8.11
+C672 net@97##0 0 29.54fF
+R197 net@97##0 net@97##1 8.11
+C673 net@97##1 0 29.54fF
+R198 net@97##1 net@97##2 8.11
+C674 net@97##2 0 29.54fF
+R199 net@97##2 net@97#1Matrix_1@3_select_24 8.11
+R200 net@113 net@113##0 8.1
+C675 net@113##0 0 29.504fF
+R201 net@113##0 net@113##1 8.1
+C676 net@113##1 0 29.504fF
+R202 net@113##1 net@113##2 8.1
+C677 net@113##2 0 29.504fF
+R203 net@113##2 net@113#1Matrix_1@3_reset_25 8.1
+R204 net@114 net@114##0 8.11
+C678 net@114##0 0 29.54fF
+R205 net@114##0 net@114##1 8.11
+C679 net@114##1 0 29.54fF
+R206 net@114##1 net@114##2 8.11
+C680 net@114##2 0 29.54fF
+R207 net@114##2 net@114#1Matrix_1@3_select_25 8.11
+R208 net@115 net@115##0 8.1
+C681 net@115##0 0 29.504fF
+R209 net@115##0 net@115##1 8.1
+C682 net@115##1 0 29.504fF
+R210 net@115##1 net@115##2 8.1
+C683 net@115##2 0 29.504fF
+R211 net@115##2 net@115#1Matrix_1@3_reset_26 8.1
+R212 net@116 net@116##0 8.11
+C684 net@116##0 0 29.54fF
+R213 net@116##0 net@116##1 8.11
+C685 net@116##1 0 29.54fF
+R214 net@116##1 net@116##2 8.11
+C686 net@116##2 0 29.54fF
+R215 net@116##2 net@116#1Matrix_1@3_select_26 8.11
+R216 net@117 net@117##0 8.1
+C687 net@117##0 0 29.504fF
+R217 net@117##0 net@117##1 8.1
+C688 net@117##1 0 29.504fF
+R218 net@117##1 net@117##2 8.1
+C689 net@117##2 0 29.504fF
+R219 net@117##2 net@117#1Matrix_1@3_reset_27 8.1
+R220 net@118 net@118##0 8.11
+C690 net@118##0 0 29.54fF
+R221 net@118##0 net@118##1 8.11
+C691 net@118##1 0 29.54fF
+R222 net@118##1 net@118##2 8.11
+C692 net@118##2 0 29.54fF
+R223 net@118##2 net@118#1Matrix_1@3_select_27 8.11
+R224 net@119 net@119##0 8.1
+C693 net@119##0 0 29.504fF
+R225 net@119##0 net@119##1 8.1
+C694 net@119##1 0 29.504fF
+R226 net@119##1 net@119##2 8.1
+C695 net@119##2 0 29.504fF
+R227 net@119##2 net@119#1Matrix_1@3_reset_28 8.1
+R228 net@120 net@120##0 8.11
+C696 net@120##0 0 29.54fF
+R229 net@120##0 net@120##1 8.11
+C697 net@120##1 0 29.54fF
+R230 net@120##1 net@120##2 8.11
+C698 net@120##2 0 29.54fF
+R231 net@120##2 net@120#1Matrix_1@3_select_28 8.11
+R232 net@121 net@121##0 8.1
+C699 net@121##0 0 29.504fF
+R233 net@121##0 net@121##1 8.1
+C700 net@121##1 0 29.504fF
+R234 net@121##1 net@121##2 8.1
+C701 net@121##2 0 29.504fF
+R235 net@121##2 net@121#1Matrix_1@3_reset_29 8.1
+R236 net@122 net@122##0 8.11
+C702 net@122##0 0 29.54fF
+R237 net@122##0 net@122##1 8.11
+C703 net@122##1 0 29.54fF
+R238 net@122##1 net@122##2 8.11
+C704 net@122##2 0 29.54fF
+R239 net@122##2 net@122#1Matrix_1@3_select_29 8.11
+R240 net@123 net@123##0 8.1
+C705 net@123##0 0 29.504fF
+R241 net@123##0 net@123##1 8.1
+C706 net@123##1 0 29.504fF
+R242 net@123##1 net@123##2 8.1
+C707 net@123##2 0 29.504fF
+R243 net@123##2 net@123#1Matrix_1@3_reset_30 8.1
+R244 net@124 net@124##0 8.11
+C708 net@124##0 0 29.54fF
+R245 net@124##0 net@124##1 8.11
+C709 net@124##1 0 29.54fF
+R246 net@124##1 net@124##2 8.11
+C710 net@124##2 0 29.54fF
+R247 net@124##2 net@124#1Matrix_1@3_select_30 8.11
+R248 net@125 net@125##0 8.11
+C711 net@125##0 0 29.54fF
+R249 net@125##0 net@125##1 8.11
+C712 net@125##1 0 29.54fF
+R250 net@125##1 net@125##2 8.11
+C713 net@125##2 0 29.54fF
+R251 net@125##2 net@125#1Matrix_1@3_select_31 8.11
+R252 net@126 net@126##0 8.1
+C714 net@126##0 0 29.504fF
+R253 net@126##0 net@126##1 8.1
+C715 net@126##1 0 29.504fF
+R254 net@126##1 net@126##2 8.1
+C716 net@126##2 0 29.504fF
+R255 net@126##2 net@126#1Matrix_1@3_reset_31 8.1
+R256 net@127 net@127##0 8.1
+C717 net@127##0 0 29.504fF
+R257 net@127##0 net@127##1 8.1
+C718 net@127##1 0 29.504fF
+R258 net@127##1 net@127##2 8.1
+C719 net@127##2 0 29.504fF
+R259 net@127##2 net@127#1Matrix_1@1_reset_0 8.1
+R260 net@128 net@128##0 8.11
+C720 net@128##0 0 29.54fF
+R261 net@128##0 net@128##1 8.11
+C721 net@128##1 0 29.54fF
+R262 net@128##1 net@128##2 8.11
+C722 net@128##2 0 29.54fF
+R263 net@128##2 net@128#1Matrix_1@1_select_0 8.11
+R264 net@129 net@129##0 8.1
+C723 net@129##0 0 29.504fF
+R265 net@129##0 net@129##1 8.1
+C724 net@129##1 0 29.504fF
+R266 net@129##1 net@129##2 8.1
+C725 net@129##2 0 29.504fF
+R267 net@129##2 net@129#1Matrix_1@1_reset_1 8.1
+R268 net@130 net@130##0 8.11
+C726 net@130##0 0 29.54fF
+R269 net@130##0 net@130##1 8.11
+C727 net@130##1 0 29.54fF
+R270 net@130##1 net@130##2 8.11
+C728 net@130##2 0 29.54fF
+R271 net@130##2 net@130#1Matrix_1@1_select_1 8.11
+R272 net@131 net@131##0 8.1
+C729 net@131##0 0 29.504fF
+R273 net@131##0 net@131##1 8.1
+C730 net@131##1 0 29.504fF
+R274 net@131##1 net@131##2 8.1
+C731 net@131##2 0 29.504fF
+R275 net@131##2 net@131#1Matrix_1@1_reset_2 8.1
+R276 net@132 net@132##0 8.11
+C732 net@132##0 0 29.54fF
+R277 net@132##0 net@132##1 8.11
+C733 net@132##1 0 29.54fF
+R278 net@132##1 net@132##2 8.11
+C734 net@132##2 0 29.54fF
+R279 net@132##2 net@132#1Matrix_1@1_select_2 8.11
+R280 net@133 net@133##0 8.1
+C735 net@133##0 0 29.504fF
+R281 net@133##0 net@133##1 8.1
+C736 net@133##1 0 29.504fF
+R282 net@133##1 net@133##2 8.1
+C737 net@133##2 0 29.504fF
+R283 net@133##2 net@133#1Matrix_1@1_reset_3 8.1
+R284 net@134 net@134##0 8.11
+C738 net@134##0 0 29.54fF
+R285 net@134##0 net@134##1 8.11
+C739 net@134##1 0 29.54fF
+R286 net@134##1 net@134##2 8.11
+C740 net@134##2 0 29.54fF
+R287 net@134##2 net@134#1Matrix_1@1_select_3 8.11
+R288 net@135 net@135##0 8.1
+C741 net@135##0 0 29.504fF
+R289 net@135##0 net@135##1 8.1
+C742 net@135##1 0 29.504fF
+R290 net@135##1 net@135##2 8.1
+C743 net@135##2 0 29.504fF
+R291 net@135##2 net@135#1Matrix_1@1_reset_4 8.1
+R292 net@136 net@136##0 8.11
+C744 net@136##0 0 29.54fF
+R293 net@136##0 net@136##1 8.11
+C745 net@136##1 0 29.54fF
+R294 net@136##1 net@136##2 8.11
+C746 net@136##2 0 29.54fF
+R295 net@136##2 net@136#1Matrix_1@1_select_4 8.11
+R296 net@137 net@137##0 8.1
+C747 net@137##0 0 29.504fF
+R297 net@137##0 net@137##1 8.1
+C748 net@137##1 0 29.504fF
+R298 net@137##1 net@137##2 8.1
+C749 net@137##2 0 29.504fF
+R299 net@137##2 net@137#1Matrix_1@1_reset_5 8.1
+R300 net@138 net@138##0 8.11
+C750 net@138##0 0 29.54fF
+R301 net@138##0 net@138##1 8.11
+C751 net@138##1 0 29.54fF
+R302 net@138##1 net@138##2 8.11
+C752 net@138##2 0 29.54fF
+R303 net@138##2 net@138#1Matrix_1@1_select_5 8.11
+R304 net@139 net@139##0 8.1
+C753 net@139##0 0 29.504fF
+R305 net@139##0 net@139##1 8.1
+C754 net@139##1 0 29.504fF
+R306 net@139##1 net@139##2 8.1
+C755 net@139##2 0 29.504fF
+R307 net@139##2 net@139#1Matrix_1@1_reset_6 8.1
+R308 net@140 net@140##0 8.11
+C756 net@140##0 0 29.54fF
+R309 net@140##0 net@140##1 8.11
+C757 net@140##1 0 29.54fF
+R310 net@140##1 net@140##2 8.11
+C758 net@140##2 0 29.54fF
+R311 net@140##2 net@140#1Matrix_1@1_select_6 8.11
+R312 net@141 net@141##0 8.1
+C759 net@141##0 0 29.504fF
+R313 net@141##0 net@141##1 8.1
+C760 net@141##1 0 29.504fF
+R314 net@141##1 net@141##2 8.1
+C761 net@141##2 0 29.504fF
+R315 net@141##2 net@141#1Matrix_1@1_reset_7 8.1
+R316 net@142 net@142##0 8.11
+C762 net@142##0 0 29.54fF
+R317 net@142##0 net@142##1 8.11
+C763 net@142##1 0 29.54fF
+R318 net@142##1 net@142##2 8.11
+C764 net@142##2 0 29.54fF
+R319 net@142##2 net@142#1Matrix_1@1_select_7 8.11
+R320 net@143 net@143##0 8.1
+C765 net@143##0 0 29.504fF
+R321 net@143##0 net@143##1 8.1
+C766 net@143##1 0 29.504fF
+R322 net@143##1 net@143##2 8.1
+C767 net@143##2 0 29.504fF
+R323 net@143##2 net@143#1Matrix_1@1_reset_8 8.1
+R324 net@144 net@144##0 8.11
+C768 net@144##0 0 29.54fF
+R325 net@144##0 net@144##1 8.11
+C769 net@144##1 0 29.54fF
+R326 net@144##1 net@144##2 8.11
+C770 net@144##2 0 29.54fF
+R327 net@144##2 net@144#1Matrix_1@1_select_8 8.11
+R328 net@145 net@145##0 8.1
+C771 net@145##0 0 29.504fF
+R329 net@145##0 net@145##1 8.1
+C772 net@145##1 0 29.504fF
+R330 net@145##1 net@145##2 8.1
+C773 net@145##2 0 29.504fF
+R331 net@145##2 net@145#1Matrix_1@1_reset_9 8.1
+R332 net@146 net@146##0 8.11
+C774 net@146##0 0 29.54fF
+R333 net@146##0 net@146##1 8.11
+C775 net@146##1 0 29.54fF
+R334 net@146##1 net@146##2 8.11
+C776 net@146##2 0 29.54fF
+R335 net@146##2 net@146#1Matrix_1@1_select_9 8.11
+R336 net@147 net@147##0 8.1
+C777 net@147##0 0 29.504fF
+R337 net@147##0 net@147##1 8.1
+C778 net@147##1 0 29.504fF
+R338 net@147##1 net@147##2 8.1
+C779 net@147##2 0 29.504fF
+R339 net@147##2 net@147#1Matrix_1@1_reset_10 8.1
+R340 net@148 net@148##0 8.11
+C780 net@148##0 0 29.54fF
+R341 net@148##0 net@148##1 8.11
+C781 net@148##1 0 29.54fF
+R342 net@148##1 net@148##2 8.11
+C782 net@148##2 0 29.54fF
+R343 net@148##2 net@148#1Matrix_1@1_select_10 8.11
+R344 net@149 net@149##0 8.1
+C783 net@149##0 0 29.504fF
+R345 net@149##0 net@149##1 8.1
+C784 net@149##1 0 29.504fF
+R346 net@149##1 net@149##2 8.1
+C785 net@149##2 0 29.504fF
+R347 net@149##2 net@149#1Matrix_1@1_reset_11 8.1
+R348 net@150 net@150##0 8.11
+C786 net@150##0 0 29.54fF
+R349 net@150##0 net@150##1 8.11
+C787 net@150##1 0 29.54fF
+R350 net@150##1 net@150##2 8.11
+C788 net@150##2 0 29.54fF
+R351 net@150##2 net@150#1Matrix_1@1_select_11 8.11
+R352 net@151 net@151##0 8.1
+C789 net@151##0 0 29.504fF
+R353 net@151##0 net@151##1 8.1
+C790 net@151##1 0 29.504fF
+R354 net@151##1 net@151##2 8.1
+C791 net@151##2 0 29.504fF
+R355 net@151##2 net@151#1Matrix_1@1_reset_12 8.1
+R356 net@152 net@152##0 8.11
+C792 net@152##0 0 29.54fF
+R357 net@152##0 net@152##1 8.11
+C793 net@152##1 0 29.54fF
+R358 net@152##1 net@152##2 8.11
+C794 net@152##2 0 29.54fF
+R359 net@152##2 net@152#1Matrix_1@1_select_12 8.11
+R360 net@153 net@153##0 8.1
+C795 net@153##0 0 29.504fF
+R361 net@153##0 net@153##1 8.1
+C796 net@153##1 0 29.504fF
+R362 net@153##1 net@153##2 8.1
+C797 net@153##2 0 29.504fF
+R363 net@153##2 net@153#1Matrix_1@1_reset_13 8.1
+R364 net@154 net@154##0 8.11
+C798 net@154##0 0 29.54fF
+R365 net@154##0 net@154##1 8.11
+C799 net@154##1 0 29.54fF
+R366 net@154##1 net@154##2 8.11
+C800 net@154##2 0 29.54fF
+R367 net@154##2 net@154#1Matrix_1@1_select_13 8.11
+R368 net@155 net@155##0 8.1
+C801 net@155##0 0 29.504fF
+R369 net@155##0 net@155##1 8.1
+C802 net@155##1 0 29.504fF
+R370 net@155##1 net@155##2 8.1
+C803 net@155##2 0 29.504fF
+R371 net@155##2 net@155#1Matrix_1@1_reset_14 8.1
+R372 net@156 net@156##0 8.11
+C804 net@156##0 0 29.54fF
+R373 net@156##0 net@156##1 8.11
+C805 net@156##1 0 29.54fF
+R374 net@156##1 net@156##2 8.11
+C806 net@156##2 0 29.54fF
+R375 net@156##2 net@156#1Matrix_1@1_select_14 8.11
+R376 net@157 net@157##0 8.1
+C807 net@157##0 0 29.504fF
+R377 net@157##0 net@157##1 8.1
+C808 net@157##1 0 29.504fF
+R378 net@157##1 net@157##2 8.1
+C809 net@157##2 0 29.504fF
+R379 net@157##2 net@157#1Matrix_1@1_reset_15 8.1
+R380 net@158 net@158##0 8.11
+C810 net@158##0 0 29.54fF
+R381 net@158##0 net@158##1 8.11
+C811 net@158##1 0 29.54fF
+R382 net@158##1 net@158##2 8.11
+C812 net@158##2 0 29.54fF
+R383 net@158##2 net@158#1Matrix_1@1_select_15 8.11
+R384 net@159 net@159##0 8.1
+C813 net@159##0 0 29.504fF
+R385 net@159##0 net@159##1 8.1
+C814 net@159##1 0 29.504fF
+R386 net@159##1 net@159##2 8.1
+C815 net@159##2 0 29.504fF
+R387 net@159##2 net@159#1Matrix_1@1_reset_16 8.1
+R388 net@160 net@160##0 8.11
+C816 net@160##0 0 29.54fF
+R389 net@160##0 net@160##1 8.11
+C817 net@160##1 0 29.54fF
+R390 net@160##1 net@160##2 8.11
+C818 net@160##2 0 29.54fF
+R391 net@160##2 net@160#1Matrix_1@1_select_16 8.11
+R392 net@161 net@161##0 8.1
+C819 net@161##0 0 29.504fF
+R393 net@161##0 net@161##1 8.1
+C820 net@161##1 0 29.504fF
+R394 net@161##1 net@161##2 8.1
+C821 net@161##2 0 29.504fF
+R395 net@161##2 net@161#1Matrix_1@1_reset_17 8.1
+R396 net@162 net@162##0 8.11
+C822 net@162##0 0 29.54fF
+R397 net@162##0 net@162##1 8.11
+C823 net@162##1 0 29.54fF
+R398 net@162##1 net@162##2 8.11
+C824 net@162##2 0 29.54fF
+R399 net@162##2 net@162#1Matrix_1@1_select_17 8.11
+R400 net@163 net@163##0 8.1
+C825 net@163##0 0 29.504fF
+R401 net@163##0 net@163##1 8.1
+C826 net@163##1 0 29.504fF
+R402 net@163##1 net@163##2 8.1
+C827 net@163##2 0 29.504fF
+R403 net@163##2 net@163#1Matrix_1@1_reset_18 8.1
+R404 net@164 net@164##0 8.11
+C828 net@164##0 0 29.54fF
+R405 net@164##0 net@164##1 8.11
+C829 net@164##1 0 29.54fF
+R406 net@164##1 net@164##2 8.11
+C830 net@164##2 0 29.54fF
+R407 net@164##2 net@164#1Matrix_1@1_select_18 8.11
+R408 net@165 net@165##0 8.1
+C831 net@165##0 0 29.504fF
+R409 net@165##0 net@165##1 8.1
+C832 net@165##1 0 29.504fF
+R410 net@165##1 net@165##2 8.1
+C833 net@165##2 0 29.504fF
+R411 net@165##2 net@165#1Matrix_1@1_reset_19 8.1
+R412 net@166 net@166##0 8.11
+C834 net@166##0 0 29.54fF
+R413 net@166##0 net@166##1 8.11
+C835 net@166##1 0 29.54fF
+R414 net@166##1 net@166##2 8.11
+C836 net@166##2 0 29.54fF
+R415 net@166##2 net@166#1Matrix_1@1_select_19 8.11
+R416 net@167 net@167##0 8.1
+C837 net@167##0 0 29.504fF
+R417 net@167##0 net@167##1 8.1
+C838 net@167##1 0 29.504fF
+R418 net@167##1 net@167##2 8.1
+C839 net@167##2 0 29.504fF
+R419 net@167##2 net@167#1Matrix_1@1_reset_20 8.1
+R420 net@168 net@168##0 8.11
+C840 net@168##0 0 29.54fF
+R421 net@168##0 net@168##1 8.11
+C841 net@168##1 0 29.54fF
+R422 net@168##1 net@168##2 8.11
+C842 net@168##2 0 29.54fF
+R423 net@168##2 net@168#1Matrix_1@1_select_20 8.11
+R424 net@169 net@169##0 8.1
+C843 net@169##0 0 29.504fF
+R425 net@169##0 net@169##1 8.1
+C844 net@169##1 0 29.504fF
+R426 net@169##1 net@169##2 8.1
+C845 net@169##2 0 29.504fF
+R427 net@169##2 net@169#1Matrix_1@1_reset_21 8.1
+R428 net@170 net@170##0 8.11
+C846 net@170##0 0 29.54fF
+R429 net@170##0 net@170##1 8.11
+C847 net@170##1 0 29.54fF
+R430 net@170##1 net@170##2 8.11
+C848 net@170##2 0 29.54fF
+R431 net@170##2 net@170#1Matrix_1@1_select_21 8.11
+R432 net@171 net@171##0 8.1
+C849 net@171##0 0 29.504fF
+R433 net@171##0 net@171##1 8.1
+C850 net@171##1 0 29.504fF
+R434 net@171##1 net@171##2 8.1
+C851 net@171##2 0 29.504fF
+R435 net@171##2 net@171#1Matrix_1@1_reset_22 8.1
+R436 net@172 net@172##0 8.11
+C852 net@172##0 0 29.54fF
+R437 net@172##0 net@172##1 8.11
+C853 net@172##1 0 29.54fF
+R438 net@172##1 net@172##2 8.11
+C854 net@172##2 0 29.54fF
+R439 net@172##2 net@172#1Matrix_1@1_select_22 8.11
+R440 net@173 net@173##0 8.1
+C855 net@173##0 0 29.504fF
+R441 net@173##0 net@173##1 8.1
+C856 net@173##1 0 29.504fF
+R442 net@173##1 net@173##2 8.1
+C857 net@173##2 0 29.504fF
+R443 net@173##2 net@173#1Matrix_1@1_reset_23 8.1
+R444 net@174 net@174##0 8.11
+C858 net@174##0 0 29.54fF
+R445 net@174##0 net@174##1 8.11
+C859 net@174##1 0 29.54fF
+R446 net@174##1 net@174##2 8.11
+C860 net@174##2 0 29.54fF
+R447 net@174##2 net@174#1Matrix_1@1_select_23 8.11
+R448 net@175 net@175##0 8.1
+C861 net@175##0 0 29.504fF
+R449 net@175##0 net@175##1 8.1
+C862 net@175##1 0 29.504fF
+R450 net@175##1 net@175##2 8.1
+C863 net@175##2 0 29.504fF
+R451 net@175##2 net@175#1Matrix_1@1_reset_24 8.1
+R452 net@176 net@176##0 8.11
+C864 net@176##0 0 29.54fF
+R453 net@176##0 net@176##1 8.11
+C865 net@176##1 0 29.54fF
+R454 net@176##1 net@176##2 8.11
+C866 net@176##2 0 29.54fF
+R455 net@176##2 net@176#1Matrix_1@1_select_24 8.11
+R456 net@177 net@177##0 8.1
+C867 net@177##0 0 29.504fF
+R457 net@177##0 net@177##1 8.1
+C868 net@177##1 0 29.504fF
+R458 net@177##1 net@177##2 8.1
+C869 net@177##2 0 29.504fF
+R459 net@177##2 net@177#1Matrix_1@1_reset_25 8.1
+R460 net@178 net@178##0 8.11
+C870 net@178##0 0 29.54fF
+R461 net@178##0 net@178##1 8.11
+C871 net@178##1 0 29.54fF
+R462 net@178##1 net@178##2 8.11
+C872 net@178##2 0 29.54fF
+R463 net@178##2 net@178#1Matrix_1@1_select_25 8.11
+R464 net@179 net@179##0 8.1
+C873 net@179##0 0 29.504fF
+R465 net@179##0 net@179##1 8.1
+C874 net@179##1 0 29.504fF
+R466 net@179##1 net@179##2 8.1
+C875 net@179##2 0 29.504fF
+R467 net@179##2 net@179#1Matrix_1@1_reset_26 8.1
+R468 net@180 net@180##0 8.11
+C876 net@180##0 0 29.54fF
+R469 net@180##0 net@180##1 8.11
+C877 net@180##1 0 29.54fF
+R470 net@180##1 net@180##2 8.11
+C878 net@180##2 0 29.54fF
+R471 net@180##2 net@180#1Matrix_1@1_select_26 8.11
+R472 net@181 net@181##0 8.1
+C879 net@181##0 0 29.504fF
+R473 net@181##0 net@181##1 8.1
+C880 net@181##1 0 29.504fF
+R474 net@181##1 net@181##2 8.1
+C881 net@181##2 0 29.504fF
+R475 net@181##2 net@181#1Matrix_1@1_reset_27 8.1
+R476 net@182 net@182##0 8.11
+C882 net@182##0 0 29.54fF
+R477 net@182##0 net@182##1 8.11
+C883 net@182##1 0 29.54fF
+R478 net@182##1 net@182##2 8.11
+C884 net@182##2 0 29.54fF
+R479 net@182##2 net@182#1Matrix_1@1_select_27 8.11
+R480 net@183 net@183##0 8.1
+C885 net@183##0 0 29.504fF
+R481 net@183##0 net@183##1 8.1
+C886 net@183##1 0 29.504fF
+R482 net@183##1 net@183##2 8.1
+C887 net@183##2 0 29.504fF
+R483 net@183##2 net@183#1Matrix_1@1_reset_28 8.1
+R484 net@184 net@184##0 8.11
+C888 net@184##0 0 29.54fF
+R485 net@184##0 net@184##1 8.11
+C889 net@184##1 0 29.54fF
+R486 net@184##1 net@184##2 8.11
+C890 net@184##2 0 29.54fF
+R487 net@184##2 net@184#1Matrix_1@1_select_28 8.11
+R488 net@185 net@185##0 8.1
+C891 net@185##0 0 29.504fF
+R489 net@185##0 net@185##1 8.1
+C892 net@185##1 0 29.504fF
+R490 net@185##1 net@185##2 8.1
+C893 net@185##2 0 29.504fF
+R491 net@185##2 net@185#1Matrix_1@1_reset_29 8.1
+R492 net@186 net@186##0 8.11
+C894 net@186##0 0 29.54fF
+R493 net@186##0 net@186##1 8.11
+C895 net@186##1 0 29.54fF
+R494 net@186##1 net@186##2 8.11
+C896 net@186##2 0 29.54fF
+R495 net@186##2 net@186#1Matrix_1@1_select_29 8.11
+R496 net@187 net@187##0 8.1
+C897 net@187##0 0 29.504fF
+R497 net@187##0 net@187##1 8.1
+C898 net@187##1 0 29.504fF
+R498 net@187##1 net@187##2 8.1
+C899 net@187##2 0 29.504fF
+R499 net@187##2 net@187#1Matrix_1@1_reset_30 8.1
+R500 net@188 net@188##0 8.11
+C900 net@188##0 0 29.54fF
+R501 net@188##0 net@188##1 8.11
+C901 net@188##1 0 29.54fF
+R502 net@188##1 net@188##2 8.11
+C902 net@188##2 0 29.54fF
+R503 net@188##2 net@188#1Matrix_1@1_select_30 8.11
+R504 net@189 net@189##0 8.11
+C903 net@189##0 0 29.54fF
+R505 net@189##0 net@189##1 8.11
+C904 net@189##1 0 29.54fF
+R506 net@189##1 net@189##2 8.11
+C905 net@189##2 0 29.54fF
+R507 net@189##2 net@189#1Matrix_1@1_select_31 8.11
+R508 net@190 net@190##0 8.1
+C906 net@190##0 0 29.504fF
+R509 net@190##0 net@190##1 8.1
+C907 net@190##1 0 29.504fF
+R510 net@190##1 net@190##2 8.1
+C908 net@190##2 0 29.504fF
+R511 net@190##2 net@190#1Matrix_1@1_reset_31 8.1
+R512 net@191 net@191##0 8.085
+C909 net@191##0 0 36.409fF
+R513 net@191##0 net@191##1 8.085
+C910 net@191##1 0 36.409fF
+R514 net@191##1 net@191##2 8.085
+C911 net@191##2 0 36.409fF
+R515 net@191##2 net@191#1Matrix_1@0_out_0 8.085
+R516 net@192 net@192##0 8.085
+C912 net@192##0 0 36.409fF
+R517 net@192##0 net@192##1 8.085
+C913 net@192##1 0 36.409fF
+R518 net@192##1 net@192##2 8.085
+C914 net@192##2 0 36.409fF
+R519 net@192##2 net@192#1Matrix_1@0_out_1 8.085
+R520 net@193 net@193##0 8.085
+C915 net@193##0 0 36.409fF
+R521 net@193##0 net@193##1 8.085
+C916 net@193##1 0 36.409fF
+R522 net@193##1 net@193##2 8.085
+C917 net@193##2 0 36.409fF
+R523 net@193##2 net@193#1Matrix_1@0_out_2 8.085
+R524 net@194 net@194##0 8.085
+C918 net@194##0 0 36.409fF
+R525 net@194##0 net@194##1 8.085
+C919 net@194##1 0 36.409fF
+R526 net@194##1 net@194##2 8.085
+C920 net@194##2 0 36.409fF
+R527 net@194##2 net@194#1Matrix_1@2_out_3 8.085
+R528 net@195 net@195##0 8.085
+C921 net@195##0 0 36.409fF
+R529 net@195##0 net@195##1 8.085
+C922 net@195##1 0 36.409fF
+R530 net@195##1 net@195##2 8.085
+C923 net@195##2 0 36.409fF
+R531 net@195##2 net@195#1Matrix_1@0_out_4 8.085
+R532 net@196 net@196##0 8.085
+C924 net@196##0 0 36.409fF
+R533 net@196##0 net@196##1 8.085
+C925 net@196##1 0 36.409fF
+R534 net@196##1 net@196##2 8.085
+C926 net@196##2 0 36.409fF
+R535 net@196##2 net@196#1Matrix_1@2_out_5 8.085
+R536 net@197 net@197##0 8.085
+C927 net@197##0 0 36.409fF
+R537 net@197##0 net@197##1 8.085
+C928 net@197##1 0 36.409fF
+R538 net@197##1 net@197##2 8.085
+C929 net@197##2 0 36.409fF
+R539 net@197##2 net@197#1Matrix_1@0_out_6 8.085
+R540 out7 out7##0 8.085
+C930 out7##0 0 36.409fF
+R541 out7##0 out7##1 8.085
+C931 out7##1 0 36.409fF
+R542 out7##1 out7##2 8.085
+C932 out7##2 0 36.409fF
+R543 out7##2 out7#0Matrix_1@2_out_7 8.085
+R544 net@199 net@199##0 8.085
+C933 net@199##0 0 36.409fF
+R545 net@199##0 net@199##1 8.085
+C934 net@199##1 0 36.409fF
+R546 net@199##1 net@199##2 8.085
+C935 net@199##2 0 36.409fF
+R547 net@199##2 net@199#1Matrix_1@2_out_8 8.085
+R548 net@200 net@200##0 8.085
+C936 net@200##0 0 36.409fF
+R549 net@200##0 net@200##1 8.085
+C937 net@200##1 0 36.409fF
+R550 net@200##1 net@200##2 8.085
+C938 net@200##2 0 36.409fF
+R551 net@200##2 net@200#1Matrix_1@0_out_9 8.085
+R552 net@201 net@201##0 8.085
+C939 net@201##0 0 36.409fF
+R553 net@201##0 net@201##1 8.085
+C940 net@201##1 0 36.409fF
+R554 net@201##1 net@201##2 8.085
+C941 net@201##2 0 36.409fF
+R555 net@201##2 net@201#1Matrix_1@2_out_10 8.085
+R556 net@202 net@202##0 8.085
+C942 net@202##0 0 36.409fF
+R557 net@202##0 net@202##1 8.085
+C943 net@202##1 0 36.409fF
+R558 net@202##1 net@202##2 8.085
+C944 net@202##2 0 36.409fF
+R559 net@202##2 net@202#1Matrix_1@0_out_11 8.085
+R560 net@203 net@203##0 8.085
+C945 net@203##0 0 36.409fF
+R561 net@203##0 net@203##1 8.085
+C946 net@203##1 0 36.409fF
+R562 net@203##1 net@203##2 8.085
+C947 net@203##2 0 36.409fF
+R563 net@203##2 net@203#1Matrix_1@2_out_12 8.085
+R564 net@204 net@204##0 8.085
+C948 net@204##0 0 36.409fF
+R565 net@204##0 net@204##1 8.085
+C949 net@204##1 0 36.409fF
+R566 net@204##1 net@204##2 8.085
+C950 net@204##2 0 36.409fF
+R567 net@204##2 net@204#1Matrix_1@0_out_13 8.085
+R568 net@205 net@205##0 8.085
+C951 net@205##0 0 36.409fF
+R569 net@205##0 net@205##1 8.085
+C952 net@205##1 0 36.409fF
+R570 net@205##1 net@205##2 8.085
+C953 net@205##2 0 36.409fF
+R571 net@205##2 net@205#1Matrix_1@2_out_14 8.085
+R572 net@206 net@206##0 8.085
+C954 net@206##0 0 36.409fF
+R573 net@206##0 net@206##1 8.085
+C955 net@206##1 0 36.409fF
+R574 net@206##1 net@206##2 8.085
+C956 net@206##2 0 36.409fF
+R575 net@206##2 net@206#1Matrix_1@0_out_15 8.085
+R576 net@207 net@207##0 8.085
+C957 net@207##0 0 36.409fF
+R577 net@207##0 net@207##1 8.085
+C958 net@207##1 0 36.409fF
+R578 net@207##1 net@207##2 8.085
+C959 net@207##2 0 36.409fF
+R579 net@207##2 net@207#1Matrix_1@2_out_16 8.085
+R580 net@208 net@208##0 8.085
+C960 net@208##0 0 36.409fF
+R581 net@208##0 net@208##1 8.085
+C961 net@208##1 0 36.409fF
+R582 net@208##1 net@208##2 8.085
+C962 net@208##2 0 36.409fF
+R583 net@208##2 net@208#1Matrix_1@0_out_17 8.085
+R584 net@209 net@209##0 8.085
+C963 net@209##0 0 36.409fF
+R585 net@209##0 net@209##1 8.085
+C964 net@209##1 0 36.409fF
+R586 net@209##1 net@209##2 8.085
+C965 net@209##2 0 36.409fF
+R587 net@209##2 net@209#1Matrix_1@2_out_18 8.085
+R588 net@210 net@210##0 8.085
+C966 net@210##0 0 36.409fF
+R589 net@210##0 net@210##1 8.085
+C967 net@210##1 0 36.409fF
+R590 net@210##1 net@210##2 8.085
+C968 net@210##2 0 36.409fF
+R591 net@210##2 net@210#1Matrix_1@0_out_19 8.085
+R592 net@211 net@211##0 8.085
+C969 net@211##0 0 36.409fF
+R593 net@211##0 net@211##1 8.085
+C970 net@211##1 0 36.409fF
+R594 net@211##1 net@211##2 8.085
+C971 net@211##2 0 36.409fF
+R595 net@211##2 net@211#1Matrix_1@0_out_20 8.085
+R596 net@212 net@212##0 8.085
+C972 net@212##0 0 36.409fF
+R597 net@212##0 net@212##1 8.085
+C973 net@212##1 0 36.409fF
+R598 net@212##1 net@212##2 8.085
+C974 net@212##2 0 36.409fF
+R599 net@212##2 net@212#1Matrix_1@2_out_21 8.085
+R600 net@213 net@213##0 8.085
+C975 net@213##0 0 36.409fF
+R601 net@213##0 net@213##1 8.085
+C976 net@213##1 0 36.409fF
+R602 net@213##1 net@213##2 8.085
+C977 net@213##2 0 36.409fF
+R603 net@213##2 net@213#1Matrix_1@0_out_22 8.085
+R604 net@214 net@214##0 8.085
+C978 net@214##0 0 36.409fF
+R605 net@214##0 net@214##1 8.085
+C979 net@214##1 0 36.409fF
+R606 net@214##1 net@214##2 8.085
+C980 net@214##2 0 36.409fF
+R607 net@214##2 net@214#1Matrix_1@2_out_23 8.085
+R608 net@215 net@215##0 8.085
+C981 net@215##0 0 36.409fF
+R609 net@215##0 net@215##1 8.085
+C982 net@215##1 0 36.409fF
+R610 net@215##1 net@215##2 8.085
+C983 net@215##2 0 36.409fF
+R611 net@215##2 net@215#1Matrix_1@0_out_24 8.085
+R612 net@216 net@216##0 8.085
+C984 net@216##0 0 36.409fF
+R613 net@216##0 net@216##1 8.085
+C985 net@216##1 0 36.409fF
+R614 net@216##1 net@216##2 8.085
+C986 net@216##2 0 36.409fF
+R615 net@216##2 net@216#1Matrix_1@2_out_25 8.085
+R616 net@217 net@217##0 8.085
+C987 net@217##0 0 36.409fF
+R617 net@217##0 net@217##1 8.085
+C988 net@217##1 0 36.409fF
+R618 net@217##1 net@217##2 8.085
+C989 net@217##2 0 36.409fF
+R619 net@217##2 net@217#1Matrix_1@0_out_26 8.085
+R620 net@218 net@218##0 8.085
+C990 net@218##0 0 36.409fF
+R621 net@218##0 net@218##1 8.085
+C991 net@218##1 0 36.409fF
+R622 net@218##1 net@218##2 8.085
+C992 net@218##2 0 36.409fF
+R623 net@218##2 net@218#1Matrix_1@2_out_27 8.085
+R624 net@219 net@219##0 8.085
+C993 net@219##0 0 36.409fF
+R625 net@219##0 net@219##1 8.085
+C994 net@219##1 0 36.409fF
+R626 net@219##1 net@219##2 8.085
+C995 net@219##2 0 36.409fF
+R627 net@219##2 net@219#1Matrix_1@2_out_28 8.085
+R628 net@220 net@220##0 8.085
+C996 net@220##0 0 36.409fF
+R629 net@220##0 net@220##1 8.085
+C997 net@220##1 0 36.409fF
+R630 net@220##1 net@220##2 8.085
+C998 net@220##2 0 36.409fF
+R631 net@220##2 net@220#1Matrix_1@0_out_29 8.085
+R632 net@221 net@221##0 8.085
+C999 net@221##0 0 36.409fF
+R633 net@221##0 net@221##1 8.085
+C1000 net@221##1 0 36.409fF
+R634 net@221##1 net@221##2 8.085
+C1001 net@221##2 0 36.409fF
+R635 net@221##2 net@221#1Matrix_1@2_out_30 8.085
+R636 o1#0Matrix_1@2_out_31 o1#0Matrix_1@2_out_31##0 8.085
+C1002 o1#0Matrix_1@2_out_31##0 0 36.409fF
+R637 o1#0Matrix_1@2_out_31##0 o1#0Matrix_1@2_out_31##1 8.085
+C1003 o1#0Matrix_1@2_out_31##1 0 36.409fF
+R638 o1#0Matrix_1@2_out_31##1 o1#0Matrix_1@2_out_31##2 8.085
+C1004 o1#0Matrix_1@2_out_31##2 0 36.409fF
+R639 o1#0Matrix_1@2_out_31##2 o1 8.085
+R640 net@223 net@223##0 8.085
+C1005 net@223##0 0 36.409fF
+R641 net@223##0 net@223##1 8.085
+C1006 net@223##1 0 36.409fF
+R642 net@223##1 net@223##2 8.085
+C1007 net@223##2 0 36.409fF
+R643 net@223##2 net@223#1Matrix_1@3_out_0 8.085
+R644 net@224 net@224##0 8.085
+C1008 net@224##0 0 36.409fF
+R645 net@224##0 net@224##1 8.085
+C1009 net@224##1 0 36.409fF
+R646 net@224##1 net@224##2 8.085
+C1010 net@224##2 0 36.409fF
+R647 net@224##2 net@224#1Matrix_1@1_out_1 8.085
+R648 net@225 net@225##0 8.085
+C1011 net@225##0 0 36.409fF
+R649 net@225##0 net@225##1 8.085
+C1012 net@225##1 0 36.409fF
+R650 net@225##1 net@225##2 8.085
+C1013 net@225##2 0 36.409fF
+R651 net@225##2 net@225#1Matrix_1@3_out_2 8.085
+R652 net@226 net@226##0 8.085
+C1014 net@226##0 0 36.409fF
+R653 net@226##0 net@226##1 8.085
+C1015 net@226##1 0 36.409fF
+R654 net@226##1 net@226##2 8.085
+C1016 net@226##2 0 36.409fF
+R655 net@226##2 net@226#1Matrix_1@1_out_3 8.085
+R656 net@227 net@227##0 8.085
+C1017 net@227##0 0 36.409fF
+R657 net@227##0 net@227##1 8.085
+C1018 net@227##1 0 36.409fF
+R658 net@227##1 net@227##2 8.085
+C1019 net@227##2 0 36.409fF
+R659 net@227##2 net@227#1Matrix_1@3_out_4 8.085
+R660 net@228 net@228##0 8.085
+C1020 net@228##0 0 36.409fF
+R661 net@228##0 net@228##1 8.085
+C1021 net@228##1 0 36.409fF
+R662 net@228##1 net@228##2 8.085
+C1022 net@228##2 0 36.409fF
+R663 net@228##2 net@228#1Matrix_1@1_out_5 8.085
+R664 net@229 net@229##0 8.085
+C1023 net@229##0 0 36.409fF
+R665 net@229##0 net@229##1 8.085
+C1024 net@229##1 0 36.409fF
+R666 net@229##1 net@229##2 8.085
+C1025 net@229##2 0 36.409fF
+R667 net@229##2 net@229#1Matrix_1@3_out_6 8.085
+R668 net@230 net@230##0 8.085
+C1026 net@230##0 0 36.409fF
+R669 net@230##0 net@230##1 8.085
+C1027 net@230##1 0 36.409fF
+R670 net@230##1 net@230##2 8.085
+C1028 net@230##2 0 36.409fF
+R671 net@230##2 net@230#1Matrix_1@1_out_7 8.085
+R672 net@231 net@231##0 8.085
+C1029 net@231##0 0 36.409fF
+R673 net@231##0 net@231##1 8.085
+C1030 net@231##1 0 36.409fF
+R674 net@231##1 net@231##2 8.085
+C1031 net@231##2 0 36.409fF
+R675 net@231##2 net@231#1Matrix_1@3_out_8 8.085
+R676 net@232 net@232##0 8.085
+C1032 net@232##0 0 36.409fF
+R677 net@232##0 net@232##1 8.085
+C1033 net@232##1 0 36.409fF
+R678 net@232##1 net@232##2 8.085
+C1034 net@232##2 0 36.409fF
+R679 net@232##2 net@232#1Matrix_1@1_out_9 8.085
+R680 net@233 net@233##0 8.085
+C1035 net@233##0 0 36.409fF
+R681 net@233##0 net@233##1 8.085
+C1036 net@233##1 0 36.409fF
+R682 net@233##1 net@233##2 8.085
+C1037 net@233##2 0 36.409fF
+R683 net@233##2 net@233#1Matrix_1@3_out_10 8.085
+R684 net@234 net@234##0 8.085
+C1038 net@234##0 0 36.409fF
+R685 net@234##0 net@234##1 8.085
+C1039 net@234##1 0 36.409fF
+R686 net@234##1 net@234##2 8.085
+C1040 net@234##2 0 36.409fF
+R687 net@234##2 net@234#1Matrix_1@1_out_11 8.085
+R688 net@235 net@235##0 8.085
+C1041 net@235##0 0 36.409fF
+R689 net@235##0 net@235##1 8.085
+C1042 net@235##1 0 36.409fF
+R690 net@235##1 net@235##2 8.085
+C1043 net@235##2 0 36.409fF
+R691 net@235##2 net@235#1Matrix_1@3_out_12 8.085
+R692 net@236 net@236##0 8.085
+C1044 net@236##0 0 36.409fF
+R693 net@236##0 net@236##1 8.085
+C1045 net@236##1 0 36.409fF
+R694 net@236##1 net@236##2 8.085
+C1046 net@236##2 0 36.409fF
+R695 net@236##2 net@236#1Matrix_1@1_out_13 8.085
+R696 net@237 net@237##0 8.085
+C1047 net@237##0 0 36.409fF
+R697 net@237##0 net@237##1 8.085
+C1048 net@237##1 0 36.409fF
+R698 net@237##1 net@237##2 8.085
+C1049 net@237##2 0 36.409fF
+R699 net@237##2 net@237#1Matrix_1@3_out_14 8.085
+R700 net@238 net@238##0 8.085
+C1050 net@238##0 0 36.409fF
+R701 net@238##0 net@238##1 8.085
+C1051 net@238##1 0 36.409fF
+R702 net@238##1 net@238##2 8.085
+C1052 net@238##2 0 36.409fF
+R703 net@238##2 net@238#1Matrix_1@1_out_15 8.085
+R704 net@239 net@239##0 8.085
+C1053 net@239##0 0 36.409fF
+R705 net@239##0 net@239##1 8.085
+C1054 net@239##1 0 36.409fF
+R706 net@239##1 net@239##2 8.085
+C1055 net@239##2 0 36.409fF
+R707 net@239##2 net@239#1Matrix_1@3_out_16 8.085
+R708 net@240 net@240##0 8.085
+C1056 net@240##0 0 36.409fF
+R709 net@240##0 net@240##1 8.085
+C1057 net@240##1 0 36.409fF
+R710 net@240##1 net@240##2 8.085
+C1058 net@240##2 0 36.409fF
+R711 net@240##2 net@240#1Matrix_1@1_out_17 8.085
+R712 net@241 net@241##0 8.085
+C1059 net@241##0 0 36.409fF
+R713 net@241##0 net@241##1 8.085
+C1060 net@241##1 0 36.409fF
+R714 net@241##1 net@241##2 8.085
+C1061 net@241##2 0 36.409fF
+R715 net@241##2 net@241#1Matrix_1@1_out_18 8.085
+R716 net@242 net@242##0 8.085
+C1062 net@242##0 0 36.409fF
+R717 net@242##0 net@242##1 8.085
+C1063 net@242##1 0 36.409fF
+R718 net@242##1 net@242##2 8.085
+C1064 net@242##2 0 36.409fF
+R719 net@242##2 net@242#1Matrix_1@3_out_19 8.085
+R720 net@243 net@243##0 8.085
+C1065 net@243##0 0 36.409fF
+R721 net@243##0 net@243##1 8.085
+C1066 net@243##1 0 36.409fF
+R722 net@243##1 net@243##2 8.085
+C1067 net@243##2 0 36.409fF
+R723 net@243##2 net@243#1Matrix_1@1_out_20 8.085
+R724 net@244 net@244##0 8.085
+C1068 net@244##0 0 36.409fF
+R725 net@244##0 net@244##1 8.085
+C1069 net@244##1 0 36.409fF
+R726 net@244##1 net@244##2 8.085
+C1070 net@244##2 0 36.409fF
+R727 net@244##2 net@244#1Matrix_1@3_out_21 8.085
+R728 net@245 net@245##0 8.085
+C1071 net@245##0 0 36.409fF
+R729 net@245##0 net@245##1 8.085
+C1072 net@245##1 0 36.409fF
+R730 net@245##1 net@245##2 8.085
+C1073 net@245##2 0 36.409fF
+R731 net@245##2 net@245#1Matrix_1@1_out_22 8.085
+R732 net@246 net@246##0 8.085
+C1074 net@246##0 0 36.409fF
+R733 net@246##0 net@246##1 8.085
+C1075 net@246##1 0 36.409fF
+R734 net@246##1 net@246##2 8.085
+C1076 net@246##2 0 36.409fF
+R735 net@246##2 net@246#1Matrix_1@3_out_23 8.085
+R736 net@247 net@247##0 8.085
+C1077 net@247##0 0 36.409fF
+R737 net@247##0 net@247##1 8.085
+C1078 net@247##1 0 36.409fF
+R738 net@247##1 net@247##2 8.085
+C1079 net@247##2 0 36.409fF
+R739 net@247##2 net@247#1Matrix_1@1_out_24 8.085
+R740 net@248 net@248##0 8.085
+C1080 net@248##0 0 36.409fF
+R741 net@248##0 net@248##1 8.085
+C1081 net@248##1 0 36.409fF
+R742 net@248##1 net@248##2 8.085
+C1082 net@248##2 0 36.409fF
+R743 net@248##2 net@248#1Matrix_1@3_out_25 8.085
+R744 net@249 net@249##0 8.085
+C1083 net@249##0 0 36.409fF
+R745 net@249##0 net@249##1 8.085
+C1084 net@249##1 0 36.409fF
+R746 net@249##1 net@249##2 8.085
+C1085 net@249##2 0 36.409fF
+R747 net@249##2 net@249#1Matrix_1@1_out_26 8.085
+R748 net@250 net@250##0 8.085
+C1086 net@250##0 0 36.409fF
+R749 net@250##0 net@250##1 8.085
+C1087 net@250##1 0 36.409fF
+R750 net@250##1 net@250##2 8.085
+C1088 net@250##2 0 36.409fF
+R751 net@250##2 net@250#1Matrix_1@3_out_27 8.085
+R752 net@251 net@251##0 8.085
+C1089 net@251##0 0 36.409fF
+R753 net@251##0 net@251##1 8.085
+C1090 net@251##1 0 36.409fF
+R754 net@251##1 net@251##2 8.085
+C1091 net@251##2 0 36.409fF
+R755 net@251##2 net@251#1Matrix_1@1_out_28 8.085
+R756 net@252 net@252##0 8.085
+C1092 net@252##0 0 36.409fF
+R757 net@252##0 net@252##1 8.085
+C1093 net@252##1 0 36.409fF
+R758 net@252##1 net@252##2 8.085
+C1094 net@252##2 0 36.409fF
+R759 net@252##2 net@252#1Matrix_1@3_out_29 8.085
+R760 net@253 net@253##0 8.085
+C1095 net@253##0 0 36.409fF
+R761 net@253##0 net@253##1 8.085
+C1096 net@253##1 0 36.409fF
+R762 net@253##1 net@253##2 8.085
+C1097 net@253##2 0 36.409fF
+R763 net@253##2 net@253#1Matrix_1@1_out_30 8.085
+R764 net@254 net@254##0 8.085
+C1098 net@254##0 0 36.409fF
+R765 net@254##0 net@254##1 8.085
+C1099 net@254##1 0 36.409fF
+R766 net@254##1 net@254##2 8.085
+C1100 net@254##2 0 36.409fF
+R767 net@254##2 net@254#1Matrix_1@3_out_31 8.085
+
+* Spice Code nodes in cell cell 'Sim_Matrix_4096{lay}'
+D1 gnd FD_1 photodiode
+I1 FD_1 0 5200p
+V1 vdd_reset 0 5
+V2 vdd 0 5
+V3 gnd 0 0
+V4 gate_column 0 1.5
+V5 D_reset 0 PULSE(0 5 300n 1p 1p 600n)
+V6 rst_reset 0 PULSE(5 0 0 1p 1p 600n)
+V7 clk_reset 0 PULSE(0 5 0 1p 1p 600n 1200n 70)
+V8 clkb_reset 0 PULSE(5 0 0 1p 1p 600n 1200n 70)
+V9 D_select 0 PULSE(0 5 4.3u 1p 1p 600n)
+V10 rst_select 0 PULSE(5 0 4u 1p 1p 600n)
+V11 clk_select 0 PULSE(0 5 4u 1p 1p 600n 1200n 70)
+V12 clkb_select 0 PULSE (5 0 4u 1p 1p 600n 1200n 70)
+V13 D_column 0 PULSE(0 5 4.3u 1p 1p 600n)
+V14 rst_column 0 PULSE(5 0 4.3u 1p 1p 600n)
+V15 clk_column 0 PULSE(0 5 4.3u 1p 1p 600n 1200n 70)
+V16 clkb_column 0 PULSE (5 0 4u 1p 1p 600n 1200n 70)
+R10000 vdd out_final 80k
+.model photodiode D (IS = 50f CJO=6.3f  VJ= 0.636 M = 0.33)
+.tran 35u
+.include G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Layout\C5_models.txt
+.END

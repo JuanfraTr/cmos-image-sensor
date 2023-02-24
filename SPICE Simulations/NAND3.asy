@@ -1,0 +1,22 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -32 -48 -32 48
+LINE Normal 16 -48 -32 -48
+LINE Normal 16 48 -32 48
+CIRCLE Normal 80 -8 64 8
+ARC Normal -32 48 64 -48 16 48 16 -48
+WINDOW 0 -38 -63 Left 2
+WINDOW 39 35 -79 Center 0
+SYMATTR SpiceLine Wnmos1 = 12 Wpmos1 = 24u
+PIN -32 -32 NONE 8
+PINATTR PinName a
+PINATTR SpiceOrder 1
+PIN -32 0 NONE 8
+PINATTR PinName b
+PINATTR SpiceOrder 2
+PIN -32 32 NONE 8
+PINATTR PinName c
+PINATTR SpiceOrder 3
+PIN 80 0 NONE 8
+PINATTR PinName out
+PINATTR SpiceOrder 4

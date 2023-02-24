@@ -1,0 +1,21 @@
+Circuit: * G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Simulaciones 3\Draft1.asc
+
+.OP point found by inspection.
+
+Date: Wed Aug 19 00:12:33 2020
+Total elapsed time: 0.191 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2266
+traniter = 2266
+tranpoints = 1134
+accept = 1126
+rejected = 8
+matrix size = 3
+fillins = 0
+solver = Normal
+Matrix Compiler1: 50 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: 175 bytes object code size  0.1/0.1/[0.1]
+

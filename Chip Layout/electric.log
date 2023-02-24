@@ -1,0 +1,1333 @@
+Electric Version 9.07
+--------------- 0 --------------
+  Tue Oct 13 13:00:12 CLST 2020
+ProcessKeyBinding 401 when=1602604812677 modifiers=200 code=12 char=ffff false false
+--------------- 1 --------------
+  Tue Oct 13 13:00:47 CLST 2020
+Menu Activated: File | Open Library...
+--------------- 2 --------------
+  Tue Oct 13 13:00:52 CLST 2020
+Menu Activated: File | New Library...
+--------------- 3 --------------
+  Tue Oct 13 13:01:18 CLST 2020
+ProcessKeyBinding 401 when=1602604878004 modifiers=80 code=11 char=ffff false true
+--------------- 4 --------------
+  Tue Oct 13 13:01:19 CLST 2020
+ProcessKeyBinding 402 when=1602604879069 modifiers=0 code=11 char=ffff false true
+--------------- 5 --------------
+  Tue Oct 13 13:01:19 CLST 2020
+ProcessKeyBinding 400 when=1602604879830 modifiers=0 code=0 char=a false false
+--------------- 6 --------------
+  Tue Oct 13 13:01:19 CLST 2020
+ProcessKeyBinding 402 when=1602604879917 modifiers=0 code=a char=a false false
+--------------- 7 --------------
+  Tue Oct 13 13:01:28 CLST 2020
+ProcessKeyBinding 402 when=1602604888325 modifiers=0 code=25 char=ffff false true
+--------------- 8 --------------
+  Tue Oct 13 13:01:28 CLST 2020
+ProcessKeyBinding 402 when=1602604888493 modifiers=0 code=25 char=ffff false true
+--------------- 9 --------------
+  Tue Oct 13 13:01:28 CLST 2020
+ProcessKeyBinding 402 when=1602604888661 modifiers=0 code=25 char=ffff false true
+--------------- 10 --------------
+  Tue Oct 13 13:01:29 CLST 2020
+ProcessKeyBinding 401 when=1602604889373 modifiers=40 code=10 char=ffff false true
+--------------- 11 --------------
+  Tue Oct 13 13:01:29 CLST 2020
+ProcessKeyBinding 401 when=1602604889605 modifiers=40 code=a char=a false true
+--------------- 12 --------------
+  Tue Oct 13 13:01:29 CLST 2020
+ProcessKeyBinding 402 when=1602604889733 modifiers=40 code=a char=a false true
+--------------- 13 --------------
+  Tue Oct 13 13:01:30 CLST 2020
+ProcessKeyBinding 402 when=1602604890052 modifiers=0 code=10 char=ffff false true
+--------------- 14 --------------
+  Tue Oct 13 13:01:31 CLST 2020
+ProcessKeyBinding 401 when=1602604891045 modifiers=40 code=10 char=ffff false true
+--------------- 15 --------------
+  Tue Oct 13 13:01:31 CLST 2020
+ProcessKeyBinding 401 when=1602604891196 modifiers=40 code=a char=a false true
+--------------- 16 --------------
+  Tue Oct 13 13:01:31 CLST 2020
+ProcessKeyBinding 402 when=1602604891324 modifiers=40 code=a char=a false true
+--------------- 17 --------------
+  Tue Oct 13 13:01:31 CLST 2020
+ProcessKeyBinding 402 when=1602604891509 modifiers=0 code=10 char=ffff false true
+--------------- 18 --------------
+  Tue Oct 13 13:01:31 CLST 2020
+ProcessKeyBinding 402 when=1602604891901 modifiers=0 code=a char=a false false
+--------------- 19 --------------
+  Tue Oct 13 13:01:33 CLST 2020
+ProcessKeyBinding 401 when=1602604893517 modifiers=80 code=11 char=ffff false false
+--------------- 20 --------------
+  Tue Oct 13 13:01:33 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    SPICE code
+--------------- 21 --------------
+  Tue Oct 13 13:01:33 CLST 2020
+ProcessKeyBinding 400 when=1602604893669 modifiers=80 code=0 char=5 false false
+--------------- 22 --------------
+  Tue Oct 13 13:01:41 CLST 2020
+Menu Activated: Edit | Properties | Object Properties...
+Currently highlighted: 
+    SPICE code
+--------------- 23 --------------
+  Tue Oct 13 13:02:34 CLST 2020
+Menu Activated: Tools | Simulation (Spice) | Write Spice Deck...
+--------------- 24 --------------
+  Tue Oct 13 13:06:13 CLST 2020
+Menu Activated: File | Open Library...
+--------------- 25 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257261 modifiers=80 code=11 char=ffff false false
+--------------- 26 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257761 modifiers=80 code=11 char=ffff false false
+--------------- 27 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257795 modifiers=80 code=11 char=ffff false false
+--------------- 28 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257828 modifiers=80 code=11 char=ffff false false
+--------------- 29 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257861 modifiers=80 code=11 char=ffff false false
+--------------- 30 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257895 modifiers=80 code=11 char=ffff false false
+--------------- 31 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257926 modifiers=80 code=11 char=ffff false false
+--------------- 32 --------------
+  Tue Oct 13 13:07:37 CLST 2020
+ProcessKeyBinding 401 when=1602605257959 modifiers=80 code=11 char=ffff false false
+--------------- 33 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605257992 modifiers=80 code=11 char=ffff false false
+--------------- 34 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258025 modifiers=80 code=11 char=ffff false false
+--------------- 35 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258058 modifiers=80 code=11 char=ffff false false
+--------------- 36 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258091 modifiers=80 code=11 char=ffff false false
+--------------- 37 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258124 modifiers=80 code=11 char=ffff false false
+--------------- 38 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258157 modifiers=80 code=11 char=ffff false false
+--------------- 39 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258190 modifiers=80 code=11 char=ffff false false
+--------------- 40 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258224 modifiers=80 code=11 char=ffff false false
+--------------- 41 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258257 modifiers=80 code=11 char=ffff false false
+--------------- 42 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258291 modifiers=80 code=11 char=ffff false false
+--------------- 43 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258328 modifiers=80 code=11 char=ffff false false
+--------------- 44 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258355 modifiers=80 code=11 char=ffff false false
+--------------- 45 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258388 modifiers=80 code=11 char=ffff false false
+--------------- 46 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258421 modifiers=80 code=11 char=ffff false false
+--------------- 47 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258454 modifiers=80 code=11 char=ffff false false
+--------------- 48 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258487 modifiers=80 code=11 char=ffff false false
+--------------- 49 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258520 modifiers=80 code=11 char=ffff false false
+--------------- 50 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258554 modifiers=80 code=11 char=ffff false false
+--------------- 51 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 402 when=1602605258581 modifiers=0 code=11 char=ffff false false
+--------------- 52 --------------
+  Tue Oct 13 13:07:38 CLST 2020
+ProcessKeyBinding 401 when=1602605258718 modifiers=40 code=10 char=ffff false false
+--------------- 53 --------------
+  Tue Oct 13 13:07:39 CLST 2020
+ProcessKeyBinding 401 when=1602605259220 modifiers=40 code=10 char=ffff false false
+--------------- 54 --------------
+  Tue Oct 13 13:07:39 CLST 2020
+ProcessKeyBinding 401 when=1602605259251 modifiers=40 code=10 char=ffff false false
+--------------- 55 --------------
+  Tue Oct 13 13:07:39 CLST 2020
+ProcessKeyBinding 402 when=1602605259270 modifiers=0 code=10 char=ffff false false
+--------------- 56 --------------
+  Tue Oct 13 13:07:40 CLST 2020
+ProcessKeyBinding 401 when=1602605260013 modifiers=40 code=10 char=ffff false false
+--------------- 57 --------------
+  Tue Oct 13 13:07:40 CLST 2020
+ProcessKeyBinding 402 when=1602605260495 modifiers=0 code=10 char=ffff false false
+--------------- 58 --------------
+  Tue Oct 13 13:07:40 CLST 2020
+ProcessKeyBinding 401 when=1602605260646 modifiers=80 code=11 char=ffff false false
+--------------- 59 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261146 modifiers=80 code=11 char=ffff false false
+--------------- 60 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261179 modifiers=80 code=11 char=ffff false false
+--------------- 61 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261212 modifiers=80 code=11 char=ffff false false
+--------------- 62 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261244 modifiers=80 code=11 char=ffff false false
+--------------- 63 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261277 modifiers=80 code=11 char=ffff false false
+--------------- 64 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261309 modifiers=80 code=11 char=ffff false false
+--------------- 65 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261343 modifiers=80 code=11 char=ffff false false
+--------------- 66 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261376 modifiers=80 code=11 char=ffff false false
+--------------- 67 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261409 modifiers=80 code=11 char=ffff false false
+--------------- 68 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261442 modifiers=80 code=11 char=ffff false false
+--------------- 69 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 402 when=1602605261445 modifiers=0 code=11 char=ffff false false
+--------------- 70 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 401 when=1602605261565 modifiers=40 code=10 char=ffff false false
+--------------- 71 --------------
+  Tue Oct 13 13:07:41 CLST 2020
+ProcessKeyBinding 402 when=1602605261941 modifiers=0 code=10 char=ffff false false
+--------------- 72 --------------
+  Tue Oct 13 13:07:42 CLST 2020
+ProcessKeyBinding 401 when=1602605262221 modifiers=40 code=10 char=ffff false false
+--------------- 73 --------------
+  Tue Oct 13 13:07:42 CLST 2020
+ProcessKeyBinding 402 when=1602605262678 modifiers=0 code=10 char=ffff false false
+--------------- 74 --------------
+  Tue Oct 13 13:07:42 CLST 2020
+ProcessKeyBinding 401 when=1602605262831 modifiers=40 code=10 char=ffff false false
+--------------- 75 --------------
+  Tue Oct 13 13:07:43 CLST 2020
+ProcessKeyBinding 402 when=1602605263286 modifiers=0 code=10 char=ffff false false
+--------------- 76 --------------
+  Tue Oct 13 13:07:43 CLST 2020
+ProcessKeyBinding 401 when=1602605263414 modifiers=80 code=11 char=ffff false false
+--------------- 77 --------------
+  Tue Oct 13 13:07:43 CLST 2020
+ProcessKeyBinding 401 when=1602605263914 modifiers=80 code=11 char=ffff false false
+--------------- 78 --------------
+  Tue Oct 13 13:07:43 CLST 2020
+ProcessKeyBinding 401 when=1602605263948 modifiers=80 code=11 char=ffff false false
+--------------- 79 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605263980 modifiers=80 code=11 char=ffff false false
+--------------- 80 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264013 modifiers=80 code=11 char=ffff false false
+--------------- 81 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264045 modifiers=80 code=11 char=ffff false false
+--------------- 82 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264078 modifiers=80 code=11 char=ffff false false
+--------------- 83 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264111 modifiers=80 code=11 char=ffff false false
+--------------- 84 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264144 modifiers=80 code=11 char=ffff false false
+--------------- 85 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264177 modifiers=80 code=11 char=ffff false false
+--------------- 86 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264210 modifiers=80 code=11 char=ffff false false
+--------------- 87 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264244 modifiers=80 code=11 char=ffff false false
+--------------- 88 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264276 modifiers=80 code=11 char=ffff false false
+--------------- 89 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264315 modifiers=80 code=11 char=ffff false false
+--------------- 90 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264343 modifiers=80 code=11 char=ffff false false
+--------------- 91 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264375 modifiers=80 code=11 char=ffff false false
+--------------- 92 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264409 modifiers=80 code=11 char=ffff false false
+--------------- 93 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264441 modifiers=80 code=11 char=ffff false false
+--------------- 94 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264474 modifiers=80 code=11 char=ffff false false
+--------------- 95 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264509 modifiers=80 code=11 char=ffff false false
+--------------- 96 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264541 modifiers=80 code=11 char=ffff false false
+--------------- 97 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264582 modifiers=80 code=11 char=ffff false false
+--------------- 98 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264613 modifiers=80 code=11 char=ffff false false
+--------------- 99 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264640 modifiers=80 code=11 char=ffff false false
+--------------- 100 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264675 modifiers=80 code=11 char=ffff false false
+--------------- 101 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264705 modifiers=80 code=11 char=ffff false false
+--------------- 102 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264738 modifiers=80 code=11 char=ffff false false
+--------------- 103 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264771 modifiers=80 code=11 char=ffff false false
+--------------- 104 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264805 modifiers=80 code=11 char=ffff false false
+--------------- 105 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264837 modifiers=80 code=11 char=ffff false false
+--------------- 106 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264871 modifiers=80 code=11 char=ffff false false
+--------------- 107 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264907 modifiers=80 code=11 char=ffff false false
+--------------- 108 --------------
+  Tue Oct 13 13:07:44 CLST 2020
+ProcessKeyBinding 401 when=1602605264936 modifiers=80 code=11 char=ffff false false
+--------------- 109 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605264969 modifiers=80 code=11 char=ffff false false
+--------------- 110 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265002 modifiers=80 code=11 char=ffff false false
+--------------- 111 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265035 modifiers=80 code=11 char=ffff false false
+--------------- 112 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265068 modifiers=80 code=11 char=ffff false false
+--------------- 113 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265101 modifiers=80 code=11 char=ffff false false
+--------------- 114 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265135 modifiers=80 code=11 char=ffff false false
+--------------- 115 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265169 modifiers=80 code=11 char=ffff false false
+--------------- 116 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 402 when=1602605265182 modifiers=0 code=11 char=ffff false false
+--------------- 117 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265301 modifiers=40 code=10 char=ffff false false
+--------------- 118 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265802 modifiers=40 code=10 char=ffff false false
+--------------- 119 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 401 when=1602605265835 modifiers=40 code=10 char=ffff false false
+--------------- 120 --------------
+  Tue Oct 13 13:07:45 CLST 2020
+ProcessKeyBinding 402 when=1602605265839 modifiers=0 code=10 char=ffff false false
+--------------- 121 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266006 modifiers=80 code=11 char=ffff false false
+--------------- 122 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266505 modifiers=80 code=11 char=ffff false false
+--------------- 123 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266538 modifiers=80 code=11 char=ffff false false
+--------------- 124 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266571 modifiers=80 code=11 char=ffff false false
+--------------- 125 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266611 modifiers=80 code=11 char=ffff false false
+--------------- 126 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266637 modifiers=80 code=11 char=ffff false false
+--------------- 127 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266671 modifiers=80 code=11 char=ffff false false
+--------------- 128 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266704 modifiers=80 code=11 char=ffff false false
+--------------- 129 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266736 modifiers=80 code=11 char=ffff false false
+--------------- 130 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266769 modifiers=80 code=11 char=ffff false false
+--------------- 131 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266802 modifiers=80 code=11 char=ffff false false
+--------------- 132 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266836 modifiers=80 code=11 char=ffff false false
+--------------- 133 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266868 modifiers=80 code=11 char=ffff false false
+--------------- 134 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266902 modifiers=80 code=11 char=ffff false false
+--------------- 135 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 401 when=1602605266934 modifiers=80 code=11 char=ffff false false
+--------------- 136 --------------
+  Tue Oct 13 13:07:46 CLST 2020
+ProcessKeyBinding 402 when=1602605266951 modifiers=0 code=11 char=ffff false false
+--------------- 137 --------------
+  Tue Oct 13 13:07:59 CLST 2020
+ProcessKeyBinding 401 when=1602605279165 modifiers=200 code=12 char=ffff false false
+--------------- 138 --------------
+  Tue Oct 13 13:09:14 CLST 2020
+ProcessKeyBinding 401 when=1602605354165 modifiers=200 code=12 char=ffff false false
+--------------- 139 --------------
+  Tue Oct 13 13:10:25 CLST 2020
+ProcessKeyBinding 401 when=1602605425957 modifiers=80 code=11 char=ffff false false
+--------------- 140 --------------
+  Tue Oct 13 13:10:26 CLST 2020
+Menu Activated: Export | Create Export...
+--------------- 141 --------------
+  Tue Oct 13 13:10:26 CLST 2020
+ProcessKeyBinding 400 when=1602605426085 modifiers=80 code=0 char=5 false false
+--------------- 142 --------------
+  Tue Oct 13 13:10:42 CLST 2020
+ProcessKeyBinding 401 when=1602605442286 modifiers=80 code=11 char=ffff false false
+--------------- 143 --------------
+  Tue Oct 13 13:10:42 CLST 2020
+ProcessKeyBinding 402 when=1602605442606 modifiers=0 code=11 char=ffff false false
+--------------- 144 --------------
+  Tue Oct 13 13:10:46 CLST 2020
+ProcessKeyBinding 400 when=1602605446445 modifiers=0 code=0 char=1b false false
+--------------- 145 --------------
+  Tue Oct 13 13:10:46 CLST 2020
+ProcessKeyBinding 402 when=1602605446575 modifiers=0 code=1b char=1b false false
+--------------- 146 --------------
+  Tue Oct 13 13:10:46 CLST 2020
+ProcessKeyBinding 400 when=1602605446854 modifiers=0 code=0 char=1b false false
+--------------- 147 --------------
+  Tue Oct 13 13:10:46 CLST 2020
+ProcessKeyBinding 402 when=1602605446957 modifiers=0 code=1b char=1b false false
+--------------- 148 --------------
+  Tue Oct 13 13:10:47 CLST 2020
+ProcessKeyBinding 400 when=1602605447110 modifiers=0 code=0 char=1b false false
+--------------- 149 --------------
+  Tue Oct 13 13:10:47 CLST 2020
+ProcessKeyBinding 402 when=1602605447230 modifiers=0 code=1b char=1b false false
+--------------- 150 --------------
+  Tue Oct 13 13:10:47 CLST 2020
+ProcessKeyBinding 400 when=1602605447357 modifiers=0 code=0 char=1b false false
+--------------- 151 --------------
+  Tue Oct 13 13:10:47 CLST 2020
+ProcessKeyBinding 402 when=1602605447493 modifiers=0 code=1b char=1b false false
+--------------- 152 --------------
+  Tue Oct 13 13:10:50 CLST 2020
+ProcessKeyBinding 401 when=1602605450661 modifiers=80 code=11 char=ffff false false
+--------------- 153 --------------
+  Tue Oct 13 13:10:51 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Wire_Pin['pin@1']
+--------------- 154 --------------
+  Tue Oct 13 13:10:51 CLST 2020
+ProcessKeyBinding 400 when=1602605451021 modifiers=80 code=0 char=5 false false
+--------------- 155 --------------
+  Tue Oct 13 13:10:58 CLST 2020
+ProcessKeyBinding 401 when=1602605458182 modifiers=80 code=11 char=ffff false false
+--------------- 156 --------------
+  Tue Oct 13 13:10:58 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Wire_Pin['pin@1']
+--------------- 157 --------------
+  Tue Oct 13 13:10:58 CLST 2020
+ProcessKeyBinding 400 when=1602605458349 modifiers=80 code=0 char=5 false false
+--------------- 158 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462261 modifiers=80 code=11 char=ffff false false
+--------------- 159 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462761 modifiers=80 code=11 char=ffff false false
+--------------- 160 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462794 modifiers=80 code=11 char=ffff false false
+--------------- 161 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462827 modifiers=80 code=11 char=ffff false false
+--------------- 162 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462860 modifiers=80 code=11 char=ffff false false
+--------------- 163 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462893 modifiers=80 code=11 char=ffff false false
+--------------- 164 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462927 modifiers=80 code=11 char=ffff false false
+--------------- 165 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462959 modifiers=80 code=11 char=ffff false false
+--------------- 166 --------------
+  Tue Oct 13 13:11:02 CLST 2020
+ProcessKeyBinding 401 when=1602605462992 modifiers=80 code=11 char=ffff false false
+--------------- 167 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463025 modifiers=80 code=11 char=ffff false false
+--------------- 168 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463059 modifiers=80 code=11 char=ffff false false
+--------------- 169 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463091 modifiers=80 code=11 char=ffff false false
+--------------- 170 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463124 modifiers=80 code=11 char=ffff false false
+--------------- 171 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463157 modifiers=80 code=11 char=ffff false false
+--------------- 172 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463190 modifiers=80 code=11 char=ffff false false
+--------------- 173 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463223 modifiers=80 code=11 char=ffff false false
+--------------- 174 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463256 modifiers=80 code=11 char=ffff false false
+--------------- 175 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463290 modifiers=80 code=11 char=ffff false false
+--------------- 176 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463322 modifiers=80 code=11 char=ffff false false
+--------------- 177 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463355 modifiers=80 code=11 char=ffff false false
+--------------- 178 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463388 modifiers=80 code=11 char=ffff false false
+--------------- 179 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463421 modifiers=80 code=11 char=ffff false false
+--------------- 180 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463454 modifiers=80 code=11 char=ffff false false
+--------------- 181 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463487 modifiers=80 code=11 char=ffff false false
+--------------- 182 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463520 modifiers=80 code=11 char=ffff false false
+--------------- 183 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463553 modifiers=80 code=11 char=ffff false false
+--------------- 184 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463586 modifiers=80 code=11 char=ffff false false
+--------------- 185 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463619 modifiers=80 code=11 char=ffff false false
+--------------- 186 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463652 modifiers=80 code=11 char=ffff false false
+--------------- 187 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463685 modifiers=80 code=11 char=ffff false false
+--------------- 188 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463718 modifiers=80 code=11 char=ffff false false
+--------------- 189 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463753 modifiers=80 code=11 char=ffff false false
+--------------- 190 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463784 modifiers=80 code=11 char=ffff false false
+--------------- 191 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463817 modifiers=80 code=11 char=ffff false false
+--------------- 192 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463850 modifiers=80 code=11 char=ffff false false
+--------------- 193 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463883 modifiers=80 code=11 char=ffff false false
+--------------- 194 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 401 when=1602605463916 modifiers=80 code=11 char=ffff false false
+--------------- 195 --------------
+  Tue Oct 13 13:11:03 CLST 2020
+ProcessKeyBinding 402 when=1602605463933 modifiers=0 code=11 char=ffff false false
+--------------- 196 --------------
+  Tue Oct 13 13:11:13 CLST 2020
+ProcessKeyBinding 401 when=1602605473733 modifiers=80 code=11 char=ffff false false
+--------------- 197 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474234 modifiers=80 code=11 char=ffff false false
+--------------- 198 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474267 modifiers=80 code=11 char=ffff false false
+--------------- 199 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474300 modifiers=80 code=11 char=ffff false false
+--------------- 200 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474333 modifiers=80 code=11 char=ffff false false
+--------------- 201 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474366 modifiers=80 code=11 char=ffff false false
+--------------- 202 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474398 modifiers=80 code=11 char=ffff false false
+--------------- 203 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474432 modifiers=80 code=11 char=ffff false false
+--------------- 204 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474464 modifiers=80 code=11 char=ffff false false
+--------------- 205 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474498 modifiers=80 code=11 char=ffff false false
+--------------- 206 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474531 modifiers=80 code=11 char=ffff false false
+--------------- 207 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474563 modifiers=80 code=11 char=ffff false false
+--------------- 208 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474597 modifiers=80 code=11 char=ffff false false
+--------------- 209 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474629 modifiers=80 code=11 char=ffff false false
+--------------- 210 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474663 modifiers=80 code=11 char=ffff false false
+--------------- 211 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474696 modifiers=80 code=11 char=ffff false false
+--------------- 212 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474729 modifiers=80 code=11 char=ffff false false
+--------------- 213 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474761 modifiers=80 code=11 char=ffff false false
+--------------- 214 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474795 modifiers=80 code=11 char=ffff false false
+--------------- 215 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474827 modifiers=80 code=11 char=ffff false false
+--------------- 216 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474860 modifiers=80 code=11 char=ffff false false
+--------------- 217 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474893 modifiers=80 code=11 char=ffff false false
+--------------- 218 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474927 modifiers=80 code=11 char=ffff false false
+--------------- 219 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474959 modifiers=80 code=11 char=ffff false false
+--------------- 220 --------------
+  Tue Oct 13 13:11:14 CLST 2020
+ProcessKeyBinding 401 when=1602605474992 modifiers=80 code=11 char=ffff false false
+--------------- 221 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 401 when=1602605475025 modifiers=80 code=11 char=ffff false false
+--------------- 222 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 401 when=1602605475059 modifiers=80 code=11 char=ffff false false
+--------------- 223 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 401 when=1602605475091 modifiers=80 code=11 char=ffff false false
+--------------- 224 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 401 when=1602605475124 modifiers=80 code=11 char=ffff false false
+--------------- 225 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 401 when=1602605475157 modifiers=80 code=11 char=ffff false false
+--------------- 226 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 401 when=1602605475190 modifiers=80 code=11 char=ffff false false
+--------------- 227 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Wire_Pin['pin@2']
+--------------- 228 --------------
+  Tue Oct 13 13:11:15 CLST 2020
+ProcessKeyBinding 400 when=1602605475213 modifiers=80 code=0 char=5 false false
+--------------- 229 --------------
+  Tue Oct 13 13:11:18 CLST 2020
+ProcessKeyBinding 402 when=1602605478029 modifiers=0 code=a char=a false false
+--------------- 230 --------------
+  Tue Oct 13 13:11:40 CLST 2020
+ProcessKeyBinding 401 when=1602605500278 modifiers=80 code=11 char=ffff false false
+--------------- 231 --------------
+  Tue Oct 13 13:11:40 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': Metal-1-Pin['pin@0']
+--------------- 232 --------------
+  Tue Oct 13 13:11:40 CLST 2020
+ProcessKeyBinding 400 when=1602605500589 modifiers=80 code=0 char=5 false false
+--------------- 233 --------------
+  Tue Oct 13 13:11:44 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-Pin[pin@0].metal-1'
+--------------- 234 --------------
+  Tue Oct 13 13:11:44 CLST 2020
+ProcessKeyBinding 400 when=1602605504191 modifiers=0 code=0 char=7f false false
+--------------- 235 --------------
+  Tue Oct 13 13:12:19 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Well-Con[well@0].metal-1-substrate'
+--------------- 236 --------------
+  Tue Oct 13 13:12:19 CLST 2020
+ProcessKeyBinding 400 when=1602605539205 modifiers=0 code=0 char=7f false false
+--------------- 237 --------------
+  Tue Oct 13 13:12:35 CLST 2020
+ProcessKeyBinding 401 when=1602605555534 modifiers=80 code=11 char=ffff false false
+--------------- 238 --------------
+  Tue Oct 13 13:12:35 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@0].metal-1-n-act'
+--------------- 239 --------------
+  Tue Oct 13 13:12:35 CLST 2020
+ProcessKeyBinding 400 when=1602605555670 modifiers=80 code=0 char=5 false false
+--------------- 240 --------------
+  Tue Oct 13 13:12:39 CLST 2020
+ProcessKeyBinding 401 when=1602605559350 modifiers=80 code=11 char=ffff false false
+--------------- 241 --------------
+  Tue Oct 13 13:12:39 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@1].metal-1-n-act'
+--------------- 242 --------------
+  Tue Oct 13 13:12:39 CLST 2020
+ProcessKeyBinding 400 when=1602605559517 modifiers=80 code=0 char=5 false false
+--------------- 243 --------------
+  Tue Oct 13 13:12:41 CLST 2020
+ProcessKeyBinding 402 when=1602605561167 modifiers=0 code=a char=a false false
+--------------- 244 --------------
+  Tue Oct 13 13:12:56 CLST 2020
+Menu Activated: Tools | DRC | Check Hierarchically
+--------------- 245 --------------
+  Tue Oct 13 13:13:06 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 246 --------------
+  Tue Oct 13 13:13:19 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    Export 'V1'
+--------------- 247 --------------
+  Tue Oct 13 13:13:19 CLST 2020
+ProcessKeyBinding 400 when=1602605599590 modifiers=0 code=0 char=7f false false
+--------------- 248 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 401 when=1602605602030 modifiers=80 code=11 char=ffff false false
+--------------- 249 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 401 when=1602605602531 modifiers=80 code=11 char=ffff false false
+--------------- 250 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 401 when=1602605602564 modifiers=80 code=11 char=ffff false false
+--------------- 251 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 401 when=1602605602596 modifiers=80 code=11 char=ffff false false
+--------------- 252 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 401 when=1602605602629 modifiers=80 code=11 char=ffff false false
+--------------- 253 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 401 when=1602605602663 modifiers=80 code=11 char=ffff false false
+--------------- 254 --------------
+  Tue Oct 13 13:13:22 CLST 2020
+ProcessKeyBinding 402 when=1602605602686 modifiers=0 code=11 char=ffff false false
+--------------- 255 --------------
+  Tue Oct 13 13:13:23 CLST 2020
+ProcessKeyBinding 401 when=1602605603350 modifiers=80 code=11 char=ffff false false
+--------------- 256 --------------
+  Tue Oct 13 13:13:23 CLST 2020
+ProcessKeyBinding 402 when=1602605603789 modifiers=0 code=11 char=ffff false false
+--------------- 257 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604062 modifiers=80 code=11 char=ffff false false
+--------------- 258 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604562 modifiers=80 code=11 char=ffff false false
+--------------- 259 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604596 modifiers=80 code=11 char=ffff false false
+--------------- 260 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604628 modifiers=80 code=11 char=ffff false false
+--------------- 261 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604662 modifiers=80 code=11 char=ffff false false
+--------------- 262 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604694 modifiers=80 code=11 char=ffff false false
+--------------- 263 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604728 modifiers=80 code=11 char=ffff false false
+--------------- 264 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604760 modifiers=80 code=11 char=ffff false false
+--------------- 265 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604793 modifiers=80 code=11 char=ffff false false
+--------------- 266 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604828 modifiers=480 code=11 char=ffff false false
+--------------- 267 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604859 modifiers=480 code=11 char=ffff false false
+--------------- 268 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604892 modifiers=480 code=11 char=ffff false false
+--------------- 269 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604926 modifiers=80 code=11 char=ffff false false
+--------------- 270 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604958 modifiers=80 code=11 char=ffff false false
+--------------- 271 --------------
+  Tue Oct 13 13:13:24 CLST 2020
+ProcessKeyBinding 401 when=1602605604992 modifiers=80 code=11 char=ffff false false
+--------------- 272 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605024 modifiers=80 code=11 char=ffff false false
+--------------- 273 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605058 modifiers=80 code=11 char=ffff false false
+--------------- 274 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605091 modifiers=80 code=11 char=ffff false false
+--------------- 275 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605123 modifiers=80 code=11 char=ffff false false
+--------------- 276 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605156 modifiers=80 code=11 char=ffff false false
+--------------- 277 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605190 modifiers=80 code=11 char=ffff false false
+--------------- 278 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 401 when=1602605605222 modifiers=80 code=11 char=ffff false false
+--------------- 279 --------------
+  Tue Oct 13 13:13:25 CLST 2020
+ProcessKeyBinding 402 when=1602605605249 modifiers=0 code=11 char=ffff false false
+--------------- 280 --------------
+  Tue Oct 13 13:13:26 CLST 2020
+ProcessKeyBinding 401 when=1602605606869 modifiers=80 code=11 char=ffff false false
+--------------- 281 --------------
+  Tue Oct 13 13:13:27 CLST 2020
+ProcessKeyBinding 401 when=1602605607369 modifiers=80 code=11 char=ffff false false
+--------------- 282 --------------
+  Tue Oct 13 13:13:27 CLST 2020
+ProcessKeyBinding 401 when=1602605607402 modifiers=80 code=11 char=ffff false false
+--------------- 283 --------------
+  Tue Oct 13 13:13:27 CLST 2020
+ProcessKeyBinding 401 when=1602605607436 modifiers=80 code=11 char=ffff false false
+--------------- 284 --------------
+  Tue Oct 13 13:13:27 CLST 2020
+ProcessKeyBinding 401 when=1602605607469 modifiers=80 code=11 char=ffff false false
+--------------- 285 --------------
+  Tue Oct 13 13:13:27 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@0].metal-1-n-act'
+--------------- 286 --------------
+  Tue Oct 13 13:13:27 CLST 2020
+ProcessKeyBinding 400 when=1602605607485 modifiers=80 code=0 char=5 false false
+--------------- 287 --------------
+  Tue Oct 13 13:13:30 CLST 2020
+ProcessKeyBinding 402 when=1602605610206 modifiers=0 code=a char=a false false
+--------------- 288 --------------
+  Tue Oct 13 13:13:39 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 289 --------------
+  Tue Oct 13 13:13:49 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 290 --------------
+  Tue Oct 13 13:13:49 CLST 2020
+ProcessKeyBinding 400 when=1602605629230 modifiers=0 code=0 char=4c(L) false false
+--------------- 291 --------------
+  Tue Oct 13 13:14:04 CLST 2020
+ProcessKeyBinding 401 when=1602605644864 modifiers=80 code=11 char=ffff false false
+--------------- 292 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+ProcessKeyBinding 401 when=1602605645046 modifiers=80 code=52 char=12 false false
+--------------- 293 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+ProcessKeyBinding 400 when=1602605645046 modifiers=80 code=0 char=12 false false
+--------------- 294 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+ProcessKeyBinding 402 when=1602605645198 modifiers=80 code=52 char=12 false false
+--------------- 295 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+ProcessKeyBinding 402 when=1602605645238 modifiers=0 code=11 char=ffff false false
+--------------- 296 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+Menu Activated: Edit | Selection | Remove from Waveform
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Resistor['res@0']
+--------------- 297 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+ProcessKeyBinding 400 when=1602605645438 modifiers=0 code=0 char=52(R) false false
+--------------- 298 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+Menu Activated: Edit | Selection | Remove from Waveform
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Resistor['res@0']
+--------------- 299 --------------
+  Tue Oct 13 13:14:05 CLST 2020
+ProcessKeyBinding 400 when=1602605645805 modifiers=0 code=0 char=52(R) false false
+--------------- 300 --------------
+  Tue Oct 13 13:14:06 CLST 2020
+Menu Activated: Edit | Selection | Remove from Waveform
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': 'Resistor[res@0].a'
+--------------- 301 --------------
+  Tue Oct 13 13:14:06 CLST 2020
+ProcessKeyBinding 400 when=1602605646957 modifiers=0 code=0 char=52(R) false false
+--------------- 302 --------------
+  Tue Oct 13 13:14:07 CLST 2020
+ProcessKeyBinding 401 when=1602605647590 modifiers=80 code=11 char=ffff false false
+--------------- 303 --------------
+  Tue Oct 13 13:14:07 CLST 2020
+ProcessKeyBinding 401 when=1602605647711 modifiers=80 code=52 char=12 false false
+--------------- 304 --------------
+  Tue Oct 13 13:14:07 CLST 2020
+ProcessKeyBinding 400 when=1602605647711 modifiers=80 code=0 char=12 false false
+--------------- 305 --------------
+  Tue Oct 13 13:14:07 CLST 2020
+ProcessKeyBinding 402 when=1602605647853 modifiers=80 code=52 char=12 false false
+--------------- 306 --------------
+  Tue Oct 13 13:14:07 CLST 2020
+ProcessKeyBinding 402 when=1602605647966 modifiers=0 code=11 char=ffff false false
+--------------- 307 --------------
+  Tue Oct 13 13:14:22 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': 'Resistor[res@0].b'
+--------------- 308 --------------
+  Tue Oct 13 13:14:22 CLST 2020
+ProcessKeyBinding 400 when=1602605662365 modifiers=0 code=0 char=7f false false
+--------------- 309 --------------
+  Tue Oct 13 13:14:31 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': Metal-1['net@1']
+--------------- 310 --------------
+  Tue Oct 13 13:14:31 CLST 2020
+ProcessKeyBinding 400 when=1602605671165 modifiers=0 code=0 char=7f false false
+--------------- 311 --------------
+  Tue Oct 13 13:14:32 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': Metal-1['net@0']
+--------------- 312 --------------
+  Tue Oct 13 13:14:32 CLST 2020
+ProcessKeyBinding 400 when=1602605672277 modifiers=0 code=0 char=7f false false
+--------------- 313 --------------
+  Tue Oct 13 13:14:34 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 314 --------------
+  Tue Oct 13 13:14:34 CLST 2020
+ProcessKeyBinding 400 when=1602605674461 modifiers=0 code=0 char=4c(L) false false
+--------------- 315 --------------
+  Tue Oct 13 13:14:35 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 316 --------------
+  Tue Oct 13 13:14:35 CLST 2020
+ProcessKeyBinding 400 when=1602605675629 modifiers=0 code=0 char=4c(L) false false
+--------------- 317 --------------
+  Tue Oct 13 13:14:37 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 318 --------------
+  Tue Oct 13 13:14:37 CLST 2020
+ProcessKeyBinding 400 when=1602605677469 modifiers=0 code=0 char=4c(L) false false
+--------------- 319 --------------
+  Tue Oct 13 13:14:38 CLST 2020
+Menu Activated: Tools | DRC | Check Hierarchically
+--------------- 320 --------------
+  Tue Oct 13 13:15:06 CLST 2020
+ProcessKeyBinding 402 when=1602605706287 modifiers=0 code=9a char=ffff false false
+--------------- 321 --------------
+  Tue Oct 13 13:15:09 CLST 2020
+ProcessKeyBinding 401 when=1602605709733 modifiers=0 code=20c char=ffff false false
+--------------- 322 --------------
+  Tue Oct 13 13:15:09 CLST 2020
+ProcessKeyBinding 402 when=1602605709813 modifiers=0 code=20c char=ffff false false
+--------------- 323 --------------
+  Tue Oct 13 13:15:22 CLST 2020
+ProcessKeyBinding 402 when=1602605722567 modifiers=0 code=9a char=ffff false false
+--------------- 324 --------------
+  Tue Oct 13 13:15:24 CLST 2020
+ProcessKeyBinding 401 when=1602605724677 modifiers=200 code=12 char=ffff false false
+--------------- 325 --------------
+  Tue Oct 13 13:16:33 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': 'spiceparts:ACVoltage{ic}[ACVoltag@0].minus'
+--------------- 326 --------------
+  Tue Oct 13 13:16:33 CLST 2020
+ProcessKeyBinding 400 when=1602605793118 modifiers=0 code=0 char=7f false false
+--------------- 327 --------------
+  Tue Oct 13 13:16:43 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': 'spiceparts:Amp{ic}[Amp@0].out'
+--------------- 328 --------------
+  Tue Oct 13 13:16:43 CLST 2020
+ProcessKeyBinding 400 when=1602605803078 modifiers=0 code=0 char=7f false false
+--------------- 329 --------------
+  Tue Oct 13 13:16:47 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': 'spiceparts:ACCurrent{ic}[ACCurren@0].minus'
+--------------- 330 --------------
+  Tue Oct 13 13:16:47 CLST 2020
+ProcessKeyBinding 400 when=1602605807693 modifiers=0 code=0 char=7f false false
+--------------- 331 --------------
+  Tue Oct 13 13:23:48 CLST 2020
+ProcessKeyBinding 401 when=1602606228111 modifiers=80 code=11 char=ffff false false
+--------------- 332 --------------
+  Tue Oct 13 13:23:48 CLST 2020
+ProcessKeyBinding 401 when=1602606228611 modifiers=80 code=11 char=ffff false false
+--------------- 333 --------------
+  Tue Oct 13 13:23:48 CLST 2020
+Menu Activated: Edit | Properties | Object Properties...
+Currently highlighted: 
+    SPICE code
+--------------- 334 --------------
+  Tue Oct 13 13:23:48 CLST 2020
+ProcessKeyBinding 400 when=1602606228638 modifiers=80 code=0 char=9 false false
+--------------- 335 --------------
+  Tue Oct 13 13:24:07 CLST 2020
+ProcessKeyBinding 401 when=1602606247926 modifiers=80 code=11 char=ffff false false
+--------------- 336 --------------
+  Tue Oct 13 13:24:08 CLST 2020
+ProcessKeyBinding 401 when=1602606248427 modifiers=80 code=11 char=ffff false false
+--------------- 337 --------------
+  Tue Oct 13 13:24:08 CLST 2020
+ProcessKeyBinding 401 when=1602606248459 modifiers=80 code=11 char=ffff false false
+--------------- 338 --------------
+  Tue Oct 13 13:24:08 CLST 2020
+ProcessKeyBinding 402 when=1602606248486 modifiers=0 code=11 char=ffff false false
+--------------- 339 --------------
+  Tue Oct 13 13:24:08 CLST 2020
+ProcessKeyBinding 401 when=1602606248702 modifiers=200 code=12 char=ffff false false
+--------------- 340 --------------
+  Tue Oct 13 13:24:31 CLST 2020
+ProcessKeyBinding 401 when=1602606271742 modifiers=80 code=11 char=ffff false false
+--------------- 341 --------------
+  Tue Oct 13 13:24:32 CLST 2020
+Menu Activated: Edit | Properties | Object Properties...
+Currently highlighted: 
+    SPICE code
+--------------- 342 --------------
+  Tue Oct 13 13:24:32 CLST 2020
+ProcessKeyBinding 400 when=1602606272047 modifiers=80 code=0 char=9 false false
+--------------- 343 --------------
+  Tue Oct 13 13:24:45 CLST 2020
+ProcessKeyBinding 401 when=1602606285534 modifiers=80 code=11 char=ffff false false
+--------------- 344 --------------
+  Tue Oct 13 13:24:45 CLST 2020
+ProcessKeyBinding 402 when=1602606285751 modifiers=0 code=11 char=ffff false false
+--------------- 345 --------------
+  Tue Oct 13 13:24:47 CLST 2020
+ProcessKeyBinding 401 when=1602606287846 modifiers=80 code=11 char=ffff false false
+--------------- 346 --------------
+  Tue Oct 13 13:24:48 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Wire_Pin['pin@3']
+--------------- 347 --------------
+  Tue Oct 13 13:24:48 CLST 2020
+ProcessKeyBinding 400 when=1602606288086 modifiers=80 code=0 char=5 false false
+--------------- 348 --------------
+  Tue Oct 13 13:24:57 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    Export 'V1'
+    Export '0'
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': Metal-1-N-Active-Con['contact@0']
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': Metal-1-N-Active-Con['contact@1']
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': Metal-1-N-Active-Con['contact@2']
+--------------- 349 --------------
+  Tue Oct 13 13:24:57 CLST 2020
+ProcessKeyBinding 400 when=1602606297326 modifiers=0 code=0 char=7f false false
+--------------- 350 --------------
+  Tue Oct 13 13:25:03 CLST 2020
+ProcessKeyBinding 401 when=1602606303031 modifiers=80 code=11 char=ffff false false
+--------------- 351 --------------
+  Tue Oct 13 13:25:03 CLST 2020
+ProcessKeyBinding 401 when=1602606303198 modifiers=80 code=52 char=12 false false
+--------------- 352 --------------
+  Tue Oct 13 13:25:03 CLST 2020
+ProcessKeyBinding 400 when=1602606303198 modifiers=80 code=0 char=12 false false
+--------------- 353 --------------
+  Tue Oct 13 13:25:03 CLST 2020
+ProcessKeyBinding 402 when=1602606303358 modifiers=80 code=52 char=12 false false
+--------------- 354 --------------
+  Tue Oct 13 13:25:03 CLST 2020
+ProcessKeyBinding 402 when=1602606303566 modifiers=0 code=11 char=ffff false false
+--------------- 355 --------------
+  Tue Oct 13 13:25:20 CLST 2020
+ProcessKeyBinding 401 when=1602606320327 modifiers=80 code=11 char=ffff false false
+--------------- 356 --------------
+  Tue Oct 13 13:25:20 CLST 2020
+Menu Activated: Edit | Properties | Object Properties...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'N-Transistor[nmos@0].diff-top'
+--------------- 357 --------------
+  Tue Oct 13 13:25:20 CLST 2020
+ProcessKeyBinding 400 when=1602606320510 modifiers=80 code=0 char=9 false false
+--------------- 358 --------------
+  Tue Oct 13 13:25:23 CLST 2020
+ProcessKeyBinding 402 when=1602606323942 modifiers=0 code=a char=a false false
+--------------- 359 --------------
+  Tue Oct 13 13:25:25 CLST 2020
+ProcessKeyBinding 401 when=1602606325280 modifiers=80 code=11 char=ffff false false
+--------------- 360 --------------
+  Tue Oct 13 13:25:25 CLST 2020
+Menu Activated: Edit | Properties | Object Properties...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@3].metal-1-n-act'
+--------------- 361 --------------
+  Tue Oct 13 13:25:25 CLST 2020
+ProcessKeyBinding 400 when=1602606325487 modifiers=80 code=0 char=9 false false
+--------------- 362 --------------
+  Tue Oct 13 13:25:28 CLST 2020
+ProcessKeyBinding 402 when=1602606328414 modifiers=0 code=a char=a false false
+--------------- 363 --------------
+  Tue Oct 13 13:25:34 CLST 2020
+ProcessKeyBinding 401 when=1602606334358 modifiers=80 code=11 char=ffff false false
+--------------- 364 --------------
+  Tue Oct 13 13:25:34 CLST 2020
+Menu Activated: Edit | Copy
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@3].metal-1-n-act'
+--------------- 365 --------------
+  Tue Oct 13 13:25:34 CLST 2020
+ProcessKeyBinding 400 when=1602606334488 modifiers=80 code=0 char=3 false false
+--------------- 366 --------------
+  Tue Oct 13 13:25:34 CLST 2020
+Menu Activated: Edit | Paste
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@3].metal-1-n-act'
+--------------- 367 --------------
+  Tue Oct 13 13:25:34 CLST 2020
+ProcessKeyBinding 400 when=1602606334822 modifiers=80 code=0 char=16 false false
+--------------- 368 --------------
+  Tue Oct 13 13:25:35 CLST 2020
+ProcessKeyBinding 402 when=1602606335022 modifiers=0 code=11 char=ffff false false
+--------------- 369 --------------
+  Tue Oct 13 13:25:36 CLST 2020
+ProcessKeyBinding 401 when=1602606336159 modifiers=80 code=11 char=ffff false false
+--------------- 370 --------------
+  Tue Oct 13 13:25:36 CLST 2020
+Menu Activated: Edit | Paste
+--------------- 371 --------------
+  Tue Oct 13 13:25:36 CLST 2020
+ProcessKeyBinding 400 when=1602606336247 modifiers=80 code=0 char=16 false false
+--------------- 372 --------------
+  Tue Oct 13 13:25:36 CLST 2020
+ProcessKeyBinding 402 when=1602606336407 modifiers=0 code=11 char=ffff false false
+--------------- 373 --------------
+  Tue Oct 13 13:25:42 CLST 2020
+ProcessKeyBinding 401 when=1602606342222 modifiers=80 code=11 char=ffff false false
+--------------- 374 --------------
+  Tue Oct 13 13:25:42 CLST 2020
+Menu Activated: Edit | Undo
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'N-Active-Pin[pin@0].n-active'
+--------------- 375 --------------
+  Tue Oct 13 13:25:42 CLST 2020
+ProcessKeyBinding 400 when=1602606342487 modifiers=80 code=0 char=1a false false
+--------------- 376 --------------
+  Tue Oct 13 13:25:42 CLST 2020
+ProcessKeyBinding 402 when=1602606342703 modifiers=0 code=11 char=ffff false false
+--------------- 377 --------------
+  Tue Oct 13 13:25:45 CLST 2020
+ProcessKeyBinding 401 when=1602606345839 modifiers=80 code=11 char=ffff false false
+--------------- 378 --------------
+  Tue Oct 13 13:25:46 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@4].metal-1-n-act'
+--------------- 379 --------------
+  Tue Oct 13 13:25:46 CLST 2020
+ProcessKeyBinding 400 when=1602606346006 modifiers=80 code=0 char=5 false false
+--------------- 380 --------------
+  Tue Oct 13 13:25:50 CLST 2020
+ProcessKeyBinding 402 when=1602606350775 modifiers=0 code=a char=a false false
+--------------- 381 --------------
+  Tue Oct 13 13:25:52 CLST 2020
+ProcessKeyBinding 401 when=1602606352183 modifiers=80 code=11 char=ffff false false
+--------------- 382 --------------
+  Tue Oct 13 13:25:52 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Polysilicon-1-Pin[pin@0].polysilicon-1'
+--------------- 383 --------------
+  Tue Oct 13 13:25:52 CLST 2020
+ProcessKeyBinding 400 when=1602606352390 modifiers=80 code=0 char=5 false false
+--------------- 384 --------------
+  Tue Oct 13 13:26:11 CLST 2020
+ProcessKeyBinding 401 when=1602606371254 modifiers=80 code=11 char=ffff false false
+--------------- 385 --------------
+  Tue Oct 13 13:26:11 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Polysilicon-1-Pin[pin@0].polysilicon-1'
+--------------- 386 --------------
+  Tue Oct 13 13:26:11 CLST 2020
+ProcessKeyBinding 400 when=1602606371454 modifiers=80 code=0 char=5 false false
+--------------- 387 --------------
+  Tue Oct 13 13:26:13 CLST 2020
+ProcessKeyBinding 402 when=1602606373726 modifiers=0 code=a char=a false false
+--------------- 388 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375039 modifiers=80 code=11 char=ffff false false
+--------------- 389 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375539 modifiers=80 code=11 char=ffff false false
+--------------- 390 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375572 modifiers=80 code=11 char=ffff false false
+--------------- 391 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375605 modifiers=80 code=11 char=ffff false false
+--------------- 392 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375638 modifiers=80 code=11 char=ffff false false
+--------------- 393 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375671 modifiers=80 code=11 char=ffff false false
+--------------- 394 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375704 modifiers=80 code=11 char=ffff false false
+--------------- 395 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375737 modifiers=80 code=11 char=ffff false false
+--------------- 396 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375770 modifiers=80 code=11 char=ffff false false
+--------------- 397 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 401 when=1602606375804 modifiers=80 code=11 char=ffff false false
+--------------- 398 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+Menu Activated: Export | Create Export...
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{lay}': 'Metal-1-N-Active-Con[contact@3].metal-1-n-act'
+--------------- 399 --------------
+  Tue Oct 13 13:26:15 CLST 2020
+ProcessKeyBinding 400 when=1602606375806 modifiers=80 code=0 char=5 false false
+--------------- 400 --------------
+  Tue Oct 13 13:26:23 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 401 --------------
+  Tue Oct 13 13:26:23 CLST 2020
+ProcessKeyBinding 400 when=1602606383694 modifiers=0 code=0 char=4c(L) false false
+--------------- 402 --------------
+  Tue Oct 13 13:26:33 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 403 --------------
+  Tue Oct 13 13:26:33 CLST 2020
+ProcessKeyBinding 400 when=1602606393014 modifiers=0 code=0 char=4c(L) false false
+--------------- 404 --------------
+  Tue Oct 13 13:26:43 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+Currently highlighted: 
+    SPICE code
+--------------- 405 --------------
+  Tue Oct 13 13:26:43 CLST 2020
+ProcessKeyBinding 400 when=1602606403823 modifiers=0 code=0 char=4c(L) false false
+--------------- 406 --------------
+  Tue Oct 13 13:26:49 CLST 2020
+Menu Activated: Edit | Erase | Selected
+Currently highlighted: 
+    com.sun.electric.tool.user.HighlightEOBJ in cell 'fff:asd{sch}': Transistor(nMOS)['nmos@0']
+--------------- 407 --------------
+  Tue Oct 13 13:26:49 CLST 2020
+ProcessKeyBinding 400 when=1602606409966 modifiers=0 code=0 char=7f false false
+--------------- 408 --------------
+  Tue Oct 13 13:26:51 CLST 2020
+ProcessKeyBinding 401 when=1602606411342 modifiers=80 code=11 char=ffff false false
+--------------- 409 --------------
+  Tue Oct 13 13:26:51 CLST 2020
+Menu Activated: Edit | Properties | Object Properties...
+Currently highlighted: 
+    SPICE code
+--------------- 410 --------------
+  Tue Oct 13 13:26:51 CLST 2020
+ProcessKeyBinding 400 when=1602606411679 modifiers=80 code=0 char=9 false false
+--------------- 411 --------------
+  Tue Oct 13 13:27:04 CLST 2020
+ProcessKeyBinding 401 when=1602606424863 modifiers=80 code=11 char=ffff false false
+--------------- 412 --------------
+  Tue Oct 13 13:27:05 CLST 2020
+Menu Activated: Edit | Text | Find Text...
+--------------- 413 --------------
+  Tue Oct 13 13:27:05 CLST 2020
+ProcessKeyBinding 400 when=1602606425119 modifiers=80 code=0 char=c false false
+--------------- 414 --------------
+  Tue Oct 13 13:27:07 CLST 2020
+Menu Activated: Tools | DRC | Check Hierarchically
+--------------- 415 --------------
+  Tue Oct 13 13:27:08 CLST 2020
+Menu Activated: Tools | DRC | Check Hierarchically
+--------------- 416 --------------
+  Tue Oct 13 13:27:09 CLST 2020
+Menu Activated: Tools | NCC | Schematic and Layout Views of Cell in Current Window
+--------------- 417 --------------
+  Tue Oct 13 13:27:09 CLST 2020
+ProcessKeyBinding 400 when=1602606429094 modifiers=0 code=0 char=4c(L) false false

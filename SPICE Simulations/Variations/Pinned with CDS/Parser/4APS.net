@@ -1,0 +1,44 @@
+* D:\Universidad\CMOS Image Sensor\Simulaciones\4TAPS.asc
+V1 Vdd 0 5
+V2 Vreset 0 PULSE(0 5 0 1p 1p 'treset1' 'tperiodo' 4)
+V3 Vtransfer 0 PULSE(0 5 0 1p 1p 'ttransfer1' 'tperiodo' 4)
+M1 FD Vtransfer2 Vdiodo 0 CMOSN l='Lmin' w='W' ad='W*Ld' as='W*Ld' pd='2*W+2*Ld' ps='2*W+2*Ld' m=1
+D1 0 Vdiodo D
+C1 Vdiodo 0 100f
+V4 Vrowselect 0 PULSE(0 5 'rowselect' 1p 1p 0.5m 'tperiodo' 4)
+M2 Vdd Vreset2 FD 0 CMOSN l='Lmin' w='W' ad='W*Ld' as='W*Ld' pd='2*W+2*Ld' ps='2*W+2*Ld' m=1
+M3 Vdd FD N001 0 CMOSN l='Lmin' w='W' ad='W*Ld' as='W*Ld' pd='2*W+2*Ld' ps='2*W+2*Ld' m=1
+M4 out Vrowselect N001 0 CMOSN l='Lmin' w='W' ad='W*Ld' as='W*Ld' pd='2*W+2*Ld' ps='2*W+2*Ld' m=1
+I2 out 0 1n
+V5 Vreset2 Vreset PULSE(0 5 'treset2' 1p 1p 0.25m 'tperiodo' 4)
+V6 Vtransfer2 Vtransfer PULSE(0 5 'ttransfer2' 1p 1p 0.5m 'tperiodo' 4)
+G1 Vdiodo 0 Vsweep 0 1
+V7 Vswcurrent1 0 PULSE(0 'current1' 0 1p 1p 'tswcurrent' 'tperiodo' 1)
+V8 Vswcurrent2 Vswcurrent1 PULSE(0 'current2' 5m 1p 1p 'tswcurrent' 'tperiodo' 1)
+V9 Vswcurrent3 Vswcurrent2 PULSE(0 'current3' 10m 1p 1p 'tswcurrent' 'tperiodo' 1)
+V10 Vswcurrent4 Vswcurrent3 PULSE(0 'current4' 15m 1p 1p 'tswcurrent' 'tperiodo' 1)
+V11 Vsweep 0 PULSE(0 'currentsweep' 0 1p 1p 'tswcurrent' 'tperiodo' 1)
+.model D D
+.lib C:\Users\Jnfraa\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\Jnfraa\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 5m *Solo un ciclo
+.param tperiodo = 5m
+.param treset1 = 0.25m
+.param ttransfer1 = 0.20m
+.include IEE3433Lib_TT.sp
+.param rowselect = 4m
+.param Lmin = 0.6u, W = 3u, Ld=1.2u
+.param treset2 = 2.5m
+.param ttransfer2 = 3m
+.param tswcurrent = 3m
+.param current1 = 100p, current2= 50p, current3=10p, current4=0p
+.MEAS TRAN vout1 FIND V(out) AT 4.25m
+.MEAS TRAN vout2 FIND V(out) AT 9.25m
+.MEAS TRAN vout3 FIND V(out) AT 14.25m
+.MEAS TRAN vout4 FIND V(out) AT 19.25m
+.param currentsweep=100p
+* *.tran 20m * Cuatro ciclos
+.backanno
+.end

@@ -1,0 +1,148 @@
+Circuit: * G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Simulaciones 3\Draft3.asc
+
+Questionable use of curly braces in "m1 vdd n002 n003 vdd pmos l={lmin} w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m1 vdd n002 n003 vdd pmos l=(lmin) w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m1 vdd n002 n003 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m1 vdd n002 n003 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m1 vdd n002 n003 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m2 d clk n002 vdd pmos l={lmin} w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m2 d clk n002 vdd pmos l=(lmin) w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m2 d clk n002 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m2 d clk n002 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m2 d clk n002 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m3 d clkb n002 0 nmos l={lmin} w={wnmos1} ad={lmin*wnmos1} as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m3 d clkb n002 0 nmos l=(lmin) w={wnmos1} ad={lmin*wnmos1} as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos1"
+Questionable use of curly braces in "m3 d clkb n002 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos1"
+Questionable use of curly braces in "m3 d clkb n002 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as=(lmin*wnmos1) pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos1)"
+Questionable use of curly braces in "m3 d clkb n002 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as=(lmin*wnmos1) pd=(2*(lmin+wnmos1)) ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos1)"
+Questionable use of curly braces in "m4 n003 n002 0 0 nmos l={lmin} w={wnmos1} ad={lmin*wnmos1} as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m4 n003 n002 0 0 nmos l=(lmin) w={wnmos1} ad={lmin*wnmos1} as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos1"
+Questionable use of curly braces in "m4 n003 n002 0 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos1"
+Questionable use of curly braces in "m4 n003 n002 0 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as=(lmin*wnmos1) pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos1)"
+Questionable use of curly braces in "m4 n003 n002 0 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as=(lmin*wnmos1) pd=(2*(lmin+wnmos1)) ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos1)"
+Questionable use of curly braces in "m5 n003 clkb n001 vdd pmos l={lmin} w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m5 n003 clkb n001 vdd pmos l=(lmin) w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m5 n003 clkb n001 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m5 n003 clkb n001 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m5 n003 clkb n001 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m6 n003 clk n001 0 nmos l={lmin} w={wnmos1} ad={lmin*wnmos1} as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m6 n003 clk n001 0 nmos l=(lmin) w={wnmos1} ad={lmin*wnmos1} as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos1"
+Questionable use of curly braces in "m6 n003 clk n001 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as={lmin*wnmos1} pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos1"
+Questionable use of curly braces in "m6 n003 clk n001 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as=(lmin*wnmos1) pd={2*(lmin+wnmos1)} ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos1)"
+Questionable use of curly braces in "m6 n003 clk n001 0 nmos l=(lmin) w={wnmos1} ad=(lmin*wnmos1) as=(lmin*wnmos1) pd=(2*(lmin+wnmos1)) ps={2*(lmin+wnmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos1)"
+Questionable use of curly braces in "m7 vdd n001 q vdd pmos l={lmin} w={wpmos2} ad={lmin*wpmos2} as={lmin*wpmos2} pd={2*(lmin+wpmos2)} ps={2*(lmin+wpmos2)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m7 vdd n001 q vdd pmos l=(lmin) w={wpmos2} ad={lmin*wpmos2} as={lmin*wpmos2} pd={2*(lmin+wpmos2)} ps={2*(lmin+wpmos2)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos2"
+Questionable use of curly braces in "m7 vdd n001 q vdd pmos l=(lmin) w={wpmos2} ad=(lmin*wpmos2) as={lmin*wpmos2} pd={2*(lmin+wpmos2)} ps={2*(lmin+wpmos2)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos2"
+Questionable use of curly braces in "m7 vdd n001 q vdd pmos l=(lmin) w={wpmos2} ad=(lmin*wpmos2) as=(lmin*wpmos2) pd={2*(lmin+wpmos2)} ps={2*(lmin+wpmos2)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos2)"
+Questionable use of curly braces in "m7 vdd n001 q vdd pmos l=(lmin) w={wpmos2} ad=(lmin*wpmos2) as=(lmin*wpmos2) pd=(2*(lmin+wpmos2)) ps={2*(lmin+wpmos2)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos2)"
+Questionable use of curly braces in "m8 q n001 0 0 nmos l={lmin} w={wnmos2} ad={lmin*wnmos2} as={lmin*wnmos2} pd={2*(lmin+wnmos2)} ps={2*(lmin+wnmos2)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m8 q n001 0 0 nmos l=(lmin) w={wnmos2} ad={lmin*wnmos2} as={lmin*wnmos2} pd={2*(lmin+wnmos2)} ps={2*(lmin+wnmos2)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos2"
+Questionable use of curly braces in "m8 q n001 0 0 nmos l=(lmin) w={wnmos2} ad=(lmin*wnmos2) as={lmin*wnmos2} pd={2*(lmin+wnmos2)} ps={2*(lmin+wnmos2)} m=1"
+    Error: undefined symbol in: "[lmin]*wnmos2"
+Questionable use of curly braces in "m8 q n001 0 0 nmos l=(lmin) w={wnmos2} ad=(lmin*wnmos2) as=(lmin*wnmos2) pd={2*(lmin+wnmos2)} ps={2*(lmin+wnmos2)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos2)"
+Questionable use of curly braces in "m8 q n001 0 0 nmos l=(lmin) w={wnmos2} ad=(lmin*wnmos2) as=(lmin*wnmos2) pd=(2*(lmin+wnmos2)) ps={2*(lmin+wnmos2)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wnmos2)"
+Questionable use of curly braces in "m9 vdd reset n001 vdd pmos l={lmin} w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]"
+Questionable use of curly braces in "m9 vdd reset n001 vdd pmos l=(lmin) w={wpmos1} ad={lmin*wpmos1} as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m9 vdd reset n001 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as={lmin*wpmos1} pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "[lmin]*wpmos1"
+Questionable use of curly braces in "m9 vdd reset n001 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd={2*(lmin+wpmos1)} ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Questionable use of curly braces in "m9 vdd reset n001 vdd pmos l=(lmin) w={wpmos1} ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps={2*(lmin+wpmos1)} m=1"
+    Error: undefined symbol in: "2*([lmin]+wpmos1)"
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Error on line 6 : m:x1:1 x1:vdd x1:n002 x1:n003 x1:vdd x1:pmos l=(lmin) w= 1.2e-005  ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps=(2*(lmin+wpmos1)) m=1
+	 Unknown parameter "lmin"
+Error on line 7 : m:x1:2 n002«:d» clk«:clk» x1:n002 x1:vdd x1:pmos l=(lmin) w= 1.2e-005  ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps=(2*(lmin+wpmos1)) m=1
+	 Unknown parameter "lmin"
+Error on line 8 : m:x1:3 n002«:d» clk«:clkb» x1:n002 0«:0» x1:nmos l=(lmin) w= 6e-006  ad=(lmin*wnmos1) as=(lmin*wnmos1) pd=(2*(lmin+wnmos1)) ps=(2*(lmin+wnmos1)) m=1
+	 Unknown parameter "lmin"
+Error on line 9 : m:x1:4 x1:n003 x1:n002 0«:0» 0«:0» x1:nmos l=(lmin) w= 6e-006  ad=(lmin*wnmos1) as=(lmin*wnmos1) pd=(2*(lmin+wnmos1)) ps=(2*(lmin+wnmos1)) m=1
+	 Unknown parameter "lmin"
+Error on line 10 : m:x1:5 x1:n003 clk«:clkb» x1:n001 x1:vdd x1:pmos l=(lmin) w= 1.2e-005  ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps=(2*(lmin+wpmos1)) m=1
+	 Unknown parameter "lmin"
+Error on line 11 : m:x1:6 x1:n003 clk«:clk» x1:n001 0«:0» x1:nmos l=(lmin) w= 6e-006  ad=(lmin*wnmos1) as=(lmin*wnmos1) pd=(2*(lmin+wnmos1)) ps=(2*(lmin+wnmos1)) m=1
+	 Unknown parameter "lmin"
+Error on line 12 : m:x1:7 x1:vdd x1:n001 n003«:q» x1:vdd x1:pmos l=(lmin) w= 2.4e-005  ad=(lmin*wpmos2) as=(lmin*wpmos2) pd=(2*(lmin+wpmos2)) ps=(2*(lmin+wpmos2)) m=1
+	 Unknown parameter "lmin"
+Error on line 13 : m:x1:8 n003«:q» x1:n001 0«:0» 0«:0» x1:nmos l=(lmin) w= 1.2e-005  ad=(lmin*wnmos2) as=(lmin*wnmos2) pd=(2*(lmin+wnmos2)) ps=(2*(lmin+wnmos2)) m=1
+	 Unknown parameter "lmin"
+Error on line 14 : m:x1:9 x1:vdd n001«:reset» x1:n001 x1:vdd x1:pmos l=(lmin) w= 1.2e-005  ad=(lmin*wpmos1) as=(lmin*wpmos1) pd=(2*(lmin+wpmos1)) ps=(2*(lmin+wpmos1)) m=1
+	 Unknown parameter "lmin"
+WARNING: Node N002 is floating.
+WARNING: Node N001 is floating.
+
+WARNING: Less than two connections to node N001.  This node is used by M:X1:9.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Increasing initial diagonal Gmin to 1000
+Increasing initial diagonal Gmin to 10000
+Increasing initial diagonal Gmin to 100000
+Increasing initial diagonal Gmin to 1e+006
+Initial Gmin=1e+006 failed
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Could not converge to DC with sources off!
+Starting source stepping with srcstepmethod=1
+Could not converge to DC with sources off!
+Pseudo Transient failed in finding the operating point at 0 s.
+Trouble finding operating point....skipping operating point for Transient analysis.
+Changing Tseed to 9.76563e-014
+Changing Tseed to 9.76562e-016
+Changing Tseed to 9.76562e-013
+Changing Tseed to 9.76562e-017
+Changing Tseed to 9.76562e-012
+Changing Tseed to 9.76562e-018
+Changing Tseed to 9.76563e-011
+Changing Tseed to 9.76563e-019
+Changing Tseed to 9.76562e-010
+Changing Tseed to 9.76563e-020
+Changing Tseed to 9.76562e-009
+Changing Tseed to 9.76562e-021
+Fatal Error: Analysis:  Time step too small; initial timepoint: cause unrecorded.
+

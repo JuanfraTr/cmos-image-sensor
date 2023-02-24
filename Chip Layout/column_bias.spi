@@ -1,0 +1,18 @@
+*** SPICE deck for cell column_bias{sch} from library pixel
+*** Created on jue ene 30, 2020 16:44:37
+*** Last revised on jue ene 30, 2020 17:12:37
+*** Written on jue ene 30, 2020 17:12:53 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd
+
+*** TOP LEVEL CELL: pixel:column_bias{sch}
+Mnmos@0 d g gnd gnd NMOS L=19.5U W=5.1U
+
+* Spice Code nodes in cell cell 'pixel:column_bias{sch}'
+vg g 0 DC 0
+vd d 0 DC 0
+.dc vd 0 5 1m vg 0 5 1
+.include G:\Mi unidad\Universidad\Semestre Actual\Design IC\Tutoriales\Tutorial2\C5_models.txt
+.END

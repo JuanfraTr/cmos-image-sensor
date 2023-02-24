@@ -1,0 +1,103 @@
+*** SPICE deck for cell Matrix_16{lay} from library pixel
+*** Created on lun dic 30, 2019 13:17:16
+*** Last revised on dom ene 19, 2020 18:12:35
+*** Written on dom ene 19, 2020 18:12:43 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** SUBCIRCUIT pixel__pixelv3 FROM CELL pixelv3{lay}
+.SUBCKT pixel__pixelv3 gnd_pix out reset select vdd_f vdd_reset
+Mnmos@1 net@90 FD#2nmos@1_poly-right vdd_f gnd_pix NMOS L=0.6U W=3U AS=4.95P AD=1.688P PS=9.3U PD=4.65U
+Mnmos@2 out select#2nmos@2_poly-left net@90 gnd_pix NMOS L=0.6U W=3U AS=1.688P AD=4.95P PS=4.65U PD=9.3U
+Mnmos@3 vdd_reset reset#0nmos@3_poly-left FD gnd_pix NMOS L=0.6U W=3U AS=9.45P AD=4.95P PS=18.3U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 out 0 1.427fF
+C1 FD 0 3.614fF
+C2 reset 0 0.973fF
+C3 select 0 3.169fF
+C4 select#2nmos@2_poly-left 0 0.134fF
+C5 FD#3pin@50_polysilicon-1 0 0.141fF
+C6 reset#1pin@103_polysilicon-1 0 0.284fF
+C7 select#1pin@124_polysilicon-1 0 0.339fF
+** Extracted Parasitic Resistors ***
+R0 FD#2nmos@1_poly-right FD#2nmos@1_poly-right##0 6.975
+R1 FD#2nmos@1_poly-right##0 FD#3pin@50_polysilicon-1 6.975
+R2 FD FD#3pin@50_polysilicon-1 4.65
+R3 reset#0nmos@3_poly-left reset#1pin@103_polysilicon-1 7.75
+R4 select select#1pin@124_polysilicon-1 4.96
+R5 select#2nmos@2_poly-left select#2nmos@2_poly-left##0 8.783
+C8 select#2nmos@2_poly-left##0 0 0.134fF
+R6 select#2nmos@2_poly-left##0 select#2nmos@2_poly-left##1 8.783
+C9 select#2nmos@2_poly-left##1 0 0.134fF
+R7 select#2nmos@2_poly-left##1 select#1pin@124_polysilicon-1 8.783
+R8 reset reset#1pin@103_polysilicon-1 4.96
+.ENDS pixel__pixelv3
+
+*** SUBCIRCUIT pixel__Matrix_4 FROM CELL Matrix_4{lay}
+.SUBCKT pixel__Matrix_4 gnd_0 gnd_1 out out_1 reset reset_1 select select_1 vdd_0 vdd_1 vdd_reset vdd_reset_1
+Xpixelv3@11 gnd_0 out reset_1 select_1 vdd_1 vdd_reset_1 pixel__pixelv3
+Xpixelv3@15 gnd_1 out_1 reset_1 select_1 vdd_1 vdd_reset_1 pixel__pixelv3
+Xpixelv3@16 gnd_0 out reset select vdd_0 vdd_reset pixel__pixelv3
+Xpixelv3@17 gnd_1 out_1 reset select vdd_0 vdd_reset pixel__pixelv3
+** Extracted Parasitic Capacitors ***
+C0 out 0 5.598fF
+C1 reset_1 0 4.439fF
+C2 select_1 0 4.439fF
+C3 out_1 0 5.598fF
+C4 reset 0 4.439fF
+C5 select 0 4.439fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__Matrix_4
+
+*** TOP LEVEL CELL: Matrix_16{lay}
+XMatrix_4@4 gnd gnd out_0 out_1 reset_2 reset_3 select_2 select_3 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+XMatrix_4@5 gnd gnd out_2 out_3 reset_2 reset_3 select_2 select_3 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+XMatrix_4@6 gnd gnd out_0 out_1 reset_0 reset_1 select_0 select_1 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+XMatrix_4@7 gnd gnd out_2 out_3 reset_0 reset_1 select_0 select_1 vdd vdd vdd_reset vdd_reset pixel__Matrix_4
+** Extracted Parasitic Capacitors ***
+C0 out_0 0 11.196fF
+C1 out_1 0 11.196fF
+C2 reset_2 0 8.923fF
+C3 reset_3 0 8.923fF
+C4 select_2 0 8.923fF
+C5 select_3 0 8.923fF
+C6 out_2 0 11.196fF
+C7 out_3 0 11.196fF
+C8 reset_0 0 8.879fF
+C9 reset_1 0 8.879fF
+C10 select_0 0 8.879fF
+C11 select_1 0 8.879fF
+** Extracted Parasitic Resistors ***
+
+* Spice Code nodes in cell cell 'Matrix_16{lay}'
+D1 gnd FD photodiode
+I1 FD 0 300p
+I2 out_0 0 5.7u
+V1 vdd_reset 0 5
+V2 vdd 0 5
+V3 gnd 0 0
+V4 reset_0 0 PULSE(0 5 0 1p 1p 5u 100u 4)
+V5 select_0 0 PULSE(0 5 90u 1p 1p 5u 100u 4)
+.model photodiode D (IS = 50f CJO=6.3f  VJ= 0.636 M = 0.33)
+.tran 100u
+.include G:\Mi unidad\Universidad\Semestre Actual\Design IC\Tutoriales\C5_models.txt
+.END

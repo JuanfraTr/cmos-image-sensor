@@ -1,0 +1,44 @@
+*** SPICE deck for cell dff{sch} from library pixel
+*** Created on vie ene 24, 2020 13:24:48
+*** Last revised on dom ene 26, 2020 00:20:02
+*** Written on dom ene 26, 2020 00:20:08 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT pixel__inv4x FROM CELL inv4x{sch}
+.SUBCKT pixel__inv4x a y
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 y a gnd gnd NMOS L=0.6U W=3.6U
+Mnmos@1 y a gnd gnd NMOS L=0.6U W=3.6U
+Mpmos@0 vdd a y vdd PMOS L=0.6U W=7.2U
+Mpmos@1 vdd a y vdd PMOS L=0.6U W=7.2U
+.ENDS pixel__inv4x
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: dff{sch}
+Mnmos@0 net@36 clkb D gnd NMOS L=0.6U W=1.8U
+Mnmos@1 net@29 clk net@62 gnd NMOS L=0.6U W=1.8U
+Mnmos@2 net@54 clkb net@29 gnd NMOS L=0.6U W=1.8U
+Mnmos@3 net@34 net@36 net@62 gnd NMOS L=0.6U W=3.6U
+Mnmos@4 gnd net@36 net@34 gnd NMOS L=0.6U W=3.6U
+Mnmos@5 net@46 Q net@54 gnd NMOS L=0.6U W=3.6U
+Mnmos@6 gnd Q net@46 gnd NMOS L=0.6U W=3.6U
+Mnmos@7 gnd net@29 Q gnd NMOS L=0.6U W=1.8U
+Mpmos@0 D clk net@36 vdd PMOS L=0.6U W=3.6U
+Mpmos@1 net@62 clkb net@29 vdd PMOS L=0.6U W=3.6U
+Mpmos@2 net@29 clk net@54 vdd PMOS L=0.6U W=3.6U
+Mpmos@3 net@62 net@36 vdd vdd PMOS L=0.6U W=3.6U
+Mpmos@4 net@54 Q vdd vdd PMOS L=0.6U W=3.6U
+Mpmos@5 net@71 net@29 vdd vdd PMOS L=0.6U W=7.2U
+Mpmos@6 Q net@29 net@71 vdd PMOS L=0.6U W=7.2U
+Xinv4x@0 clk clkb pixel__inv4x
+
+* Spice Code nodes in cell cell 'dff{sch}'
+V1 clk 0 PULSE(0 5 0 1p 1p 1m 2m 10)
+V2 D 0 PULSE(0 5 1.5m 1p 1p 1m 4m 1)
+V3 Vdd 0 5
+.tran 20m
+.include G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Layout\C5_models.txt
+.END

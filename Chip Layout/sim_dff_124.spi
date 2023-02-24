@@ -1,0 +1,371 @@
+*** SPICE deck for cell sim_dff_124{lay} from library pixel
+*** Created on mar ene 28, 2020 16:20:24
+*** Last revised on sáb feb 29, 2020 21:40:34
+*** Written on sáb feb 29, 2020 21:40:50 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** SUBCIRCUIT pixel__dff2 FROM CELL dff2{lay}
+.SUBCKT pixel__dff2 clk clkb D gnd Q rst vdd
+Mnmos@14 net@130 clk#0nmos@14_poly-right D gnd NMOS L=0.6U W=1.8U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mnmos@16 gnd net@130#7nmos@16_poly-right net@284 gnd NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mnmos@19 net@284 clkb#3nmos@19_poly-right net@348 gnd NMOS L=0.6U W=1.8U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mnmos@20 Q net@348#8nmos@20_poly-right gnd gnd NMOS L=0.6U W=1.8U AS=8.07P AD=2.43P PS=14.7U PD=4.5U
+Mnmos@21 gnd net@348#10pin@233_polysilicon-1 Q gnd NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mpmos@14 net@130 clkb#0pmos@14_poly-left D vdd PMOS L=0.6U W=3.6U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mpmos@16 vdd net@130#4pmos@16_poly-left net@284 vdd PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@18 net@284 clk#2pin@128_polysilicon-1 net@348 vdd PMOS L=0.6U W=3.6U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mpmos@31 Q net@348#6pin@229_polysilicon-1 vdd vdd PMOS L=0.6U W=3.6U AS=7.74P AD=2.43P PS=12.9U PD=4.5U
+Mpmos@32 vdd net@348#4pin@230_polysilicon-1 Q vdd PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@33 net@348 rst#2pmos@33_poly-left vdd vdd PMOS L=0.6U W=3.6U AS=7.74P AD=4.95P PS=12.9U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 net@130 0 7.474fF
+C1 D 0 6.257fF
+C2 net@284 0 4.061fF
+C3 net@348 0 10.421fF
+C4 Q 0 6.147fF
+C5 rst 0 0.454fF
+C6 clkb 0 0.151fF
+C7 clk 0 0.268fF
+C8 clk#0nmos@14_poly-right 0 0.134fF
+C9 net@130#7nmos@16_poly-right 0 0.166fF
+C10 clkb#3nmos@19_poly-right 0 0.165fF
+C11 net@348#10pin@233_polysilicon-1 0 0.102fF
+C12 clkb#0pmos@14_poly-left 0 0.178fF
+C13 clkb#2pin@124_polysilicon-1 0 0.31fF
+C14 clk#2pin@128_polysilicon-1 0 0.24fF
+C15 net@130#5pin@145_polysilicon-1 0 0.168fF
+C16 net@348#4pin@230_polysilicon-1 0 0.102fF
+C17 net@348#12pin@234_polysilicon-1 0 0.301fF
+C18 net@348#13pin@235_polysilicon-1 0 0.281fF
+C19 clk#4pin@249_polysilicon-1 0 0.308fF
+C20 clk#5pin@250_polysilicon-1 0 0.322fF
+C21 clkb#4pin@252_polysilicon-1 0 0.411fF
+C22 clk#6pin@266_polysilicon-1 0 0.498fF
+C23 rst#2pmos@33_poly-left 0 0.102fF
+** Extracted Parasitic Resistors ***
+R0 net@130#4pmos@16_poly-left net@130#4pmos@16_poly-left##0 5.425
+R1 net@130#4pmos@16_poly-left##0 net@130#5pin@145_polysilicon-1 5.425
+R2 net@130#5pin@145_polysilicon-1 net@130 9.3
+R3 net@348#6pin@229_polysilicon-1 net@348#12pin@234_polysilicon-1 4.65
+R4 net@348#12pin@234_polysilicon-1 net@348#12pin@234_polysilicon-1##0 6.717
+C24 net@348#12pin@234_polysilicon-1##0 0 0.102fF
+R5 net@348#12pin@234_polysilicon-1##0 net@348#12pin@234_polysilicon-1##1 6.717
+C25 net@348#12pin@234_polysilicon-1##1 0 0.102fF
+R6 net@348#12pin@234_polysilicon-1##1 net@348#4pin@230_polysilicon-1 6.717
+R7 net@348#8nmos@20_poly-right net@348#13pin@235_polysilicon-1 4.65
+R8 net@348#13pin@235_polysilicon-1 net@348#13pin@235_polysilicon-1##0 6.717
+C26 net@348#13pin@235_polysilicon-1##0 0 0.102fF
+R9 net@348#13pin@235_polysilicon-1##0 net@348#13pin@235_polysilicon-1##1 6.717
+C27 net@348#13pin@235_polysilicon-1##1 0 0.102fF
+R10 net@348#13pin@235_polysilicon-1##1 net@348#10pin@233_polysilicon-1 6.717
+R11 net@348#12pin@234_polysilicon-1 net@348#12pin@234_polysilicon-1##0 8.99
+C28 net@348#12pin@234_polysilicon-1##0 0 0.152fF
+R12 net@348#12pin@234_polysilicon-1##0 net@348#12pin@234_polysilicon-1##1 8.99
+C29 net@348#12pin@234_polysilicon-1##1 0 0.152fF
+R13 net@348#12pin@234_polysilicon-1##1 net@348#12pin@234_polysilicon-1##2 8.99
+C30 net@348#12pin@234_polysilicon-1##2 0 0.152fF
+R14 net@348#12pin@234_polysilicon-1##2 net@348#12pin@234_polysilicon-1##3 8.99
+C31 net@348#12pin@234_polysilicon-1##3 0 0.152fF
+R15 net@348#12pin@234_polysilicon-1##3 net@348 8.99
+R16 net@348 net@348##0 8.138
+C32 net@348##0 0 0.132fF
+R17 net@348##0 net@348##1 8.138
+C33 net@348##1 0 0.132fF
+R18 net@348##1 net@348##2 8.138
+C34 net@348##2 0 0.132fF
+R19 net@348##2 net@348#13pin@235_polysilicon-1 8.138
+R20 rst rst##0 6.717
+C35 rst##0 0 0.102fF
+R21 rst##0 rst##1 6.717
+C36 rst##1 0 0.102fF
+R22 rst##1 rst#2pmos@33_poly-left 6.717
+R23 clkb#2pin@124_polysilicon-1 clkb#2pin@124_polysilicon-1##0 9.3
+C37 clkb#2pin@124_polysilicon-1##0 0 0.165fF
+R24 clkb#2pin@124_polysilicon-1##0 clkb#2pin@124_polysilicon-1##1 9.3
+C38 clkb#2pin@124_polysilicon-1##1 0 0.165fF
+R25 clkb#2pin@124_polysilicon-1##1 clkb#2pin@124_polysilicon-1##2 9.3
+C39 clkb#2pin@124_polysilicon-1##2 0 0.165fF
+R26 clkb#2pin@124_polysilicon-1##2 clkb#2pin@124_polysilicon-1##3 9.3
+C40 clkb#2pin@124_polysilicon-1##3 0 0.165fF
+R27 clkb#2pin@124_polysilicon-1##3 clkb#2pin@124_polysilicon-1##4 9.3
+C41 clkb#2pin@124_polysilicon-1##4 0 0.165fF
+R28 clkb#2pin@124_polysilicon-1##4 clkb#2pin@124_polysilicon-1##5 9.3
+C42 clkb#2pin@124_polysilicon-1##5 0 0.165fF
+R29 clkb#2pin@124_polysilicon-1##5 clkb#3nmos@19_poly-right 9.3
+R30 net@130 net@130##0 9.558
+C43 net@130##0 0 0.166fF
+R31 net@130##0 net@130##1 9.558
+C44 net@130##1 0 0.166fF
+R32 net@130##1 net@130##2 9.558
+C45 net@130##2 0 0.166fF
+R33 net@130##2 net@130##3 9.558
+C46 net@130##3 0 0.166fF
+R34 net@130##3 net@130##4 9.558
+C47 net@130##4 0 0.166fF
+R35 net@130##4 net@130#7nmos@16_poly-right 9.558
+R36 clk#0nmos@14_poly-right clk#0nmos@14_poly-right##0 8.783
+C48 clk#0nmos@14_poly-right##0 0 0.134fF
+R37 clk#0nmos@14_poly-right##0 clk#0nmos@14_poly-right##1 8.783
+C49 clk#0nmos@14_poly-right##1 0 0.134fF
+R38 clk#0nmos@14_poly-right##1 clk#4pin@249_polysilicon-1 8.783
+R39 clk#5pin@250_polysilicon-1 clk#5pin@250_polysilicon-1##0 9.61
+C50 clk#5pin@250_polysilicon-1##0 0 0.177fF
+R40 clk#5pin@250_polysilicon-1##0 clk#5pin@250_polysilicon-1##1 9.61
+C51 clk#5pin@250_polysilicon-1##1 0 0.177fF
+R41 clk#5pin@250_polysilicon-1##1 clk#5pin@250_polysilicon-1##2 9.61
+C52 clk#5pin@250_polysilicon-1##2 0 0.177fF
+R42 clk#5pin@250_polysilicon-1##2 clk#5pin@250_polysilicon-1##3 9.61
+C53 clk#5pin@250_polysilicon-1##3 0 0.177fF
+R43 clk#5pin@250_polysilicon-1##3 clk#5pin@250_polysilicon-1##4 9.61
+C54 clk#5pin@250_polysilicon-1##4 0 0.177fF
+R44 clk#5pin@250_polysilicon-1##4 clk#5pin@250_polysilicon-1##5 9.61
+C55 clk#5pin@250_polysilicon-1##5 0 0.177fF
+R45 clk#5pin@250_polysilicon-1##5 clk#5pin@250_polysilicon-1##6 9.61
+C56 clk#5pin@250_polysilicon-1##6 0 0.177fF
+R46 clk#5pin@250_polysilicon-1##6 clk#5pin@250_polysilicon-1##7 9.61
+C57 clk#5pin@250_polysilicon-1##7 0 0.177fF
+R47 clk#5pin@250_polysilicon-1##7 clk#5pin@250_polysilicon-1##8 9.61
+C58 clk#5pin@250_polysilicon-1##8 0 0.177fF
+R48 clk#5pin@250_polysilicon-1##8 clk#2pin@128_polysilicon-1 9.61
+R49 clkb#0pmos@14_poly-left clkb#0pmos@14_poly-left##0 8.525
+C59 clkb#0pmos@14_poly-left##0 0 0.115fF
+R50 clkb#0pmos@14_poly-left##0 clkb#4pin@252_polysilicon-1 8.525
+R51 clkb#4pin@252_polysilicon-1 clkb#4pin@252_polysilicon-1##0 8.913
+C60 clkb#4pin@252_polysilicon-1##0 0 0.145fF
+R52 clkb#4pin@252_polysilicon-1##0 clkb#4pin@252_polysilicon-1##1 8.913
+C61 clkb#4pin@252_polysilicon-1##1 0 0.145fF
+R53 clkb#4pin@252_polysilicon-1##1 clkb#4pin@252_polysilicon-1##2 8.913
+C62 clkb#4pin@252_polysilicon-1##2 0 0.145fF
+R54 clkb#4pin@252_polysilicon-1##2 clkb#2pin@124_polysilicon-1 8.913
+R55 clkb#4pin@252_polysilicon-1 clkb#4pin@252_polysilicon-1##0 9.3
+C63 clkb#4pin@252_polysilicon-1##0 0 0.151fF
+R56 clkb#4pin@252_polysilicon-1##0 clkb#4pin@252_polysilicon-1##1 9.3
+C64 clkb#4pin@252_polysilicon-1##1 0 0.151fF
+R57 clkb#4pin@252_polysilicon-1##1 clkb#4pin@252_polysilicon-1##2 9.3
+C65 clkb#4pin@252_polysilicon-1##2 0 0.151fF
+R58 clkb#4pin@252_polysilicon-1##2 clkb 9.3
+R59 clk#5pin@250_polysilicon-1 clk#5pin@250_polysilicon-1##0 8.913
+C66 clk#5pin@250_polysilicon-1##0 0 0.145fF
+R60 clk#5pin@250_polysilicon-1##0 clk#5pin@250_polysilicon-1##1 8.913
+C67 clk#5pin@250_polysilicon-1##1 0 0.145fF
+R61 clk#5pin@250_polysilicon-1##1 clk#5pin@250_polysilicon-1##2 8.913
+C68 clk#5pin@250_polysilicon-1##2 0 0.145fF
+R62 clk#5pin@250_polysilicon-1##2 clk#6pin@266_polysilicon-1 8.913
+R63 clk#6pin@266_polysilicon-1 clk#6pin@266_polysilicon-1##0 9.455
+C69 clk#6pin@266_polysilicon-1##0 0 0.174fF
+R64 clk#6pin@266_polysilicon-1##0 clk#6pin@266_polysilicon-1##1 9.455
+C70 clk#6pin@266_polysilicon-1##1 0 0.174fF
+R65 clk#6pin@266_polysilicon-1##1 clk#6pin@266_polysilicon-1##2 9.455
+C71 clk#6pin@266_polysilicon-1##2 0 0.174fF
+R66 clk#6pin@266_polysilicon-1##2 clk#6pin@266_polysilicon-1##3 9.455
+C72 clk#6pin@266_polysilicon-1##3 0 0.174fF
+R67 clk#6pin@266_polysilicon-1##3 clk#6pin@266_polysilicon-1##4 9.455
+C73 clk#6pin@266_polysilicon-1##4 0 0.174fF
+R68 clk#6pin@266_polysilicon-1##4 clk#6pin@266_polysilicon-1##5 9.455
+C74 clk#6pin@266_polysilicon-1##5 0 0.174fF
+R69 clk#6pin@266_polysilicon-1##5 clk#6pin@266_polysilicon-1##6 9.455
+C75 clk#6pin@266_polysilicon-1##6 0 0.174fF
+R70 clk#6pin@266_polysilicon-1##6 clk#6pin@266_polysilicon-1##7 9.455
+C76 clk#6pin@266_polysilicon-1##7 0 0.174fF
+R71 clk#6pin@266_polysilicon-1##7 clk#6pin@266_polysilicon-1##8 9.455
+C77 clk#6pin@266_polysilicon-1##8 0 0.174fF
+R72 clk#6pin@266_polysilicon-1##8 clk#4pin@249_polysilicon-1 9.455
+R73 clk clk#6pin@266_polysilicon-1 4.34
+.ENDS pixel__dff2
+
+*** SUBCIRCUIT pixel__dff_4 FROM CELL dff_4{lay}
+.SUBCKT pixel__dff_4 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 rst_reset rst_select select_0 select_1 vdd
+Xdff2@0 clk_select clkb_select D_select gnd select_0#0dff2@0_Q rst_select vdd pixel__dff2
+Xdff2@1 clk_select clkb_select select_0#0dff2@0_Q gnd select_1 rst_select vdd pixel__dff2
+Xdff2@2 clk_reset clkb_reset D_reset gnd reset_0 rst_reset vdd pixel__dff2
+Xdff2@3 clk_reset clkb_reset reset_0 gnd reset_1 rst_reset vdd pixel__dff2
+** Extracted Parasitic Capacitors ***
+C0 select_0#0dff2@0_Q 0 15.056fF
+C1 reset_1 0 0.622fF
+C2 D_select 0 5.872fF
+C3 clk_select 0 6.482fF
+C4 clkb_select 0 7.589fF
+C5 rst_select 0 7.589fF
+C6 select_1 0 21.788fF
+C7 D_reset 0 5.324fF
+C8 reset_0 0 11.415fF
+C9 clk_reset 0 6.393fF
+C10 clkb_reset 0 7.485fF
+C11 rst_reset 0 7.485fF
+C12 select_0 0 10.61fF
+** Extracted Parasitic Resistors ***
+R0 select_0#0dff2@0_Q select_0 4.661
+.ENDS pixel__dff_4
+
+*** SUBCIRCUIT pixel__dff_16 FROM CELL dff_16{lay}
+.SUBCKT pixel__dff_16 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 rst_reset rst_select select_0 select_1 select_2 select_3 select_4 select_5 select_6 select_7 vdd
+Xdff_4@0 clk_reset clk_select clkb_reset clkb_select reset_5 select_5 gnd reset_6 reset_7 rst_reset rst_select select_6 select_7 vdd pixel__dff_4
+Xdff_4@1 clk_reset clk_select clkb_reset clkb_select reset_3 select_3 gnd reset_4 reset_5 rst_reset rst_select select_4 select_5 vdd pixel__dff_4
+Xdff_4@2 clk_reset clk_select clkb_reset clkb_select reset_1 select_1 gnd reset_2 reset_3 rst_reset rst_select select_2 select_3 vdd pixel__dff_4
+Xdff_4@3 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 rst_reset rst_select select_0 select_1 vdd pixel__dff_4
+** Extracted Parasitic Capacitors ***
+C0 reset_1 0 28.732fF
+C1 reset_3 0 28.784fF
+C2 reset_5 0 28.784fF
+C3 select_5 0 24.368fF
+C4 clk_reset 0 31.5fF
+C5 clk_select 0 31.449fF
+C6 clkb_reset 0 31.5fF
+C7 clkb_select 0 31.449fF
+C8 rst_reset 0 31.5fF
+C9 rst_select 0 31.449fF
+C10 select_3 0 24.368fF
+C11 select_1 0 24.368fF
+** Extracted Parasitic Resistors ***
+.ENDS pixel__dff_16
+
+*** TOP LEVEL CELL: sim_dff_124{lay}
+Xdff_16@0 clk_reset clk_select clkb_reset clkb_select D_reset D_select gnd reset_0 reset_1 reset_2 reset_3 reset_4 reset_5 reset_6 reset_7 rst_reset rst_select select_0 select_1 select_2 select_3 select_4 select_5 select_6 select_7 vdd pixel__dff_16
+Xdff_16@1 clk_reset#0dff_16@1_clk_reset clk_select#0dff_16@1_clk_select clkb_reset#0dff_16@1_clkb_reset clkb_select#0dff_16@1_clkb_select reset_7 select_7 gnd reset_8 reset_9 reset_10 reset_11 reset_12 reset_13 reset_14 reset_15 rst_reset#0dff_16@1_rst_reset rst_select#0dff_16@1_rst_select select_8 select_9 select_10 select_11 select_12 select_13 select_14 select_15 vdd pixel__dff_16
+Xdff_16@6 clk_reset#5dff_16@6_clk_reset clk_select#5dff_16@6_clk_select clkb_reset#5dff_16@6_clkb_reset clkb_select#5dff_16@6_clkb_select reset_47 select_47 gnd reset_48 reset_49 reset_50 reset_51 reset_52 reset_53 reset_54 reset_55 rst_reset#5dff_16@6_rst_reset rst_select#5dff_16@6_rst_select select_48 select_49 select_50 select_51 select_52 select_53 select_54 select_55 vdd pixel__dff_16
+Xdff_16@7 clk_reset#6dff_16@7_clk_reset clk_select#6dff_16@7_clk_select clkb_reset#6dff_16@7_clkb_reset clkb_select#6dff_16@7_clkb_select reset_55 select_55 gnd reset_56 reset_57 reset_58 reset_59 reset_60 reset_61 reset_62 reset_63 rst_reset#6dff_16@7_rst_reset rst_select#6dff_16@7_rst_select select_56 select_57 select_58 select_59 select_60 select_61 select_62 select_63 vdd pixel__dff_16
+Xselect_23 clk_reset#1select_23_clk_reset clk_select#1select_23_clk_select clkb_reset#1select_23_clkb_reset clkb_select#1select_23_clkb_select reset_15 select_15 gnd reset_16 reset_17 reset_18 reset_19 reset_20 reset_21 reset_22 reset_23 rst_reset#1select_23_rst_reset rst_select#1select_23_rst_select select_16 select_17 select_18 select_19 select_20 select_21 select_22 select_23 vdd pixel__dff_16
+Xselect_31 clk_reset#2select_31_clk_reset clk_select#2select_31_clk_select clkb_reset#2select_31_clkb_reset clkb_select#2select_31_clkb_select reset_23 select_23 gnd reset_24 reset_25 reset_26 reset_27 reset_28 reset_29 reset_30 reset_31 rst_reset#2select_31_rst_reset rst_select#2select_31_rst_select select_24 select_25 select_26 select_27 select_28 select_29 select_30 select_31 vdd pixel__dff_16
+Xselect_39 clk_reset#3select_39_clk_reset clk_select#3select_39_clk_select clkb_reset#3select_39_clkb_reset clkb_select#3select_39_clkb_select reset_31 select_31 gnd reset_32 reset_33 reset_34 reset_35 reset_36 reset_37 reset_38 reset_39 rst_reset#3select_39_rst_reset rst_select#3select_39_rst_select select_32 select_33 select_34 select_35 select_36 select_37 select_38 select_39 vdd pixel__dff_16
+Xselect_47 clk_reset#4select_47_clk_reset clk_select#4select_47_clk_select clkb_reset#4select_47_clkb_reset clkb_select#4select_47_clkb_select reset_39 select_39 gnd reset_40 reset_41 reset_42 reset_43 reset_44 reset_45 reset_46 reset_47 rst_reset#4select_47_rst_reset rst_select#4select_47_rst_select select_40 select_41 select_42 select_43 select_44 select_45 select_46 select_47 vdd pixel__dff_16
+** Extracted Parasitic Capacitors ***
+C0 reset_7 0 30.725fF
+C1 reset_15 0 29.928fF
+C2 reset_23 0 29.928fF
+C3 reset_31 0 29.928fF
+C4 reset_39 0 29.884fF
+C5 reset_47 0 29.936fF
+C6 reset_55 0 29.753fF
+C7 clk_reset 0 21.988fF
+C8 clk_select 0 21.988fF
+C9 clkb_reset 0 21.988fF
+C10 clkb_select 0 21.988fF
+C11 rst_reset 0 21.988fF
+C12 rst_select 0 21.988fF
+C13 select_7 0 26.453fF
+C14 clk_reset#0dff_16@1_clk_reset 0 43.612fF
+C15 clk_select#0dff_16@1_clk_select 0 43.612fF
+C16 clkb_reset#0dff_16@1_clkb_reset 0 43.612fF
+C17 clkb_select#0dff_16@1_clkb_select 0 43.612fF
+C18 rst_reset#0dff_16@1_rst_reset 0 43.612fF
+C19 rst_select#0dff_16@1_rst_select 0 43.612fF
+C20 select_15 0 25.685fF
+C21 select_47 0 25.685fF
+C22 clk_reset#5dff_16@6_clk_reset 0 43.092fF
+C23 clk_select#5dff_16@6_clk_select 0 43.092fF
+C24 clkb_reset#5dff_16@6_clkb_reset 0 43.092fF
+C25 clkb_select#5dff_16@6_clkb_select 0 43.092fF
+C26 rst_reset#5dff_16@6_rst_reset 0 43.092fF
+C27 rst_select#5dff_16@6_rst_select 0 43.092fF
+C28 select_55 0 25.465fF
+C29 clk_reset#6dff_16@7_clk_reset 0 21.52fF
+C30 clk_select#6dff_16@7_clk_select 0 21.52fF
+C31 clkb_reset#6dff_16@7_clkb_reset 0 21.52fF
+C32 clkb_select#6dff_16@7_clkb_select 0 21.52fF
+C33 rst_reset#6dff_16@7_rst_reset 0 21.52fF
+C34 rst_select#6dff_16@7_rst_select 0 21.52fF
+C35 select_23 0 25.685fF
+C36 select_31 0 25.685fF
+C37 select_39 0 25.685fF
+C38 clk_reset#1select_23_clk_reset 0 43.196fF
+C39 clk_select#1select_23_clk_select 0 43.196fF
+C40 clkb_reset#1select_23_clkb_reset 0 43.196fF
+C41 clkb_select#1select_23_clkb_select 0 43.196fF
+C42 rst_reset#1select_23_rst_reset 0 43.196fF
+C43 rst_select#1select_23_rst_select 0 43.196fF
+C44 clk_reset#2select_31_clk_reset 0 43.196fF
+C45 clk_select#2select_31_clk_select 0 43.196fF
+C46 clkb_reset#2select_31_clkb_reset 0 43.196fF
+C47 clkb_select#2select_31_clkb_select 0 43.196fF
+C48 rst_reset#2select_31_rst_reset 0 43.196fF
+C49 rst_select#2select_31_rst_select 0 43.196fF
+C50 clk_reset#3select_39_clk_reset 0 43.248fF
+C51 clk_select#3select_39_clk_select 0 43.248fF
+C52 clkb_reset#3select_39_clkb_reset 0 43.248fF
+C53 clkb_select#3select_39_clkb_select 0 43.248fF
+C54 rst_reset#3select_39_rst_reset 0 43.248fF
+C55 rst_select#3select_39_rst_select 0 43.248fF
+C56 clk_reset#4select_47_clk_reset 0 43.196fF
+C57 clk_select#4select_47_clk_select 0 43.196fF
+C58 clkb_reset#4select_47_clkb_reset 0 43.196fF
+C59 clkb_select#4select_47_clkb_select 0 43.196fF
+C60 rst_reset#4select_47_rst_reset 0 43.196fF
+C61 rst_select#4select_47_rst_select 0 43.196fF
+** Extracted Parasitic Resistors ***
+R0 clk_select clk_select#0dff_16@1_clk_select 5.499
+R1 clk_select#0dff_16@1_clk_select clk_select#1select_23_clk_select 5.408
+R2 clk_select#1select_23_clk_select clk_select#2select_31_clk_select 5.395
+R3 clk_select#2select_31_clk_select clk_select#3select_39_clk_select 5.408
+R4 clk_select#3select_39_clk_select clk_select#4select_47_clk_select 5.408
+R5 clk_select#4select_47_clk_select clk_select#5dff_16@6_clk_select 5.395
+R6 clk_select#5dff_16@6_clk_select clk_select#6dff_16@7_clk_select 5.382
+R7 clk_reset clk_reset#0dff_16@1_clk_reset 5.499
+R8 clk_reset#0dff_16@1_clk_reset clk_reset#1select_23_clk_reset 5.408
+R9 clk_reset#1select_23_clk_reset clk_reset#2select_31_clk_reset 5.395
+R10 clk_reset#2select_31_clk_reset clk_reset#3select_39_clk_reset 5.408
+R11 clk_reset#3select_39_clk_reset clk_reset#4select_47_clk_reset 5.408
+R12 clk_reset#4select_47_clk_reset clk_reset#5dff_16@6_clk_reset 5.395
+R13 clk_reset#5dff_16@6_clk_reset clk_reset#6dff_16@7_clk_reset 5.382
+R14 clkb_select clkb_select#0dff_16@1_clkb_select 5.499
+R15 clkb_select#0dff_16@1_clkb_select clkb_select#1select_23_clkb_select 5.408
+R16 clkb_select#1select_23_clkb_select clkb_select#2select_31_clkb_select 5.395
+R17 clkb_select#2select_31_clkb_select clkb_select#3select_39_clkb_select 5.408
+R18 clkb_select#3select_39_clkb_select clkb_select#4select_47_clkb_select 5.408
+R19 clkb_select#4select_47_clkb_select clkb_select#5dff_16@6_clkb_select 5.395
+R20 clkb_select#5dff_16@6_clkb_select clkb_select#6dff_16@7_clkb_select 5.382
+R21 clkb_reset clkb_reset#0dff_16@1_clkb_reset 5.499
+R22 clkb_reset#0dff_16@1_clkb_reset clkb_reset#1select_23_clkb_reset 5.408
+R23 clkb_reset#1select_23_clkb_reset clkb_reset#2select_31_clkb_reset 5.395
+R24 clkb_reset#2select_31_clkb_reset clkb_reset#3select_39_clkb_reset 5.408
+R25 clkb_reset#3select_39_clkb_reset clkb_reset#4select_47_clkb_reset 5.408
+R26 clkb_reset#4select_47_clkb_reset clkb_reset#5dff_16@6_clkb_reset 5.395
+R27 clkb_reset#5dff_16@6_clkb_reset clkb_reset#6dff_16@7_clkb_reset 5.382
+R28 rst_select rst_select#0dff_16@1_rst_select 5.499
+R29 rst_select#0dff_16@1_rst_select rst_select#1select_23_rst_select 5.408
+R30 rst_select#1select_23_rst_select rst_select#2select_31_rst_select 5.395
+R31 rst_select#2select_31_rst_select rst_select#3select_39_rst_select 5.408
+R32 rst_select#3select_39_rst_select rst_select#4select_47_rst_select 5.408
+R33 rst_select#4select_47_rst_select rst_select#5dff_16@6_rst_select 5.395
+R34 rst_select#5dff_16@6_rst_select rst_select#6dff_16@7_rst_select 5.382
+R35 rst_reset rst_reset#0dff_16@1_rst_reset 5.499
+R36 rst_reset#0dff_16@1_rst_reset rst_reset#1select_23_rst_reset 5.408
+R37 rst_reset#1select_23_rst_reset rst_reset#2select_31_rst_reset 5.395
+R38 rst_reset#2select_31_rst_reset rst_reset#3select_39_rst_reset 5.408
+R39 rst_reset#3select_39_rst_reset rst_reset#4select_47_rst_reset 5.408
+R40 rst_reset#4select_47_rst_reset rst_reset#5dff_16@6_rst_reset 5.395
+R41 rst_reset#5dff_16@6_rst_reset rst_reset#6dff_16@7_rst_reset 5.382
+
+* Spice Code nodes in cell cell 'sim_dff_124{lay}'
+V1 vdd 0 5
+V2 gnd 0 0
+V3 D_reset 0 PULSE(0 5 200n 1p 1p 200n)
+V4 rst_reset 0 PULSE(5 0 0 1p 1p 100n)
+V5 clk_reset 0 PULSE(0 5 0 1p 1p 100n 200n 70)
+V6 clkb_reset 0 PULSE(5 0 0 1p 1p 100n 200n 70)
+V7 D_select 0 PULSE(0 5 20.2u 1p 1p 200n)
+V8 rst_select 0 PULSE(5 0 20u 1p 1p 100n)
+V9 clk_select 0 PULSE(0 5 20u 1p 1p 100n 200n 70)
+V10 clkb_select 0 PULSE (5 0 20u 1p 1p 100n 200n 70)
+.tran 33u
+.include G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Layout\C5_models.txt
+.END

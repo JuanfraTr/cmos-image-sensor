@@ -1,0 +1,31 @@
+Circuit: *** SPICE deck for cell pixelv3{lay} from library pixel
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Node NMOS@1_N-TRANS-WELL is floating.
+WARNING: Node NMOS@2_N-TRANS-WELL is floating.
+WARNING: Node NMOS@3_N-TRANS-WELL is floating.
+
+WARNING: Less than two connections to node NMOS@1_N-TRANS-WELL.  This node is used by MNMOS@1.
+WARNING: Less than two connections to node NMOS@2_N-TRANS-WELL.  This node is used by MNMOS@2.
+WARNING: Less than two connections to node NMOS@3_N-TRANS-WELL.  This node is used by MNMOS@3.
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Jan 19 18:04:20 2020
+Total elapsed time: 0.269 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3075
+traniter = 3042
+tranpoints = 1431
+accept = 1371
+rejected = 60
+matrix size = 25
+fillins = 10
+solver = Normal
+Matrix Compiler1: 1,85 KB object code size  0.7/0.4/[0.2]
+Matrix Compiler2: 2,14 KB object code size  0.4/0.6/[0.3]
+
+

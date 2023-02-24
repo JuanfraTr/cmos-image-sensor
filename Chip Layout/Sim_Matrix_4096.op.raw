@@ -1,0 +1,4566 @@
+Title: *** SPICE deck for cell Sim_Matrix_4096{lay} from library pixel
+Date: Mon Mar 02 17:11:08 2020
+Plotname: Operating Point
+Flags: real
+No. Variables: 4192
+No. Points:            1
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice IV
+Variables:
+	0	V(vdd)	voltage
+	1	V(net@191#1matrix_1@0_out_0)	voltage
+	2	V(vdd_reset)	voltage
+	3	V(net@190)	voltage
+	4	V(net@189)	voltage
+	5	V(net@192#1matrix_1@0_out_1)	voltage
+	6	V(net@187)	voltage
+	7	V(net@188)	voltage
+	8	V(net@193#1matrix_1@0_out_2)	voltage
+	9	V(net@194)	voltage
+	10	V(net@185)	voltage
+	11	V(net@186)	voltage
+	12	V(net@183)	voltage
+	13	V(net@184)	voltage
+	14	V(net@195#1matrix_1@0_out_4)	voltage
+	15	V(net@196)	voltage
+	16	V(net@197#1matrix_1@0_out_6)	voltage
+	17	V(out7)	voltage
+	18	V(net@181)	voltage
+	19	V(net@182)	voltage
+	20	V(net@179)	voltage
+	21	V(net@180)	voltage
+	22	V(net@177)	voltage
+	23	V(net@178)	voltage
+	24	V(net@175)	voltage
+	25	V(net@176)	voltage
+	26	V(net@199)	voltage
+	27	V(net@200#1matrix_1@0_out_9)	voltage
+	28	V(net@201)	voltage
+	29	V(net@202#1matrix_1@0_out_11)	voltage
+	30	V(net@203)	voltage
+	31	V(net@204#1matrix_1@0_out_13)	voltage
+	32	V(net@205)	voltage
+	33	V(net@206#1matrix_1@0_out_15)	voltage
+	34	V(net@173)	voltage
+	35	V(net@174)	voltage
+	36	V(net@171)	voltage
+	37	V(net@172)	voltage
+	38	V(net@169)	voltage
+	39	V(net@170)	voltage
+	40	V(net@167)	voltage
+	41	V(net@168)	voltage
+	42	V(net@165)	voltage
+	43	V(net@166)	voltage
+	44	V(net@163)	voltage
+	45	V(net@164)	voltage
+	46	V(net@161)	voltage
+	47	V(net@162)	voltage
+	48	V(net@159)	voltage
+	49	V(net@160)	voltage
+	50	V(net@207)	voltage
+	51	V(net@208#1matrix_1@0_out_17)	voltage
+	52	V(net@209)	voltage
+	53	V(net@210#1matrix_1@0_out_19)	voltage
+	54	V(net@211#1matrix_1@0_out_20)	voltage
+	55	V(net@212)	voltage
+	56	V(net@213#1matrix_1@0_out_22)	voltage
+	57	V(net@214)	voltage
+	58	V(net@215#1matrix_1@0_out_24)	voltage
+	59	V(net@216)	voltage
+	60	V(net@217#1matrix_1@0_out_26)	voltage
+	61	V(net@218)	voltage
+	62	V(net@219)	voltage
+	63	V(net@220#1matrix_1@0_out_29)	voltage
+	64	V(net@221)	voltage
+	65	V(o1)	voltage
+	66	V(matrix_1@0_fd)	voltage
+	67	V(net@157)	voltage
+	68	V(net@158)	voltage
+	69	V(net@155)	voltage
+	70	V(net@156)	voltage
+	71	V(net@153)	voltage
+	72	V(net@154)	voltage
+	73	V(net@151)	voltage
+	74	V(net@152)	voltage
+	75	V(net@149)	voltage
+	76	V(net@150)	voltage
+	77	V(net@147)	voltage
+	78	V(net@148)	voltage
+	79	V(net@145)	voltage
+	80	V(net@146)	voltage
+	81	V(net@143)	voltage
+	82	V(net@144)	voltage
+	83	V(net@141)	voltage
+	84	V(net@142)	voltage
+	85	V(net@139)	voltage
+	86	V(net@140)	voltage
+	87	V(net@137)	voltage
+	88	V(net@138)	voltage
+	89	V(net@135)	voltage
+	90	V(net@136)	voltage
+	91	V(matrix_1@0_fd_1)	voltage
+	92	V(net@133)	voltage
+	93	V(net@134)	voltage
+	94	V(net@131)	voltage
+	95	V(net@132)	voltage
+	96	V(net@129)	voltage
+	97	V(net@130)	voltage
+	98	V(net@127)	voltage
+	99	V(net@128)	voltage
+	100	V(net@223)	voltage
+	101	V(net@190#1matrix_1@1_reset_31)	voltage
+	102	V(net@189#1matrix_1@1_select_31)	voltage
+	103	V(net@224#1matrix_1@1_out_1)	voltage
+	104	V(net@187#1matrix_1@1_reset_30)	voltage
+	105	V(net@188#1matrix_1@1_select_30)	voltage
+	106	V(net@225)	voltage
+	107	V(net@226#1matrix_1@1_out_3)	voltage
+	108	V(net@185#1matrix_1@1_reset_29)	voltage
+	109	V(net@186#1matrix_1@1_select_29)	voltage
+	110	V(net@183#1matrix_1@1_reset_28)	voltage
+	111	V(net@184#1matrix_1@1_select_28)	voltage
+	112	V(net@227)	voltage
+	113	V(net@228#1matrix_1@1_out_5)	voltage
+	114	V(net@229)	voltage
+	115	V(net@230#1matrix_1@1_out_7)	voltage
+	116	V(net@181#1matrix_1@1_reset_27)	voltage
+	117	V(net@182#1matrix_1@1_select_27)	voltage
+	118	V(net@179#1matrix_1@1_reset_26)	voltage
+	119	V(net@180#1matrix_1@1_select_26)	voltage
+	120	V(net@177#1matrix_1@1_reset_25)	voltage
+	121	V(net@178#1matrix_1@1_select_25)	voltage
+	122	V(net@175#1matrix_1@1_reset_24)	voltage
+	123	V(net@176#1matrix_1@1_select_24)	voltage
+	124	V(net@231)	voltage
+	125	V(net@232#1matrix_1@1_out_9)	voltage
+	126	V(net@233)	voltage
+	127	V(net@234#1matrix_1@1_out_11)	voltage
+	128	V(net@235)	voltage
+	129	V(net@236#1matrix_1@1_out_13)	voltage
+	130	V(net@237)	voltage
+	131	V(net@238#1matrix_1@1_out_15)	voltage
+	132	V(net@173#1matrix_1@1_reset_23)	voltage
+	133	V(net@174#1matrix_1@1_select_23)	voltage
+	134	V(net@171#1matrix_1@1_reset_22)	voltage
+	135	V(net@172#1matrix_1@1_select_22)	voltage
+	136	V(net@169#1matrix_1@1_reset_21)	voltage
+	137	V(net@170#1matrix_1@1_select_21)	voltage
+	138	V(net@167#1matrix_1@1_reset_20)	voltage
+	139	V(net@168#1matrix_1@1_select_20)	voltage
+	140	V(net@165#1matrix_1@1_reset_19)	voltage
+	141	V(net@166#1matrix_1@1_select_19)	voltage
+	142	V(net@163#1matrix_1@1_reset_18)	voltage
+	143	V(net@164#1matrix_1@1_select_18)	voltage
+	144	V(net@161#1matrix_1@1_reset_17)	voltage
+	145	V(net@162#1matrix_1@1_select_17)	voltage
+	146	V(net@159#1matrix_1@1_reset_16)	voltage
+	147	V(net@160#1matrix_1@1_select_16)	voltage
+	148	V(net@239)	voltage
+	149	V(net@240#1matrix_1@1_out_17)	voltage
+	150	V(net@241#1matrix_1@1_out_18)	voltage
+	151	V(net@242)	voltage
+	152	V(net@243#1matrix_1@1_out_20)	voltage
+	153	V(net@244)	voltage
+	154	V(net@245#1matrix_1@1_out_22)	voltage
+	155	V(net@246)	voltage
+	156	V(net@247#1matrix_1@1_out_24)	voltage
+	157	V(net@248)	voltage
+	158	V(net@249#1matrix_1@1_out_26)	voltage
+	159	V(net@250)	voltage
+	160	V(net@251#1matrix_1@1_out_28)	voltage
+	161	V(net@252)	voltage
+	162	V(net@253#1matrix_1@1_out_30)	voltage
+	163	V(net@254)	voltage
+	164	V(matrix_1@1_fd)	voltage
+	165	V(net@157#1matrix_1@1_reset_15)	voltage
+	166	V(net@158#1matrix_1@1_select_15)	voltage
+	167	V(net@155#1matrix_1@1_reset_14)	voltage
+	168	V(net@156#1matrix_1@1_select_14)	voltage
+	169	V(net@153#1matrix_1@1_reset_13)	voltage
+	170	V(net@154#1matrix_1@1_select_13)	voltage
+	171	V(net@151#1matrix_1@1_reset_12)	voltage
+	172	V(net@152#1matrix_1@1_select_12)	voltage
+	173	V(net@149#1matrix_1@1_reset_11)	voltage
+	174	V(net@150#1matrix_1@1_select_11)	voltage
+	175	V(net@147#1matrix_1@1_reset_10)	voltage
+	176	V(net@148#1matrix_1@1_select_10)	voltage
+	177	V(net@145#1matrix_1@1_reset_9)	voltage
+	178	V(net@146#1matrix_1@1_select_9)	voltage
+	179	V(net@143#1matrix_1@1_reset_8)	voltage
+	180	V(net@144#1matrix_1@1_select_8)	voltage
+	181	V(net@141#1matrix_1@1_reset_7)	voltage
+	182	V(net@142#1matrix_1@1_select_7)	voltage
+	183	V(net@139#1matrix_1@1_reset_6)	voltage
+	184	V(net@140#1matrix_1@1_select_6)	voltage
+	185	V(net@137#1matrix_1@1_reset_5)	voltage
+	186	V(net@138#1matrix_1@1_select_5)	voltage
+	187	V(net@135#1matrix_1@1_reset_4)	voltage
+	188	V(net@136#1matrix_1@1_select_4)	voltage
+	189	V(matrix_1@1_fd_1)	voltage
+	190	V(net@133#1matrix_1@1_reset_3)	voltage
+	191	V(net@134#1matrix_1@1_select_3)	voltage
+	192	V(net@131#1matrix_1@1_reset_2)	voltage
+	193	V(net@132#1matrix_1@1_select_2)	voltage
+	194	V(net@129#1matrix_1@1_reset_1)	voltage
+	195	V(net@130#1matrix_1@1_select_1)	voltage
+	196	V(net@127#1matrix_1@1_reset_0)	voltage
+	197	V(net@128#1matrix_1@1_select_0)	voltage
+	198	V(net@191)	voltage
+	199	V(net@126)	voltage
+	200	V(net@125)	voltage
+	201	V(net@192)	voltage
+	202	V(net@123)	voltage
+	203	V(net@124)	voltage
+	204	V(net@193)	voltage
+	205	V(net@194#1matrix_1@2_out_3)	voltage
+	206	V(net@121)	voltage
+	207	V(net@122)	voltage
+	208	V(net@119)	voltage
+	209	V(net@120)	voltage
+	210	V(net@195)	voltage
+	211	V(net@196#1matrix_1@2_out_5)	voltage
+	212	V(net@197)	voltage
+	213	V(out7#0matrix_1@2_out_7)	voltage
+	214	V(net@117)	voltage
+	215	V(net@118)	voltage
+	216	V(net@115)	voltage
+	217	V(net@116)	voltage
+	218	V(net@113)	voltage
+	219	V(net@114)	voltage
+	220	V(net@96)	voltage
+	221	V(net@97)	voltage
+	222	V(net@199#1matrix_1@2_out_8)	voltage
+	223	V(net@200)	voltage
+	224	V(net@201#1matrix_1@2_out_10)	voltage
+	225	V(net@202)	voltage
+	226	V(net@203#1matrix_1@2_out_12)	voltage
+	227	V(net@204)	voltage
+	228	V(net@205#1matrix_1@2_out_14)	voltage
+	229	V(net@206)	voltage
+	230	V(net@94)	voltage
+	231	V(net@95)	voltage
+	232	V(net@92)	voltage
+	233	V(net@93)	voltage
+	234	V(net@90)	voltage
+	235	V(net@91)	voltage
+	236	V(net@88)	voltage
+	237	V(net@89)	voltage
+	238	V(net@86)	voltage
+	239	V(net@87)	voltage
+	240	V(net@84)	voltage
+	241	V(net@85)	voltage
+	242	V(net@82)	voltage
+	243	V(net@83)	voltage
+	244	V(net@80)	voltage
+	245	V(net@81)	voltage
+	246	V(net@207#1matrix_1@2_out_16)	voltage
+	247	V(net@208)	voltage
+	248	V(net@209#1matrix_1@2_out_18)	voltage
+	249	V(net@210)	voltage
+	250	V(net@211)	voltage
+	251	V(net@212#1matrix_1@2_out_21)	voltage
+	252	V(net@213)	voltage
+	253	V(net@214#1matrix_1@2_out_23)	voltage
+	254	V(net@215)	voltage
+	255	V(net@216#1matrix_1@2_out_25)	voltage
+	256	V(net@217)	voltage
+	257	V(net@218#1matrix_1@2_out_27)	voltage
+	258	V(net@219#1matrix_1@2_out_28)	voltage
+	259	V(net@220)	voltage
+	260	V(net@221#1matrix_1@2_out_30)	voltage
+	261	V(o1#0matrix_1@2_out_31)	voltage
+	262	V(fd_test)	voltage
+	263	V(net@78)	voltage
+	264	V(net@79)	voltage
+	265	V(net@76)	voltage
+	266	V(net@77)	voltage
+	267	V(net@74)	voltage
+	268	V(net@75)	voltage
+	269	V(net@72)	voltage
+	270	V(net@73)	voltage
+	271	V(net@70)	voltage
+	272	V(net@71)	voltage
+	273	V(net@68)	voltage
+	274	V(net@69)	voltage
+	275	V(net@66)	voltage
+	276	V(net@67)	voltage
+	277	V(net@64)	voltage
+	278	V(net@65)	voltage
+	279	V(reset7)	voltage
+	280	V(select7)	voltage
+	281	V(net@35)	voltage
+	282	V(net@36)	voltage
+	283	V(net@33)	voltage
+	284	V(net@34)	voltage
+	285	V(net@31)	voltage
+	286	V(net@32)	voltage
+	287	V(fd_1)	voltage
+	288	V(net@29)	voltage
+	289	V(net@30)	voltage
+	290	V(net@27)	voltage
+	291	V(net@28)	voltage
+	292	V(net@25)	voltage
+	293	V(net@26)	voltage
+	294	V(net@23)	voltage
+	295	V(net@24)	voltage
+	296	V(net@223#1matrix_1@3_out_0)	voltage
+	297	V(net@126#1matrix_1@3_reset_31)	voltage
+	298	V(net@125#1matrix_1@3_select_31)	voltage
+	299	V(net@224)	voltage
+	300	V(net@123#1matrix_1@3_reset_30)	voltage
+	301	V(net@124#1matrix_1@3_select_30)	voltage
+	302	V(net@225#1matrix_1@3_out_2)	voltage
+	303	V(net@226)	voltage
+	304	V(net@121#1matrix_1@3_reset_29)	voltage
+	305	V(net@122#1matrix_1@3_select_29)	voltage
+	306	V(net@119#1matrix_1@3_reset_28)	voltage
+	307	V(net@120#1matrix_1@3_select_28)	voltage
+	308	V(net@227#1matrix_1@3_out_4)	voltage
+	309	V(net@228)	voltage
+	310	V(net@229#1matrix_1@3_out_6)	voltage
+	311	V(net@230)	voltage
+	312	V(net@117#1matrix_1@3_reset_27)	voltage
+	313	V(net@118#1matrix_1@3_select_27)	voltage
+	314	V(net@115#1matrix_1@3_reset_26)	voltage
+	315	V(net@116#1matrix_1@3_select_26)	voltage
+	316	V(net@113#1matrix_1@3_reset_25)	voltage
+	317	V(net@114#1matrix_1@3_select_25)	voltage
+	318	V(net@96#1matrix_1@3_reset_24)	voltage
+	319	V(net@97#1matrix_1@3_select_24)	voltage
+	320	V(net@231#1matrix_1@3_out_8)	voltage
+	321	V(net@232)	voltage
+	322	V(net@233#1matrix_1@3_out_10)	voltage
+	323	V(net@234)	voltage
+	324	V(net@235#1matrix_1@3_out_12)	voltage
+	325	V(net@236)	voltage
+	326	V(net@237#1matrix_1@3_out_14)	voltage
+	327	V(net@238)	voltage
+	328	V(net@94#1matrix_1@3_reset_23)	voltage
+	329	V(net@95#1matrix_1@3_select_23)	voltage
+	330	V(net@92#1matrix_1@3_reset_22)	voltage
+	331	V(net@93#1matrix_1@3_select_22)	voltage
+	332	V(net@90#1matrix_1@3_reset_21)	voltage
+	333	V(net@91#1matrix_1@3_select_21)	voltage
+	334	V(net@88#1matrix_1@3_reset_20)	voltage
+	335	V(net@89#1matrix_1@3_select_20)	voltage
+	336	V(net@86#1matrix_1@3_reset_19)	voltage
+	337	V(net@87#1matrix_1@3_select_19)	voltage
+	338	V(net@84#1matrix_1@3_reset_18)	voltage
+	339	V(net@85#1matrix_1@3_select_18)	voltage
+	340	V(net@82#1matrix_1@3_reset_17)	voltage
+	341	V(net@83#1matrix_1@3_select_17)	voltage
+	342	V(net@80#1matrix_1@3_reset_16)	voltage
+	343	V(net@81#1matrix_1@3_select_16)	voltage
+	344	V(net@239#1matrix_1@3_out_16)	voltage
+	345	V(net@240)	voltage
+	346	V(net@241)	voltage
+	347	V(net@242#1matrix_1@3_out_19)	voltage
+	348	V(net@243)	voltage
+	349	V(net@244#1matrix_1@3_out_21)	voltage
+	350	V(net@245)	voltage
+	351	V(net@246#1matrix_1@3_out_23)	voltage
+	352	V(net@247)	voltage
+	353	V(net@248#1matrix_1@3_out_25)	voltage
+	354	V(net@249)	voltage
+	355	V(net@250#1matrix_1@3_out_27)	voltage
+	356	V(net@251)	voltage
+	357	V(net@252#1matrix_1@3_out_29)	voltage
+	358	V(net@253)	voltage
+	359	V(net@254#1matrix_1@3_out_31)	voltage
+	360	V(matrix_1@3_fd)	voltage
+	361	V(net@78#1matrix_1@3_reset_15)	voltage
+	362	V(net@79#1matrix_1@3_select_15)	voltage
+	363	V(net@76#1matrix_1@3_reset_14)	voltage
+	364	V(net@77#1matrix_1@3_select_14)	voltage
+	365	V(net@74#1matrix_1@3_reset_13)	voltage
+	366	V(net@75#1matrix_1@3_select_13)	voltage
+	367	V(net@72#1matrix_1@3_reset_12)	voltage
+	368	V(net@73#1matrix_1@3_select_12)	voltage
+	369	V(net@70#1matrix_1@3_reset_11)	voltage
+	370	V(net@71#1matrix_1@3_select_11)	voltage
+	371	V(net@68#1matrix_1@3_reset_10)	voltage
+	372	V(net@69#1matrix_1@3_select_10)	voltage
+	373	V(net@66#1matrix_1@3_reset_9)	voltage
+	374	V(net@67#1matrix_1@3_select_9)	voltage
+	375	V(net@64#1matrix_1@3_reset_8)	voltage
+	376	V(net@65#1matrix_1@3_select_8)	voltage
+	377	V(reset7#1matrix_1@3_reset_7)	voltage
+	378	V(select7#1matrix_1@3_select_7)	voltage
+	379	V(net@35#1matrix_1@3_reset_6)	voltage
+	380	V(net@36#1matrix_1@3_select_6)	voltage
+	381	V(net@33#1matrix_1@3_reset_5)	voltage
+	382	V(net@34#1matrix_1@3_select_5)	voltage
+	383	V(net@31#1matrix_1@3_reset_4)	voltage
+	384	V(net@32#1matrix_1@3_select_4)	voltage
+	385	V(matrix_1@3_fd_1)	voltage
+	386	V(net@29#1matrix_1@3_reset_3)	voltage
+	387	V(net@30#1matrix_1@3_select_3)	voltage
+	388	V(net@27#1matrix_1@3_reset_2)	voltage
+	389	V(net@28#1matrix_1@3_select_2)	voltage
+	390	V(net@25#1matrix_1@3_reset_1)	voltage
+	391	V(net@26#1matrix_1@3_select_1)	voltage
+	392	V(net@23#1matrix_1@3_reset_0)	voltage
+	393	V(net@24#1matrix_1@3_select_0)	voltage
+	394	V(out_final)	voltage
+	395	V(g1)	voltage
+	396	V(gate_column)	voltage
+	397	V(net@1441)	voltage
+	398	V(net@1451)	voltage
+	399	V(net@1447)	voltage
+	400	V(net@1457)	voltage
+	401	V(net@1454)	voltage
+	402	V(net@1424)	voltage
+	403	V(net@1438)	voltage
+	404	V(net@1435)	voltage
+	405	V(net@1444)	voltage
+	406	V(net@1362)	voltage
+	407	V(net@1374)	voltage
+	408	V(net@1370)	voltage
+	409	V(net@1380)	voltage
+	410	V(net@1377)	voltage
+	411	V(net@1338)	voltage
+	412	V(net@1357)	voltage
+	413	V(net@1354)	voltage
+	414	V(net@1365)	voltage
+	415	V(net@1324)	voltage
+	416	V(net@1335)	voltage
+	417	V(net@1331)	voltage
+	418	V(net@1343)	voltage
+	419	V(d_column)	voltage
+	420	V(net@1323)	voltage
+	421	V(net@1317)	voltage
+	422	V(net@1327)	voltage
+	423	V(net@1405)	voltage
+	424	V(net@1421)	voltage
+	425	V(net@1416)	voltage
+	426	V(net@1427)	voltage
+	427	V(net@1400)	voltage
+	428	V(net@1395)	voltage
+	429	V(net@1408)	voltage
+	430	V(net@1580)	voltage
+	431	V(net@1595)	voltage
+	432	V(net@1588)	voltage
+	433	V(net@1601)	voltage
+	434	V(net@1598)	voltage
+	435	V(net@1559)	voltage
+	436	V(net@1576)	voltage
+	437	V(net@1573)	voltage
+	438	V(net@1585)	voltage
+	439	V(net@1508)	voltage
+	440	V(net@1518)	voltage
+	441	V(net@1515)	voltage
+	442	V(net@1526)	voltage
+	443	V(net@1523)	voltage
+	444	V(net@1487)	voltage
+	445	V(net@1504)	voltage
+	446	V(net@1501)	voltage
+	447	V(net@1512)	voltage
+	448	V(net@1474)	voltage
+	449	V(net@1483)	voltage
+	450	V(net@1480)	voltage
+	451	V(net@1490)	voltage
+	452	V(net@1471)	voltage
+	453	V(net@1468)	voltage
+	454	V(net@1477)	voltage
+	455	V(net@1545)	voltage
+	456	V(net@1556)	voltage
+	457	V(net@1553)	voltage
+	458	V(net@1564)	voltage
+	459	V(net@1542)	voltage
+	460	V(net@1537)	voltage
+	461	V(net@1548)	voltage
+	462	V(net@1793)	voltage
+	463	V(net@1805)	voltage
+	464	V(net@1802)	voltage
+	465	V(net@1817)	voltage
+	466	V(net@1814)	voltage
+	467	V(net@1774)	voltage
+	468	V(net@1784)	voltage
+	469	V(net@1781)	voltage
+	470	V(net@1796)	voltage
+	471	V(net@1695)	voltage
+	472	V(net@1702)	voltage
+	473	V(net@1705)	voltage
+	474	V(net@1712)	voltage
+	475	V(net@1709)	voltage
+	476	V(net@1681)	voltage
+	477	V(net@1688)	voltage
+	478	V(net@1691)	voltage
+	479	V(net@1698)	voltage
+	480	V(net@1666)	voltage
+	481	V(net@1674)	voltage
+	482	V(net@1677)	voltage
+	483	V(net@1684)	voltage
+	484	V(net@1655)	voltage
+	485	V(net@1658)	voltage
+	486	V(net@1669)	voltage
+	487	V(net@1750)	voltage
+	488	V(net@1765)	voltage
+	489	V(net@1762)	voltage
+	490	V(net@1777)	voltage
+	491	V(net@1744)	voltage
+	492	V(net@1747)	voltage
+	493	V(net@1753)	voltage
+	494	V(net@2103)	voltage
+	495	V(net@2118)	voltage
+	496	V(net@2114)	voltage
+	497	V(rst_column)	voltage
+	498	V(clkb_column)	voltage
+	499	V(clk_column)	voltage
+	500	V(net@2131)	voltage
+	501	V(net@2127)	voltage
+	502	V(net@2080)	voltage
+	503	V(net@2091)	voltage
+	504	V(net@2087)	voltage
+	505	V(net@2107)	voltage
+	506	V(net@1997)	voltage
+	507	V(net@2001)	voltage
+	508	V(net@2004)	voltage
+	509	V(net@2018)	voltage
+	510	V(net@2013)	voltage
+	511	V(net@1851)	voltage
+	512	V(net@1983)	voltage
+	513	V(net@1988)	voltage
+	514	V(net@1987)	voltage
+	515	V(net@1835)	voltage
+	516	V(net@1845)	voltage
+	517	V(net@1842)	voltage
+	518	V(net@1854)	voltage
+	519	V(net@1822)	voltage
+	520	V(net@1825)	voltage
+	521	V(net@1838)	voltage
+	522	V(net@2039)	voltage
+	523	V(net@2045)	voltage
+	524	V(net@2068)	voltage
+	525	V(net@2074)	voltage
+	526	V(net@2029)	voltage
+	527	V(net@2025)	voltage
+	528	V(net@2042)	voltage
+	529	V(rst_select)	voltage
+	530	V(clkb_select)	voltage
+	531	V(clk_select)	voltage
+	532	V(rst_reset)	voltage
+	533	V(clkb_reset)	voltage
+	534	V(clk_reset)	voltage
+	535	V(d_select)	voltage
+	536	V(d_reset)	voltage
+	537	V(net@23##0)	voltage
+	538	V(net@23##1)	voltage
+	539	V(net@23##2)	voltage
+	540	V(net@24##0)	voltage
+	541	V(net@24##1)	voltage
+	542	V(net@24##2)	voltage
+	543	V(net@25##0)	voltage
+	544	V(net@25##1)	voltage
+	545	V(net@25##2)	voltage
+	546	V(net@26##0)	voltage
+	547	V(net@26##1)	voltage
+	548	V(net@26##2)	voltage
+	549	V(net@27##0)	voltage
+	550	V(net@27##1)	voltage
+	551	V(net@27##2)	voltage
+	552	V(net@28##0)	voltage
+	553	V(net@28##1)	voltage
+	554	V(net@28##2)	voltage
+	555	V(net@29##0)	voltage
+	556	V(net@29##1)	voltage
+	557	V(net@29##2)	voltage
+	558	V(net@30##0)	voltage
+	559	V(net@30##1)	voltage
+	560	V(net@30##2)	voltage
+	561	V(net@31##0)	voltage
+	562	V(net@31##1)	voltage
+	563	V(net@31##2)	voltage
+	564	V(net@32##0)	voltage
+	565	V(net@32##1)	voltage
+	566	V(net@32##2)	voltage
+	567	V(net@33##0)	voltage
+	568	V(net@33##1)	voltage
+	569	V(net@33##2)	voltage
+	570	V(net@34##0)	voltage
+	571	V(net@34##1)	voltage
+	572	V(net@34##2)	voltage
+	573	V(net@35##0)	voltage
+	574	V(net@35##1)	voltage
+	575	V(net@35##2)	voltage
+	576	V(net@36##0)	voltage
+	577	V(net@36##1)	voltage
+	578	V(net@36##2)	voltage
+	579	V(reset7##0)	voltage
+	580	V(reset7##1)	voltage
+	581	V(reset7##2)	voltage
+	582	V(select7##0)	voltage
+	583	V(select7##1)	voltage
+	584	V(select7##2)	voltage
+	585	V(net@64##0)	voltage
+	586	V(net@64##1)	voltage
+	587	V(net@64##2)	voltage
+	588	V(net@65##0)	voltage
+	589	V(net@65##1)	voltage
+	590	V(net@65##2)	voltage
+	591	V(net@66##0)	voltage
+	592	V(net@66##1)	voltage
+	593	V(net@66##2)	voltage
+	594	V(net@67##0)	voltage
+	595	V(net@67##1)	voltage
+	596	V(net@67##2)	voltage
+	597	V(net@68##0)	voltage
+	598	V(net@68##1)	voltage
+	599	V(net@68##2)	voltage
+	600	V(net@69##0)	voltage
+	601	V(net@69##1)	voltage
+	602	V(net@69##2)	voltage
+	603	V(net@70##0)	voltage
+	604	V(net@70##1)	voltage
+	605	V(net@70##2)	voltage
+	606	V(net@71##0)	voltage
+	607	V(net@71##1)	voltage
+	608	V(net@71##2)	voltage
+	609	V(net@72##0)	voltage
+	610	V(net@72##1)	voltage
+	611	V(net@72##2)	voltage
+	612	V(net@73##0)	voltage
+	613	V(net@73##1)	voltage
+	614	V(net@73##2)	voltage
+	615	V(net@74##0)	voltage
+	616	V(net@74##1)	voltage
+	617	V(net@74##2)	voltage
+	618	V(net@75##0)	voltage
+	619	V(net@75##1)	voltage
+	620	V(net@75##2)	voltage
+	621	V(net@76##0)	voltage
+	622	V(net@76##1)	voltage
+	623	V(net@76##2)	voltage
+	624	V(net@77##0)	voltage
+	625	V(net@77##1)	voltage
+	626	V(net@77##2)	voltage
+	627	V(net@78##0)	voltage
+	628	V(net@78##1)	voltage
+	629	V(net@78##2)	voltage
+	630	V(net@79##0)	voltage
+	631	V(net@79##1)	voltage
+	632	V(net@79##2)	voltage
+	633	V(net@80##0)	voltage
+	634	V(net@80##1)	voltage
+	635	V(net@80##2)	voltage
+	636	V(net@81##0)	voltage
+	637	V(net@81##1)	voltage
+	638	V(net@81##2)	voltage
+	639	V(net@82##0)	voltage
+	640	V(net@82##1)	voltage
+	641	V(net@82##2)	voltage
+	642	V(net@83##0)	voltage
+	643	V(net@83##1)	voltage
+	644	V(net@83##2)	voltage
+	645	V(net@84##0)	voltage
+	646	V(net@84##1)	voltage
+	647	V(net@84##2)	voltage
+	648	V(net@85##0)	voltage
+	649	V(net@85##1)	voltage
+	650	V(net@85##2)	voltage
+	651	V(net@86##0)	voltage
+	652	V(net@86##1)	voltage
+	653	V(net@86##2)	voltage
+	654	V(net@87##0)	voltage
+	655	V(net@87##1)	voltage
+	656	V(net@87##2)	voltage
+	657	V(net@88##0)	voltage
+	658	V(net@88##1)	voltage
+	659	V(net@88##2)	voltage
+	660	V(net@89##0)	voltage
+	661	V(net@89##1)	voltage
+	662	V(net@89##2)	voltage
+	663	V(net@90##0)	voltage
+	664	V(net@90##1)	voltage
+	665	V(net@90##2)	voltage
+	666	V(net@91##0)	voltage
+	667	V(net@91##1)	voltage
+	668	V(net@91##2)	voltage
+	669	V(net@92##0)	voltage
+	670	V(net@92##1)	voltage
+	671	V(net@92##2)	voltage
+	672	V(net@93##0)	voltage
+	673	V(net@93##1)	voltage
+	674	V(net@93##2)	voltage
+	675	V(net@94##0)	voltage
+	676	V(net@94##1)	voltage
+	677	V(net@94##2)	voltage
+	678	V(net@95##0)	voltage
+	679	V(net@95##1)	voltage
+	680	V(net@95##2)	voltage
+	681	V(net@96##0)	voltage
+	682	V(net@96##1)	voltage
+	683	V(net@96##2)	voltage
+	684	V(net@97##0)	voltage
+	685	V(net@97##1)	voltage
+	686	V(net@97##2)	voltage
+	687	V(net@113##0)	voltage
+	688	V(net@113##1)	voltage
+	689	V(net@113##2)	voltage
+	690	V(net@114##0)	voltage
+	691	V(net@114##1)	voltage
+	692	V(net@114##2)	voltage
+	693	V(net@115##0)	voltage
+	694	V(net@115##1)	voltage
+	695	V(net@115##2)	voltage
+	696	V(net@116##0)	voltage
+	697	V(net@116##1)	voltage
+	698	V(net@116##2)	voltage
+	699	V(net@117##0)	voltage
+	700	V(net@117##1)	voltage
+	701	V(net@117##2)	voltage
+	702	V(net@118##0)	voltage
+	703	V(net@118##1)	voltage
+	704	V(net@118##2)	voltage
+	705	V(net@119##0)	voltage
+	706	V(net@119##1)	voltage
+	707	V(net@119##2)	voltage
+	708	V(net@120##0)	voltage
+	709	V(net@120##1)	voltage
+	710	V(net@120##2)	voltage
+	711	V(net@121##0)	voltage
+	712	V(net@121##1)	voltage
+	713	V(net@121##2)	voltage
+	714	V(net@122##0)	voltage
+	715	V(net@122##1)	voltage
+	716	V(net@122##2)	voltage
+	717	V(net@123##0)	voltage
+	718	V(net@123##1)	voltage
+	719	V(net@123##2)	voltage
+	720	V(net@124##0)	voltage
+	721	V(net@124##1)	voltage
+	722	V(net@124##2)	voltage
+	723	V(net@125##0)	voltage
+	724	V(net@125##1)	voltage
+	725	V(net@125##2)	voltage
+	726	V(net@126##0)	voltage
+	727	V(net@126##1)	voltage
+	728	V(net@126##2)	voltage
+	729	V(net@127##0)	voltage
+	730	V(net@127##1)	voltage
+	731	V(net@127##2)	voltage
+	732	V(net@128##0)	voltage
+	733	V(net@128##1)	voltage
+	734	V(net@128##2)	voltage
+	735	V(net@129##0)	voltage
+	736	V(net@129##1)	voltage
+	737	V(net@129##2)	voltage
+	738	V(net@130##0)	voltage
+	739	V(net@130##1)	voltage
+	740	V(net@130##2)	voltage
+	741	V(net@131##0)	voltage
+	742	V(net@131##1)	voltage
+	743	V(net@131##2)	voltage
+	744	V(net@132##0)	voltage
+	745	V(net@132##1)	voltage
+	746	V(net@132##2)	voltage
+	747	V(net@133##0)	voltage
+	748	V(net@133##1)	voltage
+	749	V(net@133##2)	voltage
+	750	V(net@134##0)	voltage
+	751	V(net@134##1)	voltage
+	752	V(net@134##2)	voltage
+	753	V(net@135##0)	voltage
+	754	V(net@135##1)	voltage
+	755	V(net@135##2)	voltage
+	756	V(net@136##0)	voltage
+	757	V(net@136##1)	voltage
+	758	V(net@136##2)	voltage
+	759	V(net@137##0)	voltage
+	760	V(net@137##1)	voltage
+	761	V(net@137##2)	voltage
+	762	V(net@138##0)	voltage
+	763	V(net@138##1)	voltage
+	764	V(net@138##2)	voltage
+	765	V(net@139##0)	voltage
+	766	V(net@139##1)	voltage
+	767	V(net@139##2)	voltage
+	768	V(net@140##0)	voltage
+	769	V(net@140##1)	voltage
+	770	V(net@140##2)	voltage
+	771	V(net@141##0)	voltage
+	772	V(net@141##1)	voltage
+	773	V(net@141##2)	voltage
+	774	V(net@142##0)	voltage
+	775	V(net@142##1)	voltage
+	776	V(net@142##2)	voltage
+	777	V(net@143##0)	voltage
+	778	V(net@143##1)	voltage
+	779	V(net@143##2)	voltage
+	780	V(net@144##0)	voltage
+	781	V(net@144##1)	voltage
+	782	V(net@144##2)	voltage
+	783	V(net@145##0)	voltage
+	784	V(net@145##1)	voltage
+	785	V(net@145##2)	voltage
+	786	V(net@146##0)	voltage
+	787	V(net@146##1)	voltage
+	788	V(net@146##2)	voltage
+	789	V(net@147##0)	voltage
+	790	V(net@147##1)	voltage
+	791	V(net@147##2)	voltage
+	792	V(net@148##0)	voltage
+	793	V(net@148##1)	voltage
+	794	V(net@148##2)	voltage
+	795	V(net@149##0)	voltage
+	796	V(net@149##1)	voltage
+	797	V(net@149##2)	voltage
+	798	V(net@150##0)	voltage
+	799	V(net@150##1)	voltage
+	800	V(net@150##2)	voltage
+	801	V(net@151##0)	voltage
+	802	V(net@151##1)	voltage
+	803	V(net@151##2)	voltage
+	804	V(net@152##0)	voltage
+	805	V(net@152##1)	voltage
+	806	V(net@152##2)	voltage
+	807	V(net@153##0)	voltage
+	808	V(net@153##1)	voltage
+	809	V(net@153##2)	voltage
+	810	V(net@154##0)	voltage
+	811	V(net@154##1)	voltage
+	812	V(net@154##2)	voltage
+	813	V(net@155##0)	voltage
+	814	V(net@155##1)	voltage
+	815	V(net@155##2)	voltage
+	816	V(net@156##0)	voltage
+	817	V(net@156##1)	voltage
+	818	V(net@156##2)	voltage
+	819	V(net@157##0)	voltage
+	820	V(net@157##1)	voltage
+	821	V(net@157##2)	voltage
+	822	V(net@158##0)	voltage
+	823	V(net@158##1)	voltage
+	824	V(net@158##2)	voltage
+	825	V(net@159##0)	voltage
+	826	V(net@159##1)	voltage
+	827	V(net@159##2)	voltage
+	828	V(net@160##0)	voltage
+	829	V(net@160##1)	voltage
+	830	V(net@160##2)	voltage
+	831	V(net@161##0)	voltage
+	832	V(net@161##1)	voltage
+	833	V(net@161##2)	voltage
+	834	V(net@162##0)	voltage
+	835	V(net@162##1)	voltage
+	836	V(net@162##2)	voltage
+	837	V(net@163##0)	voltage
+	838	V(net@163##1)	voltage
+	839	V(net@163##2)	voltage
+	840	V(net@164##0)	voltage
+	841	V(net@164##1)	voltage
+	842	V(net@164##2)	voltage
+	843	V(net@165##0)	voltage
+	844	V(net@165##1)	voltage
+	845	V(net@165##2)	voltage
+	846	V(net@166##0)	voltage
+	847	V(net@166##1)	voltage
+	848	V(net@166##2)	voltage
+	849	V(net@167##0)	voltage
+	850	V(net@167##1)	voltage
+	851	V(net@167##2)	voltage
+	852	V(net@168##0)	voltage
+	853	V(net@168##1)	voltage
+	854	V(net@168##2)	voltage
+	855	V(net@169##0)	voltage
+	856	V(net@169##1)	voltage
+	857	V(net@169##2)	voltage
+	858	V(net@170##0)	voltage
+	859	V(net@170##1)	voltage
+	860	V(net@170##2)	voltage
+	861	V(net@171##0)	voltage
+	862	V(net@171##1)	voltage
+	863	V(net@171##2)	voltage
+	864	V(net@172##0)	voltage
+	865	V(net@172##1)	voltage
+	866	V(net@172##2)	voltage
+	867	V(net@173##0)	voltage
+	868	V(net@173##1)	voltage
+	869	V(net@173##2)	voltage
+	870	V(net@174##0)	voltage
+	871	V(net@174##1)	voltage
+	872	V(net@174##2)	voltage
+	873	V(net@175##0)	voltage
+	874	V(net@175##1)	voltage
+	875	V(net@175##2)	voltage
+	876	V(net@176##0)	voltage
+	877	V(net@176##1)	voltage
+	878	V(net@176##2)	voltage
+	879	V(net@177##0)	voltage
+	880	V(net@177##1)	voltage
+	881	V(net@177##2)	voltage
+	882	V(net@178##0)	voltage
+	883	V(net@178##1)	voltage
+	884	V(net@178##2)	voltage
+	885	V(net@179##0)	voltage
+	886	V(net@179##1)	voltage
+	887	V(net@179##2)	voltage
+	888	V(net@180##0)	voltage
+	889	V(net@180##1)	voltage
+	890	V(net@180##2)	voltage
+	891	V(net@181##0)	voltage
+	892	V(net@181##1)	voltage
+	893	V(net@181##2)	voltage
+	894	V(net@182##0)	voltage
+	895	V(net@182##1)	voltage
+	896	V(net@182##2)	voltage
+	897	V(net@183##0)	voltage
+	898	V(net@183##1)	voltage
+	899	V(net@183##2)	voltage
+	900	V(net@184##0)	voltage
+	901	V(net@184##1)	voltage
+	902	V(net@184##2)	voltage
+	903	V(net@185##0)	voltage
+	904	V(net@185##1)	voltage
+	905	V(net@185##2)	voltage
+	906	V(net@186##0)	voltage
+	907	V(net@186##1)	voltage
+	908	V(net@186##2)	voltage
+	909	V(net@187##0)	voltage
+	910	V(net@187##1)	voltage
+	911	V(net@187##2)	voltage
+	912	V(net@188##0)	voltage
+	913	V(net@188##1)	voltage
+	914	V(net@188##2)	voltage
+	915	V(net@189##0)	voltage
+	916	V(net@189##1)	voltage
+	917	V(net@189##2)	voltage
+	918	V(net@190##0)	voltage
+	919	V(net@190##1)	voltage
+	920	V(net@190##2)	voltage
+	921	V(net@191##0)	voltage
+	922	V(net@191##1)	voltage
+	923	V(net@191##2)	voltage
+	924	V(net@192##0)	voltage
+	925	V(net@192##1)	voltage
+	926	V(net@192##2)	voltage
+	927	V(net@193##0)	voltage
+	928	V(net@193##1)	voltage
+	929	V(net@193##2)	voltage
+	930	V(net@194##0)	voltage
+	931	V(net@194##1)	voltage
+	932	V(net@194##2)	voltage
+	933	V(net@195##0)	voltage
+	934	V(net@195##1)	voltage
+	935	V(net@195##2)	voltage
+	936	V(net@196##0)	voltage
+	937	V(net@196##1)	voltage
+	938	V(net@196##2)	voltage
+	939	V(net@197##0)	voltage
+	940	V(net@197##1)	voltage
+	941	V(net@197##2)	voltage
+	942	V(out7##0)	voltage
+	943	V(out7##1)	voltage
+	944	V(out7##2)	voltage
+	945	V(net@199##0)	voltage
+	946	V(net@199##1)	voltage
+	947	V(net@199##2)	voltage
+	948	V(net@200##0)	voltage
+	949	V(net@200##1)	voltage
+	950	V(net@200##2)	voltage
+	951	V(net@201##0)	voltage
+	952	V(net@201##1)	voltage
+	953	V(net@201##2)	voltage
+	954	V(net@202##0)	voltage
+	955	V(net@202##1)	voltage
+	956	V(net@202##2)	voltage
+	957	V(net@203##0)	voltage
+	958	V(net@203##1)	voltage
+	959	V(net@203##2)	voltage
+	960	V(net@204##0)	voltage
+	961	V(net@204##1)	voltage
+	962	V(net@204##2)	voltage
+	963	V(net@205##0)	voltage
+	964	V(net@205##1)	voltage
+	965	V(net@205##2)	voltage
+	966	V(net@206##0)	voltage
+	967	V(net@206##1)	voltage
+	968	V(net@206##2)	voltage
+	969	V(net@207##0)	voltage
+	970	V(net@207##1)	voltage
+	971	V(net@207##2)	voltage
+	972	V(net@208##0)	voltage
+	973	V(net@208##1)	voltage
+	974	V(net@208##2)	voltage
+	975	V(net@209##0)	voltage
+	976	V(net@209##1)	voltage
+	977	V(net@209##2)	voltage
+	978	V(net@210##0)	voltage
+	979	V(net@210##1)	voltage
+	980	V(net@210##2)	voltage
+	981	V(net@211##0)	voltage
+	982	V(net@211##1)	voltage
+	983	V(net@211##2)	voltage
+	984	V(net@212##0)	voltage
+	985	V(net@212##1)	voltage
+	986	V(net@212##2)	voltage
+	987	V(net@213##0)	voltage
+	988	V(net@213##1)	voltage
+	989	V(net@213##2)	voltage
+	990	V(net@214##0)	voltage
+	991	V(net@214##1)	voltage
+	992	V(net@214##2)	voltage
+	993	V(net@215##0)	voltage
+	994	V(net@215##1)	voltage
+	995	V(net@215##2)	voltage
+	996	V(net@216##0)	voltage
+	997	V(net@216##1)	voltage
+	998	V(net@216##2)	voltage
+	999	V(net@217##0)	voltage
+	1000	V(net@217##1)	voltage
+	1001	V(net@217##2)	voltage
+	1002	V(net@218##0)	voltage
+	1003	V(net@218##1)	voltage
+	1004	V(net@218##2)	voltage
+	1005	V(net@219##0)	voltage
+	1006	V(net@219##1)	voltage
+	1007	V(net@219##2)	voltage
+	1008	V(net@220##0)	voltage
+	1009	V(net@220##1)	voltage
+	1010	V(net@220##2)	voltage
+	1011	V(net@221##0)	voltage
+	1012	V(net@221##1)	voltage
+	1013	V(net@221##2)	voltage
+	1014	V(o1#0matrix_1@2_out_31##0)	voltage
+	1015	V(o1#0matrix_1@2_out_31##1)	voltage
+	1016	V(o1#0matrix_1@2_out_31##2)	voltage
+	1017	V(net@223##0)	voltage
+	1018	V(net@223##1)	voltage
+	1019	V(net@223##2)	voltage
+	1020	V(net@224##0)	voltage
+	1021	V(net@224##1)	voltage
+	1022	V(net@224##2)	voltage
+	1023	V(net@225##0)	voltage
+	1024	V(net@225##1)	voltage
+	1025	V(net@225##2)	voltage
+	1026	V(net@226##0)	voltage
+	1027	V(net@226##1)	voltage
+	1028	V(net@226##2)	voltage
+	1029	V(net@227##0)	voltage
+	1030	V(net@227##1)	voltage
+	1031	V(net@227##2)	voltage
+	1032	V(net@228##0)	voltage
+	1033	V(net@228##1)	voltage
+	1034	V(net@228##2)	voltage
+	1035	V(net@229##0)	voltage
+	1036	V(net@229##1)	voltage
+	1037	V(net@229##2)	voltage
+	1038	V(net@230##0)	voltage
+	1039	V(net@230##1)	voltage
+	1040	V(net@230##2)	voltage
+	1041	V(net@231##0)	voltage
+	1042	V(net@231##1)	voltage
+	1043	V(net@231##2)	voltage
+	1044	V(net@232##0)	voltage
+	1045	V(net@232##1)	voltage
+	1046	V(net@232##2)	voltage
+	1047	V(net@233##0)	voltage
+	1048	V(net@233##1)	voltage
+	1049	V(net@233##2)	voltage
+	1050	V(net@234##0)	voltage
+	1051	V(net@234##1)	voltage
+	1052	V(net@234##2)	voltage
+	1053	V(net@235##0)	voltage
+	1054	V(net@235##1)	voltage
+	1055	V(net@235##2)	voltage
+	1056	V(net@236##0)	voltage
+	1057	V(net@236##1)	voltage
+	1058	V(net@236##2)	voltage
+	1059	V(net@237##0)	voltage
+	1060	V(net@237##1)	voltage
+	1061	V(net@237##2)	voltage
+	1062	V(net@238##0)	voltage
+	1063	V(net@238##1)	voltage
+	1064	V(net@238##2)	voltage
+	1065	V(net@239##0)	voltage
+	1066	V(net@239##1)	voltage
+	1067	V(net@239##2)	voltage
+	1068	V(net@240##0)	voltage
+	1069	V(net@240##1)	voltage
+	1070	V(net@240##2)	voltage
+	1071	V(net@241##0)	voltage
+	1072	V(net@241##1)	voltage
+	1073	V(net@241##2)	voltage
+	1074	V(net@242##0)	voltage
+	1075	V(net@242##1)	voltage
+	1076	V(net@242##2)	voltage
+	1077	V(net@243##0)	voltage
+	1078	V(net@243##1)	voltage
+	1079	V(net@243##2)	voltage
+	1080	V(net@244##0)	voltage
+	1081	V(net@244##1)	voltage
+	1082	V(net@244##2)	voltage
+	1083	V(net@245##0)	voltage
+	1084	V(net@245##1)	voltage
+	1085	V(net@245##2)	voltage
+	1086	V(net@246##0)	voltage
+	1087	V(net@246##1)	voltage
+	1088	V(net@246##2)	voltage
+	1089	V(net@247##0)	voltage
+	1090	V(net@247##1)	voltage
+	1091	V(net@247##2)	voltage
+	1092	V(net@248##0)	voltage
+	1093	V(net@248##1)	voltage
+	1094	V(net@248##2)	voltage
+	1095	V(net@249##0)	voltage
+	1096	V(net@249##1)	voltage
+	1097	V(net@249##2)	voltage
+	1098	V(net@250##0)	voltage
+	1099	V(net@250##1)	voltage
+	1100	V(net@250##2)	voltage
+	1101	V(net@251##0)	voltage
+	1102	V(net@251##1)	voltage
+	1103	V(net@251##2)	voltage
+	1104	V(net@252##0)	voltage
+	1105	V(net@252##1)	voltage
+	1106	V(net@252##2)	voltage
+	1107	V(net@253##0)	voltage
+	1108	V(net@253##1)	voltage
+	1109	V(net@253##2)	voltage
+	1110	V(net@254##0)	voltage
+	1111	V(net@254##1)	voltage
+	1112	V(net@254##2)	voltage
+	1113	I(C1100)	device_current
+	1114	I(C1099)	device_current
+	1115	I(C1098)	device_current
+	1116	I(C1097)	device_current
+	1117	I(C1096)	device_current
+	1118	I(C1095)	device_current
+	1119	I(C1094)	device_current
+	1120	I(C1093)	device_current
+	1121	I(C1092)	device_current
+	1122	I(C1091)	device_current
+	1123	I(C1090)	device_current
+	1124	I(C1089)	device_current
+	1125	I(C1088)	device_current
+	1126	I(C1087)	device_current
+	1127	I(C1086)	device_current
+	1128	I(C1085)	device_current
+	1129	I(C1084)	device_current
+	1130	I(C1083)	device_current
+	1131	I(C1082)	device_current
+	1132	I(C1081)	device_current
+	1133	I(C1080)	device_current
+	1134	I(C1079)	device_current
+	1135	I(C1078)	device_current
+	1136	I(C1077)	device_current
+	1137	I(C1076)	device_current
+	1138	I(C1075)	device_current
+	1139	I(C1074)	device_current
+	1140	I(C1073)	device_current
+	1141	I(C1072)	device_current
+	1142	I(C1071)	device_current
+	1143	I(C1070)	device_current
+	1144	I(C1069)	device_current
+	1145	I(C1068)	device_current
+	1146	I(C1067)	device_current
+	1147	I(C1066)	device_current
+	1148	I(C1065)	device_current
+	1149	I(C1064)	device_current
+	1150	I(C1063)	device_current
+	1151	I(C1062)	device_current
+	1152	I(C1061)	device_current
+	1153	I(C1060)	device_current
+	1154	I(C1059)	device_current
+	1155	I(C1058)	device_current
+	1156	I(C1057)	device_current
+	1157	I(C1056)	device_current
+	1158	I(C1055)	device_current
+	1159	I(C1054)	device_current
+	1160	I(C1053)	device_current
+	1161	I(C1052)	device_current
+	1162	I(C1051)	device_current
+	1163	I(C1050)	device_current
+	1164	I(C1049)	device_current
+	1165	I(C1048)	device_current
+	1166	I(C1047)	device_current
+	1167	I(C1046)	device_current
+	1168	I(C1045)	device_current
+	1169	I(C1044)	device_current
+	1170	I(C1043)	device_current
+	1171	I(C1042)	device_current
+	1172	I(C1041)	device_current
+	1173	I(C1040)	device_current
+	1174	I(C1039)	device_current
+	1175	I(C1038)	device_current
+	1176	I(C1037)	device_current
+	1177	I(C1036)	device_current
+	1178	I(C1035)	device_current
+	1179	I(C1034)	device_current
+	1180	I(C1033)	device_current
+	1181	I(C1032)	device_current
+	1182	I(C1031)	device_current
+	1183	I(C1030)	device_current
+	1184	I(C1029)	device_current
+	1185	I(C1028)	device_current
+	1186	I(C1027)	device_current
+	1187	I(C1026)	device_current
+	1188	I(C1025)	device_current
+	1189	I(C1024)	device_current
+	1190	I(C1023)	device_current
+	1191	I(C1022)	device_current
+	1192	I(C1021)	device_current
+	1193	I(C1020)	device_current
+	1194	I(C1019)	device_current
+	1195	I(C1018)	device_current
+	1196	I(C1017)	device_current
+	1197	I(C1016)	device_current
+	1198	I(C1015)	device_current
+	1199	I(C1014)	device_current
+	1200	I(C1013)	device_current
+	1201	I(C1012)	device_current
+	1202	I(C1011)	device_current
+	1203	I(C1010)	device_current
+	1204	I(C1009)	device_current
+	1205	I(C1008)	device_current
+	1206	I(C1007)	device_current
+	1207	I(C1006)	device_current
+	1208	I(C1005)	device_current
+	1209	I(C1004)	device_current
+	1210	I(C1003)	device_current
+	1211	I(C1002)	device_current
+	1212	I(C1001)	device_current
+	1213	I(C1000)	device_current
+	1214	I(C999)	device_current
+	1215	I(C998)	device_current
+	1216	I(C997)	device_current
+	1217	I(C996)	device_current
+	1218	I(C995)	device_current
+	1219	I(C994)	device_current
+	1220	I(C993)	device_current
+	1221	I(C992)	device_current
+	1222	I(C991)	device_current
+	1223	I(C990)	device_current
+	1224	I(C989)	device_current
+	1225	I(C988)	device_current
+	1226	I(C987)	device_current
+	1227	I(C986)	device_current
+	1228	I(C985)	device_current
+	1229	I(C984)	device_current
+	1230	I(C983)	device_current
+	1231	I(C982)	device_current
+	1232	I(C981)	device_current
+	1233	I(C980)	device_current
+	1234	I(C979)	device_current
+	1235	I(C978)	device_current
+	1236	I(C977)	device_current
+	1237	I(C976)	device_current
+	1238	I(C975)	device_current
+	1239	I(C974)	device_current
+	1240	I(C973)	device_current
+	1241	I(C972)	device_current
+	1242	I(C971)	device_current
+	1243	I(C970)	device_current
+	1244	I(C969)	device_current
+	1245	I(C968)	device_current
+	1246	I(C967)	device_current
+	1247	I(C966)	device_current
+	1248	I(C965)	device_current
+	1249	I(C964)	device_current
+	1250	I(C963)	device_current
+	1251	I(C962)	device_current
+	1252	I(C961)	device_current
+	1253	I(C960)	device_current
+	1254	I(C959)	device_current
+	1255	I(C958)	device_current
+	1256	I(C957)	device_current
+	1257	I(C956)	device_current
+	1258	I(C955)	device_current
+	1259	I(C954)	device_current
+	1260	I(C953)	device_current
+	1261	I(C952)	device_current
+	1262	I(C951)	device_current
+	1263	I(C950)	device_current
+	1264	I(C949)	device_current
+	1265	I(C948)	device_current
+	1266	I(C947)	device_current
+	1267	I(C946)	device_current
+	1268	I(C945)	device_current
+	1269	I(C944)	device_current
+	1270	I(C943)	device_current
+	1271	I(C942)	device_current
+	1272	I(C941)	device_current
+	1273	I(C940)	device_current
+	1274	I(C939)	device_current
+	1275	I(C938)	device_current
+	1276	I(C937)	device_current
+	1277	I(C936)	device_current
+	1278	I(C935)	device_current
+	1279	I(C934)	device_current
+	1280	I(C933)	device_current
+	1281	I(C932)	device_current
+	1282	I(C931)	device_current
+	1283	I(C930)	device_current
+	1284	I(C929)	device_current
+	1285	I(C928)	device_current
+	1286	I(C927)	device_current
+	1287	I(C926)	device_current
+	1288	I(C925)	device_current
+	1289	I(C924)	device_current
+	1290	I(C923)	device_current
+	1291	I(C922)	device_current
+	1292	I(C921)	device_current
+	1293	I(C920)	device_current
+	1294	I(C919)	device_current
+	1295	I(C918)	device_current
+	1296	I(C917)	device_current
+	1297	I(C916)	device_current
+	1298	I(C915)	device_current
+	1299	I(C914)	device_current
+	1300	I(C913)	device_current
+	1301	I(C912)	device_current
+	1302	I(C911)	device_current
+	1303	I(C910)	device_current
+	1304	I(C909)	device_current
+	1305	I(C908)	device_current
+	1306	I(C907)	device_current
+	1307	I(C906)	device_current
+	1308	I(C905)	device_current
+	1309	I(C904)	device_current
+	1310	I(C903)	device_current
+	1311	I(C902)	device_current
+	1312	I(C901)	device_current
+	1313	I(C900)	device_current
+	1314	I(C899)	device_current
+	1315	I(C898)	device_current
+	1316	I(C897)	device_current
+	1317	I(C896)	device_current
+	1318	I(C895)	device_current
+	1319	I(C894)	device_current
+	1320	I(C893)	device_current
+	1321	I(C892)	device_current
+	1322	I(C891)	device_current
+	1323	I(C890)	device_current
+	1324	I(C889)	device_current
+	1325	I(C888)	device_current
+	1326	I(C887)	device_current
+	1327	I(C886)	device_current
+	1328	I(C885)	device_current
+	1329	I(C884)	device_current
+	1330	I(C883)	device_current
+	1331	I(C882)	device_current
+	1332	I(C881)	device_current
+	1333	I(C880)	device_current
+	1334	I(C879)	device_current
+	1335	I(C878)	device_current
+	1336	I(C877)	device_current
+	1337	I(C876)	device_current
+	1338	I(C875)	device_current
+	1339	I(C874)	device_current
+	1340	I(C873)	device_current
+	1341	I(C872)	device_current
+	1342	I(C871)	device_current
+	1343	I(C870)	device_current
+	1344	I(C869)	device_current
+	1345	I(C868)	device_current
+	1346	I(C867)	device_current
+	1347	I(C866)	device_current
+	1348	I(C865)	device_current
+	1349	I(C864)	device_current
+	1350	I(C863)	device_current
+	1351	I(C862)	device_current
+	1352	I(C861)	device_current
+	1353	I(C860)	device_current
+	1354	I(C859)	device_current
+	1355	I(C858)	device_current
+	1356	I(C857)	device_current
+	1357	I(C856)	device_current
+	1358	I(C855)	device_current
+	1359	I(C854)	device_current
+	1360	I(C853)	device_current
+	1361	I(C852)	device_current
+	1362	I(C851)	device_current
+	1363	I(C850)	device_current
+	1364	I(C849)	device_current
+	1365	I(C848)	device_current
+	1366	I(C847)	device_current
+	1367	I(C846)	device_current
+	1368	I(C845)	device_current
+	1369	I(C844)	device_current
+	1370	I(C843)	device_current
+	1371	I(C842)	device_current
+	1372	I(C841)	device_current
+	1373	I(C840)	device_current
+	1374	I(C839)	device_current
+	1375	I(C838)	device_current
+	1376	I(C837)	device_current
+	1377	I(C836)	device_current
+	1378	I(C835)	device_current
+	1379	I(C834)	device_current
+	1380	I(C833)	device_current
+	1381	I(C832)	device_current
+	1382	I(C831)	device_current
+	1383	I(C830)	device_current
+	1384	I(C829)	device_current
+	1385	I(C828)	device_current
+	1386	I(C827)	device_current
+	1387	I(C826)	device_current
+	1388	I(C825)	device_current
+	1389	I(C824)	device_current
+	1390	I(C823)	device_current
+	1391	I(C822)	device_current
+	1392	I(C821)	device_current
+	1393	I(C820)	device_current
+	1394	I(C819)	device_current
+	1395	I(C818)	device_current
+	1396	I(C817)	device_current
+	1397	I(C816)	device_current
+	1398	I(C815)	device_current
+	1399	I(C814)	device_current
+	1400	I(C813)	device_current
+	1401	I(C812)	device_current
+	1402	I(C811)	device_current
+	1403	I(C810)	device_current
+	1404	I(C809)	device_current
+	1405	I(C808)	device_current
+	1406	I(C807)	device_current
+	1407	I(C806)	device_current
+	1408	I(C805)	device_current
+	1409	I(C804)	device_current
+	1410	I(C803)	device_current
+	1411	I(C802)	device_current
+	1412	I(C801)	device_current
+	1413	I(C800)	device_current
+	1414	I(C799)	device_current
+	1415	I(C798)	device_current
+	1416	I(C797)	device_current
+	1417	I(C796)	device_current
+	1418	I(C795)	device_current
+	1419	I(C794)	device_current
+	1420	I(C793)	device_current
+	1421	I(C792)	device_current
+	1422	I(C791)	device_current
+	1423	I(C790)	device_current
+	1424	I(C789)	device_current
+	1425	I(C788)	device_current
+	1426	I(C787)	device_current
+	1427	I(C786)	device_current
+	1428	I(C785)	device_current
+	1429	I(C784)	device_current
+	1430	I(C783)	device_current
+	1431	I(C782)	device_current
+	1432	I(C781)	device_current
+	1433	I(C780)	device_current
+	1434	I(C779)	device_current
+	1435	I(C778)	device_current
+	1436	I(C777)	device_current
+	1437	I(C776)	device_current
+	1438	I(C775)	device_current
+	1439	I(C774)	device_current
+	1440	I(C773)	device_current
+	1441	I(C772)	device_current
+	1442	I(C771)	device_current
+	1443	I(C770)	device_current
+	1444	I(C769)	device_current
+	1445	I(C768)	device_current
+	1446	I(C767)	device_current
+	1447	I(C766)	device_current
+	1448	I(C765)	device_current
+	1449	I(C764)	device_current
+	1450	I(C763)	device_current
+	1451	I(C762)	device_current
+	1452	I(C761)	device_current
+	1453	I(C760)	device_current
+	1454	I(C759)	device_current
+	1455	I(C758)	device_current
+	1456	I(C757)	device_current
+	1457	I(C756)	device_current
+	1458	I(C755)	device_current
+	1459	I(C754)	device_current
+	1460	I(C753)	device_current
+	1461	I(C752)	device_current
+	1462	I(C751)	device_current
+	1463	I(C750)	device_current
+	1464	I(C749)	device_current
+	1465	I(C748)	device_current
+	1466	I(C747)	device_current
+	1467	I(C746)	device_current
+	1468	I(C745)	device_current
+	1469	I(C744)	device_current
+	1470	I(C743)	device_current
+	1471	I(C742)	device_current
+	1472	I(C741)	device_current
+	1473	I(C740)	device_current
+	1474	I(C739)	device_current
+	1475	I(C738)	device_current
+	1476	I(C737)	device_current
+	1477	I(C736)	device_current
+	1478	I(C735)	device_current
+	1479	I(C734)	device_current
+	1480	I(C733)	device_current
+	1481	I(C732)	device_current
+	1482	I(C731)	device_current
+	1483	I(C730)	device_current
+	1484	I(C729)	device_current
+	1485	I(C728)	device_current
+	1486	I(C727)	device_current
+	1487	I(C726)	device_current
+	1488	I(C725)	device_current
+	1489	I(C724)	device_current
+	1490	I(C723)	device_current
+	1491	I(C722)	device_current
+	1492	I(C721)	device_current
+	1493	I(C720)	device_current
+	1494	I(C719)	device_current
+	1495	I(C718)	device_current
+	1496	I(C717)	device_current
+	1497	I(C716)	device_current
+	1498	I(C715)	device_current
+	1499	I(C714)	device_current
+	1500	I(C713)	device_current
+	1501	I(C712)	device_current
+	1502	I(C711)	device_current
+	1503	I(C710)	device_current
+	1504	I(C709)	device_current
+	1505	I(C708)	device_current
+	1506	I(C707)	device_current
+	1507	I(C706)	device_current
+	1508	I(C705)	device_current
+	1509	I(C704)	device_current
+	1510	I(C703)	device_current
+	1511	I(C702)	device_current
+	1512	I(C701)	device_current
+	1513	I(C700)	device_current
+	1514	I(C699)	device_current
+	1515	I(C698)	device_current
+	1516	I(C697)	device_current
+	1517	I(C696)	device_current
+	1518	I(C695)	device_current
+	1519	I(C694)	device_current
+	1520	I(C693)	device_current
+	1521	I(C692)	device_current
+	1522	I(C691)	device_current
+	1523	I(C690)	device_current
+	1524	I(C689)	device_current
+	1525	I(C688)	device_current
+	1526	I(C687)	device_current
+	1527	I(C686)	device_current
+	1528	I(C685)	device_current
+	1529	I(C684)	device_current
+	1530	I(C683)	device_current
+	1531	I(C682)	device_current
+	1532	I(C681)	device_current
+	1533	I(C680)	device_current
+	1534	I(C679)	device_current
+	1535	I(C678)	device_current
+	1536	I(C677)	device_current
+	1537	I(C676)	device_current
+	1538	I(C675)	device_current
+	1539	I(C674)	device_current
+	1540	I(C673)	device_current
+	1541	I(C672)	device_current
+	1542	I(C671)	device_current
+	1543	I(C670)	device_current
+	1544	I(C669)	device_current
+	1545	I(C668)	device_current
+	1546	I(C667)	device_current
+	1547	I(C666)	device_current
+	1548	I(C665)	device_current
+	1549	I(C664)	device_current
+	1550	I(C663)	device_current
+	1551	I(C662)	device_current
+	1552	I(C661)	device_current
+	1553	I(C660)	device_current
+	1554	I(C659)	device_current
+	1555	I(C658)	device_current
+	1556	I(C657)	device_current
+	1557	I(C656)	device_current
+	1558	I(C655)	device_current
+	1559	I(C654)	device_current
+	1560	I(C653)	device_current
+	1561	I(C652)	device_current
+	1562	I(C651)	device_current
+	1563	I(C650)	device_current
+	1564	I(C649)	device_current
+	1565	I(C648)	device_current
+	1566	I(C647)	device_current
+	1567	I(C646)	device_current
+	1568	I(C645)	device_current
+	1569	I(C644)	device_current
+	1570	I(C643)	device_current
+	1571	I(C642)	device_current
+	1572	I(C641)	device_current
+	1573	I(C640)	device_current
+	1574	I(C639)	device_current
+	1575	I(C638)	device_current
+	1576	I(C637)	device_current
+	1577	I(C636)	device_current
+	1578	I(C635)	device_current
+	1579	I(C634)	device_current
+	1580	I(C633)	device_current
+	1581	I(C632)	device_current
+	1582	I(C631)	device_current
+	1583	I(C630)	device_current
+	1584	I(C629)	device_current
+	1585	I(C628)	device_current
+	1586	I(C627)	device_current
+	1587	I(C626)	device_current
+	1588	I(C625)	device_current
+	1589	I(C624)	device_current
+	1590	I(C623)	device_current
+	1591	I(C622)	device_current
+	1592	I(C621)	device_current
+	1593	I(C620)	device_current
+	1594	I(C619)	device_current
+	1595	I(C618)	device_current
+	1596	I(C617)	device_current
+	1597	I(C616)	device_current
+	1598	I(C615)	device_current
+	1599	I(C614)	device_current
+	1600	I(C613)	device_current
+	1601	I(C612)	device_current
+	1602	I(C611)	device_current
+	1603	I(C610)	device_current
+	1604	I(C609)	device_current
+	1605	I(C608)	device_current
+	1606	I(C607)	device_current
+	1607	I(C606)	device_current
+	1608	I(C605)	device_current
+	1609	I(C604)	device_current
+	1610	I(C603)	device_current
+	1611	I(C602)	device_current
+	1612	I(C601)	device_current
+	1613	I(C600)	device_current
+	1614	I(C599)	device_current
+	1615	I(C598)	device_current
+	1616	I(C597)	device_current
+	1617	I(C596)	device_current
+	1618	I(C595)	device_current
+	1619	I(C594)	device_current
+	1620	I(C593)	device_current
+	1621	I(C592)	device_current
+	1622	I(C591)	device_current
+	1623	I(C590)	device_current
+	1624	I(C589)	device_current
+	1625	I(C588)	device_current
+	1626	I(C587)	device_current
+	1627	I(C586)	device_current
+	1628	I(C585)	device_current
+	1629	I(C584)	device_current
+	1630	I(C583)	device_current
+	1631	I(C582)	device_current
+	1632	I(C581)	device_current
+	1633	I(C580)	device_current
+	1634	I(C579)	device_current
+	1635	I(C578)	device_current
+	1636	I(C577)	device_current
+	1637	I(C576)	device_current
+	1638	I(C575)	device_current
+	1639	I(C574)	device_current
+	1640	I(C573)	device_current
+	1641	I(C572)	device_current
+	1642	I(C571)	device_current
+	1643	I(C570)	device_current
+	1644	I(C569)	device_current
+	1645	I(C568)	device_current
+	1646	I(C567)	device_current
+	1647	I(C566)	device_current
+	1648	I(C565)	device_current
+	1649	I(C564)	device_current
+	1650	I(C563)	device_current
+	1651	I(C562)	device_current
+	1652	I(C561)	device_current
+	1653	I(C560)	device_current
+	1654	I(C559)	device_current
+	1655	I(C558)	device_current
+	1656	I(C557)	device_current
+	1657	I(C556)	device_current
+	1658	I(C555)	device_current
+	1659	I(C554)	device_current
+	1660	I(C553)	device_current
+	1661	I(C552)	device_current
+	1662	I(C551)	device_current
+	1663	I(C550)	device_current
+	1664	I(C549)	device_current
+	1665	I(C548)	device_current
+	1666	I(C547)	device_current
+	1667	I(C546)	device_current
+	1668	I(C545)	device_current
+	1669	I(C544)	device_current
+	1670	I(C543)	device_current
+	1671	I(C542)	device_current
+	1672	I(C541)	device_current
+	1673	I(C540)	device_current
+	1674	I(C539)	device_current
+	1675	I(C538)	device_current
+	1676	I(C537)	device_current
+	1677	I(C536)	device_current
+	1678	I(C535)	device_current
+	1679	I(C534)	device_current
+	1680	I(C533)	device_current
+	1681	I(C532)	device_current
+	1682	I(C531)	device_current
+	1683	I(C530)	device_current
+	1684	I(C529)	device_current
+	1685	I(C528)	device_current
+	1686	I(C527)	device_current
+	1687	I(C526)	device_current
+	1688	I(C525)	device_current
+	1689	I(C524)	device_current
+	1690	I(C523)	device_current
+	1691	I(C522)	device_current
+	1692	I(C521)	device_current
+	1693	I(C520)	device_current
+	1694	I(C519)	device_current
+	1695	I(C518)	device_current
+	1696	I(C517)	device_current
+	1697	I(C516)	device_current
+	1698	I(C515)	device_current
+	1699	I(C514)	device_current
+	1700	I(C513)	device_current
+	1701	I(C512)	device_current
+	1702	I(C511)	device_current
+	1703	I(C510)	device_current
+	1704	I(C509)	device_current
+	1705	I(C508)	device_current
+	1706	I(C507)	device_current
+	1707	I(C506)	device_current
+	1708	I(C505)	device_current
+	1709	I(C504)	device_current
+	1710	I(C503)	device_current
+	1711	I(C502)	device_current
+	1712	I(C501)	device_current
+	1713	I(C500)	device_current
+	1714	I(C499)	device_current
+	1715	I(C498)	device_current
+	1716	I(C497)	device_current
+	1717	I(C496)	device_current
+	1718	I(C495)	device_current
+	1719	I(C494)	device_current
+	1720	I(C493)	device_current
+	1721	I(C492)	device_current
+	1722	I(C491)	device_current
+	1723	I(C490)	device_current
+	1724	I(C489)	device_current
+	1725	I(C488)	device_current
+	1726	I(C487)	device_current
+	1727	I(C486)	device_current
+	1728	I(C485)	device_current
+	1729	I(C484)	device_current
+	1730	I(C483)	device_current
+	1731	I(C482)	device_current
+	1732	I(C481)	device_current
+	1733	I(C480)	device_current
+	1734	I(C479)	device_current
+	1735	I(C478)	device_current
+	1736	I(C477)	device_current
+	1737	I(C476)	device_current
+	1738	I(C475)	device_current
+	1739	I(C474)	device_current
+	1740	I(C473)	device_current
+	1741	I(C472)	device_current
+	1742	I(C471)	device_current
+	1743	I(C470)	device_current
+	1744	I(C469)	device_current
+	1745	I(C468)	device_current
+	1746	I(C467)	device_current
+	1747	I(C466)	device_current
+	1748	I(C465)	device_current
+	1749	I(C464)	device_current
+	1750	I(C463)	device_current
+	1751	I(C462)	device_current
+	1752	I(C461)	device_current
+	1753	I(C460)	device_current
+	1754	I(C459)	device_current
+	1755	I(C458)	device_current
+	1756	I(C457)	device_current
+	1757	I(C456)	device_current
+	1758	I(C455)	device_current
+	1759	I(C454)	device_current
+	1760	I(C453)	device_current
+	1761	I(C452)	device_current
+	1762	I(C451)	device_current
+	1763	I(C450)	device_current
+	1764	I(C449)	device_current
+	1765	I(C448)	device_current
+	1766	I(C447)	device_current
+	1767	I(C446)	device_current
+	1768	I(C445)	device_current
+	1769	I(C444)	device_current
+	1770	I(C443)	device_current
+	1771	I(C442)	device_current
+	1772	I(C441)	device_current
+	1773	I(C440)	device_current
+	1774	I(C439)	device_current
+	1775	I(C438)	device_current
+	1776	I(C437)	device_current
+	1777	I(C436)	device_current
+	1778	I(C435)	device_current
+	1779	I(C434)	device_current
+	1780	I(C433)	device_current
+	1781	I(C432)	device_current
+	1782	I(C431)	device_current
+	1783	I(C430)	device_current
+	1784	I(C429)	device_current
+	1785	I(C428)	device_current
+	1786	I(C427)	device_current
+	1787	I(C426)	device_current
+	1788	I(C425)	device_current
+	1789	I(C424)	device_current
+	1790	I(C423)	device_current
+	1791	I(C422)	device_current
+	1792	I(C421)	device_current
+	1793	I(C420)	device_current
+	1794	I(C419)	device_current
+	1795	I(C418)	device_current
+	1796	I(C417)	device_current
+	1797	I(C416)	device_current
+	1798	I(C415)	device_current
+	1799	I(C414)	device_current
+	1800	I(C413)	device_current
+	1801	I(C412)	device_current
+	1802	I(C411)	device_current
+	1803	I(C410)	device_current
+	1804	I(C409)	device_current
+	1805	I(C408)	device_current
+	1806	I(C407)	device_current
+	1807	I(C406)	device_current
+	1808	I(C405)	device_current
+	1809	I(C404)	device_current
+	1810	I(C403)	device_current
+	1811	I(C402)	device_current
+	1812	I(C401)	device_current
+	1813	I(C400)	device_current
+	1814	I(C399)	device_current
+	1815	I(C398)	device_current
+	1816	I(C397)	device_current
+	1817	I(C396)	device_current
+	1818	I(C395)	device_current
+	1819	I(C394)	device_current
+	1820	I(C393)	device_current
+	1821	I(C392)	device_current
+	1822	I(C391)	device_current
+	1823	I(C390)	device_current
+	1824	I(C389)	device_current
+	1825	I(C388)	device_current
+	1826	I(C387)	device_current
+	1827	I(C386)	device_current
+	1828	I(C385)	device_current
+	1829	I(C384)	device_current
+	1830	I(C383)	device_current
+	1831	I(C382)	device_current
+	1832	I(C381)	device_current
+	1833	I(C380)	device_current
+	1834	I(C379)	device_current
+	1835	I(C378)	device_current
+	1836	I(C377)	device_current
+	1837	I(C376)	device_current
+	1838	I(C375)	device_current
+	1839	I(C374)	device_current
+	1840	I(C373)	device_current
+	1841	I(C372)	device_current
+	1842	I(C371)	device_current
+	1843	I(C370)	device_current
+	1844	I(C369)	device_current
+	1845	I(C368)	device_current
+	1846	I(C367)	device_current
+	1847	I(C366)	device_current
+	1848	I(C365)	device_current
+	1849	I(C364)	device_current
+	1850	I(C363)	device_current
+	1851	I(C362)	device_current
+	1852	I(C361)	device_current
+	1853	I(C360)	device_current
+	1854	I(C359)	device_current
+	1855	I(C358)	device_current
+	1856	I(C357)	device_current
+	1857	I(C356)	device_current
+	1858	I(C355)	device_current
+	1859	I(C354)	device_current
+	1860	I(C353)	device_current
+	1861	I(C352)	device_current
+	1862	I(C351)	device_current
+	1863	I(C350)	device_current
+	1864	I(C349)	device_current
+	1865	I(C348)	device_current
+	1866	I(C347)	device_current
+	1867	I(C346)	device_current
+	1868	I(C345)	device_current
+	1869	I(C344)	device_current
+	1870	I(C343)	device_current
+	1871	I(C342)	device_current
+	1872	I(C341)	device_current
+	1873	I(C340)	device_current
+	1874	I(C339)	device_current
+	1875	I(C338)	device_current
+	1876	I(C337)	device_current
+	1877	I(C336)	device_current
+	1878	I(C335)	device_current
+	1879	I(C334)	device_current
+	1880	I(C333)	device_current
+	1881	I(C332)	device_current
+	1882	I(C331)	device_current
+	1883	I(C330)	device_current
+	1884	I(C329)	device_current
+	1885	I(C328)	device_current
+	1886	I(C327)	device_current
+	1887	I(C326)	device_current
+	1888	I(C325)	device_current
+	1889	I(C324)	device_current
+	1890	I(C323)	device_current
+	1891	I(C322)	device_current
+	1892	I(C321)	device_current
+	1893	I(C320)	device_current
+	1894	I(C319)	device_current
+	1895	I(C318)	device_current
+	1896	I(C317)	device_current
+	1897	I(C316)	device_current
+	1898	I(C315)	device_current
+	1899	I(C314)	device_current
+	1900	I(C313)	device_current
+	1901	I(C312)	device_current
+	1902	I(C311)	device_current
+	1903	I(C310)	device_current
+	1904	I(C309)	device_current
+	1905	I(C308)	device_current
+	1906	I(C307)	device_current
+	1907	I(C306)	device_current
+	1908	I(C305)	device_current
+	1909	I(C304)	device_current
+	1910	I(C303)	device_current
+	1911	I(C302)	device_current
+	1912	I(C301)	device_current
+	1913	I(C300)	device_current
+	1914	I(C299)	device_current
+	1915	I(C298)	device_current
+	1916	I(C297)	device_current
+	1917	I(C296)	device_current
+	1918	I(C295)	device_current
+	1919	I(C294)	device_current
+	1920	I(C293)	device_current
+	1921	I(C292)	device_current
+	1922	I(C291)	device_current
+	1923	I(C290)	device_current
+	1924	I(C289)	device_current
+	1925	I(C288)	device_current
+	1926	I(C287)	device_current
+	1927	I(C286)	device_current
+	1928	I(C285)	device_current
+	1929	I(C284)	device_current
+	1930	I(C283)	device_current
+	1931	I(C282)	device_current
+	1932	I(C281)	device_current
+	1933	I(C280)	device_current
+	1934	I(C279)	device_current
+	1935	I(C278)	device_current
+	1936	I(C277)	device_current
+	1937	I(C276)	device_current
+	1938	I(C275)	device_current
+	1939	I(C274)	device_current
+	1940	I(C273)	device_current
+	1941	I(C272)	device_current
+	1942	I(C271)	device_current
+	1943	I(C270)	device_current
+	1944	I(C269)	device_current
+	1945	I(C268)	device_current
+	1946	I(C267)	device_current
+	1947	I(C266)	device_current
+	1948	I(C265)	device_current
+	1949	I(C264)	device_current
+	1950	I(C263)	device_current
+	1951	I(C262)	device_current
+	1952	I(C261)	device_current
+	1953	I(C260)	device_current
+	1954	I(C259)	device_current
+	1955	I(C258)	device_current
+	1956	I(C257)	device_current
+	1957	I(C256)	device_current
+	1958	I(C255)	device_current
+	1959	I(C254)	device_current
+	1960	I(C253)	device_current
+	1961	I(C252)	device_current
+	1962	I(C251)	device_current
+	1963	I(C250)	device_current
+	1964	I(C249)	device_current
+	1965	I(C248)	device_current
+	1966	I(C247)	device_current
+	1967	I(C246)	device_current
+	1968	I(C245)	device_current
+	1969	I(C244)	device_current
+	1970	I(C243)	device_current
+	1971	I(C242)	device_current
+	1972	I(C241)	device_current
+	1973	I(C240)	device_current
+	1974	I(C239)	device_current
+	1975	I(C238)	device_current
+	1976	I(C237)	device_current
+	1977	I(C236)	device_current
+	1978	I(C235)	device_current
+	1979	I(C234)	device_current
+	1980	I(C233)	device_current
+	1981	I(C232)	device_current
+	1982	I(C231)	device_current
+	1983	I(C230)	device_current
+	1984	I(C229)	device_current
+	1985	I(C228)	device_current
+	1986	I(C227)	device_current
+	1987	I(C226)	device_current
+	1988	I(C225)	device_current
+	1989	I(C224)	device_current
+	1990	I(C223)	device_current
+	1991	I(C222)	device_current
+	1992	I(C221)	device_current
+	1993	I(C220)	device_current
+	1994	I(C219)	device_current
+	1995	I(C218)	device_current
+	1996	I(C217)	device_current
+	1997	I(C216)	device_current
+	1998	I(C215)	device_current
+	1999	I(C214)	device_current
+	2000	I(C213)	device_current
+	2001	I(C212)	device_current
+	2002	I(C211)	device_current
+	2003	I(C210)	device_current
+	2004	I(C209)	device_current
+	2005	I(C208)	device_current
+	2006	I(C207)	device_current
+	2007	I(C206)	device_current
+	2008	I(C205)	device_current
+	2009	I(C204)	device_current
+	2010	I(C203)	device_current
+	2011	I(C202)	device_current
+	2012	I(C201)	device_current
+	2013	I(C200)	device_current
+	2014	I(C199)	device_current
+	2015	I(C198)	device_current
+	2016	I(C197)	device_current
+	2017	I(C196)	device_current
+	2018	I(C195)	device_current
+	2019	I(C194)	device_current
+	2020	I(C193)	device_current
+	2021	I(C192)	device_current
+	2022	I(C191)	device_current
+	2023	I(C190)	device_current
+	2024	I(C189)	device_current
+	2025	I(C188)	device_current
+	2026	I(C187)	device_current
+	2027	I(C186)	device_current
+	2028	I(C185)	device_current
+	2029	I(C184)	device_current
+	2030	I(C183)	device_current
+	2031	I(C182)	device_current
+	2032	I(C181)	device_current
+	2033	I(C180)	device_current
+	2034	I(C179)	device_current
+	2035	I(C178)	device_current
+	2036	I(C177)	device_current
+	2037	I(C176)	device_current
+	2038	I(C175)	device_current
+	2039	I(C174)	device_current
+	2040	I(C173)	device_current
+	2041	I(C172)	device_current
+	2042	I(C171)	device_current
+	2043	I(C170)	device_current
+	2044	I(C169)	device_current
+	2045	I(C168)	device_current
+	2046	I(C167)	device_current
+	2047	I(C166)	device_current
+	2048	I(C165)	device_current
+	2049	I(C164)	device_current
+	2050	I(C163)	device_current
+	2051	I(C162)	device_current
+	2052	I(C161)	device_current
+	2053	I(C160)	device_current
+	2054	I(C159)	device_current
+	2055	I(C158)	device_current
+	2056	I(C157)	device_current
+	2057	I(C156)	device_current
+	2058	I(C155)	device_current
+	2059	I(C154)	device_current
+	2060	I(C153)	device_current
+	2061	I(C152)	device_current
+	2062	I(C151)	device_current
+	2063	I(C150)	device_current
+	2064	I(C149)	device_current
+	2065	I(C148)	device_current
+	2066	I(C147)	device_current
+	2067	I(C146)	device_current
+	2068	I(C145)	device_current
+	2069	I(C144)	device_current
+	2070	I(C143)	device_current
+	2071	I(C142)	device_current
+	2072	I(C141)	device_current
+	2073	I(C140)	device_current
+	2074	I(C139)	device_current
+	2075	I(C138)	device_current
+	2076	I(C137)	device_current
+	2077	I(C136)	device_current
+	2078	I(C135)	device_current
+	2079	I(C134)	device_current
+	2080	I(C133)	device_current
+	2081	I(C132)	device_current
+	2082	I(C131)	device_current
+	2083	I(C130)	device_current
+	2084	I(C129)	device_current
+	2085	I(C128)	device_current
+	2086	I(C127)	device_current
+	2087	I(C126)	device_current
+	2088	I(C125)	device_current
+	2089	I(C124)	device_current
+	2090	I(C123)	device_current
+	2091	I(C122)	device_current
+	2092	I(C121)	device_current
+	2093	I(C120)	device_current
+	2094	I(C119)	device_current
+	2095	I(C118)	device_current
+	2096	I(C117)	device_current
+	2097	I(C116)	device_current
+	2098	I(C115)	device_current
+	2099	I(C114)	device_current
+	2100	I(C113)	device_current
+	2101	I(C112)	device_current
+	2102	I(C111)	device_current
+	2103	I(C110)	device_current
+	2104	I(C109)	device_current
+	2105	I(C108)	device_current
+	2106	I(C107)	device_current
+	2107	I(C106)	device_current
+	2108	I(C105)	device_current
+	2109	I(C104)	device_current
+	2110	I(C103)	device_current
+	2111	I(C102)	device_current
+	2112	I(C101)	device_current
+	2113	I(C100)	device_current
+	2114	I(C99)	device_current
+	2115	I(C98)	device_current
+	2116	I(C97)	device_current
+	2117	I(C96)	device_current
+	2118	I(C95)	device_current
+	2119	I(C94)	device_current
+	2120	I(C93)	device_current
+	2121	I(C92)	device_current
+	2122	I(C91)	device_current
+	2123	I(C90)	device_current
+	2124	I(C89)	device_current
+	2125	I(C88)	device_current
+	2126	I(C87)	device_current
+	2127	I(C86)	device_current
+	2128	I(C85)	device_current
+	2129	I(C84)	device_current
+	2130	I(C83)	device_current
+	2131	I(C82)	device_current
+	2132	I(C81)	device_current
+	2133	I(C80)	device_current
+	2134	I(C79)	device_current
+	2135	I(C78)	device_current
+	2136	I(C77)	device_current
+	2137	I(C76)	device_current
+	2138	I(C75)	device_current
+	2139	I(C74)	device_current
+	2140	I(C73)	device_current
+	2141	I(C72)	device_current
+	2142	I(C71)	device_current
+	2143	I(C70)	device_current
+	2144	I(C69)	device_current
+	2145	I(C68)	device_current
+	2146	I(C67)	device_current
+	2147	I(C66)	device_current
+	2148	I(C65)	device_current
+	2149	I(C64)	device_current
+	2150	I(C63)	device_current
+	2151	I(C62)	device_current
+	2152	I(C61)	device_current
+	2153	I(C60)	device_current
+	2154	I(C59)	device_current
+	2155	I(C58)	device_current
+	2156	I(C57)	device_current
+	2157	I(C56)	device_current
+	2158	I(C55)	device_current
+	2159	I(C54)	device_current
+	2160	I(C53)	device_current
+	2161	I(C52)	device_current
+	2162	I(C51)	device_current
+	2163	I(C50)	device_current
+	2164	I(C49)	device_current
+	2165	I(C48)	device_current
+	2166	I(C47)	device_current
+	2167	I(C46)	device_current
+	2168	I(C45)	device_current
+	2169	I(C44)	device_current
+	2170	I(C43)	device_current
+	2171	I(C42)	device_current
+	2172	I(C41)	device_current
+	2173	I(C40)	device_current
+	2174	I(C39)	device_current
+	2175	I(C38)	device_current
+	2176	I(C37)	device_current
+	2177	I(C36)	device_current
+	2178	I(C35)	device_current
+	2179	I(C34)	device_current
+	2180	I(C33)	device_current
+	2181	I(C32)	device_current
+	2182	I(C31)	device_current
+	2183	I(C30)	device_current
+	2184	I(C29)	device_current
+	2185	I(C28)	device_current
+	2186	I(C27)	device_current
+	2187	I(C26)	device_current
+	2188	I(C25)	device_current
+	2189	I(C24)	device_current
+	2190	I(C23)	device_current
+	2191	I(C22)	device_current
+	2192	I(C21)	device_current
+	2193	I(C20)	device_current
+	2194	I(C19)	device_current
+	2195	I(C18)	device_current
+	2196	I(C17)	device_current
+	2197	I(C16)	device_current
+	2198	I(C15)	device_current
+	2199	I(C14)	device_current
+	2200	I(C13)	device_current
+	2201	I(C12)	device_current
+	2202	I(C11)	device_current
+	2203	I(C10)	device_current
+	2204	I(C9)	device_current
+	2205	I(C8)	device_current
+	2206	I(C7)	device_current
+	2207	I(C6)	device_current
+	2208	I(C5)	device_current
+	2209	I(C4)	device_current
+	2210	I(C3)	device_current
+	2211	I(C2)	device_current
+	2212	I(C1)	device_current
+	2213	I(C0)	device_current
+	2214	I(D1)	device_current
+	2215	I(I1)	device_current
+	2216	I(R10000)	device_current
+	2217	I(R767)	device_current
+	2218	I(R766)	device_current
+	2219	I(R765)	device_current
+	2220	I(R764)	device_current
+	2221	I(R763)	device_current
+	2222	I(R762)	device_current
+	2223	I(R761)	device_current
+	2224	I(R760)	device_current
+	2225	I(R759)	device_current
+	2226	I(R758)	device_current
+	2227	I(R757)	device_current
+	2228	I(R756)	device_current
+	2229	I(R755)	device_current
+	2230	I(R754)	device_current
+	2231	I(R753)	device_current
+	2232	I(R752)	device_current
+	2233	I(R751)	device_current
+	2234	I(R750)	device_current
+	2235	I(R749)	device_current
+	2236	I(R748)	device_current
+	2237	I(R747)	device_current
+	2238	I(R746)	device_current
+	2239	I(R745)	device_current
+	2240	I(R744)	device_current
+	2241	I(R743)	device_current
+	2242	I(R742)	device_current
+	2243	I(R741)	device_current
+	2244	I(R740)	device_current
+	2245	I(R739)	device_current
+	2246	I(R738)	device_current
+	2247	I(R737)	device_current
+	2248	I(R736)	device_current
+	2249	I(R735)	device_current
+	2250	I(R734)	device_current
+	2251	I(R733)	device_current
+	2252	I(R732)	device_current
+	2253	I(R731)	device_current
+	2254	I(R730)	device_current
+	2255	I(R729)	device_current
+	2256	I(R728)	device_current
+	2257	I(R727)	device_current
+	2258	I(R726)	device_current
+	2259	I(R725)	device_current
+	2260	I(R724)	device_current
+	2261	I(R723)	device_current
+	2262	I(R722)	device_current
+	2263	I(R721)	device_current
+	2264	I(R720)	device_current
+	2265	I(R719)	device_current
+	2266	I(R718)	device_current
+	2267	I(R717)	device_current
+	2268	I(R716)	device_current
+	2269	I(R715)	device_current
+	2270	I(R714)	device_current
+	2271	I(R713)	device_current
+	2272	I(R712)	device_current
+	2273	I(R711)	device_current
+	2274	I(R710)	device_current
+	2275	I(R709)	device_current
+	2276	I(R708)	device_current
+	2277	I(R707)	device_current
+	2278	I(R706)	device_current
+	2279	I(R705)	device_current
+	2280	I(R704)	device_current
+	2281	I(R703)	device_current
+	2282	I(R702)	device_current
+	2283	I(R701)	device_current
+	2284	I(R700)	device_current
+	2285	I(R699)	device_current
+	2286	I(R698)	device_current
+	2287	I(R697)	device_current
+	2288	I(R696)	device_current
+	2289	I(R695)	device_current
+	2290	I(R694)	device_current
+	2291	I(R693)	device_current
+	2292	I(R692)	device_current
+	2293	I(R691)	device_current
+	2294	I(R690)	device_current
+	2295	I(R689)	device_current
+	2296	I(R688)	device_current
+	2297	I(R687)	device_current
+	2298	I(R686)	device_current
+	2299	I(R685)	device_current
+	2300	I(R684)	device_current
+	2301	I(R683)	device_current
+	2302	I(R682)	device_current
+	2303	I(R681)	device_current
+	2304	I(R680)	device_current
+	2305	I(R679)	device_current
+	2306	I(R678)	device_current
+	2307	I(R677)	device_current
+	2308	I(R676)	device_current
+	2309	I(R675)	device_current
+	2310	I(R674)	device_current
+	2311	I(R673)	device_current
+	2312	I(R672)	device_current
+	2313	I(R671)	device_current
+	2314	I(R670)	device_current
+	2315	I(R669)	device_current
+	2316	I(R668)	device_current
+	2317	I(R667)	device_current
+	2318	I(R666)	device_current
+	2319	I(R665)	device_current
+	2320	I(R664)	device_current
+	2321	I(R663)	device_current
+	2322	I(R662)	device_current
+	2323	I(R661)	device_current
+	2324	I(R660)	device_current
+	2325	I(R659)	device_current
+	2326	I(R658)	device_current
+	2327	I(R657)	device_current
+	2328	I(R656)	device_current
+	2329	I(R655)	device_current
+	2330	I(R654)	device_current
+	2331	I(R653)	device_current
+	2332	I(R652)	device_current
+	2333	I(R651)	device_current
+	2334	I(R650)	device_current
+	2335	I(R649)	device_current
+	2336	I(R648)	device_current
+	2337	I(R647)	device_current
+	2338	I(R646)	device_current
+	2339	I(R645)	device_current
+	2340	I(R644)	device_current
+	2341	I(R643)	device_current
+	2342	I(R642)	device_current
+	2343	I(R641)	device_current
+	2344	I(R640)	device_current
+	2345	I(R639)	device_current
+	2346	I(R638)	device_current
+	2347	I(R637)	device_current
+	2348	I(R636)	device_current
+	2349	I(R635)	device_current
+	2350	I(R634)	device_current
+	2351	I(R633)	device_current
+	2352	I(R632)	device_current
+	2353	I(R631)	device_current
+	2354	I(R630)	device_current
+	2355	I(R629)	device_current
+	2356	I(R628)	device_current
+	2357	I(R627)	device_current
+	2358	I(R626)	device_current
+	2359	I(R625)	device_current
+	2360	I(R624)	device_current
+	2361	I(R623)	device_current
+	2362	I(R622)	device_current
+	2363	I(R621)	device_current
+	2364	I(R620)	device_current
+	2365	I(R619)	device_current
+	2366	I(R618)	device_current
+	2367	I(R617)	device_current
+	2368	I(R616)	device_current
+	2369	I(R615)	device_current
+	2370	I(R614)	device_current
+	2371	I(R613)	device_current
+	2372	I(R612)	device_current
+	2373	I(R611)	device_current
+	2374	I(R610)	device_current
+	2375	I(R609)	device_current
+	2376	I(R608)	device_current
+	2377	I(R607)	device_current
+	2378	I(R606)	device_current
+	2379	I(R605)	device_current
+	2380	I(R604)	device_current
+	2381	I(R603)	device_current
+	2382	I(R602)	device_current
+	2383	I(R601)	device_current
+	2384	I(R600)	device_current
+	2385	I(R599)	device_current
+	2386	I(R598)	device_current
+	2387	I(R597)	device_current
+	2388	I(R596)	device_current
+	2389	I(R595)	device_current
+	2390	I(R594)	device_current
+	2391	I(R593)	device_current
+	2392	I(R592)	device_current
+	2393	I(R591)	device_current
+	2394	I(R590)	device_current
+	2395	I(R589)	device_current
+	2396	I(R588)	device_current
+	2397	I(R587)	device_current
+	2398	I(R586)	device_current
+	2399	I(R585)	device_current
+	2400	I(R584)	device_current
+	2401	I(R583)	device_current
+	2402	I(R582)	device_current
+	2403	I(R581)	device_current
+	2404	I(R580)	device_current
+	2405	I(R579)	device_current
+	2406	I(R578)	device_current
+	2407	I(R577)	device_current
+	2408	I(R576)	device_current
+	2409	I(R575)	device_current
+	2410	I(R574)	device_current
+	2411	I(R573)	device_current
+	2412	I(R572)	device_current
+	2413	I(R571)	device_current
+	2414	I(R570)	device_current
+	2415	I(R569)	device_current
+	2416	I(R568)	device_current
+	2417	I(R567)	device_current
+	2418	I(R566)	device_current
+	2419	I(R565)	device_current
+	2420	I(R564)	device_current
+	2421	I(R563)	device_current
+	2422	I(R562)	device_current
+	2423	I(R561)	device_current
+	2424	I(R560)	device_current
+	2425	I(R559)	device_current
+	2426	I(R558)	device_current
+	2427	I(R557)	device_current
+	2428	I(R556)	device_current
+	2429	I(R555)	device_current
+	2430	I(R554)	device_current
+	2431	I(R553)	device_current
+	2432	I(R552)	device_current
+	2433	I(R551)	device_current
+	2434	I(R550)	device_current
+	2435	I(R549)	device_current
+	2436	I(R548)	device_current
+	2437	I(R547)	device_current
+	2438	I(R546)	device_current
+	2439	I(R545)	device_current
+	2440	I(R544)	device_current
+	2441	I(R543)	device_current
+	2442	I(R542)	device_current
+	2443	I(R541)	device_current
+	2444	I(R540)	device_current
+	2445	I(R539)	device_current
+	2446	I(R538)	device_current
+	2447	I(R537)	device_current
+	2448	I(R536)	device_current
+	2449	I(R535)	device_current
+	2450	I(R534)	device_current
+	2451	I(R533)	device_current
+	2452	I(R532)	device_current
+	2453	I(R531)	device_current
+	2454	I(R530)	device_current
+	2455	I(R529)	device_current
+	2456	I(R528)	device_current
+	2457	I(R527)	device_current
+	2458	I(R526)	device_current
+	2459	I(R525)	device_current
+	2460	I(R524)	device_current
+	2461	I(R523)	device_current
+	2462	I(R522)	device_current
+	2463	I(R521)	device_current
+	2464	I(R520)	device_current
+	2465	I(R519)	device_current
+	2466	I(R518)	device_current
+	2467	I(R517)	device_current
+	2468	I(R516)	device_current
+	2469	I(R515)	device_current
+	2470	I(R514)	device_current
+	2471	I(R513)	device_current
+	2472	I(R512)	device_current
+	2473	I(R511)	device_current
+	2474	I(R510)	device_current
+	2475	I(R509)	device_current
+	2476	I(R508)	device_current
+	2477	I(R507)	device_current
+	2478	I(R506)	device_current
+	2479	I(R505)	device_current
+	2480	I(R504)	device_current
+	2481	I(R503)	device_current
+	2482	I(R502)	device_current
+	2483	I(R501)	device_current
+	2484	I(R500)	device_current
+	2485	I(R499)	device_current
+	2486	I(R498)	device_current
+	2487	I(R497)	device_current
+	2488	I(R496)	device_current
+	2489	I(R495)	device_current
+	2490	I(R494)	device_current
+	2491	I(R493)	device_current
+	2492	I(R492)	device_current
+	2493	I(R491)	device_current
+	2494	I(R490)	device_current
+	2495	I(R489)	device_current
+	2496	I(R488)	device_current
+	2497	I(R487)	device_current
+	2498	I(R486)	device_current
+	2499	I(R485)	device_current
+	2500	I(R484)	device_current
+	2501	I(R483)	device_current
+	2502	I(R482)	device_current
+	2503	I(R481)	device_current
+	2504	I(R480)	device_current
+	2505	I(R479)	device_current
+	2506	I(R478)	device_current
+	2507	I(R477)	device_current
+	2508	I(R476)	device_current
+	2509	I(R475)	device_current
+	2510	I(R474)	device_current
+	2511	I(R473)	device_current
+	2512	I(R472)	device_current
+	2513	I(R471)	device_current
+	2514	I(R470)	device_current
+	2515	I(R469)	device_current
+	2516	I(R468)	device_current
+	2517	I(R467)	device_current
+	2518	I(R466)	device_current
+	2519	I(R465)	device_current
+	2520	I(R464)	device_current
+	2521	I(R463)	device_current
+	2522	I(R462)	device_current
+	2523	I(R461)	device_current
+	2524	I(R460)	device_current
+	2525	I(R459)	device_current
+	2526	I(R458)	device_current
+	2527	I(R457)	device_current
+	2528	I(R456)	device_current
+	2529	I(R455)	device_current
+	2530	I(R454)	device_current
+	2531	I(R453)	device_current
+	2532	I(R452)	device_current
+	2533	I(R451)	device_current
+	2534	I(R450)	device_current
+	2535	I(R449)	device_current
+	2536	I(R448)	device_current
+	2537	I(R447)	device_current
+	2538	I(R446)	device_current
+	2539	I(R445)	device_current
+	2540	I(R444)	device_current
+	2541	I(R443)	device_current
+	2542	I(R442)	device_current
+	2543	I(R441)	device_current
+	2544	I(R440)	device_current
+	2545	I(R439)	device_current
+	2546	I(R438)	device_current
+	2547	I(R437)	device_current
+	2548	I(R436)	device_current
+	2549	I(R435)	device_current
+	2550	I(R434)	device_current
+	2551	I(R433)	device_current
+	2552	I(R432)	device_current
+	2553	I(R431)	device_current
+	2554	I(R430)	device_current
+	2555	I(R429)	device_current
+	2556	I(R428)	device_current
+	2557	I(R427)	device_current
+	2558	I(R426)	device_current
+	2559	I(R425)	device_current
+	2560	I(R424)	device_current
+	2561	I(R423)	device_current
+	2562	I(R422)	device_current
+	2563	I(R421)	device_current
+	2564	I(R420)	device_current
+	2565	I(R419)	device_current
+	2566	I(R418)	device_current
+	2567	I(R417)	device_current
+	2568	I(R416)	device_current
+	2569	I(R415)	device_current
+	2570	I(R414)	device_current
+	2571	I(R413)	device_current
+	2572	I(R412)	device_current
+	2573	I(R411)	device_current
+	2574	I(R410)	device_current
+	2575	I(R409)	device_current
+	2576	I(R408)	device_current
+	2577	I(R407)	device_current
+	2578	I(R406)	device_current
+	2579	I(R405)	device_current
+	2580	I(R404)	device_current
+	2581	I(R403)	device_current
+	2582	I(R402)	device_current
+	2583	I(R401)	device_current
+	2584	I(R400)	device_current
+	2585	I(R399)	device_current
+	2586	I(R398)	device_current
+	2587	I(R397)	device_current
+	2588	I(R396)	device_current
+	2589	I(R395)	device_current
+	2590	I(R394)	device_current
+	2591	I(R393)	device_current
+	2592	I(R392)	device_current
+	2593	I(R391)	device_current
+	2594	I(R390)	device_current
+	2595	I(R389)	device_current
+	2596	I(R388)	device_current
+	2597	I(R387)	device_current
+	2598	I(R386)	device_current
+	2599	I(R385)	device_current
+	2600	I(R384)	device_current
+	2601	I(R383)	device_current
+	2602	I(R382)	device_current
+	2603	I(R381)	device_current
+	2604	I(R380)	device_current
+	2605	I(R379)	device_current
+	2606	I(R378)	device_current
+	2607	I(R377)	device_current
+	2608	I(R376)	device_current
+	2609	I(R375)	device_current
+	2610	I(R374)	device_current
+	2611	I(R373)	device_current
+	2612	I(R372)	device_current
+	2613	I(R371)	device_current
+	2614	I(R370)	device_current
+	2615	I(R369)	device_current
+	2616	I(R368)	device_current
+	2617	I(R367)	device_current
+	2618	I(R366)	device_current
+	2619	I(R365)	device_current
+	2620	I(R364)	device_current
+	2621	I(R363)	device_current
+	2622	I(R362)	device_current
+	2623	I(R361)	device_current
+	2624	I(R360)	device_current
+	2625	I(R359)	device_current
+	2626	I(R358)	device_current
+	2627	I(R357)	device_current
+	2628	I(R356)	device_current
+	2629	I(R355)	device_current
+	2630	I(R354)	device_current
+	2631	I(R353)	device_current
+	2632	I(R352)	device_current
+	2633	I(R351)	device_current
+	2634	I(R350)	device_current
+	2635	I(R349)	device_current
+	2636	I(R348)	device_current
+	2637	I(R347)	device_current
+	2638	I(R346)	device_current
+	2639	I(R345)	device_current
+	2640	I(R344)	device_current
+	2641	I(R343)	device_current
+	2642	I(R342)	device_current
+	2643	I(R341)	device_current
+	2644	I(R340)	device_current
+	2645	I(R339)	device_current
+	2646	I(R338)	device_current
+	2647	I(R337)	device_current
+	2648	I(R336)	device_current
+	2649	I(R335)	device_current
+	2650	I(R334)	device_current
+	2651	I(R333)	device_current
+	2652	I(R332)	device_current
+	2653	I(R331)	device_current
+	2654	I(R330)	device_current
+	2655	I(R329)	device_current
+	2656	I(R328)	device_current
+	2657	I(R327)	device_current
+	2658	I(R326)	device_current
+	2659	I(R325)	device_current
+	2660	I(R324)	device_current
+	2661	I(R323)	device_current
+	2662	I(R322)	device_current
+	2663	I(R321)	device_current
+	2664	I(R320)	device_current
+	2665	I(R319)	device_current
+	2666	I(R318)	device_current
+	2667	I(R317)	device_current
+	2668	I(R316)	device_current
+	2669	I(R315)	device_current
+	2670	I(R314)	device_current
+	2671	I(R313)	device_current
+	2672	I(R312)	device_current
+	2673	I(R311)	device_current
+	2674	I(R310)	device_current
+	2675	I(R309)	device_current
+	2676	I(R308)	device_current
+	2677	I(R307)	device_current
+	2678	I(R306)	device_current
+	2679	I(R305)	device_current
+	2680	I(R304)	device_current
+	2681	I(R303)	device_current
+	2682	I(R302)	device_current
+	2683	I(R301)	device_current
+	2684	I(R300)	device_current
+	2685	I(R299)	device_current
+	2686	I(R298)	device_current
+	2687	I(R297)	device_current
+	2688	I(R296)	device_current
+	2689	I(R295)	device_current
+	2690	I(R294)	device_current
+	2691	I(R293)	device_current
+	2692	I(R292)	device_current
+	2693	I(R291)	device_current
+	2694	I(R290)	device_current
+	2695	I(R289)	device_current
+	2696	I(R288)	device_current
+	2697	I(R287)	device_current
+	2698	I(R286)	device_current
+	2699	I(R285)	device_current
+	2700	I(R284)	device_current
+	2701	I(R283)	device_current
+	2702	I(R282)	device_current
+	2703	I(R281)	device_current
+	2704	I(R280)	device_current
+	2705	I(R279)	device_current
+	2706	I(R278)	device_current
+	2707	I(R277)	device_current
+	2708	I(R276)	device_current
+	2709	I(R275)	device_current
+	2710	I(R274)	device_current
+	2711	I(R273)	device_current
+	2712	I(R272)	device_current
+	2713	I(R271)	device_current
+	2714	I(R270)	device_current
+	2715	I(R269)	device_current
+	2716	I(R268)	device_current
+	2717	I(R267)	device_current
+	2718	I(R266)	device_current
+	2719	I(R265)	device_current
+	2720	I(R264)	device_current
+	2721	I(R263)	device_current
+	2722	I(R262)	device_current
+	2723	I(R261)	device_current
+	2724	I(R260)	device_current
+	2725	I(R259)	device_current
+	2726	I(R258)	device_current
+	2727	I(R257)	device_current
+	2728	I(R256)	device_current
+	2729	I(R255)	device_current
+	2730	I(R254)	device_current
+	2731	I(R253)	device_current
+	2732	I(R252)	device_current
+	2733	I(R251)	device_current
+	2734	I(R250)	device_current
+	2735	I(R249)	device_current
+	2736	I(R248)	device_current
+	2737	I(R247)	device_current
+	2738	I(R246)	device_current
+	2739	I(R245)	device_current
+	2740	I(R244)	device_current
+	2741	I(R243)	device_current
+	2742	I(R242)	device_current
+	2743	I(R241)	device_current
+	2744	I(R240)	device_current
+	2745	I(R239)	device_current
+	2746	I(R238)	device_current
+	2747	I(R237)	device_current
+	2748	I(R236)	device_current
+	2749	I(R235)	device_current
+	2750	I(R234)	device_current
+	2751	I(R233)	device_current
+	2752	I(R232)	device_current
+	2753	I(R231)	device_current
+	2754	I(R230)	device_current
+	2755	I(R229)	device_current
+	2756	I(R228)	device_current
+	2757	I(R227)	device_current
+	2758	I(R226)	device_current
+	2759	I(R225)	device_current
+	2760	I(R224)	device_current
+	2761	I(R223)	device_current
+	2762	I(R222)	device_current
+	2763	I(R221)	device_current
+	2764	I(R220)	device_current
+	2765	I(R219)	device_current
+	2766	I(R218)	device_current
+	2767	I(R217)	device_current
+	2768	I(R216)	device_current
+	2769	I(R215)	device_current
+	2770	I(R214)	device_current
+	2771	I(R213)	device_current
+	2772	I(R212)	device_current
+	2773	I(R211)	device_current
+	2774	I(R210)	device_current
+	2775	I(R209)	device_current
+	2776	I(R208)	device_current
+	2777	I(R207)	device_current
+	2778	I(R206)	device_current
+	2779	I(R205)	device_current
+	2780	I(R204)	device_current
+	2781	I(R203)	device_current
+	2782	I(R202)	device_current
+	2783	I(R201)	device_current
+	2784	I(R200)	device_current
+	2785	I(R199)	device_current
+	2786	I(R198)	device_current
+	2787	I(R197)	device_current
+	2788	I(R196)	device_current
+	2789	I(R195)	device_current
+	2790	I(R194)	device_current
+	2791	I(R193)	device_current
+	2792	I(R192)	device_current
+	2793	I(R191)	device_current
+	2794	I(R190)	device_current
+	2795	I(R189)	device_current
+	2796	I(R188)	device_current
+	2797	I(R187)	device_current
+	2798	I(R186)	device_current
+	2799	I(R185)	device_current
+	2800	I(R184)	device_current
+	2801	I(R183)	device_current
+	2802	I(R182)	device_current
+	2803	I(R181)	device_current
+	2804	I(R180)	device_current
+	2805	I(R179)	device_current
+	2806	I(R178)	device_current
+	2807	I(R177)	device_current
+	2808	I(R176)	device_current
+	2809	I(R175)	device_current
+	2810	I(R174)	device_current
+	2811	I(R173)	device_current
+	2812	I(R172)	device_current
+	2813	I(R171)	device_current
+	2814	I(R170)	device_current
+	2815	I(R169)	device_current
+	2816	I(R168)	device_current
+	2817	I(R167)	device_current
+	2818	I(R166)	device_current
+	2819	I(R165)	device_current
+	2820	I(R164)	device_current
+	2821	I(R163)	device_current
+	2822	I(R162)	device_current
+	2823	I(R161)	device_current
+	2824	I(R160)	device_current
+	2825	I(R159)	device_current
+	2826	I(R158)	device_current
+	2827	I(R157)	device_current
+	2828	I(R156)	device_current
+	2829	I(R155)	device_current
+	2830	I(R154)	device_current
+	2831	I(R153)	device_current
+	2832	I(R152)	device_current
+	2833	I(R151)	device_current
+	2834	I(R150)	device_current
+	2835	I(R149)	device_current
+	2836	I(R148)	device_current
+	2837	I(R147)	device_current
+	2838	I(R146)	device_current
+	2839	I(R145)	device_current
+	2840	I(R144)	device_current
+	2841	I(R143)	device_current
+	2842	I(R142)	device_current
+	2843	I(R141)	device_current
+	2844	I(R140)	device_current
+	2845	I(R139)	device_current
+	2846	I(R138)	device_current
+	2847	I(R137)	device_current
+	2848	I(R136)	device_current
+	2849	I(R135)	device_current
+	2850	I(R134)	device_current
+	2851	I(R133)	device_current
+	2852	I(R132)	device_current
+	2853	I(R131)	device_current
+	2854	I(R130)	device_current
+	2855	I(R129)	device_current
+	2856	I(R128)	device_current
+	2857	I(R127)	device_current
+	2858	I(R126)	device_current
+	2859	I(R125)	device_current
+	2860	I(R124)	device_current
+	2861	I(R123)	device_current
+	2862	I(R122)	device_current
+	2863	I(R121)	device_current
+	2864	I(R120)	device_current
+	2865	I(R119)	device_current
+	2866	I(R118)	device_current
+	2867	I(R117)	device_current
+	2868	I(R116)	device_current
+	2869	I(R115)	device_current
+	2870	I(R114)	device_current
+	2871	I(R113)	device_current
+	2872	I(R112)	device_current
+	2873	I(R111)	device_current
+	2874	I(R110)	device_current
+	2875	I(R109)	device_current
+	2876	I(R108)	device_current
+	2877	I(R107)	device_current
+	2878	I(R106)	device_current
+	2879	I(R105)	device_current
+	2880	I(R104)	device_current
+	2881	I(R103)	device_current
+	2882	I(R102)	device_current
+	2883	I(R101)	device_current
+	2884	I(R100)	device_current
+	2885	I(R99)	device_current
+	2886	I(R98)	device_current
+	2887	I(R97)	device_current
+	2888	I(R96)	device_current
+	2889	I(R95)	device_current
+	2890	I(R94)	device_current
+	2891	I(R93)	device_current
+	2892	I(R92)	device_current
+	2893	I(R91)	device_current
+	2894	I(R90)	device_current
+	2895	I(R89)	device_current
+	2896	I(R88)	device_current
+	2897	I(R87)	device_current
+	2898	I(R86)	device_current
+	2899	I(R85)	device_current
+	2900	I(R84)	device_current
+	2901	I(R83)	device_current
+	2902	I(R82)	device_current
+	2903	I(R81)	device_current
+	2904	I(R80)	device_current
+	2905	I(R79)	device_current
+	2906	I(R78)	device_current
+	2907	I(R77)	device_current
+	2908	I(R76)	device_current
+	2909	I(R75)	device_current
+	2910	I(R74)	device_current
+	2911	I(R73)	device_current
+	2912	I(R72)	device_current
+	2913	I(R71)	device_current
+	2914	I(R70)	device_current
+	2915	I(R69)	device_current
+	2916	I(R68)	device_current
+	2917	I(R67)	device_current
+	2918	I(R66)	device_current
+	2919	I(R65)	device_current
+	2920	I(R64)	device_current
+	2921	I(R63)	device_current
+	2922	I(R62)	device_current
+	2923	I(R61)	device_current
+	2924	I(R60)	device_current
+	2925	I(R59)	device_current
+	2926	I(R58)	device_current
+	2927	I(R57)	device_current
+	2928	I(R56)	device_current
+	2929	I(R55)	device_current
+	2930	I(R54)	device_current
+	2931	I(R53)	device_current
+	2932	I(R52)	device_current
+	2933	I(R51)	device_current
+	2934	I(R50)	device_current
+	2935	I(R49)	device_current
+	2936	I(R48)	device_current
+	2937	I(R47)	device_current
+	2938	I(R46)	device_current
+	2939	I(R45)	device_current
+	2940	I(R44)	device_current
+	2941	I(R43)	device_current
+	2942	I(R42)	device_current
+	2943	I(R41)	device_current
+	2944	I(R40)	device_current
+	2945	I(R39)	device_current
+	2946	I(R38)	device_current
+	2947	I(R37)	device_current
+	2948	I(R36)	device_current
+	2949	I(R35)	device_current
+	2950	I(R34)	device_current
+	2951	I(R33)	device_current
+	2952	I(R32)	device_current
+	2953	I(R31)	device_current
+	2954	I(R30)	device_current
+	2955	I(R29)	device_current
+	2956	I(R28)	device_current
+	2957	I(R27)	device_current
+	2958	I(R26)	device_current
+	2959	I(R25)	device_current
+	2960	I(R24)	device_current
+	2961	I(R23)	device_current
+	2962	I(R22)	device_current
+	2963	I(R21)	device_current
+	2964	I(R20)	device_current
+	2965	I(R19)	device_current
+	2966	I(R18)	device_current
+	2967	I(R17)	device_current
+	2968	I(R16)	device_current
+	2969	I(R15)	device_current
+	2970	I(R14)	device_current
+	2971	I(R13)	device_current
+	2972	I(R12)	device_current
+	2973	I(R11)	device_current
+	2974	I(R10)	device_current
+	2975	I(R9)	device_current
+	2976	I(R8)	device_current
+	2977	I(R7)	device_current
+	2978	I(R6)	device_current
+	2979	I(R5)	device_current
+	2980	I(R4)	device_current
+	2981	I(R3)	device_current
+	2982	I(R2)	device_current
+	2983	I(R1)	device_current
+	2984	I(R0)	device_current
+	2985	I(V16)	device_current
+	2986	I(V15)	device_current
+	2987	I(V14)	device_current
+	2988	I(V13)	device_current
+	2989	I(V12)	device_current
+	2990	I(V11)	device_current
+	2991	I(V10)	device_current
+	2992	I(V9)	device_current
+	2993	I(V8)	device_current
+	2994	I(V7)	device_current
+	2995	I(V6)	device_current
+	2996	I(V5)	device_current
+	2997	I(V4)	device_current
+	2998	I(V2)	device_current
+	2999	I(V1)	device_current
+	3000	Ix(matrix_1@0:FD)	subckt_current
+	3001	Ix(matrix_1@0:FD_1)	subckt_current
+	3002	Ix(matrix_1@0:GND)	subckt_current
+	3003	Ix(matrix_1@0:OUT_0)	subckt_current
+	3004	Ix(matrix_1@0:OUT_1)	subckt_current
+	3005	Ix(matrix_1@0:OUT_10)	subckt_current
+	3006	Ix(matrix_1@0:OUT_11)	subckt_current
+	3007	Ix(matrix_1@0:OUT_12)	subckt_current
+	3008	Ix(matrix_1@0:OUT_13)	subckt_current
+	3009	Ix(matrix_1@0:OUT_14)	subckt_current
+	3010	Ix(matrix_1@0:OUT_15)	subckt_current
+	3011	Ix(matrix_1@0:OUT_16)	subckt_current
+	3012	Ix(matrix_1@0:OUT_17)	subckt_current
+	3013	Ix(matrix_1@0:OUT_18)	subckt_current
+	3014	Ix(matrix_1@0:OUT_19)	subckt_current
+	3015	Ix(matrix_1@0:OUT_2)	subckt_current
+	3016	Ix(matrix_1@0:OUT_20)	subckt_current
+	3017	Ix(matrix_1@0:OUT_21)	subckt_current
+	3018	Ix(matrix_1@0:OUT_22)	subckt_current
+	3019	Ix(matrix_1@0:OUT_23)	subckt_current
+	3020	Ix(matrix_1@0:OUT_24)	subckt_current
+	3021	Ix(matrix_1@0:OUT_25)	subckt_current
+	3022	Ix(matrix_1@0:OUT_26)	subckt_current
+	3023	Ix(matrix_1@0:OUT_27)	subckt_current
+	3024	Ix(matrix_1@0:OUT_28)	subckt_current
+	3025	Ix(matrix_1@0:OUT_29)	subckt_current
+	3026	Ix(matrix_1@0:OUT_3)	subckt_current
+	3027	Ix(matrix_1@0:OUT_30)	subckt_current
+	3028	Ix(matrix_1@0:OUT_31)	subckt_current
+	3029	Ix(matrix_1@0:OUT_4)	subckt_current
+	3030	Ix(matrix_1@0:OUT_5)	subckt_current
+	3031	Ix(matrix_1@0:OUT_6)	subckt_current
+	3032	Ix(matrix_1@0:OUT_7)	subckt_current
+	3033	Ix(matrix_1@0:OUT_8)	subckt_current
+	3034	Ix(matrix_1@0:OUT_9)	subckt_current
+	3035	Ix(matrix_1@0:RESET_0)	subckt_current
+	3036	Ix(matrix_1@0:RESET_1)	subckt_current
+	3037	Ix(matrix_1@0:RESET_10)	subckt_current
+	3038	Ix(matrix_1@0:RESET_11)	subckt_current
+	3039	Ix(matrix_1@0:RESET_12)	subckt_current
+	3040	Ix(matrix_1@0:RESET_13)	subckt_current
+	3041	Ix(matrix_1@0:RESET_14)	subckt_current
+	3042	Ix(matrix_1@0:RESET_15)	subckt_current
+	3043	Ix(matrix_1@0:RESET_16)	subckt_current
+	3044	Ix(matrix_1@0:RESET_17)	subckt_current
+	3045	Ix(matrix_1@0:RESET_18)	subckt_current
+	3046	Ix(matrix_1@0:RESET_19)	subckt_current
+	3047	Ix(matrix_1@0:RESET_2)	subckt_current
+	3048	Ix(matrix_1@0:RESET_20)	subckt_current
+	3049	Ix(matrix_1@0:RESET_21)	subckt_current
+	3050	Ix(matrix_1@0:RESET_22)	subckt_current
+	3051	Ix(matrix_1@0:RESET_23)	subckt_current
+	3052	Ix(matrix_1@0:RESET_24)	subckt_current
+	3053	Ix(matrix_1@0:RESET_25)	subckt_current
+	3054	Ix(matrix_1@0:RESET_26)	subckt_current
+	3055	Ix(matrix_1@0:RESET_27)	subckt_current
+	3056	Ix(matrix_1@0:RESET_28)	subckt_current
+	3057	Ix(matrix_1@0:RESET_29)	subckt_current
+	3058	Ix(matrix_1@0:RESET_3)	subckt_current
+	3059	Ix(matrix_1@0:RESET_30)	subckt_current
+	3060	Ix(matrix_1@0:RESET_31)	subckt_current
+	3061	Ix(matrix_1@0:RESET_4)	subckt_current
+	3062	Ix(matrix_1@0:RESET_5)	subckt_current
+	3063	Ix(matrix_1@0:RESET_6)	subckt_current
+	3064	Ix(matrix_1@0:RESET_7)	subckt_current
+	3065	Ix(matrix_1@0:RESET_8)	subckt_current
+	3066	Ix(matrix_1@0:RESET_9)	subckt_current
+	3067	Ix(matrix_1@0:SELECT_0)	subckt_current
+	3068	Ix(matrix_1@0:SELECT_1)	subckt_current
+	3069	Ix(matrix_1@0:SELECT_10)	subckt_current
+	3070	Ix(matrix_1@0:SELECT_11)	subckt_current
+	3071	Ix(matrix_1@0:SELECT_12)	subckt_current
+	3072	Ix(matrix_1@0:SELECT_13)	subckt_current
+	3073	Ix(matrix_1@0:SELECT_14)	subckt_current
+	3074	Ix(matrix_1@0:SELECT_15)	subckt_current
+	3075	Ix(matrix_1@0:SELECT_16)	subckt_current
+	3076	Ix(matrix_1@0:SELECT_17)	subckt_current
+	3077	Ix(matrix_1@0:SELECT_18)	subckt_current
+	3078	Ix(matrix_1@0:SELECT_19)	subckt_current
+	3079	Ix(matrix_1@0:SELECT_2)	subckt_current
+	3080	Ix(matrix_1@0:SELECT_20)	subckt_current
+	3081	Ix(matrix_1@0:SELECT_21)	subckt_current
+	3082	Ix(matrix_1@0:SELECT_22)	subckt_current
+	3083	Ix(matrix_1@0:SELECT_23)	subckt_current
+	3084	Ix(matrix_1@0:SELECT_24)	subckt_current
+	3085	Ix(matrix_1@0:SELECT_25)	subckt_current
+	3086	Ix(matrix_1@0:SELECT_26)	subckt_current
+	3087	Ix(matrix_1@0:SELECT_27)	subckt_current
+	3088	Ix(matrix_1@0:SELECT_28)	subckt_current
+	3089	Ix(matrix_1@0:SELECT_29)	subckt_current
+	3090	Ix(matrix_1@0:SELECT_3)	subckt_current
+	3091	Ix(matrix_1@0:SELECT_30)	subckt_current
+	3092	Ix(matrix_1@0:SELECT_31)	subckt_current
+	3093	Ix(matrix_1@0:SELECT_4)	subckt_current
+	3094	Ix(matrix_1@0:SELECT_5)	subckt_current
+	3095	Ix(matrix_1@0:SELECT_6)	subckt_current
+	3096	Ix(matrix_1@0:SELECT_7)	subckt_current
+	3097	Ix(matrix_1@0:SELECT_8)	subckt_current
+	3098	Ix(matrix_1@0:SELECT_9)	subckt_current
+	3099	Ix(matrix_1@0:VDD)	subckt_current
+	3100	Ix(matrix_1@0:VDD_RESET)	subckt_current
+	3101	Ix(matrix_1@1:FD)	subckt_current
+	3102	Ix(matrix_1@1:FD_1)	subckt_current
+	3103	Ix(matrix_1@1:GND)	subckt_current
+	3104	Ix(matrix_1@1:OUT_0)	subckt_current
+	3105	Ix(matrix_1@1:OUT_1)	subckt_current
+	3106	Ix(matrix_1@1:OUT_10)	subckt_current
+	3107	Ix(matrix_1@1:OUT_11)	subckt_current
+	3108	Ix(matrix_1@1:OUT_12)	subckt_current
+	3109	Ix(matrix_1@1:OUT_13)	subckt_current
+	3110	Ix(matrix_1@1:OUT_14)	subckt_current
+	3111	Ix(matrix_1@1:OUT_15)	subckt_current
+	3112	Ix(matrix_1@1:OUT_16)	subckt_current
+	3113	Ix(matrix_1@1:OUT_17)	subckt_current
+	3114	Ix(matrix_1@1:OUT_18)	subckt_current
+	3115	Ix(matrix_1@1:OUT_19)	subckt_current
+	3116	Ix(matrix_1@1:OUT_2)	subckt_current
+	3117	Ix(matrix_1@1:OUT_20)	subckt_current
+	3118	Ix(matrix_1@1:OUT_21)	subckt_current
+	3119	Ix(matrix_1@1:OUT_22)	subckt_current
+	3120	Ix(matrix_1@1:OUT_23)	subckt_current
+	3121	Ix(matrix_1@1:OUT_24)	subckt_current
+	3122	Ix(matrix_1@1:OUT_25)	subckt_current
+	3123	Ix(matrix_1@1:OUT_26)	subckt_current
+	3124	Ix(matrix_1@1:OUT_27)	subckt_current
+	3125	Ix(matrix_1@1:OUT_28)	subckt_current
+	3126	Ix(matrix_1@1:OUT_29)	subckt_current
+	3127	Ix(matrix_1@1:OUT_3)	subckt_current
+	3128	Ix(matrix_1@1:OUT_30)	subckt_current
+	3129	Ix(matrix_1@1:OUT_31)	subckt_current
+	3130	Ix(matrix_1@1:OUT_4)	subckt_current
+	3131	Ix(matrix_1@1:OUT_5)	subckt_current
+	3132	Ix(matrix_1@1:OUT_6)	subckt_current
+	3133	Ix(matrix_1@1:OUT_7)	subckt_current
+	3134	Ix(matrix_1@1:OUT_8)	subckt_current
+	3135	Ix(matrix_1@1:OUT_9)	subckt_current
+	3136	Ix(matrix_1@1:RESET_0)	subckt_current
+	3137	Ix(matrix_1@1:RESET_1)	subckt_current
+	3138	Ix(matrix_1@1:RESET_10)	subckt_current
+	3139	Ix(matrix_1@1:RESET_11)	subckt_current
+	3140	Ix(matrix_1@1:RESET_12)	subckt_current
+	3141	Ix(matrix_1@1:RESET_13)	subckt_current
+	3142	Ix(matrix_1@1:RESET_14)	subckt_current
+	3143	Ix(matrix_1@1:RESET_15)	subckt_current
+	3144	Ix(matrix_1@1:RESET_16)	subckt_current
+	3145	Ix(matrix_1@1:RESET_17)	subckt_current
+	3146	Ix(matrix_1@1:RESET_18)	subckt_current
+	3147	Ix(matrix_1@1:RESET_19)	subckt_current
+	3148	Ix(matrix_1@1:RESET_2)	subckt_current
+	3149	Ix(matrix_1@1:RESET_20)	subckt_current
+	3150	Ix(matrix_1@1:RESET_21)	subckt_current
+	3151	Ix(matrix_1@1:RESET_22)	subckt_current
+	3152	Ix(matrix_1@1:RESET_23)	subckt_current
+	3153	Ix(matrix_1@1:RESET_24)	subckt_current
+	3154	Ix(matrix_1@1:RESET_25)	subckt_current
+	3155	Ix(matrix_1@1:RESET_26)	subckt_current
+	3156	Ix(matrix_1@1:RESET_27)	subckt_current
+	3157	Ix(matrix_1@1:RESET_28)	subckt_current
+	3158	Ix(matrix_1@1:RESET_29)	subckt_current
+	3159	Ix(matrix_1@1:RESET_3)	subckt_current
+	3160	Ix(matrix_1@1:RESET_30)	subckt_current
+	3161	Ix(matrix_1@1:RESET_31)	subckt_current
+	3162	Ix(matrix_1@1:RESET_4)	subckt_current
+	3163	Ix(matrix_1@1:RESET_5)	subckt_current
+	3164	Ix(matrix_1@1:RESET_6)	subckt_current
+	3165	Ix(matrix_1@1:RESET_7)	subckt_current
+	3166	Ix(matrix_1@1:RESET_8)	subckt_current
+	3167	Ix(matrix_1@1:RESET_9)	subckt_current
+	3168	Ix(matrix_1@1:SELECT_0)	subckt_current
+	3169	Ix(matrix_1@1:SELECT_1)	subckt_current
+	3170	Ix(matrix_1@1:SELECT_10)	subckt_current
+	3171	Ix(matrix_1@1:SELECT_11)	subckt_current
+	3172	Ix(matrix_1@1:SELECT_12)	subckt_current
+	3173	Ix(matrix_1@1:SELECT_13)	subckt_current
+	3174	Ix(matrix_1@1:SELECT_14)	subckt_current
+	3175	Ix(matrix_1@1:SELECT_15)	subckt_current
+	3176	Ix(matrix_1@1:SELECT_16)	subckt_current
+	3177	Ix(matrix_1@1:SELECT_17)	subckt_current
+	3178	Ix(matrix_1@1:SELECT_18)	subckt_current
+	3179	Ix(matrix_1@1:SELECT_19)	subckt_current
+	3180	Ix(matrix_1@1:SELECT_2)	subckt_current
+	3181	Ix(matrix_1@1:SELECT_20)	subckt_current
+	3182	Ix(matrix_1@1:SELECT_21)	subckt_current
+	3183	Ix(matrix_1@1:SELECT_22)	subckt_current
+	3184	Ix(matrix_1@1:SELECT_23)	subckt_current
+	3185	Ix(matrix_1@1:SELECT_24)	subckt_current
+	3186	Ix(matrix_1@1:SELECT_25)	subckt_current
+	3187	Ix(matrix_1@1:SELECT_26)	subckt_current
+	3188	Ix(matrix_1@1:SELECT_27)	subckt_current
+	3189	Ix(matrix_1@1:SELECT_28)	subckt_current
+	3190	Ix(matrix_1@1:SELECT_29)	subckt_current
+	3191	Ix(matrix_1@1:SELECT_3)	subckt_current
+	3192	Ix(matrix_1@1:SELECT_30)	subckt_current
+	3193	Ix(matrix_1@1:SELECT_31)	subckt_current
+	3194	Ix(matrix_1@1:SELECT_4)	subckt_current
+	3195	Ix(matrix_1@1:SELECT_5)	subckt_current
+	3196	Ix(matrix_1@1:SELECT_6)	subckt_current
+	3197	Ix(matrix_1@1:SELECT_7)	subckt_current
+	3198	Ix(matrix_1@1:SELECT_8)	subckt_current
+	3199	Ix(matrix_1@1:SELECT_9)	subckt_current
+	3200	Ix(matrix_1@1:VDD)	subckt_current
+	3201	Ix(matrix_1@1:VDD_RESET)	subckt_current
+	3202	Ix(matrix_1@2:FD)	subckt_current
+	3203	Ix(matrix_1@2:FD_1)	subckt_current
+	3204	Ix(matrix_1@2:GND)	subckt_current
+	3205	Ix(matrix_1@2:OUT_0)	subckt_current
+	3206	Ix(matrix_1@2:OUT_1)	subckt_current
+	3207	Ix(matrix_1@2:OUT_10)	subckt_current
+	3208	Ix(matrix_1@2:OUT_11)	subckt_current
+	3209	Ix(matrix_1@2:OUT_12)	subckt_current
+	3210	Ix(matrix_1@2:OUT_13)	subckt_current
+	3211	Ix(matrix_1@2:OUT_14)	subckt_current
+	3212	Ix(matrix_1@2:OUT_15)	subckt_current
+	3213	Ix(matrix_1@2:OUT_16)	subckt_current
+	3214	Ix(matrix_1@2:OUT_17)	subckt_current
+	3215	Ix(matrix_1@2:OUT_18)	subckt_current
+	3216	Ix(matrix_1@2:OUT_19)	subckt_current
+	3217	Ix(matrix_1@2:OUT_2)	subckt_current
+	3218	Ix(matrix_1@2:OUT_20)	subckt_current
+	3219	Ix(matrix_1@2:OUT_21)	subckt_current
+	3220	Ix(matrix_1@2:OUT_22)	subckt_current
+	3221	Ix(matrix_1@2:OUT_23)	subckt_current
+	3222	Ix(matrix_1@2:OUT_24)	subckt_current
+	3223	Ix(matrix_1@2:OUT_25)	subckt_current
+	3224	Ix(matrix_1@2:OUT_26)	subckt_current
+	3225	Ix(matrix_1@2:OUT_27)	subckt_current
+	3226	Ix(matrix_1@2:OUT_28)	subckt_current
+	3227	Ix(matrix_1@2:OUT_29)	subckt_current
+	3228	Ix(matrix_1@2:OUT_3)	subckt_current
+	3229	Ix(matrix_1@2:OUT_30)	subckt_current
+	3230	Ix(matrix_1@2:OUT_31)	subckt_current
+	3231	Ix(matrix_1@2:OUT_4)	subckt_current
+	3232	Ix(matrix_1@2:OUT_5)	subckt_current
+	3233	Ix(matrix_1@2:OUT_6)	subckt_current
+	3234	Ix(matrix_1@2:OUT_7)	subckt_current
+	3235	Ix(matrix_1@2:OUT_8)	subckt_current
+	3236	Ix(matrix_1@2:OUT_9)	subckt_current
+	3237	Ix(matrix_1@2:RESET_0)	subckt_current
+	3238	Ix(matrix_1@2:RESET_1)	subckt_current
+	3239	Ix(matrix_1@2:RESET_10)	subckt_current
+	3240	Ix(matrix_1@2:RESET_11)	subckt_current
+	3241	Ix(matrix_1@2:RESET_12)	subckt_current
+	3242	Ix(matrix_1@2:RESET_13)	subckt_current
+	3243	Ix(matrix_1@2:RESET_14)	subckt_current
+	3244	Ix(matrix_1@2:RESET_15)	subckt_current
+	3245	Ix(matrix_1@2:RESET_16)	subckt_current
+	3246	Ix(matrix_1@2:RESET_17)	subckt_current
+	3247	Ix(matrix_1@2:RESET_18)	subckt_current
+	3248	Ix(matrix_1@2:RESET_19)	subckt_current
+	3249	Ix(matrix_1@2:RESET_2)	subckt_current
+	3250	Ix(matrix_1@2:RESET_20)	subckt_current
+	3251	Ix(matrix_1@2:RESET_21)	subckt_current
+	3252	Ix(matrix_1@2:RESET_22)	subckt_current
+	3253	Ix(matrix_1@2:RESET_23)	subckt_current
+	3254	Ix(matrix_1@2:RESET_24)	subckt_current
+	3255	Ix(matrix_1@2:RESET_25)	subckt_current
+	3256	Ix(matrix_1@2:RESET_26)	subckt_current
+	3257	Ix(matrix_1@2:RESET_27)	subckt_current
+	3258	Ix(matrix_1@2:RESET_28)	subckt_current
+	3259	Ix(matrix_1@2:RESET_29)	subckt_current
+	3260	Ix(matrix_1@2:RESET_3)	subckt_current
+	3261	Ix(matrix_1@2:RESET_30)	subckt_current
+	3262	Ix(matrix_1@2:RESET_31)	subckt_current
+	3263	Ix(matrix_1@2:RESET_4)	subckt_current
+	3264	Ix(matrix_1@2:RESET_5)	subckt_current
+	3265	Ix(matrix_1@2:RESET_6)	subckt_current
+	3266	Ix(matrix_1@2:RESET_7)	subckt_current
+	3267	Ix(matrix_1@2:RESET_8)	subckt_current
+	3268	Ix(matrix_1@2:RESET_9)	subckt_current
+	3269	Ix(matrix_1@2:SELECT_0)	subckt_current
+	3270	Ix(matrix_1@2:SELECT_1)	subckt_current
+	3271	Ix(matrix_1@2:SELECT_10)	subckt_current
+	3272	Ix(matrix_1@2:SELECT_11)	subckt_current
+	3273	Ix(matrix_1@2:SELECT_12)	subckt_current
+	3274	Ix(matrix_1@2:SELECT_13)	subckt_current
+	3275	Ix(matrix_1@2:SELECT_14)	subckt_current
+	3276	Ix(matrix_1@2:SELECT_15)	subckt_current
+	3277	Ix(matrix_1@2:SELECT_16)	subckt_current
+	3278	Ix(matrix_1@2:SELECT_17)	subckt_current
+	3279	Ix(matrix_1@2:SELECT_18)	subckt_current
+	3280	Ix(matrix_1@2:SELECT_19)	subckt_current
+	3281	Ix(matrix_1@2:SELECT_2)	subckt_current
+	3282	Ix(matrix_1@2:SELECT_20)	subckt_current
+	3283	Ix(matrix_1@2:SELECT_21)	subckt_current
+	3284	Ix(matrix_1@2:SELECT_22)	subckt_current
+	3285	Ix(matrix_1@2:SELECT_23)	subckt_current
+	3286	Ix(matrix_1@2:SELECT_24)	subckt_current
+	3287	Ix(matrix_1@2:SELECT_25)	subckt_current
+	3288	Ix(matrix_1@2:SELECT_26)	subckt_current
+	3289	Ix(matrix_1@2:SELECT_27)	subckt_current
+	3290	Ix(matrix_1@2:SELECT_28)	subckt_current
+	3291	Ix(matrix_1@2:SELECT_29)	subckt_current
+	3292	Ix(matrix_1@2:SELECT_3)	subckt_current
+	3293	Ix(matrix_1@2:SELECT_30)	subckt_current
+	3294	Ix(matrix_1@2:SELECT_31)	subckt_current
+	3295	Ix(matrix_1@2:SELECT_4)	subckt_current
+	3296	Ix(matrix_1@2:SELECT_5)	subckt_current
+	3297	Ix(matrix_1@2:SELECT_6)	subckt_current
+	3298	Ix(matrix_1@2:SELECT_7)	subckt_current
+	3299	Ix(matrix_1@2:SELECT_8)	subckt_current
+	3300	Ix(matrix_1@2:SELECT_9)	subckt_current
+	3301	Ix(matrix_1@2:VDD)	subckt_current
+	3302	Ix(matrix_1@2:VDD_RESET)	subckt_current
+	3303	Ix(matrix_1@3:FD)	subckt_current
+	3304	Ix(matrix_1@3:FD_1)	subckt_current
+	3305	Ix(matrix_1@3:GND)	subckt_current
+	3306	Ix(matrix_1@3:OUT_0)	subckt_current
+	3307	Ix(matrix_1@3:OUT_1)	subckt_current
+	3308	Ix(matrix_1@3:OUT_10)	subckt_current
+	3309	Ix(matrix_1@3:OUT_11)	subckt_current
+	3310	Ix(matrix_1@3:OUT_12)	subckt_current
+	3311	Ix(matrix_1@3:OUT_13)	subckt_current
+	3312	Ix(matrix_1@3:OUT_14)	subckt_current
+	3313	Ix(matrix_1@3:OUT_15)	subckt_current
+	3314	Ix(matrix_1@3:OUT_16)	subckt_current
+	3315	Ix(matrix_1@3:OUT_17)	subckt_current
+	3316	Ix(matrix_1@3:OUT_18)	subckt_current
+	3317	Ix(matrix_1@3:OUT_19)	subckt_current
+	3318	Ix(matrix_1@3:OUT_2)	subckt_current
+	3319	Ix(matrix_1@3:OUT_20)	subckt_current
+	3320	Ix(matrix_1@3:OUT_21)	subckt_current
+	3321	Ix(matrix_1@3:OUT_22)	subckt_current
+	3322	Ix(matrix_1@3:OUT_23)	subckt_current
+	3323	Ix(matrix_1@3:OUT_24)	subckt_current
+	3324	Ix(matrix_1@3:OUT_25)	subckt_current
+	3325	Ix(matrix_1@3:OUT_26)	subckt_current
+	3326	Ix(matrix_1@3:OUT_27)	subckt_current
+	3327	Ix(matrix_1@3:OUT_28)	subckt_current
+	3328	Ix(matrix_1@3:OUT_29)	subckt_current
+	3329	Ix(matrix_1@3:OUT_3)	subckt_current
+	3330	Ix(matrix_1@3:OUT_30)	subckt_current
+	3331	Ix(matrix_1@3:OUT_31)	subckt_current
+	3332	Ix(matrix_1@3:OUT_4)	subckt_current
+	3333	Ix(matrix_1@3:OUT_5)	subckt_current
+	3334	Ix(matrix_1@3:OUT_6)	subckt_current
+	3335	Ix(matrix_1@3:OUT_7)	subckt_current
+	3336	Ix(matrix_1@3:OUT_8)	subckt_current
+	3337	Ix(matrix_1@3:OUT_9)	subckt_current
+	3338	Ix(matrix_1@3:RESET_0)	subckt_current
+	3339	Ix(matrix_1@3:RESET_1)	subckt_current
+	3340	Ix(matrix_1@3:RESET_10)	subckt_current
+	3341	Ix(matrix_1@3:RESET_11)	subckt_current
+	3342	Ix(matrix_1@3:RESET_12)	subckt_current
+	3343	Ix(matrix_1@3:RESET_13)	subckt_current
+	3344	Ix(matrix_1@3:RESET_14)	subckt_current
+	3345	Ix(matrix_1@3:RESET_15)	subckt_current
+	3346	Ix(matrix_1@3:RESET_16)	subckt_current
+	3347	Ix(matrix_1@3:RESET_17)	subckt_current
+	3348	Ix(matrix_1@3:RESET_18)	subckt_current
+	3349	Ix(matrix_1@3:RESET_19)	subckt_current
+	3350	Ix(matrix_1@3:RESET_2)	subckt_current
+	3351	Ix(matrix_1@3:RESET_20)	subckt_current
+	3352	Ix(matrix_1@3:RESET_21)	subckt_current
+	3353	Ix(matrix_1@3:RESET_22)	subckt_current
+	3354	Ix(matrix_1@3:RESET_23)	subckt_current
+	3355	Ix(matrix_1@3:RESET_24)	subckt_current
+	3356	Ix(matrix_1@3:RESET_25)	subckt_current
+	3357	Ix(matrix_1@3:RESET_26)	subckt_current
+	3358	Ix(matrix_1@3:RESET_27)	subckt_current
+	3359	Ix(matrix_1@3:RESET_28)	subckt_current
+	3360	Ix(matrix_1@3:RESET_29)	subckt_current
+	3361	Ix(matrix_1@3:RESET_3)	subckt_current
+	3362	Ix(matrix_1@3:RESET_30)	subckt_current
+	3363	Ix(matrix_1@3:RESET_31)	subckt_current
+	3364	Ix(matrix_1@3:RESET_4)	subckt_current
+	3365	Ix(matrix_1@3:RESET_5)	subckt_current
+	3366	Ix(matrix_1@3:RESET_6)	subckt_current
+	3367	Ix(matrix_1@3:RESET_7)	subckt_current
+	3368	Ix(matrix_1@3:RESET_8)	subckt_current
+	3369	Ix(matrix_1@3:RESET_9)	subckt_current
+	3370	Ix(matrix_1@3:SELECT_0)	subckt_current
+	3371	Ix(matrix_1@3:SELECT_1)	subckt_current
+	3372	Ix(matrix_1@3:SELECT_10)	subckt_current
+	3373	Ix(matrix_1@3:SELECT_11)	subckt_current
+	3374	Ix(matrix_1@3:SELECT_12)	subckt_current
+	3375	Ix(matrix_1@3:SELECT_13)	subckt_current
+	3376	Ix(matrix_1@3:SELECT_14)	subckt_current
+	3377	Ix(matrix_1@3:SELECT_15)	subckt_current
+	3378	Ix(matrix_1@3:SELECT_16)	subckt_current
+	3379	Ix(matrix_1@3:SELECT_17)	subckt_current
+	3380	Ix(matrix_1@3:SELECT_18)	subckt_current
+	3381	Ix(matrix_1@3:SELECT_19)	subckt_current
+	3382	Ix(matrix_1@3:SELECT_2)	subckt_current
+	3383	Ix(matrix_1@3:SELECT_20)	subckt_current
+	3384	Ix(matrix_1@3:SELECT_21)	subckt_current
+	3385	Ix(matrix_1@3:SELECT_22)	subckt_current
+	3386	Ix(matrix_1@3:SELECT_23)	subckt_current
+	3387	Ix(matrix_1@3:SELECT_24)	subckt_current
+	3388	Ix(matrix_1@3:SELECT_25)	subckt_current
+	3389	Ix(matrix_1@3:SELECT_26)	subckt_current
+	3390	Ix(matrix_1@3:SELECT_27)	subckt_current
+	3391	Ix(matrix_1@3:SELECT_28)	subckt_current
+	3392	Ix(matrix_1@3:SELECT_29)	subckt_current
+	3393	Ix(matrix_1@3:SELECT_3)	subckt_current
+	3394	Ix(matrix_1@3:SELECT_30)	subckt_current
+	3395	Ix(matrix_1@3:SELECT_31)	subckt_current
+	3396	Ix(matrix_1@3:SELECT_4)	subckt_current
+	3397	Ix(matrix_1@3:SELECT_5)	subckt_current
+	3398	Ix(matrix_1@3:SELECT_6)	subckt_current
+	3399	Ix(matrix_1@3:SELECT_7)	subckt_current
+	3400	Ix(matrix_1@3:SELECT_8)	subckt_current
+	3401	Ix(matrix_1@3:SELECT_9)	subckt_current
+	3402	Ix(matrix_1@3:VDD)	subckt_current
+	3403	Ix(matrix_1@3:VDD_RESET)	subckt_current
+	3404	Ix(buffer@0:D)	subckt_current
+	3405	Ix(buffer@0:G)	subckt_current
+	3406	Ix(buffer@0:GND)	subckt_current
+	3407	Ix(buffer@0:VDD)	subckt_current
+	3408	Ix(column_b@0:G)	subckt_current
+	3409	Ix(column_b@0:GND)	subckt_current
+	3410	Ix(column_b@0:OUT_1)	subckt_current
+	3411	Ix(column_b@1:G)	subckt_current
+	3412	Ix(column_b@1:GND)	subckt_current
+	3413	Ix(column_b@1:OUT_1)	subckt_current
+	3414	Ix(column_b@4:G)	subckt_current
+	3415	Ix(column_b@4:GND)	subckt_current
+	3416	Ix(column_b@4:OUT_1)	subckt_current
+	3417	Ix(column_b@5:G)	subckt_current
+	3418	Ix(column_b@5:GND)	subckt_current
+	3419	Ix(column_b@5:OUT_1)	subckt_current
+	3420	Ix(column_b@6:G)	subckt_current
+	3421	Ix(column_b@6:GND)	subckt_current
+	3422	Ix(column_b@6:OUT_1)	subckt_current
+	3423	Ix(column_b@7:G)	subckt_current
+	3424	Ix(column_b@7:GND)	subckt_current
+	3425	Ix(column_b@7:OUT_1)	subckt_current
+	3426	Ix(column_b@8:G)	subckt_current
+	3427	Ix(column_b@8:GND)	subckt_current
+	3428	Ix(column_b@8:OUT_1)	subckt_current
+	3429	Ix(column_b@9:G)	subckt_current
+	3430	Ix(column_b@9:GND)	subckt_current
+	3431	Ix(column_b@9:OUT_1)	subckt_current
+	3432	Ix(column_b@10:G)	subckt_current
+	3433	Ix(column_b@10:GND)	subckt_current
+	3434	Ix(column_b@10:OUT_1)	subckt_current
+	3435	Ix(column_b@11:G)	subckt_current
+	3436	Ix(column_b@11:GND)	subckt_current
+	3437	Ix(column_b@11:OUT_1)	subckt_current
+	3438	Ix(column_b@12:G)	subckt_current
+	3439	Ix(column_b@12:GND)	subckt_current
+	3440	Ix(column_b@12:OUT_1)	subckt_current
+	3441	Ix(column_b@13:G)	subckt_current
+	3442	Ix(column_b@13:GND)	subckt_current
+	3443	Ix(column_b@13:OUT_1)	subckt_current
+	3444	Ix(column_b@14:G)	subckt_current
+	3445	Ix(column_b@14:GND)	subckt_current
+	3446	Ix(column_b@14:OUT_1)	subckt_current
+	3447	Ix(column_b@15:G)	subckt_current
+	3448	Ix(column_b@15:GND)	subckt_current
+	3449	Ix(column_b@15:OUT_1)	subckt_current
+	3450	Ix(column_b@16:G)	subckt_current
+	3451	Ix(column_b@16:GND)	subckt_current
+	3452	Ix(column_b@16:OUT_1)	subckt_current
+	3453	Ix(column_b@17:G)	subckt_current
+	3454	Ix(column_b@17:GND)	subckt_current
+	3455	Ix(column_b@17:OUT_1)	subckt_current
+	3456	Ix(column_b@18:G)	subckt_current
+	3457	Ix(column_b@18:GND)	subckt_current
+	3458	Ix(column_b@18:OUT_1)	subckt_current
+	3459	Ix(column_b@19:G)	subckt_current
+	3460	Ix(column_b@19:GND)	subckt_current
+	3461	Ix(column_b@19:OUT_1)	subckt_current
+	3462	Ix(column_b@20:G)	subckt_current
+	3463	Ix(column_b@20:GND)	subckt_current
+	3464	Ix(column_b@20:OUT_1)	subckt_current
+	3465	Ix(column_b@21:G)	subckt_current
+	3466	Ix(column_b@21:GND)	subckt_current
+	3467	Ix(column_b@21:OUT_1)	subckt_current
+	3468	Ix(column_b@22:G)	subckt_current
+	3469	Ix(column_b@22:GND)	subckt_current
+	3470	Ix(column_b@22:OUT_1)	subckt_current
+	3471	Ix(column_b@23:G)	subckt_current
+	3472	Ix(column_b@23:GND)	subckt_current
+	3473	Ix(column_b@23:OUT_1)	subckt_current
+	3474	Ix(column_b@24:G)	subckt_current
+	3475	Ix(column_b@24:GND)	subckt_current
+	3476	Ix(column_b@24:OUT_1)	subckt_current
+	3477	Ix(column_b@25:G)	subckt_current
+	3478	Ix(column_b@25:GND)	subckt_current
+	3479	Ix(column_b@25:OUT_1)	subckt_current
+	3480	Ix(column_b@26:G)	subckt_current
+	3481	Ix(column_b@26:GND)	subckt_current
+	3482	Ix(column_b@26:OUT_1)	subckt_current
+	3483	Ix(column_b@27:G)	subckt_current
+	3484	Ix(column_b@27:GND)	subckt_current
+	3485	Ix(column_b@27:OUT_1)	subckt_current
+	3486	Ix(column_b@28:G)	subckt_current
+	3487	Ix(column_b@28:GND)	subckt_current
+	3488	Ix(column_b@28:OUT_1)	subckt_current
+	3489	Ix(column_b@29:G)	subckt_current
+	3490	Ix(column_b@29:GND)	subckt_current
+	3491	Ix(column_b@29:OUT_1)	subckt_current
+	3492	Ix(column_b@30:G)	subckt_current
+	3493	Ix(column_b@30:GND)	subckt_current
+	3494	Ix(column_b@30:OUT_1)	subckt_current
+	3495	Ix(column_b@31:G)	subckt_current
+	3496	Ix(column_b@31:GND)	subckt_current
+	3497	Ix(column_b@31:OUT_1)	subckt_current
+	3498	Ix(column_b@32:G)	subckt_current
+	3499	Ix(column_b@32:GND)	subckt_current
+	3500	Ix(column_b@32:OUT_1)	subckt_current
+	3501	Ix(column_b@33:G)	subckt_current
+	3502	Ix(column_b@33:GND)	subckt_current
+	3503	Ix(column_b@33:OUT_1)	subckt_current
+	3504	Ix(column_b@34:G)	subckt_current
+	3505	Ix(column_b@34:GND)	subckt_current
+	3506	Ix(column_b@34:OUT_1)	subckt_current
+	3507	Ix(column_b@35:G)	subckt_current
+	3508	Ix(column_b@35:GND)	subckt_current
+	3509	Ix(column_b@35:OUT_1)	subckt_current
+	3510	Ix(column_b@36:G)	subckt_current
+	3511	Ix(column_b@36:GND)	subckt_current
+	3512	Ix(column_b@36:OUT_1)	subckt_current
+	3513	Ix(column_b@37:G)	subckt_current
+	3514	Ix(column_b@37:GND)	subckt_current
+	3515	Ix(column_b@37:OUT_1)	subckt_current
+	3516	Ix(column_b@38:G)	subckt_current
+	3517	Ix(column_b@38:GND)	subckt_current
+	3518	Ix(column_b@38:OUT_1)	subckt_current
+	3519	Ix(column_b@39:G)	subckt_current
+	3520	Ix(column_b@39:GND)	subckt_current
+	3521	Ix(column_b@39:OUT_1)	subckt_current
+	3522	Ix(column_b@40:G)	subckt_current
+	3523	Ix(column_b@40:GND)	subckt_current
+	3524	Ix(column_b@40:OUT_1)	subckt_current
+	3525	Ix(column_b@41:G)	subckt_current
+	3526	Ix(column_b@41:GND)	subckt_current
+	3527	Ix(column_b@41:OUT_1)	subckt_current
+	3528	Ix(column_b@42:G)	subckt_current
+	3529	Ix(column_b@42:GND)	subckt_current
+	3530	Ix(column_b@42:OUT_1)	subckt_current
+	3531	Ix(column_b@43:G)	subckt_current
+	3532	Ix(column_b@43:GND)	subckt_current
+	3533	Ix(column_b@43:OUT_1)	subckt_current
+	3534	Ix(column_b@44:G)	subckt_current
+	3535	Ix(column_b@44:GND)	subckt_current
+	3536	Ix(column_b@44:OUT_1)	subckt_current
+	3537	Ix(column_b@45:G)	subckt_current
+	3538	Ix(column_b@45:GND)	subckt_current
+	3539	Ix(column_b@45:OUT_1)	subckt_current
+	3540	Ix(column_b@46:G)	subckt_current
+	3541	Ix(column_b@46:GND)	subckt_current
+	3542	Ix(column_b@46:OUT_1)	subckt_current
+	3543	Ix(column_b@47:G)	subckt_current
+	3544	Ix(column_b@47:GND)	subckt_current
+	3545	Ix(column_b@47:OUT_1)	subckt_current
+	3546	Ix(column_b@48:G)	subckt_current
+	3547	Ix(column_b@48:GND)	subckt_current
+	3548	Ix(column_b@48:OUT_1)	subckt_current
+	3549	Ix(column_b@49:G)	subckt_current
+	3550	Ix(column_b@49:GND)	subckt_current
+	3551	Ix(column_b@49:OUT_1)	subckt_current
+	3552	Ix(column_b@50:G)	subckt_current
+	3553	Ix(column_b@50:GND)	subckt_current
+	3554	Ix(column_b@50:OUT_1)	subckt_current
+	3555	Ix(column_b@51:G)	subckt_current
+	3556	Ix(column_b@51:GND)	subckt_current
+	3557	Ix(column_b@51:OUT_1)	subckt_current
+	3558	Ix(column_b@52:G)	subckt_current
+	3559	Ix(column_b@52:GND)	subckt_current
+	3560	Ix(column_b@52:OUT_1)	subckt_current
+	3561	Ix(column_b@53:G)	subckt_current
+	3562	Ix(column_b@53:GND)	subckt_current
+	3563	Ix(column_b@53:OUT_1)	subckt_current
+	3564	Ix(column_b@54:G)	subckt_current
+	3565	Ix(column_b@54:GND)	subckt_current
+	3566	Ix(column_b@54:OUT_1)	subckt_current
+	3567	Ix(column_b@55:G)	subckt_current
+	3568	Ix(column_b@55:GND)	subckt_current
+	3569	Ix(column_b@55:OUT_1)	subckt_current
+	3570	Ix(column_b@56:G)	subckt_current
+	3571	Ix(column_b@56:GND)	subckt_current
+	3572	Ix(column_b@56:OUT_1)	subckt_current
+	3573	Ix(column_b@57:G)	subckt_current
+	3574	Ix(column_b@57:GND)	subckt_current
+	3575	Ix(column_b@57:OUT_1)	subckt_current
+	3576	Ix(column_b@58:G)	subckt_current
+	3577	Ix(column_b@58:GND)	subckt_current
+	3578	Ix(column_b@58:OUT_1)	subckt_current
+	3579	Ix(column_b@59:G)	subckt_current
+	3580	Ix(column_b@59:GND)	subckt_current
+	3581	Ix(column_b@59:OUT_1)	subckt_current
+	3582	Ix(column_b@60:G)	subckt_current
+	3583	Ix(column_b@60:GND)	subckt_current
+	3584	Ix(column_b@60:OUT_1)	subckt_current
+	3585	Ix(column_b@61:G)	subckt_current
+	3586	Ix(column_b@61:GND)	subckt_current
+	3587	Ix(column_b@61:OUT_1)	subckt_current
+	3588	Ix(column_b@62:G)	subckt_current
+	3589	Ix(column_b@62:GND)	subckt_current
+	3590	Ix(column_b@62:OUT_1)	subckt_current
+	3591	Ix(column_b@63:G)	subckt_current
+	3592	Ix(column_b@63:GND)	subckt_current
+	3593	Ix(column_b@63:OUT_1)	subckt_current
+	3594	Ix(column_b@64:G)	subckt_current
+	3595	Ix(column_b@64:GND)	subckt_current
+	3596	Ix(column_b@64:OUT_1)	subckt_current
+	3597	Ix(column_b@65:G)	subckt_current
+	3598	Ix(column_b@65:GND)	subckt_current
+	3599	Ix(column_b@65:OUT_1)	subckt_current
+	3600	Ix(dff_64_c@0:A0)	subckt_current
+	3601	Ix(dff_64_c@0:A1)	subckt_current
+	3602	Ix(dff_64_c@0:A10)	subckt_current
+	3603	Ix(dff_64_c@0:A11)	subckt_current
+	3604	Ix(dff_64_c@0:A12)	subckt_current
+	3605	Ix(dff_64_c@0:A13)	subckt_current
+	3606	Ix(dff_64_c@0:A14)	subckt_current
+	3607	Ix(dff_64_c@0:A15)	subckt_current
+	3608	Ix(dff_64_c@0:A16)	subckt_current
+	3609	Ix(dff_64_c@0:A17)	subckt_current
+	3610	Ix(dff_64_c@0:A18)	subckt_current
+	3611	Ix(dff_64_c@0:A19)	subckt_current
+	3612	Ix(dff_64_c@0:A2)	subckt_current
+	3613	Ix(dff_64_c@0:A20)	subckt_current
+	3614	Ix(dff_64_c@0:A21)	subckt_current
+	3615	Ix(dff_64_c@0:A22)	subckt_current
+	3616	Ix(dff_64_c@0:A23)	subckt_current
+	3617	Ix(dff_64_c@0:A24)	subckt_current
+	3618	Ix(dff_64_c@0:A25)	subckt_current
+	3619	Ix(dff_64_c@0:A26)	subckt_current
+	3620	Ix(dff_64_c@0:A27)	subckt_current
+	3621	Ix(dff_64_c@0:A28)	subckt_current
+	3622	Ix(dff_64_c@0:A29)	subckt_current
+	3623	Ix(dff_64_c@0:A3)	subckt_current
+	3624	Ix(dff_64_c@0:A30)	subckt_current
+	3625	Ix(dff_64_c@0:A31)	subckt_current
+	3626	Ix(dff_64_c@0:A32)	subckt_current
+	3627	Ix(dff_64_c@0:A33)	subckt_current
+	3628	Ix(dff_64_c@0:A34)	subckt_current
+	3629	Ix(dff_64_c@0:A35)	subckt_current
+	3630	Ix(dff_64_c@0:A36)	subckt_current
+	3631	Ix(dff_64_c@0:A37)	subckt_current
+	3632	Ix(dff_64_c@0:A38)	subckt_current
+	3633	Ix(dff_64_c@0:A39)	subckt_current
+	3634	Ix(dff_64_c@0:A4)	subckt_current
+	3635	Ix(dff_64_c@0:A40)	subckt_current
+	3636	Ix(dff_64_c@0:A41)	subckt_current
+	3637	Ix(dff_64_c@0:A42)	subckt_current
+	3638	Ix(dff_64_c@0:A43)	subckt_current
+	3639	Ix(dff_64_c@0:A44)	subckt_current
+	3640	Ix(dff_64_c@0:A45)	subckt_current
+	3641	Ix(dff_64_c@0:A46)	subckt_current
+	3642	Ix(dff_64_c@0:A47)	subckt_current
+	3643	Ix(dff_64_c@0:A48)	subckt_current
+	3644	Ix(dff_64_c@0:A49)	subckt_current
+	3645	Ix(dff_64_c@0:A5)	subckt_current
+	3646	Ix(dff_64_c@0:A50)	subckt_current
+	3647	Ix(dff_64_c@0:A51)	subckt_current
+	3648	Ix(dff_64_c@0:A52)	subckt_current
+	3649	Ix(dff_64_c@0:A53)	subckt_current
+	3650	Ix(dff_64_c@0:A54)	subckt_current
+	3651	Ix(dff_64_c@0:A55)	subckt_current
+	3652	Ix(dff_64_c@0:A56)	subckt_current
+	3653	Ix(dff_64_c@0:A57)	subckt_current
+	3654	Ix(dff_64_c@0:A58)	subckt_current
+	3655	Ix(dff_64_c@0:A59)	subckt_current
+	3656	Ix(dff_64_c@0:A6)	subckt_current
+	3657	Ix(dff_64_c@0:A60)	subckt_current
+	3658	Ix(dff_64_c@0:A61)	subckt_current
+	3659	Ix(dff_64_c@0:A62)	subckt_current
+	3660	Ix(dff_64_c@0:A63)	subckt_current
+	3661	Ix(dff_64_c@0:A7)	subckt_current
+	3662	Ix(dff_64_c@0:A8)	subckt_current
+	3663	Ix(dff_64_c@0:A9)	subckt_current
+	3664	Ix(dff_64_c@0:CLK_COLUMN)	subckt_current
+	3665	Ix(dff_64_c@0:CLKB_COLUMN)	subckt_current
+	3666	Ix(dff_64_c@0:D_COLUMN)	subckt_current
+	3667	Ix(dff_64_c@0:GND_DIGITAL)	subckt_current
+	3668	Ix(dff_64_c@0:NA0)	subckt_current
+	3669	Ix(dff_64_c@0:NA1)	subckt_current
+	3670	Ix(dff_64_c@0:NA10)	subckt_current
+	3671	Ix(dff_64_c@0:NA11)	subckt_current
+	3672	Ix(dff_64_c@0:NA12)	subckt_current
+	3673	Ix(dff_64_c@0:NA13)	subckt_current
+	3674	Ix(dff_64_c@0:NA14)	subckt_current
+	3675	Ix(dff_64_c@0:NA15)	subckt_current
+	3676	Ix(dff_64_c@0:NA16)	subckt_current
+	3677	Ix(dff_64_c@0:NA17)	subckt_current
+	3678	Ix(dff_64_c@0:NA18)	subckt_current
+	3679	Ix(dff_64_c@0:NA19)	subckt_current
+	3680	Ix(dff_64_c@0:NA2)	subckt_current
+	3681	Ix(dff_64_c@0:NA20)	subckt_current
+	3682	Ix(dff_64_c@0:NA21)	subckt_current
+	3683	Ix(dff_64_c@0:NA22)	subckt_current
+	3684	Ix(dff_64_c@0:NA23)	subckt_current
+	3685	Ix(dff_64_c@0:NA24)	subckt_current
+	3686	Ix(dff_64_c@0:NA25)	subckt_current
+	3687	Ix(dff_64_c@0:NA26)	subckt_current
+	3688	Ix(dff_64_c@0:NA27)	subckt_current
+	3689	Ix(dff_64_c@0:NA28)	subckt_current
+	3690	Ix(dff_64_c@0:NA29)	subckt_current
+	3691	Ix(dff_64_c@0:NA3)	subckt_current
+	3692	Ix(dff_64_c@0:NA30)	subckt_current
+	3693	Ix(dff_64_c@0:NA31)	subckt_current
+	3694	Ix(dff_64_c@0:NA32)	subckt_current
+	3695	Ix(dff_64_c@0:NA33)	subckt_current
+	3696	Ix(dff_64_c@0:NA34)	subckt_current
+	3697	Ix(dff_64_c@0:NA35)	subckt_current
+	3698	Ix(dff_64_c@0:NA36)	subckt_current
+	3699	Ix(dff_64_c@0:NA37)	subckt_current
+	3700	Ix(dff_64_c@0:NA38)	subckt_current
+	3701	Ix(dff_64_c@0:NA39)	subckt_current
+	3702	Ix(dff_64_c@0:NA4)	subckt_current
+	3703	Ix(dff_64_c@0:NA40)	subckt_current
+	3704	Ix(dff_64_c@0:NA41)	subckt_current
+	3705	Ix(dff_64_c@0:NA42)	subckt_current
+	3706	Ix(dff_64_c@0:NA43)	subckt_current
+	3707	Ix(dff_64_c@0:NA44)	subckt_current
+	3708	Ix(dff_64_c@0:NA45)	subckt_current
+	3709	Ix(dff_64_c@0:NA46)	subckt_current
+	3710	Ix(dff_64_c@0:NA47)	subckt_current
+	3711	Ix(dff_64_c@0:NA48)	subckt_current
+	3712	Ix(dff_64_c@0:NA49)	subckt_current
+	3713	Ix(dff_64_c@0:NA5)	subckt_current
+	3714	Ix(dff_64_c@0:NA50)	subckt_current
+	3715	Ix(dff_64_c@0:NA51)	subckt_current
+	3716	Ix(dff_64_c@0:NA52)	subckt_current
+	3717	Ix(dff_64_c@0:NA53)	subckt_current
+	3718	Ix(dff_64_c@0:NA54)	subckt_current
+	3719	Ix(dff_64_c@0:NA55)	subckt_current
+	3720	Ix(dff_64_c@0:NA56)	subckt_current
+	3721	Ix(dff_64_c@0:NA57)	subckt_current
+	3722	Ix(dff_64_c@0:NA58)	subckt_current
+	3723	Ix(dff_64_c@0:NA59)	subckt_current
+	3724	Ix(dff_64_c@0:NA6)	subckt_current
+	3725	Ix(dff_64_c@0:NA60)	subckt_current
+	3726	Ix(dff_64_c@0:NA61)	subckt_current
+	3727	Ix(dff_64_c@0:NA62)	subckt_current
+	3728	Ix(dff_64_c@0:NA63)	subckt_current
+	3729	Ix(dff_64_c@0:NA7)	subckt_current
+	3730	Ix(dff_64_c@0:NA8)	subckt_current
+	3731	Ix(dff_64_c@0:NA9)	subckt_current
+	3732	Ix(dff_64_c@0:RST_COLUMN)	subckt_current
+	3733	Ix(dff_64_c@0:VDD_DIGITAL)	subckt_current
+	3734	Ix(dff_124@0:CLK_RESET)	subckt_current
+	3735	Ix(dff_124@0:CLK_SELECT)	subckt_current
+	3736	Ix(dff_124@0:CLKB_RESET)	subckt_current
+	3737	Ix(dff_124@0:CLKB_SELECT)	subckt_current
+	3738	Ix(dff_124@0:D_RESET)	subckt_current
+	3739	Ix(dff_124@0:D_SELECT)	subckt_current
+	3740	Ix(dff_124@0:GND)	subckt_current
+	3741	Ix(dff_124@0:RESET_0)	subckt_current
+	3742	Ix(dff_124@0:RESET_1)	subckt_current
+	3743	Ix(dff_124@0:RESET_10)	subckt_current
+	3744	Ix(dff_124@0:RESET_11)	subckt_current
+	3745	Ix(dff_124@0:RESET_12)	subckt_current
+	3746	Ix(dff_124@0:RESET_13)	subckt_current
+	3747	Ix(dff_124@0:RESET_14)	subckt_current
+	3748	Ix(dff_124@0:RESET_15)	subckt_current
+	3749	Ix(dff_124@0:RESET_16)	subckt_current
+	3750	Ix(dff_124@0:RESET_17)	subckt_current
+	3751	Ix(dff_124@0:RESET_18)	subckt_current
+	3752	Ix(dff_124@0:RESET_19)	subckt_current
+	3753	Ix(dff_124@0:RESET_2)	subckt_current
+	3754	Ix(dff_124@0:RESET_20)	subckt_current
+	3755	Ix(dff_124@0:RESET_21)	subckt_current
+	3756	Ix(dff_124@0:RESET_22)	subckt_current
+	3757	Ix(dff_124@0:RESET_23)	subckt_current
+	3758	Ix(dff_124@0:RESET_24)	subckt_current
+	3759	Ix(dff_124@0:RESET_25)	subckt_current
+	3760	Ix(dff_124@0:RESET_26)	subckt_current
+	3761	Ix(dff_124@0:RESET_27)	subckt_current
+	3762	Ix(dff_124@0:RESET_28)	subckt_current
+	3763	Ix(dff_124@0:RESET_29)	subckt_current
+	3764	Ix(dff_124@0:RESET_3)	subckt_current
+	3765	Ix(dff_124@0:RESET_30)	subckt_current
+	3766	Ix(dff_124@0:RESET_31)	subckt_current
+	3767	Ix(dff_124@0:RESET_32)	subckt_current
+	3768	Ix(dff_124@0:RESET_33)	subckt_current
+	3769	Ix(dff_124@0:RESET_34)	subckt_current
+	3770	Ix(dff_124@0:RESET_35)	subckt_current
+	3771	Ix(dff_124@0:RESET_36)	subckt_current
+	3772	Ix(dff_124@0:RESET_37)	subckt_current
+	3773	Ix(dff_124@0:RESET_38)	subckt_current
+	3774	Ix(dff_124@0:RESET_39)	subckt_current
+	3775	Ix(dff_124@0:RESET_4)	subckt_current
+	3776	Ix(dff_124@0:RESET_40)	subckt_current
+	3777	Ix(dff_124@0:RESET_41)	subckt_current
+	3778	Ix(dff_124@0:RESET_42)	subckt_current
+	3779	Ix(dff_124@0:RESET_43)	subckt_current
+	3780	Ix(dff_124@0:RESET_44)	subckt_current
+	3781	Ix(dff_124@0:RESET_45)	subckt_current
+	3782	Ix(dff_124@0:RESET_46)	subckt_current
+	3783	Ix(dff_124@0:RESET_47)	subckt_current
+	3784	Ix(dff_124@0:RESET_48)	subckt_current
+	3785	Ix(dff_124@0:RESET_49)	subckt_current
+	3786	Ix(dff_124@0:RESET_5)	subckt_current
+	3787	Ix(dff_124@0:RESET_50)	subckt_current
+	3788	Ix(dff_124@0:RESET_51)	subckt_current
+	3789	Ix(dff_124@0:RESET_52)	subckt_current
+	3790	Ix(dff_124@0:RESET_53)	subckt_current
+	3791	Ix(dff_124@0:RESET_54)	subckt_current
+	3792	Ix(dff_124@0:RESET_55)	subckt_current
+	3793	Ix(dff_124@0:RESET_56)	subckt_current
+	3794	Ix(dff_124@0:RESET_57)	subckt_current
+	3795	Ix(dff_124@0:RESET_58)	subckt_current
+	3796	Ix(dff_124@0:RESET_59)	subckt_current
+	3797	Ix(dff_124@0:RESET_6)	subckt_current
+	3798	Ix(dff_124@0:RESET_60)	subckt_current
+	3799	Ix(dff_124@0:RESET_61)	subckt_current
+	3800	Ix(dff_124@0:RESET_62)	subckt_current
+	3801	Ix(dff_124@0:RESET_63)	subckt_current
+	3802	Ix(dff_124@0:RESET_7)	subckt_current
+	3803	Ix(dff_124@0:RESET_8)	subckt_current
+	3804	Ix(dff_124@0:RESET_9)	subckt_current
+	3805	Ix(dff_124@0:RST_RESET)	subckt_current
+	3806	Ix(dff_124@0:RST_SELECT)	subckt_current
+	3807	Ix(dff_124@0:SELECT_0)	subckt_current
+	3808	Ix(dff_124@0:SELECT_1)	subckt_current
+	3809	Ix(dff_124@0:SELECT_10)	subckt_current
+	3810	Ix(dff_124@0:SELECT_11)	subckt_current
+	3811	Ix(dff_124@0:SELECT_12)	subckt_current
+	3812	Ix(dff_124@0:SELECT_13)	subckt_current
+	3813	Ix(dff_124@0:SELECT_14)	subckt_current
+	3814	Ix(dff_124@0:SELECT_15)	subckt_current
+	3815	Ix(dff_124@0:SELECT_16)	subckt_current
+	3816	Ix(dff_124@0:SELECT_17)	subckt_current
+	3817	Ix(dff_124@0:SELECT_18)	subckt_current
+	3818	Ix(dff_124@0:SELECT_19)	subckt_current
+	3819	Ix(dff_124@0:SELECT_2)	subckt_current
+	3820	Ix(dff_124@0:SELECT_20)	subckt_current
+	3821	Ix(dff_124@0:SELECT_21)	subckt_current
+	3822	Ix(dff_124@0:SELECT_22)	subckt_current
+	3823	Ix(dff_124@0:SELECT_23)	subckt_current
+	3824	Ix(dff_124@0:SELECT_24)	subckt_current
+	3825	Ix(dff_124@0:SELECT_25)	subckt_current
+	3826	Ix(dff_124@0:SELECT_26)	subckt_current
+	3827	Ix(dff_124@0:SELECT_27)	subckt_current
+	3828	Ix(dff_124@0:SELECT_28)	subckt_current
+	3829	Ix(dff_124@0:SELECT_29)	subckt_current
+	3830	Ix(dff_124@0:SELECT_3)	subckt_current
+	3831	Ix(dff_124@0:SELECT_30)	subckt_current
+	3832	Ix(dff_124@0:SELECT_31)	subckt_current
+	3833	Ix(dff_124@0:SELECT_32)	subckt_current
+	3834	Ix(dff_124@0:SELECT_33)	subckt_current
+	3835	Ix(dff_124@0:SELECT_34)	subckt_current
+	3836	Ix(dff_124@0:SELECT_35)	subckt_current
+	3837	Ix(dff_124@0:SELECT_36)	subckt_current
+	3838	Ix(dff_124@0:SELECT_37)	subckt_current
+	3839	Ix(dff_124@0:SELECT_38)	subckt_current
+	3840	Ix(dff_124@0:SELECT_39)	subckt_current
+	3841	Ix(dff_124@0:SELECT_4)	subckt_current
+	3842	Ix(dff_124@0:SELECT_40)	subckt_current
+	3843	Ix(dff_124@0:SELECT_41)	subckt_current
+	3844	Ix(dff_124@0:SELECT_42)	subckt_current
+	3845	Ix(dff_124@0:SELECT_43)	subckt_current
+	3846	Ix(dff_124@0:SELECT_44)	subckt_current
+	3847	Ix(dff_124@0:SELECT_45)	subckt_current
+	3848	Ix(dff_124@0:SELECT_46)	subckt_current
+	3849	Ix(dff_124@0:SELECT_47)	subckt_current
+	3850	Ix(dff_124@0:SELECT_48)	subckt_current
+	3851	Ix(dff_124@0:SELECT_49)	subckt_current
+	3852	Ix(dff_124@0:SELECT_5)	subckt_current
+	3853	Ix(dff_124@0:SELECT_50)	subckt_current
+	3854	Ix(dff_124@0:SELECT_51)	subckt_current
+	3855	Ix(dff_124@0:SELECT_52)	subckt_current
+	3856	Ix(dff_124@0:SELECT_53)	subckt_current
+	3857	Ix(dff_124@0:SELECT_54)	subckt_current
+	3858	Ix(dff_124@0:SELECT_55)	subckt_current
+	3859	Ix(dff_124@0:SELECT_56)	subckt_current
+	3860	Ix(dff_124@0:SELECT_57)	subckt_current
+	3861	Ix(dff_124@0:SELECT_58)	subckt_current
+	3862	Ix(dff_124@0:SELECT_59)	subckt_current
+	3863	Ix(dff_124@0:SELECT_6)	subckt_current
+	3864	Ix(dff_124@0:SELECT_60)	subckt_current
+	3865	Ix(dff_124@0:SELECT_61)	subckt_current
+	3866	Ix(dff_124@0:SELECT_62)	subckt_current
+	3867	Ix(dff_124@0:SELECT_63)	subckt_current
+	3868	Ix(dff_124@0:SELECT_7)	subckt_current
+	3869	Ix(dff_124@0:SELECT_8)	subckt_current
+	3870	Ix(dff_124@0:SELECT_9)	subckt_current
+	3871	Ix(dff_124@0:VDD)	subckt_current
+	3872	Ix(pass_gat@0:CLK)	subckt_current
+	3873	Ix(pass_gat@0:CLKB)	subckt_current
+	3874	Ix(pass_gat@0:IN)	subckt_current
+	3875	Ix(pass_gat@0:OUT)	subckt_current
+	3876	Ix(pass_gat@0:VDD)	subckt_current
+	3877	Ix(pass_gat@1:CLK)	subckt_current
+	3878	Ix(pass_gat@1:CLKB)	subckt_current
+	3879	Ix(pass_gat@1:IN)	subckt_current
+	3880	Ix(pass_gat@1:OUT)	subckt_current
+	3881	Ix(pass_gat@1:VDD)	subckt_current
+	3882	Ix(pass_gat@2:CLK)	subckt_current
+	3883	Ix(pass_gat@2:CLKB)	subckt_current
+	3884	Ix(pass_gat@2:IN)	subckt_current
+	3885	Ix(pass_gat@2:OUT)	subckt_current
+	3886	Ix(pass_gat@2:VDD)	subckt_current
+	3887	Ix(pass_gat@3:CLK)	subckt_current
+	3888	Ix(pass_gat@3:CLKB)	subckt_current
+	3889	Ix(pass_gat@3:IN)	subckt_current
+	3890	Ix(pass_gat@3:OUT)	subckt_current
+	3891	Ix(pass_gat@3:VDD)	subckt_current
+	3892	Ix(pass_gat@4:CLK)	subckt_current
+	3893	Ix(pass_gat@4:CLKB)	subckt_current
+	3894	Ix(pass_gat@4:IN)	subckt_current
+	3895	Ix(pass_gat@4:OUT)	subckt_current
+	3896	Ix(pass_gat@4:VDD)	subckt_current
+	3897	Ix(pass_gat@5:CLK)	subckt_current
+	3898	Ix(pass_gat@5:CLKB)	subckt_current
+	3899	Ix(pass_gat@5:IN)	subckt_current
+	3900	Ix(pass_gat@5:OUT)	subckt_current
+	3901	Ix(pass_gat@5:VDD)	subckt_current
+	3902	Ix(pass_gat@6:CLK)	subckt_current
+	3903	Ix(pass_gat@6:CLKB)	subckt_current
+	3904	Ix(pass_gat@6:IN)	subckt_current
+	3905	Ix(pass_gat@6:OUT)	subckt_current
+	3906	Ix(pass_gat@6:VDD)	subckt_current
+	3907	Ix(pass_gat@7:CLK)	subckt_current
+	3908	Ix(pass_gat@7:CLKB)	subckt_current
+	3909	Ix(pass_gat@7:IN)	subckt_current
+	3910	Ix(pass_gat@7:OUT)	subckt_current
+	3911	Ix(pass_gat@7:VDD)	subckt_current
+	3912	Ix(pass_gat@8:CLK)	subckt_current
+	3913	Ix(pass_gat@8:CLKB)	subckt_current
+	3914	Ix(pass_gat@8:IN)	subckt_current
+	3915	Ix(pass_gat@8:OUT)	subckt_current
+	3916	Ix(pass_gat@8:VDD)	subckt_current
+	3917	Ix(pass_gat@9:CLK)	subckt_current
+	3918	Ix(pass_gat@9:CLKB)	subckt_current
+	3919	Ix(pass_gat@9:IN)	subckt_current
+	3920	Ix(pass_gat@9:OUT)	subckt_current
+	3921	Ix(pass_gat@9:VDD)	subckt_current
+	3922	Ix(pass_gat@10:CLK)	subckt_current
+	3923	Ix(pass_gat@10:CLKB)	subckt_current
+	3924	Ix(pass_gat@10:IN)	subckt_current
+	3925	Ix(pass_gat@10:OUT)	subckt_current
+	3926	Ix(pass_gat@10:VDD)	subckt_current
+	3927	Ix(pass_gat@11:CLK)	subckt_current
+	3928	Ix(pass_gat@11:CLKB)	subckt_current
+	3929	Ix(pass_gat@11:IN)	subckt_current
+	3930	Ix(pass_gat@11:OUT)	subckt_current
+	3931	Ix(pass_gat@11:VDD)	subckt_current
+	3932	Ix(pass_gat@12:CLK)	subckt_current
+	3933	Ix(pass_gat@12:CLKB)	subckt_current
+	3934	Ix(pass_gat@12:IN)	subckt_current
+	3935	Ix(pass_gat@12:OUT)	subckt_current
+	3936	Ix(pass_gat@12:VDD)	subckt_current
+	3937	Ix(pass_gat@13:CLK)	subckt_current
+	3938	Ix(pass_gat@13:CLKB)	subckt_current
+	3939	Ix(pass_gat@13:IN)	subckt_current
+	3940	Ix(pass_gat@13:OUT)	subckt_current
+	3941	Ix(pass_gat@13:VDD)	subckt_current
+	3942	Ix(pass_gat@14:CLK)	subckt_current
+	3943	Ix(pass_gat@14:CLKB)	subckt_current
+	3944	Ix(pass_gat@14:IN)	subckt_current
+	3945	Ix(pass_gat@14:OUT)	subckt_current
+	3946	Ix(pass_gat@14:VDD)	subckt_current
+	3947	Ix(pass_gat@15:CLK)	subckt_current
+	3948	Ix(pass_gat@15:CLKB)	subckt_current
+	3949	Ix(pass_gat@15:IN)	subckt_current
+	3950	Ix(pass_gat@15:OUT)	subckt_current
+	3951	Ix(pass_gat@15:VDD)	subckt_current
+	3952	Ix(pass_gat@16:CLK)	subckt_current
+	3953	Ix(pass_gat@16:CLKB)	subckt_current
+	3954	Ix(pass_gat@16:IN)	subckt_current
+	3955	Ix(pass_gat@16:OUT)	subckt_current
+	3956	Ix(pass_gat@16:VDD)	subckt_current
+	3957	Ix(pass_gat@17:CLK)	subckt_current
+	3958	Ix(pass_gat@17:CLKB)	subckt_current
+	3959	Ix(pass_gat@17:IN)	subckt_current
+	3960	Ix(pass_gat@17:OUT)	subckt_current
+	3961	Ix(pass_gat@17:VDD)	subckt_current
+	3962	Ix(pass_gat@18:CLK)	subckt_current
+	3963	Ix(pass_gat@18:CLKB)	subckt_current
+	3964	Ix(pass_gat@18:IN)	subckt_current
+	3965	Ix(pass_gat@18:OUT)	subckt_current
+	3966	Ix(pass_gat@18:VDD)	subckt_current
+	3967	Ix(pass_gat@19:CLK)	subckt_current
+	3968	Ix(pass_gat@19:CLKB)	subckt_current
+	3969	Ix(pass_gat@19:IN)	subckt_current
+	3970	Ix(pass_gat@19:OUT)	subckt_current
+	3971	Ix(pass_gat@19:VDD)	subckt_current
+	3972	Ix(pass_gat@20:CLK)	subckt_current
+	3973	Ix(pass_gat@20:CLKB)	subckt_current
+	3974	Ix(pass_gat@20:IN)	subckt_current
+	3975	Ix(pass_gat@20:OUT)	subckt_current
+	3976	Ix(pass_gat@20:VDD)	subckt_current
+	3977	Ix(pass_gat@21:CLK)	subckt_current
+	3978	Ix(pass_gat@21:CLKB)	subckt_current
+	3979	Ix(pass_gat@21:IN)	subckt_current
+	3980	Ix(pass_gat@21:OUT)	subckt_current
+	3981	Ix(pass_gat@21:VDD)	subckt_current
+	3982	Ix(pass_gat@22:CLK)	subckt_current
+	3983	Ix(pass_gat@22:CLKB)	subckt_current
+	3984	Ix(pass_gat@22:IN)	subckt_current
+	3985	Ix(pass_gat@22:OUT)	subckt_current
+	3986	Ix(pass_gat@22:VDD)	subckt_current
+	3987	Ix(pass_gat@23:CLK)	subckt_current
+	3988	Ix(pass_gat@23:CLKB)	subckt_current
+	3989	Ix(pass_gat@23:IN)	subckt_current
+	3990	Ix(pass_gat@23:OUT)	subckt_current
+	3991	Ix(pass_gat@23:VDD)	subckt_current
+	3992	Ix(pass_gat@24:CLK)	subckt_current
+	3993	Ix(pass_gat@24:CLKB)	subckt_current
+	3994	Ix(pass_gat@24:IN)	subckt_current
+	3995	Ix(pass_gat@24:OUT)	subckt_current
+	3996	Ix(pass_gat@24:VDD)	subckt_current
+	3997	Ix(pass_gat@25:CLK)	subckt_current
+	3998	Ix(pass_gat@25:CLKB)	subckt_current
+	3999	Ix(pass_gat@25:IN)	subckt_current
+	4000	Ix(pass_gat@25:OUT)	subckt_current
+	4001	Ix(pass_gat@25:VDD)	subckt_current
+	4002	Ix(pass_gat@26:CLK)	subckt_current
+	4003	Ix(pass_gat@26:CLKB)	subckt_current
+	4004	Ix(pass_gat@26:IN)	subckt_current
+	4005	Ix(pass_gat@26:OUT)	subckt_current
+	4006	Ix(pass_gat@26:VDD)	subckt_current
+	4007	Ix(pass_gat@27:CLK)	subckt_current
+	4008	Ix(pass_gat@27:CLKB)	subckt_current
+	4009	Ix(pass_gat@27:IN)	subckt_current
+	4010	Ix(pass_gat@27:OUT)	subckt_current
+	4011	Ix(pass_gat@27:VDD)	subckt_current
+	4012	Ix(pass_gat@28:CLK)	subckt_current
+	4013	Ix(pass_gat@28:CLKB)	subckt_current
+	4014	Ix(pass_gat@28:IN)	subckt_current
+	4015	Ix(pass_gat@28:OUT)	subckt_current
+	4016	Ix(pass_gat@28:VDD)	subckt_current
+	4017	Ix(pass_gat@29:CLK)	subckt_current
+	4018	Ix(pass_gat@29:CLKB)	subckt_current
+	4019	Ix(pass_gat@29:IN)	subckt_current
+	4020	Ix(pass_gat@29:OUT)	subckt_current
+	4021	Ix(pass_gat@29:VDD)	subckt_current
+	4022	Ix(pass_gat@30:CLK)	subckt_current
+	4023	Ix(pass_gat@30:CLKB)	subckt_current
+	4024	Ix(pass_gat@30:IN)	subckt_current
+	4025	Ix(pass_gat@30:OUT)	subckt_current
+	4026	Ix(pass_gat@30:VDD)	subckt_current
+	4027	Ix(pass_gat@31:CLK)	subckt_current
+	4028	Ix(pass_gat@31:CLKB)	subckt_current
+	4029	Ix(pass_gat@31:IN)	subckt_current
+	4030	Ix(pass_gat@31:OUT)	subckt_current
+	4031	Ix(pass_gat@31:VDD)	subckt_current
+	4032	Ix(pass_gat@32:CLK)	subckt_current
+	4033	Ix(pass_gat@32:CLKB)	subckt_current
+	4034	Ix(pass_gat@32:IN)	subckt_current
+	4035	Ix(pass_gat@32:OUT)	subckt_current
+	4036	Ix(pass_gat@32:VDD)	subckt_current
+	4037	Ix(pass_gat@33:CLK)	subckt_current
+	4038	Ix(pass_gat@33:CLKB)	subckt_current
+	4039	Ix(pass_gat@33:IN)	subckt_current
+	4040	Ix(pass_gat@33:OUT)	subckt_current
+	4041	Ix(pass_gat@33:VDD)	subckt_current
+	4042	Ix(pass_gat@34:CLK)	subckt_current
+	4043	Ix(pass_gat@34:CLKB)	subckt_current
+	4044	Ix(pass_gat@34:IN)	subckt_current
+	4045	Ix(pass_gat@34:OUT)	subckt_current
+	4046	Ix(pass_gat@34:VDD)	subckt_current
+	4047	Ix(pass_gat@35:CLK)	subckt_current
+	4048	Ix(pass_gat@35:CLKB)	subckt_current
+	4049	Ix(pass_gat@35:IN)	subckt_current
+	4050	Ix(pass_gat@35:OUT)	subckt_current
+	4051	Ix(pass_gat@35:VDD)	subckt_current
+	4052	Ix(pass_gat@36:CLK)	subckt_current
+	4053	Ix(pass_gat@36:CLKB)	subckt_current
+	4054	Ix(pass_gat@36:IN)	subckt_current
+	4055	Ix(pass_gat@36:OUT)	subckt_current
+	4056	Ix(pass_gat@36:VDD)	subckt_current
+	4057	Ix(pass_gat@39:CLK)	subckt_current
+	4058	Ix(pass_gat@39:CLKB)	subckt_current
+	4059	Ix(pass_gat@39:IN)	subckt_current
+	4060	Ix(pass_gat@39:OUT)	subckt_current
+	4061	Ix(pass_gat@39:VDD)	subckt_current
+	4062	Ix(pass_gat@40:CLK)	subckt_current
+	4063	Ix(pass_gat@40:CLKB)	subckt_current
+	4064	Ix(pass_gat@40:IN)	subckt_current
+	4065	Ix(pass_gat@40:OUT)	subckt_current
+	4066	Ix(pass_gat@40:VDD)	subckt_current
+	4067	Ix(pass_gat@41:CLK)	subckt_current
+	4068	Ix(pass_gat@41:CLKB)	subckt_current
+	4069	Ix(pass_gat@41:IN)	subckt_current
+	4070	Ix(pass_gat@41:OUT)	subckt_current
+	4071	Ix(pass_gat@41:VDD)	subckt_current
+	4072	Ix(pass_gat@42:CLK)	subckt_current
+	4073	Ix(pass_gat@42:CLKB)	subckt_current
+	4074	Ix(pass_gat@42:IN)	subckt_current
+	4075	Ix(pass_gat@42:OUT)	subckt_current
+	4076	Ix(pass_gat@42:VDD)	subckt_current
+	4077	Ix(pass_gat@43:CLK)	subckt_current
+	4078	Ix(pass_gat@43:CLKB)	subckt_current
+	4079	Ix(pass_gat@43:IN)	subckt_current
+	4080	Ix(pass_gat@43:OUT)	subckt_current
+	4081	Ix(pass_gat@43:VDD)	subckt_current
+	4082	Ix(pass_gat@44:CLK)	subckt_current
+	4083	Ix(pass_gat@44:CLKB)	subckt_current
+	4084	Ix(pass_gat@44:IN)	subckt_current
+	4085	Ix(pass_gat@44:OUT)	subckt_current
+	4086	Ix(pass_gat@44:VDD)	subckt_current
+	4087	Ix(pass_gat@45:CLK)	subckt_current
+	4088	Ix(pass_gat@45:CLKB)	subckt_current
+	4089	Ix(pass_gat@45:IN)	subckt_current
+	4090	Ix(pass_gat@45:OUT)	subckt_current
+	4091	Ix(pass_gat@45:VDD)	subckt_current
+	4092	Ix(pass_gat@46:CLK)	subckt_current
+	4093	Ix(pass_gat@46:CLKB)	subckt_current
+	4094	Ix(pass_gat@46:IN)	subckt_current
+	4095	Ix(pass_gat@46:OUT)	subckt_current
+	4096	Ix(pass_gat@46:VDD)	subckt_current
+	4097	Ix(pass_gat@47:CLK)	subckt_current
+	4098	Ix(pass_gat@47:CLKB)	subckt_current
+	4099	Ix(pass_gat@47:IN)	subckt_current
+	4100	Ix(pass_gat@47:OUT)	subckt_current
+	4101	Ix(pass_gat@47:VDD)	subckt_current
+	4102	Ix(pass_gat@48:CLK)	subckt_current
+	4103	Ix(pass_gat@48:CLKB)	subckt_current
+	4104	Ix(pass_gat@48:IN)	subckt_current
+	4105	Ix(pass_gat@48:OUT)	subckt_current
+	4106	Ix(pass_gat@48:VDD)	subckt_current
+	4107	Ix(pass_gat@49:CLK)	subckt_current
+	4108	Ix(pass_gat@49:CLKB)	subckt_current
+	4109	Ix(pass_gat@49:IN)	subckt_current
+	4110	Ix(pass_gat@49:OUT)	subckt_current
+	4111	Ix(pass_gat@49:VDD)	subckt_current
+	4112	Ix(pass_gat@50:CLK)	subckt_current
+	4113	Ix(pass_gat@50:CLKB)	subckt_current
+	4114	Ix(pass_gat@50:IN)	subckt_current
+	4115	Ix(pass_gat@50:OUT)	subckt_current
+	4116	Ix(pass_gat@50:VDD)	subckt_current
+	4117	Ix(pass_gat@51:CLK)	subckt_current
+	4118	Ix(pass_gat@51:CLKB)	subckt_current
+	4119	Ix(pass_gat@51:IN)	subckt_current
+	4120	Ix(pass_gat@51:OUT)	subckt_current
+	4121	Ix(pass_gat@51:VDD)	subckt_current
+	4122	Ix(pass_gat@52:CLK)	subckt_current
+	4123	Ix(pass_gat@52:CLKB)	subckt_current
+	4124	Ix(pass_gat@52:IN)	subckt_current
+	4125	Ix(pass_gat@52:OUT)	subckt_current
+	4126	Ix(pass_gat@52:VDD)	subckt_current
+	4127	Ix(pass_gat@53:CLK)	subckt_current
+	4128	Ix(pass_gat@53:CLKB)	subckt_current
+	4129	Ix(pass_gat@53:IN)	subckt_current
+	4130	Ix(pass_gat@53:OUT)	subckt_current
+	4131	Ix(pass_gat@53:VDD)	subckt_current
+	4132	Ix(pass_gat@54:CLK)	subckt_current
+	4133	Ix(pass_gat@54:CLKB)	subckt_current
+	4134	Ix(pass_gat@54:IN)	subckt_current
+	4135	Ix(pass_gat@54:OUT)	subckt_current
+	4136	Ix(pass_gat@54:VDD)	subckt_current
+	4137	Ix(pass_gat@55:CLK)	subckt_current
+	4138	Ix(pass_gat@55:CLKB)	subckt_current
+	4139	Ix(pass_gat@55:IN)	subckt_current
+	4140	Ix(pass_gat@55:OUT)	subckt_current
+	4141	Ix(pass_gat@55:VDD)	subckt_current
+	4142	Ix(pass_gat@56:CLK)	subckt_current
+	4143	Ix(pass_gat@56:CLKB)	subckt_current
+	4144	Ix(pass_gat@56:IN)	subckt_current
+	4145	Ix(pass_gat@56:OUT)	subckt_current
+	4146	Ix(pass_gat@56:VDD)	subckt_current
+	4147	Ix(pass_gat@57:CLK)	subckt_current
+	4148	Ix(pass_gat@57:CLKB)	subckt_current
+	4149	Ix(pass_gat@57:IN)	subckt_current
+	4150	Ix(pass_gat@57:OUT)	subckt_current
+	4151	Ix(pass_gat@57:VDD)	subckt_current
+	4152	Ix(pass_gat@58:CLK)	subckt_current
+	4153	Ix(pass_gat@58:CLKB)	subckt_current
+	4154	Ix(pass_gat@58:IN)	subckt_current
+	4155	Ix(pass_gat@58:OUT)	subckt_current
+	4156	Ix(pass_gat@58:VDD)	subckt_current
+	4157	Ix(pass_gat@59:CLK)	subckt_current
+	4158	Ix(pass_gat@59:CLKB)	subckt_current
+	4159	Ix(pass_gat@59:IN)	subckt_current
+	4160	Ix(pass_gat@59:OUT)	subckt_current
+	4161	Ix(pass_gat@59:VDD)	subckt_current
+	4162	Ix(pass_gat@60:CLK)	subckt_current
+	4163	Ix(pass_gat@60:CLKB)	subckt_current
+	4164	Ix(pass_gat@60:IN)	subckt_current
+	4165	Ix(pass_gat@60:OUT)	subckt_current
+	4166	Ix(pass_gat@60:VDD)	subckt_current
+	4167	Ix(pass_gat@61:CLK)	subckt_current
+	4168	Ix(pass_gat@61:CLKB)	subckt_current
+	4169	Ix(pass_gat@61:IN)	subckt_current
+	4170	Ix(pass_gat@61:OUT)	subckt_current
+	4171	Ix(pass_gat@61:VDD)	subckt_current
+	4172	Ix(pass_gat@62:CLK)	subckt_current
+	4173	Ix(pass_gat@62:CLKB)	subckt_current
+	4174	Ix(pass_gat@62:IN)	subckt_current
+	4175	Ix(pass_gat@62:OUT)	subckt_current
+	4176	Ix(pass_gat@62:VDD)	subckt_current
+	4177	Ix(pass_gat@63:CLK)	subckt_current
+	4178	Ix(pass_gat@63:CLKB)	subckt_current
+	4179	Ix(pass_gat@63:IN)	subckt_current
+	4180	Ix(pass_gat@63:OUT)	subckt_current
+	4181	Ix(pass_gat@63:VDD)	subckt_current
+	4182	Ix(pass_gat@64:CLK)	subckt_current
+	4183	Ix(pass_gat@64:CLKB)	subckt_current
+	4184	Ix(pass_gat@64:IN)	subckt_current
+	4185	Ix(pass_gat@64:OUT)	subckt_current
+	4186	Ix(pass_gat@64:VDD)	subckt_current
+	4187	Ix(pass_gat@65:CLK)	subckt_current
+	4188	Ix(pass_gat@65:CLKB)	subckt_current
+	4189	Ix(pass_gat@65:IN)	subckt_current
+	4190	Ix(pass_gat@65:OUT)	subckt_current
+	4191	Ix(pass_gat@65:VDD)	subckt_current
+Binary:
+      @bÎ4   @z>z>bÎ4z>z>bÎ4bÎ4z>z>z>z>bÎ4bÎ4bÎ4.¿4z>z>z>z>z>z>z>z>bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4¤ö=z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>¤ö=z>z>z>z>z>z>z>z>bÎ4z>z>bÎ4z>z>bÎ4bÎ4z>z>z>z>bÎ4bÎ4bÎ4bÎ4z>z>z>z>z>z>z>z>bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4bÎ4¿ö=z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>Àö=z>z>z>z>z>z>z>z>®Î4z>z>®Î4z>z>®Î4®Î4z>z>z>z>®Î4®Î4®Î4y¿4z>z>z>z>z>z>z>z>®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4¯Î4¯Î4¯Î4¯Î4¯Î4¯Î4¯Î4¯Î4Àö=z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>ˆ™‘¾z>z>z>z>z>z>n>n>¯Î4z>z>¯Î4z>z>¯Î4¯Î4z>z>z>z>¯Î4¯Î4¯Î4¯Î4z>z>z>z>z>z>z>z>¯Î4¯Î4¯Î4¯Î4¯Î4¯Î4¯Î4¯Î4z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4®Î4¨ö=z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>¨ö=z>z>z>z>z>z>n>n>etk@åù@  À?z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@    ßb@n>·b@z>·b@z>·b@·b@z>·b@z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@·b@z>·b@z>·b@z>·b@·b@z>·b@z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@·b@z>·b@z>·b@z>·b@·b@z>·b@z>·b@z>   @   @    ·b@z>z>·b@z>·b@z>·b@z>·b@z>z>·b@z>·b@z>·b@z>·b@·b@z>·b@z>·b@z>·b@·b@z>·b@   @   @       @   @            n>n>n>n>n>n>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>z>›Î4ˆÎ4uÎ4›Î4ˆÎ4uÎ4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4A¿4T¿4f¿4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4›Î4ˆÎ4uÎ4uÎ4ˆÎ4›Î4"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+·àK
+œàK
+‚àK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+"öK
+öK
+ìõK
+ìõK
+öK
+"öK
+ìõK
+öK
+"öK
+ìõK
+öK
+"öK
+ª¦ª¦ª¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦ª¦ª¦ª¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦Ş¦Ş¦Ş¦ª¦ª¦ª¦]İ¦]İ¦]İ¦N©¦N©¦N©¦ÔûÅÁ?ªK3                w²vCWgIh×íX×íX£’IÇî@æˆJ²-;Õ‰2ô#<€3ÀÈ,ä$$¿-&%Ïcò¿Ïcò¿ D`cú†V/Ÿ ¥öï/Ÿ ¥öïö‡â=@Ñ{täÂ,Ó¾ÅZv´¾ÅZv´«§ò¿•0ô¨w¬—B¡Ë°®—UŸFÄ¬ÿ¾®zËz¼—ÉÖŞÚ…MèÖŞÚ…Mè>•ù÷¹¨÷´‹‘/öK iññ    “+E­Q7 õ6Ûó1x„2v(‰§(#¼6[Ğoÿ™ ™ 35FÔÁÑñÁÑñöúİ9ßQbËQbË…‹·âÃ¸í¤=+¦rT’˜’“™w™w~#ŒXåŠ#¼    bÇøjO!‰©ü(AYx™¦|šY—CUÎ6ŞkŠ3ø4ŞkŠ¾ÁtÇ¾vÈ¨Vc±Xv«\m®ZkÄzkÄzşr°nŒI˜¾°yœ%˜Â ŸÉó–»ó–»ò¡Ëm£Êm®ÚªÙçºéš¶èbÇø1iîémîÕ² !ù%†Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦]İ¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦N©¦=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+c@!|8ÈÙğ 1¹ÈP¡ å9ÉR šºÉ½¯!&xÇ'h!ÛøÇ!yÈP¡ ÒøÈF."Ñ·Æ½Ş!…8Çì!È·Çc@!|8È[$]uÄŠ2$©ôÃéP$guÃÛ#BóÃñ©ŞÛŞ`ŞÑ[ßß†Üßzµß:]à
+ŞİÇŞ
+Şİ{›Ş¿^Ş0ßsßŞäœß ÜqZİšÜ&ÛİiİÚ[Ş«ŞÛŞáÙ`àR—Ùjßß­ÙIßöàÙ=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+ÑàK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+=öK
+Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦Ş¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦ª¦%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+1Û;úÉ1ÛïzÊ¨‹¤ûÊ<æzËö Ü9Ê¨‹‘ºÊ<E;ËZú»Ë‹y †yÉ»* ;úÉ1ÛïzÊ¨‹¤ûÊÙğ 1¹ÈP¡ å9Éö šºÉö Ü9ÊjËØÛœà`àáÓààDáˆaáùâQ«àïİà,á1]át áåİá)¡áš^âüêß'àjßßÛœà`àáÓààDá¦*ßÑ[ßß†ÜßÉŸß:]à} àïİà&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+&ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+²ä{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+%ÿ{
+¥¡L1¯«²1ã„Š7Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©
+Á—)
+Á—)
+Á—)
+Á—)
+Á—©
+Á—©
+Á—©
+Á—©
+Á—)
+Á—)
+Á—)
+Á—)
+Á—©
+Á—©
+Á—©
+Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©“©“©“©“©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—©Á—©Á—©Á—©Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)Á—)/¡½£/¡½£R£R£©¾l%Å°p%Å°p%á¢t%Å°p%©¾l%Å°p%á¢t%/¡½£/¡½£R£R£©¾l%Å°p%Å°p%á¢t%R£/¡½£/¡½£R£Å°p%©¾l%Å°p%á¢t%/¡½£/¡½£R£R£©¾l%Å°p%Å°p%á¢t%R£/¡½£/¡½£R£©¾l%Å°p%Å°p%á¢t%R£/¡½£/¡½£R£Å°p%©¾l%Å°p%á¢t%/¡½£/¡½£R£R£©¾l%Å°p%Å°p%á¢t%R£/¡½£/¡½£R£Å°p%©¾l%Å°p%á¢t%/¡½£/¡½£R£R£Å°p%©¾l%Å°p%á¢t%/¡½£/¡½£R£R£©¾l%Å°p%Å°p%á¢t%/¡½£/¡½£R£R£Å°p%©¾l%Å°p%á¢t%R£/¡½£/¡½£R£Å°p%©¾l%Å°p%á¢t%êÖ|¢êÖü¢êÖ|¢êÖ|¢©¾l%Å°p%Å°p%á¢t%êÖ|¢êÖü¢êÖ|¢êÖ|¢Å°p%©¾l%Å°p%á¢t%êÖ|¢êÖü¢êÖ|¢êÖ|¢©¾l%Å°p%Å°p%á¢t%êÖü¢êÖ|¢êÖ|¢êÖ|¢7ö\%7ö\%7ö\%Sè`%êÖü"êÖü"êÖü"/¡=#7ö\%7ö\%7ö\%Sè`%êÖü"êÖü"/¡=#êÖü"7ö\%7ö\%7ö\%Sè`%/¡=#êÖü"êÖü"êÖü"7ö\%7ö\%7ö\%Sè`%êÖü"êÖü"êÖü"/¡=#7ö\%7ö\%7ö\%Sè`%/¡=#êÖü"êÖü"êÖü"7ö\%7ö\%7ö\%Sè`%êÖü"êÖü"/¡=#êÖü"7ö\%7ö\%7ö\%Sè`%/¡½#/¡½#<İ#<İ#7ö\%7ö\%7ö\%Sè`%<İ#/¡½#/¡½#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%<İ#/¡½#/¡½#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#/¡½#<İ#©;I%©;I%Å-M%âQ%<İ#/¡½#<İ#<İ#©;I%ŒIE%Å-M%âQ%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%Å-M%Å-M%Å-M%/¡½#/¡½#<İ#<İ#©;I%©;I%Å-M%âQ%/¡½#/¡½#<İ#<İ#  k)      ˜((ğ¯,  D)      ((ğ¯,  G)      ((ğ¯, €Ö(¬ \½âÚÃ²vŒ¡5¡²0²$Á—©$Á—©$Á—©$Á—©$Á—©$Á—©$Á—©$Á—©*Á—©*Á—©*Á—©*Á—©$Á—©*Á—©*Á—©*Á—©*Á—©.Á—©.Á—©.Á—©.Á—©0Á—©0Á—©$Á—©0Á—©0Á—©$Á—©$Á—©$Á—©%Á—©$Á—©$Á—©ïßü#æ>$*–$*–$£B$*–$’$’$VLñ$æ–Å$æ–Å$æ–Å$Æ©e$n¯½$æ–Å$ÔeÕ$ÔeÕ$]~Í$ÔeÕ$¢ %]~Í$ÔeÕ$]~Í$Æ©e$ÔeÕ$ÔeÕ$æ>$Æ©e$æ>$æ>$£B$*–$«=%‚yW%‚yW%‚yW%«=%‚yW%‚yW%«=%«=%‚yW%«=%‚yW%«=%‚yW%‚yW%‚yW%‚yW%«=%‚yW%«=%‚yW%‚yW%«=%‚yW%‚yW%«=%«=%‚yW%‚yW%‚yW%‚yW%«=%}6°1ª@±141~ ‘Ó| ²0²<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©<Á—©,Õ${î#,Õ$,Õ${î#,Õ$,Õ${î#ÂĞ®#å2#å2#å2#,Õ$å2#ÂĞ®#ÂĞ®#ÂĞ®#å2#ÂĞ®#å2#å2#ÂĞ®#å2#,Õ$ÂĞ®#ÂĞ®#{î#,Õ${î#{î#,Õ${î#”ªG%Ø¶C%Ø¶C%dè)%”ªG%dè)%Ø¶C%”ªG%‚yW%‚yW%«=%‚yW%”ªG%‚yW%«=%‚yW%‚yW%«=%‚yW%«=%‚yW%‚yW%«=%Ø¶C%‚yW%«=%”ªG%Ø¶C%”ªG%Ø¶C%dè)%”ªG%}6°1ª@±1†Ó| ¹µ±¹/²Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©“©Á—©Á—©{î#{î#{î#,Õ${î#{î#{î#,Õ${î#{î#{î#,Õ${î#{î#,Õ$,Õ${î#,Õ${î#,Õ${î#,Õ$,Õ${î#,Õ${î#{î#{î#{î#,Õ$,Õ${î#”ªG%Ø¶C%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%Ø¶C%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%Ø¶C%”ªG%Ø¶C%Ø¶C%”ªG%”ªG%”ªG%Ø¶C%”ªG%k6°1‰©û1€B!·@!²0²Á—©Á—©Á—©Á—©
+Á—©
+Á—©
+Á—©
+Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©Á—©{î#{î#{î#,Õ${î#{î#{î#,Õ${î#{î#{î#,Õ${î#{î#,Õ$,Õ${î#,Õ${î#,Õ${î#,Õ$,Õ${î#,Õ${î#{î#{î#,Õ$,Õ$,Õ${î#Ø¶C%”ªG%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%”ªG%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%Ø¶C%”ªG%”ªG%Ø¶C%”ªG%”ªG%”ªG%Ø¶C%Ø¶C%”ªG%Ø¶C%}6°1ª@±1ã„Š7Õ¦ÿ„Š·æp^.ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¬¡´¬¬¡´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¥´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¥´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¥´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,ĞÌ¥¤´´¬¤´´,  5"Ø
+}"  	¢o…ò"  (¡!õ¢ €’" €J"  T¡l…ß"  ¼!:êÏ¡  F¢  7¢o…Ò"  ®¡  T¡  ¡Ø
+c"  ®¡rÔS¡  M"Ø
+8"Û
+r"  (! @÷¢  ¤ =ê‡¡  p!t…Ñ"  F"ã
+x"   "  Ö!  `  @§¢ã
+x"   "t…Ñ"  7¢r’"  "  !  ¢!Àğ!à
+j"  ş!¹ğ!  X"¼¾!  <¡  ğ   
+¢¸´!  d!¹ğ!  	¢  X"¼¾! €J" € "  Ğ  À±"s+ !    Xé^©(ğ¯¬9
+“¼J}+¥G½¥kO¥¸^Ì¤ÿLn¥0o9¥¢Ì¥KŸ¥j2¤ÄÆŒ¤nÅ½¥©†¥h°œ¥Ò‹x¥…Ä#¥;Gÿ¤UU‰¥òÙ'¤Á`Z¤;Gÿ¤UU‰¥™-j¤_U¤I5P¤Qc£¤0]¤ Y´¥çh¥ç gª²¥ÛÒ¤*¥§¡9¥¾V€¥ø“Æ¤Ô—L¥*¥§¡9¥gª²¥hµ¤x¿N¥‚
+¥2¶¥‹g ¥ÌGL¥—K¥¦•š£­(¥%#„ò)¥;¦¥­(¥³#¥×¥'3¥­(¥kO¥%#„ò)¥:Ë¥²¥™,¤ã÷¡¥W¥±K¨9
+“<        §úG©ËE©(ğ¯¬(ğ¯¬9
+½ ˆ­¤¦^«£  é£©ÿƒ¤ À.¤¥şù£ à’£ ø‘¤  ¤©'ª¤ ĞI¤R/u¤  ¬¤ ¸¨¤R¤  m¤ @X¤ €ç£©?‡¤ Àm¤R/V¤ Àm¤©Ç‡¤ROK¤ Ğ§¤ @è£  ·¤RoF¤ @µ£RÏS¤  š¤RÏK¤ (¸¤  K¤ ˆ«¤ „¤©Ï·¤ ¨Î¤©¤ Ï¤©w«¤ ¨›¤©'Õ¤ øò¤©çº¤SZ¤ ¨²¤©o¤ ”¤SŸ¤ €š¤ ¨æ¤ ¨ê¤©ª¤ 8¢¤©G£¤ °©¤  è¤ªÎ¤ ¨Œ¤ €ª¤ Y¤ ğ ¤©¯½¤ÜL¨Pğ"¨RÇ¥êÃÖ¥ŠªÃ¥êcº¥RÇ¥êsÍ¥RÇ¥ XË¥ŠªÃ¥ê…Ø¥ŠªÃ¥ê¿Õ¥ˆÊ¥ŠªÃ¥êÏÕ¥ŠªÃ¥ 
+Ö¥ŠªÃ¥ê½¼¥RÇ¥êı½¥RÇ¥ê/¾¥ê­Ô¥RÇ¥ 2Ø¥"mé¥êK×¥"mé¥ê}è¥"mé¥êSç¥"mé¥ ~è¥RÇ¥z¹ó¥êQè¥z¹ó¥ê÷û¥z¹ó¥êGğ¥z¹ó¥êù¥
+—ú¥õ¦êÃ¿¥
+—ú¥êÿ¥
+—ú¥õF ¦
+—ú¥ ¸ø¥
+—ú¥ê3ÿ¥
+—ú¥õ¿¦RÇ¥
+—ú¥êñ¥Òş¥ B¦ ÌÛ¥RÇ¥êc×¥9
+=    ØÆe¤›ö¯¬ c£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬„£a£°ö-    ØÆe¤›ö¯¬*¤a£°ö-

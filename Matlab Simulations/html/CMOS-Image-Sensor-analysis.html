@@ -1,0 +1,799 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>CMOS Image Sensor Analysis</title><meta name="generator" content="MATLAB 9.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-06-17"><meta name="DC.source" content="simulaciones_varias.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Par&aacute;metros de la tecnolog&iacute;a</a></li><li><a href="#4">Calculo de la zona de agotamiento</a></li><li><a href="#7">Calculo de la capacitancia del fotodiodo</a></li><li><a href="#11">Calculo de densidad de corriente</a></li><li><a href="#13">Optimizacion pixel APS CMOS</a></li><li><a href="#17">Simulaci&oacute;n de la optimizaci&oacute;n</a></li><li><a href="#19">Conclusiones de la optimizacion</a></li><li><a href="#20">Voltaje que produce un flujo de fotones</a></li><li><a href="#21">Tabla de referencia para el flujo de fotones</a></li><li><a href="#22">Extract of parasitic values</a></li></ul></div><h2 id="1">Par&aacute;metros de la tecnolog&iacute;a</h2><p>Se intoduciran los parametros de la tecnolog&iacute;a</p><pre class="codeinput">C_nwell = 10^16;        <span class="comment">% Concentracion de donadores Nd [1/cm^-3]</span>
+C_psubstrate = 10^15;   <span class="comment">% Concentracion de aceptores Na [1/cm^-3]</span>
+k_j = 1.38064852e-23;   <span class="comment">% Constante de boltzmann [J/K]</span>
+k_ev = 8.62e-5;         <span class="comment">% Constante de boltzmann [eV/K]</span>
+T = 300;                <span class="comment">% Temperatura absoluta [K]</span>
+E_g = 1.12;             <span class="comment">% Energia de separacion de banda del Silicio [eV]</span>
+q = 1.6e-19;            <span class="comment">% Carga del electron [Col]</span>
+e_s = 10.45e-13;        <span class="comment">% Permitividad del silicio [F/cm]</span>
+e_s_r = 11.7;           <span class="comment">% Permitividad del silicio respecto al e_0</span>
+e_0 = 1.04e-12;         <span class="comment">% Permitividad del vacio [F/cm]</span>
+n_i = 1.45e10;          <span class="comment">% Concentracion intrinseca a temperatura ambiente [1/cm^-3]</span>
+<span class="comment">% B = 5.4e31;           % B del silicio [(cm^2K)^-3]</span>
+<span class="comment">% n_i = B*T^3*exp(-E_g/(k_ev*T));</span>
+</pre><p>Por ejemplo, el calculo del voltaje built in <img src="simulaciones_varias_eq09692603061016414841.png" alt="$(\phi_0$"> o <img src="simulaciones_varias_eq06106820019869001234.png" alt="$V_{bi})$"> en una union pn compuesta por el sustratro tipo p y un pozo n-well es:</p><pre class="codeinput">N_a = C_psubstrate;
+N_d = C_nwell;
+V_T = k_j*T/q;
+V_bi = V_T*log(N_d*N_a/n_i^2)
+</pre><pre class="codeoutput">
+V_bi =
+
+    0.6364
+
+</pre><p>Podemos ver en la siguiente secci&oacute;n que <img src="simulaciones_varias_eq04449465001374386046.png" alt="$\phi_n+\phi_p$"> dara el mismo resultado.</p><h2 id="4">Calculo de la zona de agotamiento</h2><p>Se calculara el ancho de la zona de agotamiento en un eje vertical z, de una union entre un sustrato tipo p y un pozo N.</p><pre class="codeinput">phi_n = k_j*T/q*log(N_d/n_i);   <span class="comment">% Potencial de la zona n [V]</span>
+phi_p = k_j*T/q*log(N_a/n_i);   <span class="comment">% Potencial de la zona p [V]</span>
+coef = N_a/N_d;                 <span class="comment">% Coeficiente igual a x_n/x_p. distancia_type</span>
+v_D = 2;                        <span class="comment">% Voltaje que polariza el diodo en inversa [V]</span>
+</pre><p>Vemos que:</p><pre class="codeinput">V_bi = phi_n+phi_p
+</pre><pre class="codeoutput">
+V_bi =
+
+    0.6364
+
+</pre><p>Luego, el ancho de la zona de agotamiento en micrometros es:</p><pre class="codeinput">W = sqrt(2*e_s/q*(v_D + V_bi)*(1/N_a + 1/N_d));    <span class="comment">% Ancho de zona de agotamiento del diodo [cm]</span>
+W_um = W*10000
+</pre><pre class="codeoutput">
+W_um =
+
+    1.9463
+
+</pre><h2 id="7">Calculo de la capacitancia del fotodiodo</h2><p>Con respecto a la capacitancia del fotodiodo tenemos que:</p><p><img src="simulaciones_varias_eq17861662949211224475.png" alt="$$C_{PD} = C_A A + C_{P}A_P$$"></p><p><img src="simulaciones_varias_eq04280834912327072413.png" alt="$$C_{\mathrm{PD}}=\frac{e_{Si}}{\sqrt{\frac{2e_{Si}}{q}&#xA;\left(\phi_{\mathrm{0,A}}+V_{\mathrm{PD}}\right)\left(\frac{N_{\mathrm{A}}+&#xA;N_{\mathrm{D}}}{N_{\mathrm{A}} N_{\mathrm{D}}}\right)}} A+\frac{e_{Si}}&#xA;{\sqrt{\frac{2 e_{Si}}{q}\left(\phi_{\mathrm{0,P}}+V_{\mathrm{PD}}\right)&#xA;\left(\frac{N_{\mathrm{A}}+N_{\mathrm{D}}}{N_{\mathrm{A}}&#xA;N_{\mathrm{D}}}\right)}} A_{\mathrm{P}}$$"></p><p>o bien:</p><p><img src="simulaciones_varias_eq04404314056964304865.png" alt="$$C_{A,P}=\frac{C_{\mathrm{JO,JOP}}}{\left(1+\frac{V_{\mathrm{PD}}}&#xA;{\phi_{\mathrm{0,0P}}}\right)^{M_{\mathrm{J,JP}}}}$$"></p><p>Donde <img src="simulaciones_varias_eq05147331747641807187.png" alt="$A$"> corresponde a la area activa del fotodiodo y <img src="simulaciones_varias_eq09686537392669178849.png" alt="$A_P$"> es el area lateral del fotodiodo. Tambien <img src="simulaciones_varias_eq15967570605189004374.png" alt="$C_{JO}$"> y <img src="simulaciones_varias_eq10859278313706555347.png" alt="$C_{JOP}$"> corresponden a <img src="simulaciones_varias_eq01995930689427509825.png" alt="$C_{PD}$"> evaluada en <img src="simulaciones_varias_eq03687553883176798525.png" alt="$V_{PD} = 0$"> y <img src="simulaciones_varias_eq02192008967605791687.png" alt="$\phi_{0,A}$"> y <img src="simulaciones_varias_eq09564973055338420014.png" alt="$\phi_{0,P}$"> corresponden a el voltaje de buit in en el area activa y en el area lateral. Por lo tanto si <img src="simulaciones_varias_eq05508344529756732484.png" alt="$a$"> y <img src="simulaciones_varias_eq02044268985122151499.png" alt="$b$"> corresponde a los lados activos del fotodiodo y <img src="simulaciones_varias_eq09941021013676836398.png" alt="$p$"> la profundidad de la difusion n tenemos que:</p><pre class="codeinput">a = 9/(10*1000);        <span class="comment">% largo horizontal: 5 [um] pero en [cm]</span>
+b = 4.8/(10*1000);        <span class="comment">% largo vertical:   4 [um] pero en [cm]</span>
+p = 2/(10*1000);     <span class="comment">% profundidad:      2 [um] pero en [cm]</span>
+Area_activa = @(x,y) x*y;           <span class="comment">% (largo horizontal, largo vertical)</span>
+Area_lateral = @(x,y,z)(2*x+2*y)*z; <span class="comment">% (largo horizontal, largo vertical, profundidad)</span>
+A = Area_activa(a,b);                <span class="comment">% en [cm^2]</span>
+A_P = Area_lateral(a,b,p);           <span class="comment">% en [cm^2]</span>
+fprintf(<span class="string">'El area activa corresponde a %d [um^2] y el area lateral corresponde a %d [um^2]'</span>, (A/1e-8), (A_P/1e-8))
+</pre><pre class="codeoutput">El area activa corresponde a 4.320000e+01 [um^2] y el area lateral corresponde a 5.520000e+01 [um^2]</pre><p>Luego, calculamos <img src="simulaciones_varias_eq15967570605189004374.png" alt="$C_{JO}$"> y <img src="simulaciones_varias_eq10859278313706555347.png" alt="$C_{JOP}$">.</p><pre class="codeinput">phi_0A = V_bi;
+phi_0P = V_bi*0.9;
+denom1 = sqrt(2*e_s/q*(phi_0A)*(N_a+N_d)/(N_a*N_d)); <span class="comment">% [cm]</span>
+denom2 = sqrt(2*e_s/q*(phi_0P)*(N_a+N_d)/(N_a*N_d)); <span class="comment">% [cm]</span>
+C_JO = e_s/denom1;  <span class="comment">% [F/cm^2]</span>
+C_JOP = e_s/denom2; <span class="comment">% [F/cm^2]</span>
+C_neto = C_JO*A + C_JOP*A_P;
+fprintf(<span class="string">'La capacitancia en el area activa sin V_PD es: %d [F/cm^2]\n'</span>, C_JO)
+fprintf(<span class="string">'La capacitancia en el area lateral sin V_PD es: %d [F/cm^2]\n'</span>, C_JOP)
+fprintf(<span class="string">'La capacitancia total sin V_PD es: %d [F]'</span>, C_neto)
+</pre><pre class="codeoutput">La capacitancia en el area activa sin V_PD es: 1.092765e-08 [F/cm^2]
+La capacitancia en el area lateral sin V_PD es: 1.151875e-08 [F/cm^2]
+La capacitancia total sin V_PD es: 1.107910e-14 [F]</pre><p>Ahora con ello calculamos la capacitancia del fotodiodo con la incorporacion del coeficiente de grading. Este coeficiente valdra <img src="simulaciones_varias_eq06191247368528508831.png" alt="$M=1/2$"> cuando la union es abrupta (mas comun). En caso de ser gradual se ocupara <img src="simulaciones_varias_eq06459414525155029152.png" alt="$M=1/3$">.</p><pre class="codeinput">V_PD = 3.75;
+M = 1/2;
+C_A = C_JO/((1 + V_PD/phi_0A)^M);
+C_P = C_JOP/((1 + V_PD/phi_0P)^M);
+C_PD = C_A*A + C_P*A_P;
+fprintf(<span class="string">'La capacitancia en el area activa es: %d [F/cm^2]\n'</span>, C_A)
+fprintf(<span class="string">'La capacitancia en el area lateral es: %d [F/cm^2]\n'</span>, C_P)
+fprintf(<span class="string">'La capacitancia neta del fotodiodo es: %d [F]'</span>, C_PD)
+</pre><pre class="codeoutput">La capacitancia en el area activa es: 4.162464e-09 [F/cm^2]
+La capacitancia en el area lateral es: 4.192994e-09 [F/cm^2]
+La capacitancia neta del fotodiodo es: 4.112717e-15 [F]</pre><h2 id="11">Calculo de densidad de corriente</h2><p>La densidad de corriente total generada esta dada por la siguiente expresion, donde esta medida en [A/cm^2]</p><p><img src="simulaciones_varias_eq11941539156346941363.png" alt="$j_{ph} = \frac{qF_0}{\alpha}\left(\frac{1-exp(-\alpha x_1)}{x_1}- \frac{exp(-\alpha x_2)-exp(-\alpha x_3)}{x_3 - x_2}\right)$"></p><p>Donde el parametro <img src="simulaciones_varias_eq05581510236333683931.png" alt="$F_0$"> corresponde al flujo de electrones [photons/sec cm^2]. Con ello procedemos a encontrar la corriente que entrega cierto flujo de fotones al area sensible.</p><pre class="codeinput">x_1 = (2-0.1769)*1e-6*100;
+x_2 = (2+1.769)*1e-6*100;
+x_3 = 10e-6*100;
+alpha = 1e4;
+F_0 = 4.09e12;
+factor = q/alpha*((1-exp(-alpha*x_1))/(x_1) - (exp(-alpha*x_2)-exp(-alpha*x_3))/(x_3 - x_2));
+j_ph = factor*F_0;
+I = j_ph*A;
+Corriente_deseada = 1e-9;
+f_0 = Corriente_deseada/A/factor;
+
+fprintf(<span class="string">'El flujo de electrones %0.5e, produce una corriente de: %0.5e\n'</span>, F_0, I)
+fprintf(<span class="string">'Para producir una corriente %0.5e, se necesita un flujo de: %0.5e'</span>, Corriente_deseada, f_0)
+</pre><pre class="codeoutput">El flujo de electrones 4.09000e+12, produce una corriente de: 1.28974e-13
+Para producir una corriente 1.00000e-09, se necesita un flujo de: 3.17118e+16</pre><h2 id="13">Optimizacion pixel APS CMOS</h2><p>En la siguiente seccion se optimizara el tama&ntilde;o de un pixel CMOS en la tecnologia CMOS <img src="simulaciones_varias_eq02238558863244491875.png" alt="$0.5 \mu m$">. La funci&oacute;n a optimizar consiste en la <b>sensibilidad fotometrica <img src="simulaciones_varias_eq08796712765209927318.png" alt="$(S)$"></b> , la cual se define como la se&ntilde;al de salida de un sensor de imagen iluminado por un nivel determinado de luz en un tiempo especifico de integracion. Se define matematicamente como:</p><p><img src="simulaciones_varias_eq16507934774197347871.png" alt="$$S = CG \cdot R$$"></p><p>Donde <img src="simulaciones_varias_eq13994249547582797788.png" alt="$$CG$"> es la <b>ganancia de conversion</b> la cual es medida en <img src="simulaciones_varias_eq05033598636862052906.png" alt="$\left[\frac{V}{e-}\right]$">  y <img src="simulaciones_varias_eq03442895190380135198.png" alt="$R$"> la <b>receptividad</b> medida en <img src="simulaciones_varias_eq03326786838564744135.png" alt="$\left[\frac{e-}{sec\cdot lux}\right]$">.</p><p>Por el lado de la ganancia de conversion <img src="simulaciones_varias_eq17949442388822926982.png" alt="$(CG)$">, se calcula como sigue, donde <img src="simulaciones_varias_eq01995930689427509825.png" alt="$C_{PD}$"> es la capacitancia del fotodiodo.</p><p><img src="simulaciones_varias_eq01910618057116829411.png" alt="$$ CG = \frac{q}{C_{PD}}$$"></p><p>Mientras que la receptividad <img src="simulaciones_varias_eq15924097535152088843.png" alt="$(R)$">, como las cargas fotogeneradas pueden ser colectadas por el area activa <img src="simulaciones_varias_eq15569506994185479445.png" alt="$(R_A)$"> o periferica <img src="simulaciones_varias_eq01850387858563119205.png" alt="$(R_P)$">, tenemos que:</p><p><img src="simulaciones_varias_eq06712980200219667416.png" alt="$$R = R_A + R_P$"></p><p>Por lo tanto, la sensibilidad fotometrica <img src="simulaciones_varias_eq08796712765209927318.png" alt="$(S)$"> queda como:</p><p><img src="simulaciones_varias_eq11099011731304144591.png" alt="$$S = q \frac{R_A+R_P}{C_{PD}}$$"></p><p><b>Receptividad Activa:</b> Con respecto a la receptividad del area activa, sabemos que depende directamente del area del fotodiodo, tanto como el area del Nwell como el area de la difusion N activa, por lo que se elije la opcion propuesta en la tesis</p><p><img src="simulaciones_varias_eq11466274514810951618.png" alt="$$R_A = C_1 A^{l_{diff}/{l}}$$"></p><p>Donde <img src="simulaciones_varias_eq18399025947828558552.png" alt="$C_1$"> es una constante medida en <img src="simulaciones_varias_eq05433413121418319369.png" alt="$\left[\frac{e-}{sec\cdot lux \mu m^2}\right]$"> y <img src="simulaciones_varias_eq17284052138343687664.png" alt="$l_{diff}$"> corresponde a la longitud del cuadrado de la difusion activa y <img src="simulaciones_varias_eq11306495728221823791.png" alt="$l$"> a la longitud del cuadrado del Nwell.</p><p><b>Receptividad Periferica:</b> Con respecto a esta receptividad debemos considerar tres factores:</p><div><ol><li>La contribucion del tama&ntilde;o del area en el bottom y en las paredes: <img src="simulaciones_varias_eq04473244531260832245.png" alt="$R_{P1}$"></li><li>La area no ocupada alrededor del pixel: <img src="simulaciones_varias_eq10057008612688133653.png" alt="$R_{P2}$"></li><li>La diffusion length  de los portadores minoritarios: <img src="simulaciones_varias_eq01379890781182076576.png" alt="$R_{P3}$"></li></ol></div><p>Consecuentemente, <img src="simulaciones_varias_eq10313916136568173625.png" alt="$R_P$"> es proporcional a estos tres terminos.</p><p><img src="simulaciones_varias_eq13661022696572925965.png" alt="$$R_P = C_2\cdot R_{P1}\cdot R_{P2}\cdot R_{P3}$$"></p><p>--&gt; Con respecto a <img src="simulaciones_varias_eq04473244531260832245.png" alt="$R_{P1}$"> tenemos dos funciones propuestas por el modelo que van de 0 hasta A (area del pixel).</p><p><img src="simulaciones_varias_eq01761473848276745190.png" alt="$$f_1 = C\cdot A \textrm{  Donde }0<C\leq 1)$$"></p><p>El bottom area de la zona de agotamiento tiene aproximadamente el tama&ntilde;o del area activa del fotodiodo <img src="simulaciones_varias_eq17221527434527694065.png" alt="$(A)$">. En este caso, <img src="simulaciones_varias_eq14741863930587673176.png" alt="$f_1$"> considera este aspecto. Luego, tenemos <img src="simulaciones_varias_eq08380977875581089526.png" alt="$f_2$"> que tambien considera la diffusion length de los portadores minoritarios.</p><p><img src="simulaciones_varias_eq11863580387824030420.png" alt="$$f_2 = log_{10}\left(1+\frac{l}{2L_{diff}} \right)\cdot A \textrm{  Donde }0<\frac{l}{2L_{diff}}\leq 9 $$"></p><p>Donde <img src="simulaciones_varias_eq11306495728221823791.png" alt="$l$"> representa el lado del area activa del fotodiodo (lado n-well). Se pueden considerar tres escenarios:</p><div><ol><li><img src="simulaciones_varias_eq10753461067570348486.png" alt="$l<<L_{diff}$">: La contribucion de bottom no es importante porque no hay muchos fotocarriers suseptibles para ser capturado por la superficie bottom.</li><li><img src="simulaciones_varias_eq09060339877052293500.png" alt="$l\approx L_{diff}$">: La contribucion bottom pasa a ser significante</li><li><img src="simulaciones_varias_eq10753461067570348486.png" alt="$l<<L_{diff}$">: La contribucion periferica es directamente proporcional al area bottom.</li></ol></div><p>A la funci&oacute;n anterior se le adhiere el &aacute;rea periferica, donde interviene la profundidad <img src="simulaciones_varias_eq17945534905364173734.png" alt="$(p)$"> de la union. As&iacute;, finalmente se tiene <img src="simulaciones_varias_eq04473244531260832245.png" alt="$R_{P1}$"></p><p><img src="simulaciones_varias_eq00660763126581628431.png" alt="$$R_{P1} = f + 4lp$$"></p><p>--&gt; Con respecto a <img src="simulaciones_varias_eq10057008612688133653.png" alt="$R_{P2}$"> tenemos que considerar que si el area es muy grande, la contribuci&oacute;n periferica ser&aacute; menor. De esta manera, este termino modela el area no ocupada del fotodiodo que rodea el area activa. As&iacute;, si <img src="simulaciones_varias_eq14670066768851161957.png" alt="$A_{pix}$"> representa el area total del pixel tenemos que:</p><p><img src="simulaciones_varias_eq05452644473871215665.png" alt="$$R_{P2} = \left( \frac{A_{pix}-A}{A_{pix}}  \right)$$"></p><p>--&gt; Finalemnte, con respecto a <img src="simulaciones_varias_eq01379890781182076576.png" alt="$R_{P3}$"> describe el rol de la difussion length creados fuera del area activa del fotodiodo. Siendo <img src="simulaciones_varias_eq11904963258706611165.png" alt="$L$"> la longitud maxima entre la depletion region y la esquina del fotodiodo region, tenemos que:</p><div><ol><li><img src="simulaciones_varias_eq13945326605897182630.png" alt="$L<<L_{diff}$">: La probabilidad de adquerir minoritarios es alta</li><li><img src="simulaciones_varias_eq15829118472630728512.png" alt="$L\approx L_{diff}$">: La probabilidad de adquerir minoritarios es baja</li><li><img src="simulaciones_varias_eq13945326605897182630.png" alt="$L<<L_{diff}$">: La contribucion es negativa, es decir hay perdidas de fotocarriers generados.</li></ol></div><p><img src="simulaciones_varias_eq16765369133342106676.png" alt="$$R_{P3} = \left( \frac{L_{diff}-L}{L_{diff}} \right)$$"></p><p>Finalmente <img src="simulaciones_varias_eq15046249450042423189.png" alt="$R_{P}$"> esta dado por la siguiente expresi&oacute;n, donde la constante <img src="simulaciones_varias_eq12157756404733703045.png" alt="$C_2$"> tiene unidades de medida <img src="simulaciones_varias_eq03326786838564744135.png" alt="$\left[\frac{e-}{sec\cdot lux}\right]$">.</p><p><img src="simulaciones_varias_eq15745109016953542636.png" alt="$$R_P = C_2(f+4ld)\left( \frac{A_{pix}-A}{A_{pix}}\right) \left(&#xA;\frac{L_{diff}-L}{L_{diff}} \right)$$"></p><p>Por lo tanto, retomando la sensibilidad fotometrica <img src="simulaciones_varias_eq08796712765209927318.png" alt="$(S)$"> esta dada por:</p><p><img src="simulaciones_varias_eq10744619895015493148.png" alt="$$S = q\frac{C_1A^{l_{diff}/l}+C_2(f_2+4ld)\left( \frac{A_{pix}-A}{A_{pix}}\right) \left(&#xA;\frac{L_{diff}-L}{L_{diff}} \right)}{C_A A + C_P A_P}$$"></p><h2 id="17">Simulaci&oacute;n de la optimizaci&oacute;n</h2><p>Se introducen los principales par&aacute;metros.</p><pre class="codeinput">clear;
+clc;
+q = 1.6e-19;            <span class="comment">% Carga del electron [Col]</span>
+p = 2e-6;               <span class="comment">% profundidad:      2 [um]</span>
+L_diff =  30e-6;        <span class="comment">% Diffusion lenght: 68 [um]</span>
+C_JO = 1.0927e-8;       <span class="comment">% Capacitancia de union basal [F/cm^2]</span>
+C_JOP = 1.15187e-8;     <span class="comment">% Capacitancia de union lateral [F/cm^2]</span>
+V_PD = 2;
+phi_0A = 0.6364;
+phi_0P = 0.6364*0.8;
+M_J = 0.5;
+M_JP = 0.33;
+</pre><p>Ahora calculamos S</p><pre class="codeinput">l = (2:0.1:8)*1e-6;                  <span class="comment">% Longitud de N-well [m]</span>
+l_diff = [4, 6, 8, 12]*0.3e-6;         <span class="comment">% Longitud de N-active [m]</span>
+A_pix = 32*0.3e-6*26*0.3e-6;        <span class="comment">% Area total del pixel [m^2]</span>
+<span class="comment">% A_pix = 41*0.3e-6*60*0.3e-6;        % Area total del pixel [m^2]</span>
+A = l.^2;                           <span class="comment">% Area activa del Nwell [m^2]</span>
+A_P = 4*l*p;                        <span class="comment">% Area lateral del Nwell [m^2]</span>
+L = (41*0.3e-6 - l)/2;            <span class="comment">% Longitud maxima de los carrier [um]</span>
+
+
+C_A = C_JO/((1 + V_PD/phi_0A)^M_J);
+C_P = C_JOP/((1 + V_PD/phi_0P)^M_JP);
+C_PD = C_A*A*100*100 + C_P*A_P*100*100;
+
+<span class="comment">% C_1 = 0.468;    % Wavelength = 570 [nm]</span>
+<span class="comment">% C_2 = 0.29;    % Wavelength = 570 [nm]</span>
+C_1 = 0.215;    <span class="comment">% Wavelength = 490 [nm]</span>
+C_2 = 0.107;    <span class="comment">% Wavelength = 490 [nm]</span>
+
+R_A = [];
+R_P = [];
+S = [];
+R_P1 = [];
+R_P2 = [];
+R_P3 = [];
+A_um = A*1e6*1e6;
+A_P_um = A_P*1e6*1e6;
+
+<span class="keyword">for</span> i = 1:length(l_diff)
+    <span class="keyword">for</span> j = 1:length(l)
+        <span class="keyword">if</span> l_diff(i)&gt;=l(j)
+            l_diff(i) = l(j);
+        <span class="keyword">end</span>
+        <span class="comment">% R_A(i,j)  = C_1*A_um(j)^(l_diff(i)/l(j)); % Cae muy abrupto.</span>
+        <span class="comment">% R_A(i,j)  = C_1*l_diff(i)/l(j)*A_um(j);   % Funciona pero no hay</span>
+        <span class="comment">% maximo claro</span>
+        <span class="comment">% prueba(i,j) = (l_diff(i)/l(j));</span>
+        R_A(i,j) = C_1*0.5*A_um(j);                 <span class="comment">% Funciona, maximo claro.</span>
+        R_P1(i,j) = log10(1 + l(j)/(2*L_diff))*A_um(j) + A_P_um(j);
+        R_P2(i,j) = (A_pix-A(j))/A_pix;
+        R_P3(i,j) = 1 - L(j)/L_diff;
+        R_P(i,j)  = C_2 * R_P1(i,j) * R_P2(i,j) * R_P3(i,j);
+        S(i,j) = q*(R_A(i,j) + R_P(i,j))/C_PD(j);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+figure(1)
+hold <span class="string">on</span>;
+plot(A_um, S(1,:))
+plot(A_um, S(2,:))
+plot(A_um, S(3,:))
+plot(A_um, S(4,:))
+hold <span class="string">off</span>;
+title(<span class="string">'Sensibilidad para distintos l_{diff}'</span>)
+legend(<span class="string">'l_{diff} = 4\lambda'</span>,<span class="string">'l_{diff} = 6\lambda'</span>,<span class="string">'l_{diff} = 8\lambda'</span>,<span class="string">'l_{diff} = 12\lambda'</span>)
+xlabel(<span class="string">'Area del Nwell'</span>)
+ylabel(<span class="string">'Sensibilidad'</span>)
+
+figure(2)
+hold <span class="string">on</span>;
+plot(A_um, R_A(1,:))
+plot(A_um, R_P(1,:))
+hold <span class="string">off</span>;
+title(<span class="string">'Receptividad activa y periferica'</span>)
+legend(<span class="string">'Receptividad activa'</span>,<span class="string">'receptividad periferica'</span>)
+xlabel(<span class="string">'Area del Nwell'</span>)
+ylabel(<span class="string">'Receptividad'</span>)
+
+figure(3)
+hold <span class="string">on</span>;
+<span class="comment">% plot(A_um, R_P1(1,:))</span>
+plot(A_um, R_P2(1,:))
+plot(A_um, R_P3(1,:))
+hold <span class="string">off</span>;
+title(<span class="string">'Receptividad periferica: RP2 y RP3'</span>)
+legend(<span class="string">'RP2'</span>,<span class="string">'RP3'</span>)
+xlabel(<span class="string">'Area del Nwell'</span>)
+ylabel(<span class="string">'Valor'</span>)
+ylim([0 1.2])
+pause(0.5)
+
+figure(4)
+hold <span class="string">on</span>;
+plot(A_um, R_A(1,:))
+plot(A_um, R_A(2,:))
+plot(A_um, R_A(3,:))
+plot(A_um, R_A(4,:))
+hold <span class="string">off</span>;
+title(<span class="string">'Receptividad activa'</span>)
+legend(<span class="string">'l_{diff} = 4\lambda'</span>,<span class="string">'l_{diff} = 6\lambda'</span>,<span class="string">'l_{diff} = 8\lambda'</span>,<span class="string">'l_{diff} = 12\lambda'</span>)
+xlabel(<span class="string">'Area del Nwell'</span>)
+ylabel(<span class="string">'Receptividad Activa R_A'</span>)
+
+close(figure(1))
+close(figure(2))
+close(figure(3))
+close(figure(4))
+</pre><h2 id="19">Conclusiones de la optimizacion</h2><p>Se puede observar que en muchos casos, la sensibilidad maxima del pixel se encuentra bajo los limites de dise&ntilde;o, por lo que preferira consturir un area activa de aproximadamente 12 \lambdas por lado. Recordemos que esto nos dara un area m&iacute;nima de:</p><pre class="codeinput">A_min = (12*0.3)^2      <span class="comment">% Area m&iacute;nima en [um^2]</span>
+</pre><pre class="codeoutput">
+A_min =
+
+   12.9600
+
+</pre><h2 id="20">Voltaje que produce un flujo de fotones</h2><p>En esta secci&oacute;n se determinara el flujo de fotones necesarios para producir tres fotocorrientes: 50pA, 150pA y 300pA. El voltaje en el fotodiodo parte en 3.75V cuya capacitancia es 3.5fF. Se agrega al calculo la capacitancia de los transistores M1 y M2 correspondientes. Para los calculos se aproximo <img src="simulaciones_varias_eq14221827199139923399.png" alt="$\alpha$"> a <img src="simulaciones_varias_eq05107046124960610142.png" alt="$1e^4$"> y profundidades del Nwell seg&uacute;n los parametros de la tecnologia.</p><p>En el siguiente grafico se muestra el voltaje de salida en funcion del tiempo para tres flujos de fotones que inciden sobre el pixelv3.</p><pre class="codeinput">i_ph = [50e-12 150e-12 300e-12];
+V_d = 3.75;
+
+C_D = 4.1127e-15;
+Cgs_M1 = 5.01e-16;
+Cgg_M2 = 2.9e-15;
+C_FD = C_D + Cgs_M1 + Cgg_M2;
+
+t = (1:1:100)*1e-6;
+v(1,:) = V_d - i_ph(1)/C_FD.*t;
+v(2,:) = V_d - i_ph(2)/C_FD.*t;
+v(3,:) = V_d - i_ph(3)/C_FD.*t;
+
+alpha = 1e4;
+x_1 = (2-0.1769)*1e-6*100;
+x_2 = (2+1.769)*1e-6*100;
+x_3 = 10e-6*100;
+factor = q/alpha*((1-exp(-alpha*x_1))/(x_1) - (exp(-alpha*x_2)-exp(-alpha*x_3))/(x_3 - x_2));
+<span class="comment">% a = 5/(10*1000);        % largo horizontal: 5 [um] pero en [cm]</span>
+<span class="comment">% b = 4/(10*1000);        % largo vertical:   4 [um] pero en [cm]</span>
+<span class="comment">% A_pix = a*b;            % Area del pixel [cm^2]</span>
+Area = 30*16*0.3*0.3 - 4*9*0.3*0.3 - 3*4*0.3*0.3;
+A_pix = Area/((10*1000)^2);    <span class="comment">% Area del pixelv3</span>
+F_0 = i_ph/A_pix/factor;
+hold <span class="string">on</span>
+plot(t*1e6,v(1,:))
+plot(t*1e6,v(2,:))
+plot(t*1e6,v(3,:))
+ylabel(<span class="string">'Voltaje de salida (V)'</span>)
+xlabel(<span class="string">'tiempo (\mu s)'</span>)
+title(<span class="string">'Voltaje en el diodo con distintos i_{ph}'</span>)
+legend([<span class="string">'F_0 = '</span>,num2str(F_0(1)/10^15), <span class="string">'x 10^{15} [ph/cm^2 s] '</span>],<span class="keyword">...</span>
+    [<span class="string">'F_0 = '</span>,num2str(F_0(2)/10^16), <span class="string">'x 10^{16} [ph/cm^2 s] '</span>], <span class="keyword">...</span>
+    [<span class="string">'F_0 = '</span>,num2str(F_0(3)/10^16), <span class="string">'x 10^{16} [ph/cm^2 s] '</span>])
+grid <span class="string">on</span>
+ylim([0 4])
+
+<span class="comment">% En forma adicional se adjunta una aproximacion a la magnitud del escalon</span>
+<span class="comment">% producida justo luego del reset.</span>
+
+magnitud_escalon = Cgs_M1/(C_D + Cgg_M2 + Cgs_M1)*5
+
+<span class="comment">% Segun los resultados de Spice, este escalon tiene un valor de 228 mV, es</span>
+<span class="comment">% decir, la capacitancia $C_D$ es ligeramente mayor.</span>
+</pre><pre class="codeoutput">
+magnitud_escalon =
+
+    0.3334
+
+</pre><img vspace="5" hspace="5" src="simulaciones_varias_01.png" alt=""> <h2 id="21">Tabla de referencia para el flujo de fotones</h2><p>En la siguiente tabla se adjuntan distintas fuentes de luz con su correspondiente aproximacion del flujo del fotones <img src="simulaciones_varias_eq05581510236333683931.png" alt="$F_0$"> <img src="simulaciones_varias_eq14556493290888230251.png" alt="$[photons/cm^2 sec]$"> para considerarlos como referencia a los resultados anteriores.</p><div><ul><li>Clear sky <img src="simulaciones_varias_eq04873700875981793758.png" alt="$\approx$"> <img src="simulaciones_varias_eq14079313239914964384.png" alt="$10^4$"> Lux con flujo <img src="simulaciones_varias_eq00877393841220460080.png" alt="$F_0 = 10^{17}$"></li><li>Room light <img src="simulaciones_varias_eq04873700875981793758.png" alt="$\approx$"> <img src="simulaciones_varias_eq05652116873258451120.png" alt="$10$"> Lux con flujo <img src="simulaciones_varias_eq09269479358032162347.png" alt="$F_0 = 10^{13}$"></li><li>Full noon <img src="simulaciones_varias_eq04873700875981793758.png" alt="$\approx$"> <img src="simulaciones_varias_eq04724808284356669986.png" alt="$0.1$"> Lux con flujo <img src="simulaciones_varias_eq05431722934174774568.png" alt="$F_0 = 10^{11}$"></li><li>Noon less night <img src="simulaciones_varias_eq04873700875981793758.png" alt="$\approx$"> <img src="simulaciones_varias_eq06294580275139675239.png" alt="$10^{-4}$"> Lux con flujo <img src="simulaciones_varias_eq12411109310875147874.png" alt="$F_0 = 10^{8}$"></li></ul></div><h2 id="22">Extract of parasitic values</h2><p>Metal 1</p><pre class="codeinput">Squares = 4*13;
+Perimeter = 4+26;
+Cap_A_Metal_1 = 0.1209*Squares*0.3*0.3  <span class="comment">% Femto Farad</span>
+Cap_P_Metal_1 = 0.1104*Perimeter*0.3
+
+<span class="comment">% N Active</span>
+Squares = 9.5*4
+Cap_A_N_Active = 0.9*Squares*0.3*0.3  <span class="comment">% Femto Farad</span>
+
+Total = Cap_A_Metal_1 + Cap_P_Metal_1
+</pre><pre class="codeoutput">
+Cap_A_Metal_1 =
+
+    0.5658
+
+
+Cap_P_Metal_1 =
+
+    0.9936
+
+
+Squares =
+
+    38
+
+
+Cap_A_N_Active =
+
+    3.0780
+
+
+Total =
+
+    1.5594
+
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Parámetros de la tecnología
+% Se intoduciran los parametros de la tecnología
+
+C_nwell = 10^16;        % Concentracion de donadores Nd [1/cm^-3]
+C_psubstrate = 10^15;   % Concentracion de aceptores Na [1/cm^-3]
+k_j = 1.38064852e-23;   % Constante de boltzmann [J/K]
+k_ev = 8.62e-5;         % Constante de boltzmann [eV/K]
+T = 300;                % Temperatura absoluta [K]
+E_g = 1.12;             % Energia de separacion de banda del Silicio [eV]
+q = 1.6e-19;            % Carga del electron [Col]
+e_s = 10.45e-13;        % Permitividad del silicio [F/cm]
+e_s_r = 11.7;           % Permitividad del silicio respecto al e_0
+e_0 = 1.04e-12;         % Permitividad del vacio [F/cm]
+n_i = 1.45e10;          % Concentracion intrinseca a temperatura ambiente [1/cm^-3]
+% B = 5.4e31;           % B del silicio [(cm^2K)^-3]
+% n_i = B*T^3*exp(-E_g/(k_ev*T));
+%%
+% Por ejemplo, el calculo del voltaje built in $(\phi_0$ o $V_{bi})$ en una
+% union pn compuesta por el sustratro tipo p y un pozo n-well es:
+
+N_a = C_psubstrate;
+N_d = C_nwell;
+V_T = k_j*T/q;
+V_bi = V_T*log(N_d*N_a/n_i^2)  
+
+%%
+% Podemos ver en la siguiente sección que $\phi_n+\phi_p$ dara el mismo resultado. 
+
+%% Calculo de la zona de agotamiento 
+% Se calculara el ancho de la zona de agotamiento en un eje vertical z, de
+% una union entre un sustrato tipo p y un pozo N. 
+
+phi_n = k_j*T/q*log(N_d/n_i);   % Potencial de la zona n [V]
+phi_p = k_j*T/q*log(N_a/n_i);   % Potencial de la zona p [V]
+coef = N_a/N_d;                 % Coeficiente igual a x_n/x_p. distancia_type
+v_D = 2;                        % Voltaje que polariza el diodo en inversa [V]
+%%
+% Vemos que:
+V_bi = phi_n+phi_p
+%%
+% Luego, el ancho de la zona de agotamiento en micrometros es:
+W = sqrt(2*e_s/q*(v_D + V_bi)*(1/N_a + 1/N_d));    % Ancho de zona de agotamiento del diodo [cm]
+W_um = W*10000                                         
+
+%% Calculo de la capacitancia del fotodiodo
+% Con respecto a la capacitancia del fotodiodo tenemos que:
+%
+% $$C_{PD} = C_A A + C_{P}A_P$$ 
+%
+% $$C_{\mathrm{PD}}=\frac{e_{Si}}{\sqrt{\frac{2e_{Si}}{q}
+% \left(\phi_{\mathrm{0,A}}+V_{\mathrm{PD}}\right)\left(\frac{N_{\mathrm{A}}+
+% N_{\mathrm{D}}}{N_{\mathrm{A}} N_{\mathrm{D}}}\right)}} A+\frac{e_{Si}}
+% {\sqrt{\frac{2 e_{Si}}{q}\left(\phi_{\mathrm{0,P}}+V_{\mathrm{PD}}\right)
+% \left(\frac{N_{\mathrm{A}}+N_{\mathrm{D}}}{N_{\mathrm{A}} 
+% N_{\mathrm{D}}}\right)}} A_{\mathrm{P}}$$
+%
+% o bien:
+%
+% $$C_{A,P}=\frac{C_{\mathrm{JO,JOP}}}{\left(1+\frac{V_{\mathrm{PD}}}
+% {\phi_{\mathrm{0,0P}}}\right)^{M_{\mathrm{J,JP}}}}$$
+%
+% Donde $A$ corresponde a la area activa del fotodiodo y $A_P$ es el area
+% lateral del fotodiodo. Tambien $C_{JO}$ y $C_{JOP}$ corresponden a $C_{PD}$
+% evaluada en $V_{PD} = 0$ y $\phi_{0,A}$ y $\phi_{0,P}$ corresponden a el
+% voltaje de buit in en el area activa y en el area lateral. Por lo tanto 
+% si $a$ y $b$ corresponde a los lados activos del fotodiodo y $p$ 
+% la profundidad de la difusion n tenemos que:
+%
+%%
+a = 9/(10*1000);        % largo horizontal: 5 [um] pero en [cm]
+b = 4.8/(10*1000);        % largo vertical:   4 [um] pero en [cm]
+p = 2/(10*1000);     % profundidad:      2 [um] pero en [cm]
+Area_activa = @(x,y) x*y;           % (largo horizontal, largo vertical)
+Area_lateral = @(x,y,z)(2*x+2*y)*z; % (largo horizontal, largo vertical, profundidad)
+A = Area_activa(a,b);                % en [cm^2]
+A_P = Area_lateral(a,b,p);           % en [cm^2]
+fprintf('El area activa corresponde a %d [um^2] y el area lateral corresponde a %d [um^2]', (A/1e-8), (A_P/1e-8))
+%%
+% Luego, calculamos $C_{JO}$ y $C_{JOP}$.
+phi_0A = V_bi;
+phi_0P = V_bi*0.9;
+denom1 = sqrt(2*e_s/q*(phi_0A)*(N_a+N_d)/(N_a*N_d)); % [cm]
+denom2 = sqrt(2*e_s/q*(phi_0P)*(N_a+N_d)/(N_a*N_d)); % [cm]
+C_JO = e_s/denom1;  % [F/cm^2]
+C_JOP = e_s/denom2; % [F/cm^2]
+C_neto = C_JO*A + C_JOP*A_P;
+fprintf('La capacitancia en el area activa sin V_PD es: %d [F/cm^2]\n', C_JO)
+fprintf('La capacitancia en el area lateral sin V_PD es: %d [F/cm^2]\n', C_JOP)
+fprintf('La capacitancia total sin V_PD es: %d [F]', C_neto)
+%%
+% Ahora con ello calculamos la capacitancia del fotodiodo con la
+% incorporacion del coeficiente de grading. Este coeficiente valdra $M=1/2$
+% cuando la union es abrupta (mas comun). En caso de ser gradual se ocupara
+% $M=1/3$.
+V_PD = 3.75;
+M = 1/2;
+C_A = C_JO/((1 + V_PD/phi_0A)^M);
+C_P = C_JOP/((1 + V_PD/phi_0P)^M);
+C_PD = C_A*A + C_P*A_P;
+fprintf('La capacitancia en el area activa es: %d [F/cm^2]\n', C_A)
+fprintf('La capacitancia en el area lateral es: %d [F/cm^2]\n', C_P)
+fprintf('La capacitancia neta del fotodiodo es: %d [F]', C_PD)
+
+%% Calculo de densidad de corriente
+% La densidad de corriente total generada esta dada por la siguiente
+% expresion, donde esta medida en [A/cm^2]
+%
+% $j_{ph} = \frac{qF_0}{\alpha}\left(\frac{1-exp(-\alpha x_1)}{x_1}- \frac{exp(-\alpha x_2)-exp(-\alpha x_3)}{x_3 - x_2}\right)$
+%
+% Donde el parametro $F_0$ corresponde al flujo de electrones [photons/sec
+% cm^2].
+% Con ello procedemos a encontrar la corriente que entrega cierto flujo de
+% fotones al area sensible. 
+%%
+x_1 = (2-0.1769)*1e-6*100;
+x_2 = (2+1.769)*1e-6*100;
+x_3 = 10e-6*100;
+alpha = 1e4;
+F_0 = 4.09e12;
+factor = q/alpha*((1-exp(-alpha*x_1))/(x_1) - (exp(-alpha*x_2)-exp(-alpha*x_3))/(x_3 - x_2));
+j_ph = factor*F_0;
+I = j_ph*A;
+Corriente_deseada = 1e-9;
+f_0 = Corriente_deseada/A/factor;
+
+fprintf('El flujo de electrones %0.5e, produce una corriente de: %0.5e\n', F_0, I)
+fprintf('Para producir una corriente %0.5e, se necesita un flujo de: %0.5e', Corriente_deseada, f_0)
+
+
+%% Optimizacion pixel APS CMOS
+% En la siguiente seccion se optimizara el tamaño de un pixel CMOS en la 
+% tecnologia CMOS $0.5 \mu m$. La función a optimizar consiste en la
+% *sensibilidad fotometrica $(S)$* , la cual se define como la señal de salida de un
+% sensor de imagen iluminado por un nivel determinado de luz en un tiempo
+% especifico de integracion. Se define matematicamente como:
+% 
+% $$S = CG \cdot R$$
+% 
+% Donde $$CG$ es la *ganancia de conversion* la cual es medida en 
+% $\left[\frac{V}{e-}\right]$  y $R$ la *receptividad* medida en 
+% $\left[\frac{e-}{sec\cdot lux}\right]$.
+%
+% Por el lado de la ganancia de conversion $(CG)$, se calcula como sigue, donde
+% $C_{PD}$ es la capacitancia del fotodiodo.
+%
+% $$ CG = \frac{q}{C_{PD}}$$ 
+%
+% Mientras que la receptividad $(R)$, como las cargas fotogeneradas pueden
+% ser colectadas por el area activa $(R_A)$ o periferica $(R_P)$, tenemos
+% que:
+%
+% $$R = R_A + R_P$
+%
+% Por lo tanto, la sensibilidad fotometrica $(S)$ queda como:
+%
+% $$S = q \frac{R_A+R_P}{C_{PD}}$$
+%
+% *Receptividad Activa:* Con respecto a la receptividad del area activa, sabemos que depende
+% directamente del area del fotodiodo, tanto como el area del Nwell como el
+% area de la difusion N activa, por lo que se elije la opcion propuesta en
+% la tesis
+%
+% $$R_A = C_1 A^{l_{diff}/{l}}$$
+%
+% Donde $C_1$ es una constante medida en $\left[\frac{e-}{sec\cdot lux \mu m^2}\right]$
+% y $l_{diff}$ corresponde a la longitud del cuadrado de la difusion activa
+% y $l$ a la longitud del cuadrado del Nwell.
+%
+% *Receptividad Periferica:* Con respecto a esta receptividad debemos
+% considerar tres factores:
+% 
+% # La contribucion del tamaño del area en el
+% bottom y en las paredes: $R_{P1}$
+% # La area no ocupada alrededor del pixel: $R_{P2}$
+% # La diffusion length  de los portadores minoritarios: $R_{P3}$
+%
+% Consecuentemente, $R_P$ es proporcional a estos tres terminos.
+%
+% $$R_P = C_2\cdot R_{P1}\cdot R_{P2}\cdot R_{P3}$$
+%
+%%
+% REPLACE_WITH_DASH_DASH> Con respecto a $R_{P1}$ tenemos dos funciones propuestas por el modelo
+% que van de 0 hasta A (area del pixel).
+%
+% $$f_1 = C\cdot A \textrm{  Donde }0<C\leq 1)$$
+%
+% El bottom area de la zona de agotamiento tiene aproximadamente el tamaño
+% del area activa del fotodiodo $(A)$. En este caso, $f_1$ considera este
+% aspecto. Luego, tenemos $f_2$ que tambien considera la diffusion length
+% de los portadores minoritarios.
+%
+% $$f_2 = log_{10}\left(1+\frac{l}{2L_{diff}} \right)\cdot A \textrm{  Donde }0<\frac{l}{2L_{diff}}\leq 9 $$
+%
+% Donde $l$ representa el lado del area activa del fotodiodo (lado n-well).
+% Se pueden considerar tres escenarios:
+% 
+% # $l<<L_{diff}$: La contribucion de bottom no es importante porque no hay
+% muchos fotocarriers suseptibles para ser capturado por la superficie
+% bottom.
+% # $l\approx L_{diff}$: La contribucion bottom pasa a ser significante
+% # $l<<L_{diff}$: La contribucion periferica es directamente proporcional
+% al area bottom.
+%
+% A la función anterior se le adhiere el área periferica, donde interviene
+% la profundidad $(p)$ de la union. Así, finalmente se tiene $R_{P1}$
+%
+% $$R_{P1} = f + 4lp$$
+%
+%%
+% REPLACE_WITH_DASH_DASH> Con respecto a $R_{P2}$ tenemos que considerar que si el area es muy
+% grande, la contribución periferica será menor. De esta manera, este
+% termino modela el area no ocupada del fotodiodo que rodea el area activa.
+% Así, si $A_{pix}$ representa el area total del pixel tenemos que:
+%
+% $$R_{P2} = \left( \frac{A_{pix}-A}{A_{pix}}  \right)$$ 
+%
+%%
+% REPLACE_WITH_DASH_DASH> Finalemnte, con respecto a $R_{P3}$ describe el rol de la difussion
+% length creados fuera del area activa del fotodiodo. Siendo $L$ la
+% longitud maxima entre la depletion region y la esquina del fotodiodo
+% region, tenemos que:
+% 
+% # $L<<L_{diff}$: La probabilidad de adquerir minoritarios es alta
+% # $L\approx L_{diff}$: La probabilidad de adquerir minoritarios es baja
+% # $L<<L_{diff}$: La contribucion es negativa, es decir hay perdidas de
+% fotocarriers generados.
+%
+% $$R_{P3} = \left( \frac{L_{diff}-L}{L_{diff}} \right)$$
+%
+% Finalmente $R_{P}$ esta dado por la siguiente expresión, donde la
+% constante $C_2$ tiene unidades de medida $\left[\frac{e-}{sec\cdot lux}\right]$.
+%
+% $$R_P = C_2(f+4ld)\left( \frac{A_{pix}-A}{A_{pix}}\right) \left(
+% \frac{L_{diff}-L}{L_{diff}} \right)$$
+%
+% Por lo tanto, retomando la sensibilidad fotometrica $(S)$ esta dada por:
+%
+% $$S = q\frac{C_1A^{l_{diff}/l}+C_2(f_2+4ld)\left( \frac{A_{pix}-A}{A_{pix}}\right) \left(
+% \frac{L_{diff}-L}{L_{diff}} \right)}{C_A A + C_P A_P}$$
+%
+%% Simulación de la optimización
+% Se introducen los principales parámetros.
+clear;
+clc;
+q = 1.6e-19;            % Carga del electron [Col]
+p = 2e-6;               % profundidad:      2 [um]
+L_diff =  30e-6;        % Diffusion lenght: 68 [um]
+C_JO = 1.0927e-8;       % Capacitancia de union basal [F/cm^2]
+C_JOP = 1.15187e-8;     % Capacitancia de union lateral [F/cm^2]
+V_PD = 2;
+phi_0A = 0.6364;
+phi_0P = 0.6364*0.8;
+M_J = 0.5;
+M_JP = 0.33;
+
+%%
+% Ahora calculamos S
+l = (2:0.1:8)*1e-6;                  % Longitud de N-well [m]
+l_diff = [4, 6, 8, 12]*0.3e-6;         % Longitud de N-active [m]   
+A_pix = 32*0.3e-6*26*0.3e-6;        % Area total del pixel [m^2]
+% A_pix = 41*0.3e-6*60*0.3e-6;        % Area total del pixel [m^2]
+A = l.^2;                           % Area activa del Nwell [m^2]
+A_P = 4*l*p;                        % Area lateral del Nwell [m^2]
+L = (41*0.3e-6 - l)/2;            % Longitud maxima de los carrier [um]
+
+
+C_A = C_JO/((1 + V_PD/phi_0A)^M_J);
+C_P = C_JOP/((1 + V_PD/phi_0P)^M_JP);
+C_PD = C_A*A*100*100 + C_P*A_P*100*100;
+
+% C_1 = 0.468;    % Wavelength = 570 [nm]
+% C_2 = 0.29;    % Wavelength = 570 [nm]
+C_1 = 0.215;    % Wavelength = 490 [nm]
+C_2 = 0.107;    % Wavelength = 490 [nm]    
+
+R_A = [];
+R_P = [];
+S = [];
+R_P1 = [];
+R_P2 = [];
+R_P3 = [];
+A_um = A*1e6*1e6;
+A_P_um = A_P*1e6*1e6;
+
+for i = 1:length(l_diff)
+    for j = 1:length(l)
+        if l_diff(i)>=l(j)
+            l_diff(i) = l(j);
+        end
+        % R_A(i,j)  = C_1*A_um(j)^(l_diff(i)/l(j)); % Cae muy abrupto.
+        % R_A(i,j)  = C_1*l_diff(i)/l(j)*A_um(j);   % Funciona pero no hay
+        % maximo claro
+        % prueba(i,j) = (l_diff(i)/l(j));
+        R_A(i,j) = C_1*0.5*A_um(j);                 % Funciona, maximo claro.
+        R_P1(i,j) = log10(1 + l(j)/(2*L_diff))*A_um(j) + A_P_um(j);
+        R_P2(i,j) = (A_pix-A(j))/A_pix;
+        R_P3(i,j) = 1 - L(j)/L_diff;
+        R_P(i,j)  = C_2 * R_P1(i,j) * R_P2(i,j) * R_P3(i,j);
+        S(i,j) = q*(R_A(i,j) + R_P(i,j))/C_PD(j);
+    end
+end
+
+figure(1)
+hold on;
+plot(A_um, S(1,:))
+plot(A_um, S(2,:))
+plot(A_um, S(3,:))
+plot(A_um, S(4,:))
+hold off;
+title('Sensibilidad para distintos l_{diff}')
+legend('l_{diff} = 4\lambda','l_{diff} = 6\lambda','l_{diff} = 8\lambda','l_{diff} = 12\lambda')
+xlabel('Area del Nwell')
+ylabel('Sensibilidad')
+
+figure(2)
+hold on;
+plot(A_um, R_A(1,:))
+plot(A_um, R_P(1,:))
+hold off;
+title('Receptividad activa y periferica')
+legend('Receptividad activa','receptividad periferica')
+xlabel('Area del Nwell')
+ylabel('Receptividad')
+
+figure(3)
+hold on;
+% plot(A_um, R_P1(1,:))
+plot(A_um, R_P2(1,:))
+plot(A_um, R_P3(1,:))
+hold off;
+title('Receptividad periferica: RP2 y RP3')
+legend('RP2','RP3')
+xlabel('Area del Nwell')
+ylabel('Valor')
+ylim([0 1.2])
+pause(0.5)
+
+figure(4)
+hold on;
+plot(A_um, R_A(1,:))
+plot(A_um, R_A(2,:))
+plot(A_um, R_A(3,:))
+plot(A_um, R_A(4,:))
+hold off;
+title('Receptividad activa')
+legend('l_{diff} = 4\lambda','l_{diff} = 6\lambda','l_{diff} = 8\lambda','l_{diff} = 12\lambda')
+xlabel('Area del Nwell')
+ylabel('Receptividad Activa R_A')
+
+close(figure(1))
+close(figure(2))
+close(figure(3))
+close(figure(4))
+
+%% Conclusiones de la optimizacion
+% Se puede observar que en muchos casos, la sensibilidad maxima del pixel
+% se encuentra bajo los limites de diseño, por lo que preferira consturir
+% un area activa de aproximadamente 12 \lambdas por lado. Recordemos que
+% esto nos dara un area mínima de:
+
+A_min = (12*0.3)^2      % Area mínima en [um^2]
+
+%% Voltaje que produce un flujo de fotones
+% En esta sección se determinara el flujo de fotones necesarios para
+% producir tres fotocorrientes: 50pA, 150pA y 300pA. El voltaje en el
+% fotodiodo parte en 3.75V cuya capacitancia es 3.5fF. Se agrega al calculo
+% la capacitancia de los transistores M1 y M2 correspondientes. 
+% Para los calculos se aproximo $\alpha$ a $1e^4$ y profundidades del Nwell
+% según los parametros de la tecnologia.
+%
+% En el siguiente grafico se muestra el voltaje de salida en funcion del
+% tiempo para tres flujos de fotones que inciden sobre el pixelv3.
+i_ph = [50e-12 150e-12 300e-12];
+V_d = 3.75;
+
+C_D = 4.1127e-15;
+Cgs_M1 = 5.01e-16;
+Cgg_M2 = 2.9e-15;
+C_FD = C_D + Cgs_M1 + Cgg_M2;
+
+t = (1:1:100)*1e-6;
+v(1,:) = V_d - i_ph(1)/C_FD.*t;
+v(2,:) = V_d - i_ph(2)/C_FD.*t; 
+v(3,:) = V_d - i_ph(3)/C_FD.*t;
+
+alpha = 1e4;
+x_1 = (2-0.1769)*1e-6*100;
+x_2 = (2+1.769)*1e-6*100;
+x_3 = 10e-6*100;
+factor = q/alpha*((1-exp(-alpha*x_1))/(x_1) - (exp(-alpha*x_2)-exp(-alpha*x_3))/(x_3 - x_2));
+% a = 5/(10*1000);        % largo horizontal: 5 [um] pero en [cm]
+% b = 4/(10*1000);        % largo vertical:   4 [um] pero en [cm]
+% A_pix = a*b;            % Area del pixel [cm^2]
+Area = 30*16*0.3*0.3 - 4*9*0.3*0.3 - 3*4*0.3*0.3;
+A_pix = Area/((10*1000)^2);    % Area del pixelv3
+F_0 = i_ph/A_pix/factor;
+hold on
+plot(t*1e6,v(1,:))
+plot(t*1e6,v(2,:))
+plot(t*1e6,v(3,:))
+ylabel('Voltaje de salida (V)')
+xlabel('tiempo (\mu s)')
+title('Voltaje en el diodo con distintos i_{ph}')
+legend(['F_0 = ',num2str(F_0(1)/10^15), 'x 10^{15} [ph/cm^2 s] '],...
+    ['F_0 = ',num2str(F_0(2)/10^16), 'x 10^{16} [ph/cm^2 s] '], ...
+    ['F_0 = ',num2str(F_0(3)/10^16), 'x 10^{16} [ph/cm^2 s] '])
+grid on
+ylim([0 4])
+
+% En forma adicional se adjunta una aproximacion a la magnitud del escalon
+% producida justo luego del reset.
+
+magnitud_escalon = Cgs_M1/(C_D + Cgg_M2 + Cgs_M1)*5
+
+% Segun los resultados de Spice, este escalon tiene un valor de 228 mV, es
+% decir, la capacitancia $C_D$ es ligeramente mayor.
+
+%% Tabla de referencia para el flujo de fotones
+% En la siguiente tabla se adjuntan distintas fuentes de luz con su correspondiente
+% aproximacion del flujo del fotones $F_0$ $[photons/cm^2 sec]$ para considerarlos
+% como referencia a los resultados anteriores.
+% 
+% * Clear sky $\approx$ $10^4$ Lux con flujo $F_0 = 10^{17}$
+% * Room light $\approx$ $10$ Lux con flujo $F_0 = 10^{13}$
+% * Full noon $\approx$ $0.1$ Lux con flujo $F_0 = 10^{11}$
+% * Noon less night $\approx$ $10^{-4}$ Lux con flujo $F_0 = 10^{8}$
+% 
+%% Extract of parasitic values
+% Metal 1
+Squares = 4*13;
+Perimeter = 4+26;
+Cap_A_Metal_1 = 0.1209*Squares*0.3*0.3  % Femto Farad
+Cap_P_Metal_1 = 0.1104*Perimeter*0.3
+
+% N Active
+Squares = 9.5*4
+Cap_A_N_Active = 0.9*Squares*0.3*0.3  % Femto Farad
+
+Total = Cap_A_Metal_1 + Cap_P_Metal_1
+
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>

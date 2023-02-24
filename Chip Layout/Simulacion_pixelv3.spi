@@ -1,0 +1,65 @@
+*** SPICE deck for cell pixelv3{lay} from library pixel
+*** Created on lun nov 11, 2019 23:23:22
+*** Last revised on dom ene 19, 2020 18:00:51
+*** Written on dom ene 19, 2020 18:04:19 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: pixelv3{lay}
+Mnmos@1 net@90 FD#2nmos@1_poly-right vdd_f nmos@1_n-trans-well NMOS L=0.6U W=3U AS=4.95P AD=1.688P PS=9.3U PD=4.65U
+Mnmos@2 out select#2nmos@2_poly-left net@90 nmos@2_n-trans-well NMOS L=0.6U W=3U AS=1.688P AD=4.95P PS=4.65U PD=9.3U
+Mnmos@3 vdd_reset reset#0nmos@3_poly-left FD nmos@3_n-trans-well NMOS L=0.6U W=3U AS=9.45P AD=4.95P PS=18.3U PD=9.3U
+** Extracted Parasitic Capacitors ***
+C0 out 0 1.427fF
+C1 FD 0 3.614fF
+C2 reset 0 0.973fF
+C3 select 0 3.169fF
+C4 select#2nmos@2_poly-left 0 0.134fF
+C5 FD#3pin@50_polysilicon-1 0 0.141fF
+C6 reset#1pin@103_polysilicon-1 0 0.284fF
+C7 select#1pin@124_polysilicon-1 0 0.339fF
+** Extracted Parasitic Resistors ***
+R0 FD#2nmos@1_poly-right FD#2nmos@1_poly-right##0 6.975
+R1 FD#2nmos@1_poly-right##0 FD#3pin@50_polysilicon-1 6.975
+R2 FD FD#3pin@50_polysilicon-1 4.65
+R3 reset#0nmos@3_poly-left reset#1pin@103_polysilicon-1 7.75
+R4 select select#1pin@124_polysilicon-1 4.96
+R5 select#2nmos@2_poly-left select#2nmos@2_poly-left##0 8.783
+C8 select#2nmos@2_poly-left##0 0 0.134fF
+R6 select#2nmos@2_poly-left##0 select#2nmos@2_poly-left##1 8.783
+C9 select#2nmos@2_poly-left##1 0 0.134fF
+R7 select#2nmos@2_poly-left##1 select#1pin@124_polysilicon-1 8.783
+R8 reset reset#1pin@103_polysilicon-1 4.96
+
+* Spice Code nodes in cell cell 'pixelv3{lay}'
+D1 gnd_pix FD photodiode
+I1 FD 0 300p
+I2 out 0 5.7u
+V1 vdd_reset 0 5
+V2 vdd_f 0 5
+V3 gnd_pix 0 0
+V4 reset 0 PULSE(0 5 0 1p 1p 5u 100u 4)
+V5 select 0 PULSE(0 5 90u 1p 1p 5u 100u 4)
+.model photodiode D (IS = 50f CJO=6.3f  VJ= 0.636 M = 0.33)
+.tran 100u
+.include G:\Mi unidad\Universidad\Semestre Actual\Design IC\Tutoriales\C5_models.txt
+.END

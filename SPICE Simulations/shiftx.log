@@ -1,0 +1,25 @@
+Circuit: * G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Simulaciones 3\shiftx.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Mar 12 11:07:38 2020
+Total elapsed time: 0.673 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5285
+traniter = 5250
+tranpoints = 2360
+accept = 2106
+rejected = 254
+matrix size = 18
+fillins = 0
+solver = Normal
+Matrix Compiler1: 962 bytes object code size  0.8/0.4/[0.4]
+Matrix Compiler2: 2.09 KB object code size  0.5/0.8/[0.5]
+

@@ -1,0 +1,25 @@
+*** SPICE deck for cell buffer{sch} from library pixel
+*** Created on lun feb 10, 2020 22:48:41
+*** Last revised on lun feb 10, 2020 23:54:29
+*** Written on lun feb 10, 2020 23:54:38 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd
+
+*** TOP LEVEL CELL: buffer{sch}
+Mnmos-4@0 gnd g d vdd PMOS L=0.6U W=5.7U
+Mnmos-4@1 d g gnd vdd PMOS L=0.6U W=5.7U
+Mnmos-4@2 gnd g d vdd PMOS L=0.6U W=5.7U
+Mnmos-4@3 d g gnd vdd PMOS L=0.6U W=5.7U
+Mnmos-4@4 gnd g d vdd PMOS L=0.6U W=5.7U
+Mnmos-4@5 d g gnd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@0 d g gnd vdd PMOS L=0.6U W=5.7U
+
+* Spice Code nodes in cell cell 'buffer{sch}'
+vg g 0 DC 1.5
+vd d 0 DC 0
+V1 Vdd 0 5
+.dc vd 0 5 1m
+.include G:\Mi unidad\Universidad\Semestre Actual\Design IC\Tutoriales\Tutorial2\C5_models.txt
+.END

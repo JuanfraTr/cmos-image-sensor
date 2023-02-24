@@ -1,0 +1,25 @@
+Circuit: * G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Simulaciones 3\3T-APS.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Jun 18 16:26:19 2020
+Total elapsed time: 0.389 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5218
+traniter = 5187
+tranpoints = 2437
+accept = 2222
+rejected = 215
+matrix size = 26
+fillins = 0
+solver = Normal
+Matrix Compiler1: 984 bytes object code size  0.6/0.2/[0.2]
+Matrix Compiler2: 1.92 KB object code size  0.3/0.7/[0.3]
+

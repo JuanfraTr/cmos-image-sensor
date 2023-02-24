@@ -1,0 +1,118 @@
+Circuit: * G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Simulaciones\pinned con CDS\4TAPS.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Less than two connections to node VSWEEP.  This node is used by V11.
+WARNING: Less than two connections to node OUT.  This node is used by E1.
+WARNING: Less than two connections to node NC_01.  This node is used by V17.
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:      d1
+Model:      d
+Id:     -1.48e-17
+Vd:     -1.07e-05
+Req:     7.21e+11
+CAP:     0.00e+00
+
+                        --- BSIM3 MOSFETS ---
+Name:        m12         m11         m10         m9          m7
+Model:      cmosp       cmosp       cmosp       cmosp       cmosp
+Id:       -4.68e-12   -4.68e-12   -4.68e-12   -4.68e-12   -4.68e-12
+Vgs:      -2.00e+00   -2.00e+00    8.02e-09    8.02e-09   -3.33e-01
+Vds:      -8.02e-09   -8.02e-09   -4.67e+00   -4.67e+00   -3.33e-01
+Vbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Vth:      -8.93e-01   -8.93e-01   -8.65e-01   -8.65e-01   -8.86e-01
+Vdsat:    -7.77e-01   -7.77e-01   -4.33e-02   -4.33e-02   -4.33e-02
+Gm:        3.09e-12    3.09e-12    9.61e-14    9.61e-14    1.12e-10
+Gds:       5.83e-04    5.83e-04    1.01e-15    1.01e-15    2.37e-12
+Gmb        1.09e-12    1.09e-12    3.87e-14    3.87e-14    3.89e-11
+Cbd:       1.28e-14    1.28e-14    3.40e-14    3.40e-14    6.40e-14
+Cbs:       1.28e-14    1.28e-14    7.29e-14    7.29e-14    7.29e-14
+Cgsov:     2.74e-15    2.74e-15    1.72e-14    1.72e-14    1.72e-14
+Cgdov:     2.74e-15    2.74e-15    1.72e-14    1.72e-14    1.72e-14
+Cgbov:     4.89e-16    4.89e-16    4.89e-16    4.89e-16    4.89e-16
+dQgdVgb:   1.74e-14    1.74e-14    6.34e-14    6.34e-14    5.70e-14
+dQgdVdb:  -8.26e-15   -8.26e-15   -1.72e-14   -1.72e-14   -1.72e-14
+dQgdVsb:  -8.29e-15   -8.29e-15   -1.72e-14   -1.72e-14   -1.72e-14
+dQddVgb:  -8.47e-15   -8.47e-15   -1.72e-14   -1.72e-14   -1.72e-14
+dQddVdb:   2.01e-14    2.01e-14    5.13e-14    5.13e-14    8.12e-14
+dQddVsb:   2.65e-15    2.65e-15    7.00e-24    7.00e-24    2.13e-20
+dQbdVgb:  -5.03e-16   -5.03e-16   -2.89e-14   -2.89e-14   -2.25e-14
+dQbdVdb:  -1.64e-14   -1.64e-14   -3.40e-14   -3.40e-14   -6.40e-14
+dQbdVsb:  -1.25e-14   -1.25e-14   -7.29e-14   -7.29e-14   -7.29e-14
+
+Name:        m8          m14         m13         m5          m6
+Model:      cmosp       cmosn       cmosn       cmosn       cmosn
+Id:       -4.68e-12   -1.16e-04    4.47e-17   -5.13e-39   -5.13e-39
+Vgs:      -3.33e-01    0.00e+00    1.51e+00   -1.40e-13   -1.40e-13
+Vds:      -3.33e-01   -1.51e+00    1.40e-13   -1.38e-13   -1.38e-13
+Vbs:       0.00e+00   -1.51e+00    0.00e+00   -1.40e-13   -1.40e-13
+Vth:      -8.86e-01    7.17e-01    7.36e-01    7.36e-01    7.36e-01
+Vdsat:    -4.33e-02    4.31e-01    4.24e-01    3.70e-02    3.70e-02
+Gm:        1.12e-10    2.27e-04    4.61e-17    6.43e-26    6.43e-26
+Gds:       2.37e-12    8.31e-06    3.19e-04    1.75e-14    1.75e-14
+Gmb        3.89e-11    5.62e-05    1.51e-17    2.69e-26    2.69e-26
+Cbd:       6.40e-14    3.83e-15    3.83e-15    3.83e-15    3.83e-15
+Cbs:       7.29e-14    2.68e-15    3.83e-15    3.83e-15    3.83e-15
+Cgsov:     1.72e-14    5.01e-16    5.01e-16    5.01e-16    5.01e-16
+Cgdov:     1.72e-14    5.01e-16    5.01e-16    5.01e-16    5.01e-16
+Cgbov:     4.89e-16    5.28e-16    5.28e-16    5.28e-16    5.28e-16
+dQgdVgb:   5.70e-14    4.24e-15    4.82e-15    2.90e-15    2.90e-15
+dQgdVdb:  -1.72e-14   -4.81e-16   -2.04e-15   -5.01e-16   -5.01e-16
+dQgdVsb:  -1.72e-14   -2.76e-15   -1.89e-15   -5.01e-16   -5.01e-16
+dQddVgb:  -1.72e-14   -1.60e-15   -2.14e-15   -5.01e-16   -5.01e-16
+dQddVdb:   8.12e-14    4.32e-15    5.77e-15    4.33e-15    4.33e-15
+dQddVsb:   2.13e-20    1.43e-15    6.92e-16    2.54e-24    2.54e-24
+dQbdVgb:  -2.25e-14   -1.04e-15   -5.35e-16   -1.90e-15   -1.90e-15
+dQbdVdb:  -6.40e-14   -3.83e-15   -5.17e-15   -3.83e-15   -3.83e-15
+dQbdVsb:  -7.29e-14   -3.28e-15   -3.83e-15   -3.83e-15   -3.83e-15
+
+Name:        m4          m3          m2          m1
+Model:      cmosn       cmosn       cmosn       cmosn
+Id:       -4.47e-17    3.50e-11    5.00e-12    1.55e-15
+Vgs:      -2.65e-03   -1.14e-03   -1.51e-03   -1.07e-05
+Vds:      -2.65e-03    5.00e+00    5.00e+00    1.50e-03
+Vbs:      -2.65e-03   -2.65e-03   -1.51e-03   -1.07e-05
+Vth:       7.36e-01    6.74e-01    6.74e-01    7.36e-01
+Vdsat:     3.70e-02    3.71e-02    3.70e-02    3.70e-02
+Gm:        1.19e-15    5.73e-13    8.20e-14    6.83e-16
+Gds:       1.62e-14    1.00e-14    1.43e-15    1.68e-14
+Gmb        4.96e-16    2.28e-13    3.26e-14    2.85e-16
+Cbd:       3.83e-15    1.50e-14    2.15e-15    3.83e-15
+Cbs:       3.82e-15    2.68e-14    3.83e-15    3.83e-15
+Cgsov:     5.01e-16    3.51e-15    5.01e-16    5.01e-16
+Cgdov:     5.01e-16    3.51e-15    5.01e-16    5.01e-16
+Cgbov:     5.28e-16    3.70e-15    5.28e-16    5.28e-16
+dQgdVgb:   2.90e-15    2.03e-14    2.90e-15    2.90e-15
+dQgdVdb:  -5.01e-16   -3.51e-15   -5.01e-16   -5.01e-16
+dQgdVsb:  -5.01e-16   -3.51e-15   -5.01e-16   -5.01e-16
+dQddVgb:  -5.01e-16   -3.51e-15   -5.01e-16   -5.01e-16
+dQddVdb:   4.33e-15    1.85e-14    2.65e-15    4.33e-15
+dQddVsb:   3.34e-24    1.69e-22    2.43e-23    3.03e-24
+dQbdVgb:  -1.90e-15   -1.33e-14   -1.90e-15   -1.90e-15
+dQbdVdb:  -3.83e-15   -1.50e-14   -2.15e-15   -3.83e-15
+dQbdVsb:  -3.82e-15   -2.68e-14   -3.83e-15   -3.83e-15
+
+
+
+
+
+Date: Thu Oct 10 16:55:10 2019
+Total elapsed time: 0.149 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 38
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 47
+fillins = 0
+solver = Normal
+Matrix Compiler1: 1.56 KB object code size
+Matrix Compiler2:     275 opcodes

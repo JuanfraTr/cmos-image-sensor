@@ -1,0 +1,41 @@
+*** SPICE deck for cell dff_4_column{lay} from library pixel
+*** Created on mar ene 28, 2020 00:10:28
+*** Last revised on vie feb 07, 2020 22:32:53
+*** Written on vie feb 07, 2020 22:37:32 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT pixel__dff2_column FROM CELL dff2_column{lay}
+.SUBCKT pixel__dff2_column clk clkb D gnd Q Q_neg rst vdd
+Mnmos@14 net@130 clk D gnd NMOS L=0.6U W=1.8U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mnmos@16 gnd net@130 net@284 gnd NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mnmos@19 net@284 clkb Q_neg gnd NMOS L=0.6U W=1.8U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mnmos@20 Q Q_neg gnd gnd NMOS L=0.6U W=1.8U AS=8.07P AD=2.43P PS=14.7U PD=4.5U
+Mnmos@21 gnd Q_neg Q gnd NMOS L=0.6U W=1.8U AS=2.43P AD=8.07P PS=4.5U PD=14.7U
+Mpmos@14 net@130 clkb D vdd PMOS L=0.6U W=3.6U AS=4.455P AD=4.455P PS=8.7U PD=8.7U
+Mpmos@16 vdd net@130 net@284 vdd PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@18 net@284 clk Q_neg vdd PMOS L=0.6U W=3.6U AS=4.95P AD=2.43P PS=9.3U PD=4.5U
+Mpmos@31 Q Q_neg vdd vdd PMOS L=0.6U W=3.6U AS=7.74P AD=2.43P PS=12.9U PD=4.5U
+Mpmos@32 vdd Q_neg Q vdd PMOS L=0.6U W=3.6U AS=2.43P AD=7.74P PS=4.5U PD=12.9U
+Mpmos@33 Q_neg rst vdd vdd PMOS L=0.6U W=3.6U AS=7.74P AD=4.95P PS=12.9U PD=9.3U
+.ENDS pixel__dff2_column
+
+*** SUBCIRCUIT pixel__dff_2_column FROM CELL dff_2_column{lay}
+.SUBCKT pixel__dff_2_column clk_column clkb_column D_column gnd I_column I_column_neg Q_column Q_column_neg rst_column vdd
+Xdff2_col@0 clk_column clkb_column D_column gnd I_column I_column_neg rst_column vdd pixel__dff2_column
+Xdff2_col@1 clk_column clkb_column I_column gnd Q_column Q_column_neg rst_column vdd pixel__dff2_column
+.ENDS pixel__dff_2_column
+
+*** TOP LEVEL CELL: dff_4_column{lay}
+Xdff_2_co@0 clk_column clkb_column a1 gnd a2 a2_neg a3 a3_neg rst_column vdd pixel__dff_2_column
+Xdff_2_co@1 clk_column clkb_column D_column gnd a0 a0_neg a1 a1_neg rst_column vdd pixel__dff_2_column
+
+* Spice Code nodes in cell cell 'dff_4_column{lay}'
+V1 clk_column 0 PULSE(0 5 0 1p 1p 1u 2u 10)
+V2 clkb_column 0 PULSE(5 0 0 1p 1p 1u 2u 10)
+V3 D_column 0 PULSE(0 5 2u 1p 1p 2u 2u 1)
+V4 Vdd 0 5
+V5 rst_column 0 PULSE(5 0 0 1p 1p 1u 1u 1)
+.tran 20u
+.include G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Layout\C5_models.txt
+.END

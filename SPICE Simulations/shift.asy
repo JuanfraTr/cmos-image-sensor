@@ -1,0 +1,23 @@
+Version 4
+SymbolType CELL
+LINE Normal 0 -32 -16 -48
+LINE Normal 16 -48 0 -32
+RECTANGLE Normal 48 64 -48 -48
+PIN -48 16 NONE 8
+PINATTR PinName D
+PINATTR SpiceOrder 1
+PIN 48 16 NONE 8
+PINATTR PinName Q
+PINATTR SpiceOrder 2
+PIN 0 -48 NONE 8
+PINATTR PinName clk
+PINATTR SpiceOrder 3
+PIN 0 64 NONE 8
+PINATTR PinName clkb
+PINATTR SpiceOrder 4
+PIN -32 -48 NONE 8
+PINATTR PinName reset
+PINATTR SpiceOrder 5
+PIN 48 48 NONE 8
+PINATTR PinName Qneg
+PINATTR SpiceOrder 6

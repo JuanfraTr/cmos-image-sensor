@@ -1,0 +1,27 @@
+D1 gnd_pix FD photodiode
+I1 FD 0 300p
+I2 out 0 5.7u
+V1 vdd_reset 0 5
+V2 vdd_f 0 5
+V3 gnd_pix 0 0
+V4 reset 0 PULSE(0 5 0 1p 1p 5u 100u 4)
+V5 select 0 PULSE(0 5 90u 1p 1p 5u 100u 4)
+.model photodiode D (IS = 50f CJO=6.3f  VJ= 0.636 M = 0.33)
+.tran 100u
+.include G:\Mi unidad\Universidad\Semestre Actual\Design IC\Tutoriales\C5_models.txt
+
+
+
+Resultados:
+I1 FD 0 300p				
+* Variar entre 300p y 0p. Para 300p tenemos 500mV. Para 100p tenemos 2.6V. En general 500mV mas que en LTspice.
+* Se probo con una fuente de corriente ideal en out de 5.7u.
+I2 out 0 5.7u
+
+
+Simulacion en matriz 16 pixeles.
+Se vario con correctos resultados entre 300p y 0p. Se tuvo que realizar una extraccion en el pixel de FD hacia la matriz de 4 y luego realizar otra extraccion a la matriz de 16. Ahi recien FD figuraba para simularlo con el codigo de spice.
+Resultados
+2.5V con 0p. 
+2V con 100p.
+1V con 300p.

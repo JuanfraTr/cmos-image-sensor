@@ -1,0 +1,37 @@
+*** SPICE deck for cell sim_dff2{sch} from library pixel
+*** Created on mar ene 28, 2020 00:58:42
+*** Last revised on mar ene 28, 2020 00:59:42
+*** Written on mar ene 28, 2020 00:59:46 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT pixel__dff2 FROM CELL dff2{sch}
+.SUBCKT pixel__dff2 clk clkb D Q rst
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@38 clk D gnd NMOS L=0.6U W=1.8U
+Mnmos@1 net@70 clkb net@92 gnd NMOS L=0.6U W=1.8U
+Mnmos@3 gnd net@38 net@92 gnd NMOS L=0.6U W=1.8U
+Mnmos@7 gnd net@70 Q gnd NMOS L=0.6U W=3.6U
+Mpmos@0 D clkb net@38 vdd PMOS L=0.6U W=3.6U
+Mpmos@1 net@92 clk net@70 vdd PMOS L=0.6U W=3.6U
+Mpmos@3 net@92 net@38 vdd vdd PMOS L=0.6U W=3.6U
+Mpmos@6 Q net@70 vdd vdd PMOS L=0.6U W=7.2U
+Mpmos@7 net@70 rst vdd vdd PMOS L=0.6U W=0.9U
+.ENDS pixel__dff2
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: sim_dff2{sch}
+Xdff2@0 clk_reset clkb_reset D_reset reset_0 rst_reset pixel__dff2
+Xdff2@1 clk_reset clkb_reset reset_0 reset_1 rst_reset pixel__dff2
+
+* Spice Code nodes in cell cell 'sim_dff2{sch}'
+V1 clk_reset 0 PULSE(0 5 0 1p 1p 1u 2u 10)
+V2 clkb_reset 0 PULSE(5 0 0 1p 1p 1u 2u 10)
+V3 D_reset 0 PULSE(0 5 2u 1p 1p 2u 2u 1)
+V4 Vdd 0 5
+V5 rst_reset 0 PULSE(0 5 0 1p 1p 1u 1u 1)
+.tran 20u
+.include G:\Mi unidad\Universidad\Semestre Actual\CMOS Image Sensor\Layout\C5_models.txt
+.END

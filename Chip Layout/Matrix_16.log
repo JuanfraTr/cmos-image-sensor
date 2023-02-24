@@ -1,0 +1,33 @@
+Circuit: *** SPICE deck for cell Matrix_16{lay} from library pixel
+
+V3: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Node MATRIX_4@4:PIXELV3@11:RESET#1PIN@103_POLYSILICON-1 is floating.
+WARNING: Node MATRIX_4@4:PIXELV3@11:SELECT#2NMOS@2_POLY-LEFT##1 is floating.
+WARNING: Node MATRIX_4@4:PIXELV3@16:RESET#1PIN@103_POLYSILICON-1 is floating.
+WARNING: Node MATRIX_4@4:PIXELV3@16:SELECT#2NMOS@2_POLY-LEFT##1 is floating.
+WARNING: Node MATRIX_4@6:PIXELV3@11:RESET#1PIN@103_POLYSILICON-1 is floating.
+WARNING: Node MATRIX_4@6:PIXELV3@11:SELECT#2NMOS@2_POLY-LEFT##1 is floating.
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Jan 19 18:12:43 2020
+Total elapsed time: 0.450 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3145
+traniter = 3123
+tranpoints = 1474
+accept = 1413
+rejected = 61
+matrix size = 195
+fillins = 384
+solver = Normal
+Thread vector: 155.4/45.5[8] 33.6/7.3[8] 3.7/1.5[8] 1.1/0.9[2]  2592/500
+Matrix Compiler1: 34,2 KB object code size  9.3/5.0/[4.1]
+Matrix Compiler2: 23,4 KB object code size  3.5/4.6/[2.1]
+
+
